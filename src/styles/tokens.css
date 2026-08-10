@@ -1,0 +1,38 @@
+:root {
+  --grass-deep: #0c2e1a;
+  --grass-mid: #1a4d2e;
+  --grass-bright: #2d6b3f;
+  --clay: #c4784a;
+  --clay-deep: #8b4a2b;
+  --chalk: #f4efe4;
+  --ivory: #faf6ee;
+  --night: #07140d;
+  --night-soft: #0f2418;
+  --cream: #e8dfc8;
+  --gold: #d4a84b;
+  --gold-soft: #e8c97a;
+  --ink: #102018;
+  --muted: #6b7c6e;
+  --danger: #b54a3a;
+  --success: #3d8f5a;
+  --line: rgba(244, 239, 228, 0.18);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --max-width: 720px;
+}
