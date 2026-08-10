@@ -1,4 +1,4 @@
-import { head, put } from '@vercel/blob';
+import { del, head, put } from '@vercel/blob';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 interface DailyEntry {
@@ -28,6 +28,25 @@ function blobPath(dateKey: string): string {
   return `daily-boards/${dateKey}.json`;
 }
 
+function parseBody(req: VercelRequest): Record<string, unknown> {
+  if (req.body == null) return {};
+  if (typeof req.body === 'string') {
+    try {
+      return JSON.parse(req.body) as Record<string, unknown>;
+    } catch {
+      return {};
+    }
+  }
+  if (Buffer.isBuffer(req.body)) {
+    try {
+      return JSON.parse(req.body.toString('utf8')) as Record<string, unknown>;
+    } catch {
+      return {};
+    }
+  }
+  return req.body as Record<string, unknown>;
+}
+
 async function readBoard(dateKey: string): Promise<DailyBoard> {
   const pathname = blobPath(dateKey);
   try {
@@ -45,12 +64,28 @@ async function readBoard(dateKey: string): Promise<DailyBoard> {
 }
 
 async function writeBoard(board: DailyBoard): Promise<void> {
-  await put(blobPath(board.dateKey), JSON.stringify(board), {
-    access: 'public',
-    addRandomSuffix: false,
-    allowOverwrite: true,
-    contentType: 'application/json',
-  });
+  const pathname = blobPath(board.dateKey);
+  const payload = JSON.stringify(board);
+  try {
+    await put(pathname, payload, {
+      access: 'public',
+      addRandomSuffix: false,
+      allowOverwrite: true,
+      contentType: 'application/json',
+    });
+  } catch {
+    // Fallback for stores/SDK combos that reject overwrite flags
+    try {
+      await del(pathname);
+    } catch {
+      /* first write */
+    }
+    await put(pathname, payload, {
+      access: 'public',
+      addRandomSuffix: false,
+      contentType: 'application/json',
+    });
+  }
 }
 
 function validateEntry(body: Record<string, unknown>): DailyEntry | string {
@@ -104,7 +139,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     if (req.method === 'POST') {
-      const body = (req.body ?? {}) as Record<string, unknown>;
+      const body = parseBody(req);
       const dateKey = typeof body.dateKey === 'string' ? body.dateKey : '';
       if (!DATE_RE.test(dateKey)) {
         return res.status(400).json({ error: 'Invalid dateKey' });
@@ -137,6 +172,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   } catch (err) {
     console.error('[api/daily]', err);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    const message = err instanceof Error ? err.message : 'Internal Server Error';
+    return res.status(500).json({ error: message });
   }
 }
