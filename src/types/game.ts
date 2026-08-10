@@ -75,3 +75,9 @@ export interface DailyRecord {
   gradeLabel?: string;
   rosterNames?: string[];
 }
+
+declare global {
+  interface Window {
+    __E2E__?: boolean;
+  }
+}

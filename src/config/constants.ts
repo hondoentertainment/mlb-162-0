@@ -41,14 +41,30 @@ export type Decade = (typeof DECADES)[number];
 
 export const ROUNDS = POSITIONS.length;
 
-export type GameMode = 'classic' | 'diamondiq' | 'daily' | 'salary';
+export type GameMode =
+  | 'classic'
+  | 'diamondiq'
+  | 'daily'
+  | 'salary'
+  | 'franchise'
+  | 'challenge';
 
 export const MODE_LABELS: Record<GameMode, string> = {
   classic: 'Classic',
   diamondiq: 'Diamond IQ',
   daily: 'Daily',
   salary: 'Salary Cap',
+  franchise: 'One Franchise',
+  challenge: 'Challenge',
 };
+
+/** Spin animation duration; shortened when `window.__E2E__` is set */
+export function spinDurationMs(): number {
+  if (typeof window !== 'undefined' && (window as Window & { __E2E__?: boolean }).__E2E__) {
+    return 40;
+  }
+  return 900;
+}
 
 export type GradeId =
   | 'perfection'
@@ -77,4 +93,6 @@ export const STORAGE_KEYS = {
   leaderboard: 'mlb1620_leaderboard',
   daily: 'mlb1620_daily',
   lastResult: 'mlb1620_last_result',
+  career: 'mlb1620_career',
+  achievements: 'mlb1620_achievements',
 } as const;

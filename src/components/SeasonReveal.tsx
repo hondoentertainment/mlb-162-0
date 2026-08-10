@@ -11,7 +11,7 @@ export function SeasonReveal() {
 
   useEffect(() => {
     const target = preview.wins;
-    const duration = 1600;
+    const duration = window.__E2E__ ? 80 : 1600;
     const start = performance.now();
     let frame = 0;
     let timeout = 0;
@@ -24,7 +24,7 @@ export function SeasonReveal() {
         frame = requestAnimationFrame(tick);
       } else if (!finished.current) {
         finished.current = true;
-        timeout = window.setTimeout(finishReveal, 450);
+        timeout = window.setTimeout(finishReveal, window.__E2E__ ? 40 : 450);
       }
     };
 
@@ -36,7 +36,7 @@ export function SeasonReveal() {
   }, [finishReveal, preview.wins]);
 
   return (
-    <section className="reveal-stage panel">
+    <section className="reveal-stage panel" data-testid="reveal">
       <p className="section-label">Simulating {SEASON_GAMES} games</p>
       <div className="win-counter">
         {wins}

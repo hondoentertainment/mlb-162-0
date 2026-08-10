@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { ACHIEVEMENT_BY_ID } from '../game/achievements';
+import { challengeShareUrl } from '../game/challenge';
 import { useGame } from '../state/gameStore';
 import { RosterBoard } from './RosterBoard';
 import { ShareCard } from './ShareCard';
@@ -9,23 +11,37 @@ function buildShareText(
   grade: string,
   mode: string,
   names: string[],
+  challengeCode?: string | null,
 ): string {
-  return [
+  const lines = [
     `162-0 · ${wins}-${losses} · ${grade}`,
     `Mode: ${mode}`,
     names.join(' · '),
-    'Can you go 162-0?',
-  ].join('\n');
+  ];
+  if (challengeCode) {
+    lines.push(`Challenge code: ${challengeCode}`);
+    lines.push(challengeShareUrl(challengeCode));
+  }
+  lines.push('Can you go 162-0?');
+  return lines.join('\n');
 }
 
 export function ResultCard() {
-  const { state, goHome, startGame, modeLabel } = useGame();
+  const { state, goHome, startGame, modeLabel, setScreen } = useGame();
   const [copied, setCopied] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
   const result = state.result;
   if (!result) return null;
 
   const names = state.roster.map((s) => s.player?.name ?? '—');
-  const share = buildShareText(result.wins, result.losses, result.gradeLabel, modeLabel, names);
+  const share = buildShareText(
+    result.wins,
+    result.losses,
+    result.gradeLabel,
+    modeLabel,
+    names,
+    state.challengeCode,
+  );
 
   const copy = async () => {
     try {
@@ -37,14 +53,27 @@ export function ResultCard() {
     }
   };
 
+  const copyChallengeLink = async () => {
+    if (!state.challengeCode) return;
+    try {
+      await navigator.clipboard.writeText(challengeShareUrl(state.challengeCode));
+      setLinkCopied(true);
+      window.setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      setLinkCopied(false);
+    }
+  };
+
   return (
-    <section>
+    <section data-testid="result">
       <div className="panel" style={{ textAlign: 'center' }}>
         <p className="section-label">Final record</p>
-        <div className="win-counter">
+        <div className="win-counter" data-testid="final-record">
           {result.wins}-{result.losses}
         </div>
-        <div className="grade-tag">{result.gradeLabel}</div>
+        <div className="grade-tag" data-testid="final-grade">
+          {result.gradeLabel}
+        </div>
         <p className="lede" style={{ margin: '0.5rem auto 0', textAlign: 'center' }}>
           Score {result.score}/1000 · {modeLabel}
         </p>
@@ -54,7 +83,26 @@ export function ResultCard() {
         {state.dailyRank != null && (
           <p className="toast">Global daily rank: #{state.dailyRank}</p>
         )}
+        {state.challengeCode && (
+          <p className="toast" data-testid="result-challenge-code">
+            Challenge code: {state.challengeCode}
+          </p>
+        )}
       </div>
+
+      {state.newAchievements.length > 0 && (
+        <div className="panel unlock-panel" data-testid="new-achievements">
+          <p className="section-label">New badges</p>
+          <ul className="unlock-list">
+            {state.newAchievements.map((id) => (
+              <li key={id}>
+                <strong>{ACHIEVEMENT_BY_ID[id].title}</strong>
+                <span>{ACHIEVEMENT_BY_ID[id].description}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       <div className="result-grid">
         <div className="panel">
@@ -96,20 +144,38 @@ export function ResultCard() {
           <button type="button" className="btn btn-primary" onClick={copy}>
             Copy result
           </button>
+          {state.challengeCode && (
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-testid="copy-challenge-link"
+              onClick={copyChallengeLink}
+            >
+              Copy challenge link
+            </button>
+          )}
           {state.mode && state.mode !== 'daily' && (
             <button
               type="button"
               className="btn btn-secondary"
-              onClick={() => startGame(state.mode!)}
+              onClick={() =>
+                state.mode === 'challenge' && state.challengeCode
+                  ? startGame('challenge', undefined, state.challengeCode)
+                  : startGame(state.mode!)
+              }
             >
               Play again
             </button>
           )}
+          <button type="button" className="btn btn-ghost" onClick={() => setScreen('career')}>
+            Career
+          </button>
           <button type="button" className="btn btn-ghost" onClick={goHome}>
             Home
           </button>
         </div>
         {copied && <p className="toast">Copied to clipboard.</p>}
+        {linkCopied && <p className="toast">Challenge link copied.</p>}
       </div>
     </section>
   );

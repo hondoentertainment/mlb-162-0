@@ -49,10 +49,23 @@ export function HowToPlay() {
           salary; you cannot draft above the remaining cap.
         </li>
         <li>
+          <strong>One Franchise</strong> — lock a club, spin decades only, two decade skips.
+        </li>
+        <li>
           <strong>Daily</strong> — seeded by UTC date. One attempt per day. Results post to the
-          global daily board when available.
+          global daily board when available. Keep a streak by playing consecutive UTC days.
+        </li>
+        <li>
+          <strong>Challenge</strong> — share a code so friends face the same spins. No skips.
+          Compare records offline.
         </li>
       </ul>
+
+      <h3>Career & achievements</h3>
+      <p>
+        Every finished season updates local career stats (best wins, mode breakdown, daily streak)
+        and can unlock badges. Progress stays on this device.
+      </p>
 
       <h3>Grades</h3>
       <ul>

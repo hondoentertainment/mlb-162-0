@@ -194,6 +194,18 @@ a {
   margin-top: var(--space-5);
 }
 
+.franchise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .franchise-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .mode-card {
   text-align: left;
   width: 100%;
@@ -584,4 +596,177 @@ a {
 
 .back-link {
   margin-bottom: var(--space-4);
+}
+
+.career-chip {
+  margin: 0 0 var(--space-4);
+  color: var(--gold-soft);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.challenge-card {
+  cursor: default;
+}
+
+.challenge-card:hover {
+  transform: none;
+}
+
+.challenge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  align-items: center;
+}
+
+.challenge-input {
+  flex: 1 1 8rem;
+  min-width: 7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--chalk);
+  padding: 0.7rem 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.challenge-input::placeholder {
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.55;
+}
+
+.field-error {
+  margin: var(--space-2) 0 0;
+  color: var(--danger);
+  font-size: 0.85rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+@media (max-width: 520px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-tile {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.28);
+  padding: var(--space-3);
+  display: grid;
+  gap: 0.2rem;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.subhead {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+.mode-stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.mode-stats li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--cream);
+}
+
+.achievement-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.achievement-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.achievement-list li p {
+  margin: 0.25rem 0 0;
+  color: var(--cream);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.achievement-list li.locked {
+  opacity: 0.45;
+}
+
+.achievement-list li.unlocked {
+  border-color: rgba(212, 168, 75, 0.45);
+  background: rgba(212, 168, 75, 0.08);
+}
+
+.ach-status {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  white-space: nowrap;
+}
+
+.unlock-panel {
+  margin-top: var(--space-4);
+}
+
+.unlock-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.unlock-list li {
+  display: grid;
+  gap: 0.15rem;
+  color: var(--cream);
+}
+
+.unlock-list span {
+  opacity: 0.8;
+  font-size: 0.9rem;
 }

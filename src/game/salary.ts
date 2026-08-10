@@ -1,7 +1,7 @@
 import type { Player } from '../types/game';
 
 /** Soft cap in millions — forces stars vs depth tradeoffs across 9 slots */
-export const SALARY_CAP_M = 175;
+export const SALARY_CAP_M = 240;
 
 const TIER_SALARY: Record<1 | 2 | 3 | 4 | 5, number> = {
   1: 7,

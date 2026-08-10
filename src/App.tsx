@@ -1,4 +1,6 @@
+import { Career } from './components/Career';
 import { Draft } from './components/Draft';
+import { FranchiseSelect } from './components/FranchiseSelect';
 import { Home } from './components/Home';
 import { HowToPlay } from './components/HowToPlay';
 import { Leaderboard } from './components/Leaderboard';
@@ -10,6 +12,8 @@ function ScreenRouter() {
   const { state } = useGame();
 
   switch (state.screen) {
+    case 'franchise-select':
+      return <FranchiseSelect />;
     case 'draft':
       return <Draft />;
     case 'reveal':
@@ -20,6 +24,8 @@ function ScreenRouter() {
       return <HowToPlay />;
     case 'leaderboard':
       return <Leaderboard />;
+    case 'career':
+      return <Career />;
     default:
       return <Home />;
   }

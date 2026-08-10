@@ -43,17 +43,38 @@ export function getAvailablePlayers(
     .sort((a, b) => b.tier - a.tier || a.name.localeCompare(b.name));
 }
 
+export function decadesForFranchise(franchiseId: string): Decade[] {
+  return DECADES.filter((d) => POPULATED_KEYS.has(`${franchiseId}|${d}`));
+}
+
+export function spinDecadeForFranchise(
+  rand: () => number,
+  franchiseId: string,
+  excludeDecade?: Decade,
+): SpinResult {
+  let decades = decadesForFranchise(franchiseId);
+  if (excludeDecade) {
+    const filtered = decades.filter((d) => d !== excludeDecade);
+    if (filtered.length) decades = filtered;
+  }
+  const decade = pickRandom(decades.length ? decades : DECADES, rand);
+  return { decade, franchiseId };
+}
+
 /** Prefer spins that have at least one eligible player for open slots */
 export function spinWithEligibility(
   rand: () => number,
   openPositions: string[],
   takenIds: Set<string>,
   attempts = 40,
+  lockedFranchiseId?: string | null,
 ): SpinResult {
   let best: SpinResult | null = null;
   let bestCount = -1;
   for (let i = 0; i < attempts; i++) {
-    const spin = spinDraw(rand);
+    const spin = lockedFranchiseId
+      ? spinDecadeForFranchise(rand, lockedFranchiseId)
+      : spinDraw(rand);
     const count = getAvailablePlayers(spin, openPositions, takenIds).length;
     if (count > bestCount) {
       best = spin;
@@ -61,5 +82,8 @@ export function spinWithEligibility(
     }
     if (count > 0 && rand() < 0.65) return spin;
   }
-  return best ?? spinDraw(rand);
+  if (best) return best;
+  return lockedFranchiseId
+    ? spinDecadeForFranchise(rand, lockedFranchiseId)
+    : spinDraw(rand);
 }

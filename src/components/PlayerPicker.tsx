@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import type { Position } from '../config/constants';
 import { formatSalary, playerSalary } from '../game/salary';
 import type { Player, RosterSlot } from '../types/game';
@@ -34,7 +34,6 @@ export function PlayerPicker({
   salaryRemaining: number | null;
   onPick: (player: Player, position: Position) => void;
 }) {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
   const open = useMemo(
     () => new Set(roster.filter((s) => !s.player).map((s) => s.position)),
     [roster],
@@ -50,31 +49,19 @@ export function PlayerPicker({
   }
 
   return (
-    <div className="player-list">
+    <div className="player-list" data-testid="player-list">
       {players.map((player) => {
         const eligible = player.positions.filter((p) => open.has(p));
         const salary = playerSalary(player);
         const unaffordable =
           salaryMode && salaryRemaining != null && salary > salaryRemaining;
-        const expanded = selectedId === player.id;
         return (
           <div
             key={player.id}
             className={`player-card ${unaffordable ? 'unaffordable' : ''}`}
+            data-testid={`player-${player.id}`}
           >
-            <button
-              type="button"
-              className="player-top"
-              style={{
-                background: 'none',
-                border: 'none',
-                padding: 0,
-                color: 'inherit',
-                width: '100%',
-                cursor: 'pointer',
-              }}
-              onClick={() => setSelectedId(expanded ? null : player.id)}
-            >
+            <div className="player-top">
               <div>
                 <div className="player-name">{player.name}</div>
                 <div className="badges">
@@ -92,7 +79,7 @@ export function PlayerPicker({
                   ))}
                 </div>
               </div>
-            </button>
+            </div>
 
             {showStats && (
               <div className="stats">
@@ -109,15 +96,18 @@ export function PlayerPicker({
                 Over remaining cap
               </div>
             ) : (
-              (expanded || eligible.length === 1) && (
-                <div className="pos-picks">
-                  {eligible.map((pos) => (
-                    <button key={pos} type="button" onClick={() => onPick(player, pos)}>
-                      Draft to {pos}
-                    </button>
-                  ))}
-                </div>
-              )
+              <div className="pos-picks">
+                {eligible.map((pos) => (
+                  <button
+                    key={pos}
+                    type="button"
+                    data-testid={`draft-${player.id}-${pos}`}
+                    onClick={() => onPick(player, pos)}
+                  >
+                    Draft to {pos}
+                  </button>
+                ))}
+              </div>
             )}
           </div>
         );
