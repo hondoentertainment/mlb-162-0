@@ -1,3 +1,4 @@
+import { SALARY_CAP_M, formatSalary } from '../game/salary';
 import { useGame } from '../state/gameStore';
 
 export function HowToPlay() {
@@ -31,8 +32,8 @@ export function HowToPlay() {
 
       <h3>Skips</h3>
       <p>
-        Classic and Diamond IQ start with one team skip and one decade skip. Daily Challenge has no
-        skips — everyone faces the same draws.
+        Classic, Diamond IQ, and Salary Cap start with one team skip and one decade skip. Daily
+        Challenge has no skips — everyone faces the same draws.
       </p>
 
       <h3>Modes</h3>
@@ -44,7 +45,12 @@ export function HowToPlay() {
           <strong>Diamond IQ</strong> — stats hidden. Draft from memory.
         </li>
         <li>
-          <strong>Daily</strong> — seeded by UTC date. One attempt per day.
+          <strong>Salary Cap</strong> — {formatSalary(SALARY_CAP_M)} budget. Tier and HOF drive
+          salary; you cannot draft above the remaining cap.
+        </li>
+        <li>
+          <strong>Daily</strong> — seeded by UTC date. One attempt per day. Results post to the
+          global daily board when available.
         </li>
       </ul>
 

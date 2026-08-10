@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { Position } from '../config/constants';
+import { formatSalary, playerSalary } from '../game/salary';
 import type { Player, RosterSlot } from '../types/game';
 
 function formatBatting(p: Player): string {
@@ -22,11 +23,15 @@ export function PlayerPicker({
   players,
   roster,
   showStats,
+  salaryMode,
+  salaryRemaining,
   onPick,
 }: {
   players: Player[];
   roster: RosterSlot[];
   showStats: boolean;
+  salaryMode: boolean;
+  salaryRemaining: number | null;
   onPick: (player: Player, position: Position) => void;
 }) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -38,8 +43,8 @@ export function PlayerPicker({
   if (!players.length) {
     return (
       <div className="empty-pool">
-        No eligible players for your open positions. Use a skip if you have one, or spin again after
-        filling other slots in a later run.
+        No eligible players for your open positions. Use a skip if you have one, or redraw when
+        available.
       </div>
     );
   }
@@ -48,9 +53,15 @@ export function PlayerPicker({
     <div className="player-list">
       {players.map((player) => {
         const eligible = player.positions.filter((p) => open.has(p));
+        const salary = playerSalary(player);
+        const unaffordable =
+          salaryMode && salaryRemaining != null && salary > salaryRemaining;
         const expanded = selectedId === player.id;
         return (
-          <div key={player.id} className="player-card">
+          <div
+            key={player.id}
+            className={`player-card ${unaffordable ? 'unaffordable' : ''}`}
+          >
             <button
               type="button"
               className="player-top"
@@ -71,6 +82,9 @@ export function PlayerPicker({
                     {tierDots(player.tier)}
                   </span>
                   {player.hof && <span className="badge hof">HOF</span>}
+                  {salaryMode && (
+                    <span className="badge salary">{formatSalary(salary)}</span>
+                  )}
                   {eligible.map((p) => (
                     <span key={p} className="badge">
                       {p}
@@ -90,14 +104,20 @@ export function PlayerPicker({
               </div>
             )}
 
-            {(expanded || eligible.length === 1) && (
-              <div className="pos-picks">
-                {eligible.map((pos) => (
-                  <button key={pos} type="button" onClick={() => onPick(player, pos)}>
-                    Draft to {pos}
-                  </button>
-                ))}
+            {unaffordable ? (
+              <div className="stats" style={{ opacity: 0.7 }}>
+                Over remaining cap
               </div>
+            ) : (
+              (expanded || eligible.length === 1) && (
+                <div className="pos-picks">
+                  {eligible.map((pos) => (
+                    <button key={pos} type="button" onClick={() => onPick(player, pos)}>
+                      Draft to {pos}
+                    </button>
+                  ))}
+                </div>
+              )
             )}
           </div>
         );

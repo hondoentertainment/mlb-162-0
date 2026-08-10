@@ -1,4 +1,5 @@
 import { isDailyCompletedToday, loadDailyRecord, utcDateKey } from '../game/daily';
+import { formatSalary, SALARY_CAP_M } from '../game/salary';
 import { useGame } from '../state/gameStore';
 
 export function Home() {
@@ -27,6 +28,13 @@ export function Home() {
           <h3>Diamond IQ</h3>
           <p>Blind draft — no numbers. Prove you know baseball history.</p>
         </button>
+        <button type="button" className="mode-card" onClick={() => startGame('salary')}>
+          <h3>Salary Cap</h3>
+          <p>
+            Build under a {formatSalary(SALARY_CAP_M)} soft cap. Stars cost more — balance the
+            diamond.
+          </p>
+        </button>
         <button
           type="button"
           className="mode-card"
@@ -37,7 +45,7 @@ export function Home() {
           <p>
             {dailyDone && daily?.dateKey === today
               ? `Done today — ${daily.wins}-${daily.losses} · ${daily.gradeLabel}`
-              : 'Same spins for everyone. No skips. One attempt per UTC day.'}
+              : 'Same spins worldwide. No skips. Compete on the global board.'}
           </p>
         </button>
       </div>
@@ -47,7 +55,7 @@ export function Home() {
           How to play
         </button>
         <button type="button" onClick={() => setScreen('leaderboard')}>
-          Local leaderboard
+          Leaderboards
         </button>
       </div>
 

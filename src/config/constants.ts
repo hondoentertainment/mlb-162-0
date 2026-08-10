@@ -41,7 +41,14 @@ export type Decade = (typeof DECADES)[number];
 
 export const ROUNDS = POSITIONS.length;
 
-export type GameMode = 'classic' | 'diamondiq' | 'daily';
+export type GameMode = 'classic' | 'diamondiq' | 'daily' | 'salary';
+
+export const MODE_LABELS: Record<GameMode, string> = {
+  classic: 'Classic',
+  diamondiq: 'Diamond IQ',
+  daily: 'Daily',
+  salary: 'Salary Cap',
+};
 
 export type GradeId =
   | 'perfection'

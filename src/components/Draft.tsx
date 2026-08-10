@@ -1,4 +1,5 @@
 import { ROUNDS } from '../config/constants';
+import { formatSalary } from '../game/salary';
 import { useGame } from '../state/gameStore';
 import { PlayerPicker } from './PlayerPicker';
 import { RosterBoard } from './RosterBoard';
@@ -15,14 +16,10 @@ export function Draft() {
     availablePlayers,
     franchiseName,
     goHome,
+    modeLabel,
+    salarySpent,
+    salaryRemaining,
   } = useGame();
-
-  const modeLabel =
-    state.mode === 'classic'
-      ? 'Classic'
-      : state.mode === 'diamondiq'
-        ? 'Diamond IQ'
-        : 'Daily';
 
   return (
     <section>
@@ -31,6 +28,13 @@ export function Draft() {
           <h2>{modeLabel}</h2>
           <div className="round-meta">
             Round {Math.min(state.round, ROUNDS)} of {ROUNDS}
+            {state.salaryCap != null && salaryRemaining != null && (
+              <>
+                {' '}
+                · Cap {formatSalary(salarySpent)} / {formatSalary(state.salaryCap)} (
+                {formatSalary(salaryRemaining)} left)
+              </>
+            )}
           </div>
         </div>
         <button type="button" className="btn btn-ghost" onClick={goHome}>
@@ -85,6 +89,8 @@ export function Draft() {
               players={availablePlayers}
               roster={state.roster}
               showStats={state.showStats}
+              salaryMode={state.mode === 'salary'}
+              salaryRemaining={salaryRemaining}
               onPick={pickPlayer}
             />
           </>

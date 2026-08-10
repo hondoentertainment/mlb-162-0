@@ -6,11 +6,13 @@ import {
   useReducer,
   type ReactNode,
 } from 'react';
-import { POSITIONS, type GameMode, type Position } from '../config/constants';
+import { MODE_LABELS, POSITIONS, type GameMode, type Position } from '../config/constants';
 import { FRANCHISE_BY_ID } from '../data/franchises';
 import { dailyRng, saveDailyRecord, utcDateKey } from '../game/daily';
+import { submitDailyBoard } from '../game/dailyBoard';
 import { tryAddLeaderboardEntry } from '../game/leaderboard';
 import { hashString, mulberry32 } from '../game/rng';
+import { playerSalary, rosterSpend, SALARY_CAP_M } from '../game/salary';
 import { simulateSeason } from '../game/simulate';
 import {
   getAvailablePlayers,
@@ -41,6 +43,8 @@ interface GameState {
   randSeed: number;
   dateKey: string | null;
   madeLeaderboard: boolean;
+  dailyRank: number | null;
+  salaryCap: number | null;
 }
 
 type Action =
@@ -52,7 +56,12 @@ type Action =
   | { type: 'SKIP_DECADE' }
   | { type: 'RESPIN' }
   | { type: 'PICK'; player: Player; position: Position }
-  | { type: 'SET_RESULT'; result: SeasonResult; madeLeaderboard: boolean }
+  | {
+      type: 'SET_RESULT';
+      result: SeasonResult;
+      madeLeaderboard: boolean;
+      dailyRank: number | null;
+    }
   | { type: 'RESET' };
 
 function emptyRoster(): RosterSlot[] {
@@ -77,6 +86,8 @@ const initialState: GameState = {
   randSeed: Date.now(),
   dateKey: null,
   madeLeaderboard: false,
+  dailyRank: null,
+  salaryCap: null,
 };
 
 function openPositions(roster: RosterSlot[]): Position[] {
@@ -93,6 +104,7 @@ function reducer(state: GameState, action: Action): GameState {
       return { ...state, screen: action.screen };
     case 'START': {
       const isDaily = action.mode === 'daily';
+      const isSalary = action.mode === 'salary';
       const dateKey = isDaily ? utcDateKey() : null;
       const seed = isDaily
         ? hashString(`mlb1620-daily-${dateKey}`)
@@ -101,12 +113,13 @@ function reducer(state: GameState, action: Action): GameState {
         ...initialState,
         screen: 'draft',
         mode: action.mode,
-        showStats: action.mode === 'classic',
+        showStats: action.mode === 'classic' || isSalary,
         teamSkips: isDaily ? 0 : 1,
         decadeSkips: isDaily ? 0 : 1,
         randSeed: seed,
         dateKey,
         roster: emptyRoster(),
+        salaryCap: isSalary ? SALARY_CAP_M : null,
       };
     }
     case 'SPIN_START':
@@ -140,7 +153,6 @@ function reducer(state: GameState, action: Action): GameState {
       };
     }
     case 'RESPIN': {
-      // Free redraw when the current pool has no legal picks
       if (!state.spin || state.mode === 'daily') return state;
       const rand = createRng(state.randSeed + state.round * 53 + 7);
       const spin = spinWithEligibility(
@@ -151,6 +163,10 @@ function reducer(state: GameState, action: Action): GameState {
       return { ...state, spin, randSeed: state.randSeed + 41 };
     }
     case 'PICK': {
+      if (state.salaryCap != null) {
+        const spent = rosterSpend(state.roster.map((s) => s.player));
+        if (spent + playerSalary(action.player) > state.salaryCap) return state;
+      }
       const roster = state.roster.map((slot) =>
         slot.position === action.position
           ? { ...slot, player: action.player }
@@ -171,6 +187,7 @@ function reducer(state: GameState, action: Action): GameState {
         ...state,
         result: action.result,
         madeLeaderboard: action.madeLeaderboard,
+        dailyRank: action.dailyRank,
         screen: 'result',
       };
     case 'RESET':
@@ -193,6 +210,9 @@ interface GameContextValue {
   setScreen: (screen: Screen) => void;
   availablePlayers: Player[];
   franchiseName: string;
+  salarySpent: number;
+  salaryRemaining: number | null;
+  modeLabel: string;
 }
 
 const GameContext = createContext<GameContextValue | null>(null);
@@ -209,7 +229,6 @@ export function GameProvider({ children }: { children: ReactNode }) {
     let rand: () => number;
     if (state.mode === 'daily') {
       rand = dailyRng(state.dateKey ?? utcDateKey());
-      // Deterministic advancement per round so everyone shares the same draws
       for (let i = 0; i < state.round * 17; i++) rand();
     } else {
       rand = createRng(state.randSeed + state.round * 1009);
@@ -231,39 +250,54 @@ export function GameProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const finishReveal = useCallback(() => {
-    const result = simulateSeason(state.roster);
-    const rosterNames = state.roster.map((s) => s.player?.name ?? '—');
-    let madeLeaderboard = false;
-    if (state.mode === 'classic') {
-      madeLeaderboard = tryAddLeaderboardEntry({
-        id: `${Date.now()}-${result.wins}`,
-        wins: result.wins,
-        losses: result.losses,
-        gradeLabel: result.gradeLabel,
-        mode: 'classic',
-        rosterNames,
-        createdAt: new Date().toISOString(),
-      });
-    }
-    if (state.mode === 'daily' && state.dateKey) {
-      saveDailyRecord({
-        dateKey: state.dateKey,
-        completed: true,
-        wins: result.wins,
-        losses: result.losses,
-        gradeLabel: result.gradeLabel,
-        rosterNames,
-      });
-    }
-    try {
-      localStorage.setItem(
-        'mlb1620_last_result',
-        JSON.stringify({ result, rosterNames, mode: state.mode }),
-      );
-    } catch {
-      /* ignore */
-    }
-    dispatch({ type: 'SET_RESULT', result, madeLeaderboard });
+    void (async () => {
+      const result = simulateSeason(state.roster);
+      const rosterNames = state.roster.map((s) => s.player?.name ?? '—');
+      let madeLeaderboard = false;
+      let dailyRank: number | null = null;
+
+      if (state.mode === 'classic') {
+        madeLeaderboard = tryAddLeaderboardEntry({
+          id: `${Date.now()}-${result.wins}`,
+          wins: result.wins,
+          losses: result.losses,
+          gradeLabel: result.gradeLabel,
+          mode: 'classic',
+          rosterNames,
+          createdAt: new Date().toISOString(),
+        });
+      }
+
+      if (state.mode === 'daily' && state.dateKey) {
+        saveDailyRecord({
+          dateKey: state.dateKey,
+          completed: true,
+          wins: result.wins,
+          losses: result.losses,
+          gradeLabel: result.gradeLabel,
+          rosterNames,
+        });
+        const submitted = await submitDailyBoard({
+          dateKey: state.dateKey,
+          wins: result.wins,
+          losses: result.losses,
+          gradeLabel: result.gradeLabel,
+          rosterNames,
+        });
+        dailyRank = submitted.rank ?? null;
+      }
+
+      try {
+        localStorage.setItem(
+          'mlb1620_last_result',
+          JSON.stringify({ result, rosterNames, mode: state.mode }),
+        );
+      } catch {
+        /* ignore */
+      }
+
+      dispatch({ type: 'SET_RESULT', result, madeLeaderboard, dailyRank });
+    })();
   }, [state.dateKey, state.mode, state.roster]);
 
   const goHome = useCallback(() => dispatch({ type: 'RESET' }), []);
@@ -271,6 +305,13 @@ export function GameProvider({ children }: { children: ReactNode }) {
     (screen: Screen) => dispatch({ type: 'SET_SCREEN', screen }),
     [],
   );
+
+  const salarySpent = useMemo(
+    () => rosterSpend(state.roster.map((s) => s.player)),
+    [state.roster],
+  );
+  const salaryRemaining =
+    state.salaryCap != null ? state.salaryCap - salarySpent : null;
 
   const availablePlayers = useMemo(() => {
     if (!state.spin) return [];
@@ -284,6 +325,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
   const franchiseName = state.spin
     ? FRANCHISE_BY_ID[state.spin.franchiseId]?.name ?? state.spin.franchiseId
     : '';
+
+  const modeLabel = state.mode ? MODE_LABELS[state.mode] : '';
 
   const value = useMemo(
     () => ({
@@ -299,6 +342,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
       setScreen,
       availablePlayers,
       franchiseName,
+      salarySpent,
+      salaryRemaining,
+      modeLabel,
     }),
     [
       state,
@@ -313,6 +359,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
       setScreen,
       availablePlayers,
       franchiseName,
+      salarySpent,
+      salaryRemaining,
+      modeLabel,
     ],
   );
 

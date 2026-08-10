@@ -402,6 +402,21 @@ a {
   border-color: rgba(212, 168, 75, 0.5);
 }
 
+.player-card.unaffordable {
+  opacity: 0.55;
+}
+
+.badge.salary {
+  border-color: rgba(61, 143, 90, 0.65);
+  color: #8fd4a8;
+}
+
+#share-card-preview canvas {
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+
 .player-top {
   display: flex;
   justify-content: space-between;

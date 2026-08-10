@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useGame } from '../state/gameStore';
 import { RosterBoard } from './RosterBoard';
+import { ShareCard } from './ShareCard';
 
 function buildShareText(
   wins: number,
@@ -18,17 +19,11 @@ function buildShareText(
 }
 
 export function ResultCard() {
-  const { state, goHome, startGame } = useGame();
+  const { state, goHome, startGame, modeLabel } = useGame();
   const [copied, setCopied] = useState(false);
   const result = state.result;
   if (!result) return null;
 
-  const modeLabel =
-    state.mode === 'classic'
-      ? 'Classic'
-      : state.mode === 'diamondiq'
-        ? 'Diamond IQ'
-        : 'Daily';
   const names = state.roster.map((s) => s.player?.name ?? '—');
   const share = buildShareText(result.wins, result.losses, result.gradeLabel, modeLabel, names);
 
@@ -51,10 +46,13 @@ export function ResultCard() {
         </div>
         <div className="grade-tag">{result.gradeLabel}</div>
         <p className="lede" style={{ margin: '0.5rem auto 0', textAlign: 'center' }}>
-          Score {result.score}/1000
+          Score {result.score}/1000 · {modeLabel}
         </p>
         {state.madeLeaderboard && (
           <p className="toast">You made the local all-time board (140+ Classic wins).</p>
+        )}
+        {state.dailyRank != null && (
+          <p className="toast">Global daily rank: #{state.dailyRank}</p>
         )}
       </div>
 
@@ -81,7 +79,18 @@ export function ResultCard() {
       <RosterBoard roster={state.roster} />
 
       <div className="panel" style={{ marginTop: '1.5rem' }}>
-        <p className="section-label">Share</p>
+        <p className="section-label">Share card</p>
+        <ShareCard
+          wins={result.wins}
+          losses={result.losses}
+          gradeLabel={result.gradeLabel}
+          modeLabel={modeLabel}
+          rosterNames={names}
+        />
+      </div>
+
+      <div className="panel" style={{ marginTop: '1.5rem' }}>
+        <p className="section-label">Share text</p>
         <div className="share-box">{share}</div>
         <div className="btn-row" style={{ marginTop: '1rem' }}>
           <button type="button" className="btn btn-primary" onClick={copy}>
