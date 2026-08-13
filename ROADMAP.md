@@ -55,16 +55,16 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 ## Next up
 
-### v1.3 — Polish & fairness (near-term)
+### v1.3 — Polish & fairness (this slice)
 
 | # | Feature | Priority | Complexity | Why |
 |---|---------|----------|------------|-----|
-| N1 | Draft undo (last pick) | High | Low | Forgives mis-taps; disabled in Daily/Challenge |
-| N2 | Empty-pool auto-respin UX | High | Low | Clearer when a spin has no legal picks |
+| N1 | Draft undo (last pick) | High | Low | Done — Classic / Diamond IQ / Salary / Franchise; off in Daily/Challenge |
+| N2 | Empty-pool auto-respin UX | High | Low | Done — clear copy + auto-respin (not a skip); Daily/Challenge never redraw |
 | N3 | Result confetti / grade motion | Medium | Low | Celebrate Dynasty+ |
 | N4 | Install / “Add to Home Screen” tip | Medium | Low | Convert PWA browsers |
 | N5 | Accessibility pass | Medium | Medium | Focus order, contrast, reduced motion |
-| N6 | CI workflow (lint + unit + e2e) | High | Low | Protect main |
+| N6 | CI workflow (lint + unit + e2e) | High | Low | Done — GitHub Actions on PRs and main (oxlint, Vitest, Chromium e2e) |
 
 ### v1.4 — Deeper daily / social
 
@@ -107,13 +107,12 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 ---
 
-## Suggested build order (after v1.2)
+## Suggested build order (after N1 / N2 / N6)
 
-1. CI + draft undo + empty-pool UX  
+1. N3–N5 — confetti, install tip, accessibility  
 2. Daily history + challenge rematch board  
 3. Era Lock mode  
-4. A11y + install tip  
-5. Reassess accounts only if sync requests spike  
+4. Reassess accounts only if sync requests spike  
 
 ---
 

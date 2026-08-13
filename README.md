@@ -8,12 +8,14 @@ Draft MLB legends across random franchises and decades, fill nine positions, and
 
 ## Modes
 
-- **Classic** — stats on, team/decade skips, local leaderboard (140+ wins)
-- **Diamond IQ** — blind draft
-- **Salary Cap** — $240M soft cap; tier + HOF set salaries
-- **One Franchise** — lock a club, spin decades only
-- **Daily Challenge** — same UTC-seeded spins, no skips, global board via `/api/daily`, streak tracking
-- **Challenge a friend** — shareable codes / `#c=` links, identical spins
+- **Classic** — stats on, team/decade skips, undo last pick, local leaderboard (140+ wins)
+- **Diamond IQ** — blind draft, undo last pick
+- **Salary Cap** — $240M soft cap; tier + HOF set salaries; undo last pick
+- **One Franchise** — lock a club, spin decades only; undo last pick
+- **Daily Challenge** — same UTC-seeded spins, no skips or undo, global board via `/api/daily`, streak tracking
+- **Challenge a friend** — shareable codes / `#c=` links, identical spins, no skips or undo
+
+Empty franchise/decade spins with no legal picks redraw automatically in Classic, Diamond IQ, Salary Cap, and One Franchise (not a skip). Daily and Challenge never grant a redraw.
 
 ## Career
 
@@ -28,9 +30,12 @@ npm run dev
 
 ```bash
 npm test          # Vitest unit tests
+npm run lint      # oxlint
 npm run test:e2e  # Playwright (builds + preview)
 npm run test:all  # unit + e2e
 ```
+
+PRs and pushes to `main` run lint, unit tests, and Chromium e2e via GitHub Actions.
 
 ## Global daily board
 

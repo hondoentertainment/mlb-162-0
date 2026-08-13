@@ -8,7 +8,13 @@ export async function openApp(page: Page) {
   await expect(page.getByTestId('home')).toBeVisible();
 }
 
-async function draftOnePick(page: Page) {
+export async function spinAndWait(page: Page) {
+  await expect(page.getByTestId('spin-button')).toBeVisible({ timeout: 10_000 });
+  await page.getByTestId('spin-button').click();
+  await expect(page.getByTestId('spin-result')).toBeVisible({ timeout: 10_000 });
+}
+
+export async function draftOnePick(page: Page) {
   for (let attempt = 0; attempt < 12; attempt++) {
     const draftButtons = page.locator(
       '[data-testid="player-list"] .player-card:not(.unaffordable) [data-testid^="draft-"]',
@@ -20,10 +26,13 @@ async function draftOnePick(page: Page) {
       return;
     }
 
-    const respin = page.getByTestId('respin');
-    if (await respin.isVisible().catch(() => false)) {
-      await respin.click();
-      await expect(page.getByTestId('spin-result')).toBeVisible();
+    const emptyPool = page.getByTestId('empty-pool');
+    if (await emptyPool.isVisible().catch(() => false)) {
+      const respin = page.getByTestId('respin');
+      if (await respin.isVisible().catch(() => false)) {
+        await respin.click();
+      }
+      await expect(page.getByTestId('player-list')).toBeVisible({ timeout: 8_000 });
       continue;
     }
 
@@ -54,9 +63,7 @@ export async function playFullDraft(page: Page) {
     if (onResult) break;
 
     await expect(page.getByTestId('draft')).toBeVisible();
-    await expect(page.getByTestId('spin-button')).toBeVisible({ timeout: 10_000 });
-    await page.getByTestId('spin-button').click();
-    await expect(page.getByTestId('spin-result')).toBeVisible({ timeout: 10_000 });
+    await spinAndWait(page);
     await draftOnePick(page);
   }
 

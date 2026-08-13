@@ -30,10 +30,15 @@ export function HowToPlay() {
         team-era and assign them to an open slot. Nine rounds, nine legends.
       </p>
 
-      <h3>Skips</h3>
+      <h3>Skips, redraws, and undo</h3>
       <p>
-        Classic, Diamond IQ, and Salary Cap start with one team skip and one decade skip. Daily
-        Challenge has no skips — everyone faces the same draws.
+        Classic, Diamond IQ, and Salary Cap start with one team skip and one decade skip. If a spin
+        has no legal picks for your open slots, those modes redraw automatically (or tap Redraw now).
+        You can also undo the last pick and choose again from that same spin.
+      </p>
+      <p>
+        Daily Challenge and Challenge a friend have no skips, no redraws, and no undo — everyone
+        faces the same draws.
       </p>
 
       <h3>Modes</h3>
