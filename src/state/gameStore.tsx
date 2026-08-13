@@ -14,7 +14,7 @@ import { dailyRng, saveDailyRecord, utcDateKey } from '../game/daily';
 import { submitDailyBoard } from '../game/dailyBoard';
 import { canUndoLastPick } from '../game/draftRules';
 import { tryAddLeaderboardEntry } from '../game/leaderboard';
-import { playerSalary, rosterSpend } from '../game/salary';
+import { rosterSpend } from '../game/salary';
 import { simulateSeason } from '../game/simulate';
 import { getAvailablePlayers, spinWithEligibility } from '../game/spin';
 import type { Player } from '../types/game';
