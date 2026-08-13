@@ -1,5 +1,12 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { ROUNDS } from '../config/constants';
+import {
+  canRespinEmptyPool,
+  canUndoLastPick,
+  emptyPoolCopy,
+  emptyPoolKind,
+  isFairnessMode,
+} from '../game/draftRules';
 import { formatSalary, playerSalary } from '../game/salary';
 import { useGame } from '../state/gameStore';
 import { PlayerPicker } from './PlayerPicker';
@@ -14,12 +21,14 @@ export function Draft() {
     skipDecade,
     respinEmpty,
     pickPlayer,
+    undoLastPick,
     availablePlayers,
     franchiseName,
     goHome,
     modeLabel,
     salarySpent,
     salaryRemaining,
+    canUndo,
   } = useGame();
 
   const spinLabel = state.lockedFranchiseId
@@ -31,12 +40,30 @@ export function Draft() {
     return availablePlayers.filter((p) => playerSalary(p) <= salaryRemaining).length;
   }, [availablePlayers, salaryRemaining, state.mode]);
 
-  const needsRedraw =
-    state.mode !== 'daily' &&
-    state.mode !== 'challenge' &&
-    !!state.spin &&
-    !state.spinning &&
-    (!availablePlayers.length || (state.mode === 'salary' && affordableCount === 0));
+  const poolKind = emptyPoolKind({
+    mode: state.mode,
+    hasSpin: !!state.spin,
+    spinning: state.spinning,
+    availableCount: availablePlayers.length,
+    affordableCount,
+  });
+  const needsRedraw = canRespinEmptyPool(state.mode, poolKind);
+  const showUndo = canUndoLastPick(state.mode);
+  const fairEmpty = isFairnessMode(state.mode) && poolKind !== 'none';
+
+  const autoRespinKey = state.spin
+    ? `${state.round}|${state.spin.franchiseId}|${state.spin.decade}|${poolKind}`
+    : null;
+  const lastAutoKey = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!needsRedraw || !autoRespinKey) return;
+    if (lastAutoKey.current === autoRespinKey) return;
+    lastAutoKey.current = autoRespinKey;
+    const delay = typeof window !== 'undefined' && window.__E2E__ ? 40 : 700;
+    const id = window.setTimeout(() => respinEmpty(), delay);
+    return () => window.clearTimeout(id);
+  }, [autoRespinKey, needsRedraw, respinEmpty]);
 
   return (
     <section data-testid="draft">
@@ -61,9 +88,22 @@ export function Draft() {
             )}
           </div>
         </div>
-        <button type="button" className="btn btn-ghost" data-testid="quit" onClick={goHome}>
-          Quit
-        </button>
+        <div className="draft-actions">
+          {showUndo && (
+            <button
+              type="button"
+              className="btn btn-ghost"
+              data-testid="undo-pick"
+              disabled={!canUndo}
+              onClick={undoLastPick}
+            >
+              Undo last pick
+            </button>
+          )}
+          <button type="button" className="btn btn-ghost" data-testid="quit" onClick={goHome}>
+            Quit
+          </button>
+        </div>
       </div>
 
       <div className="panel">
@@ -115,26 +155,38 @@ export function Draft() {
               </div>
             )}
             <p className="section-label">Select your player</p>
-            {needsRedraw && (
-              <div className="btn-row" style={{ marginBottom: '0.75rem' }}>
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-testid="respin"
-                  onClick={respinEmpty}
-                >
-                  No fits — redraw spin
-                </button>
+            {(needsRedraw || fairEmpty) && (
+              <div className="empty-pool empty-pool-banner" data-testid="empty-pool">
+                <p data-testid="empty-pool-copy">
+                  {emptyPoolCopy(poolKind, isFairnessMode(state.mode))}
+                </p>
+                {needsRedraw && (
+                  <>
+                    <p className="empty-pool-hint">Redrawing a new spin — this is not a skip.</p>
+                    <div className="btn-row">
+                      <button
+                        type="button"
+                        className="btn btn-secondary"
+                        data-testid="respin"
+                        onClick={respinEmpty}
+                      >
+                        Redraw now
+                      </button>
+                    </div>
+                  </>
+                )}
               </div>
             )}
-            <PlayerPicker
-              players={availablePlayers}
-              roster={state.roster}
-              showStats={state.showStats}
-              salaryMode={state.mode === 'salary'}
-              salaryRemaining={salaryRemaining}
-              onPick={pickPlayer}
-            />
+            {!needsRedraw && !fairEmpty && (
+              <PlayerPicker
+                players={availablePlayers}
+                roster={state.roster}
+                showStats={state.showStats}
+                salaryMode={state.mode === 'salary'}
+                salaryRemaining={salaryRemaining}
+                onPick={pickPlayer}
+              />
+            )}
           </>
         )}
       </div>

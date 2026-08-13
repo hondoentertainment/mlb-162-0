@@ -41,9 +41,8 @@ export function PlayerPicker({
 
   if (!players.length) {
     return (
-      <div className="empty-pool">
-        No eligible players for your open positions. Use a skip if you have one, or redraw when
-        available.
+      <div className="empty-pool" data-testid="empty-pool">
+        This franchise and decade have no legal picks for your open positions.
       </div>
     );
   }
