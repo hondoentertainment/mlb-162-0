@@ -16,7 +16,7 @@ import { canUndoLastPick } from '../game/draftRules';
 import { tryAddLeaderboardEntry } from '../game/leaderboard';
 import { rosterSpend } from '../game/salary';
 import { simulateSeason } from '../game/simulate';
-import { getAvailablePlayers, spinWithEligibility } from '../game/spin';
+import { getAvailablePlayers, playersOnSpin, spinWithEligibility } from '../game/spin';
 import type { Player } from '../types/game';
 import {
   createRng,
@@ -44,6 +44,7 @@ interface GameContextValue {
   goHome: () => void;
   setScreen: (screen: Screen) => void;
   availablePlayers: Player[];
+  spinPlayers: Player[];
   franchiseName: string;
   salarySpent: number;
   salaryRemaining: number | null;
@@ -208,6 +209,11 @@ export function GameProvider({ children }: { children: ReactNode }) {
   const salaryRemaining =
     state.salaryCap != null ? state.salaryCap - salarySpent : null;
 
+  const spinPlayers = useMemo(() => {
+    if (!state.spin) return [];
+    return playersOnSpin(state.spin, takenIds(state.roster));
+  }, [state.roster, state.spin]);
+
   const availablePlayers = useMemo(() => {
     if (!state.spin) return [];
     return getAvailablePlayers(
@@ -241,6 +247,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       goHome,
       setScreen,
       availablePlayers,
+      spinPlayers,
       franchiseName,
       salarySpent,
       salaryRemaining,
@@ -261,6 +268,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       goHome,
       setScreen,
       availablePlayers,
+      spinPlayers,
       franchiseName,
       salarySpent,
       salaryRemaining,

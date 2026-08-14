@@ -23,6 +23,7 @@ export function Draft() {
     pickPlayer,
     undoLastPick,
     availablePlayers,
+    spinPlayers,
     franchiseName,
     goHome,
     modeLabel,
@@ -154,7 +155,17 @@ export function Draft() {
                 </button>
               </div>
             )}
-            <p className="section-label">Select your player</p>
+            <p className="section-label">
+              All players from this {state.lockedFranchiseId ? 'decade' : 'franchise and decade'}
+            </p>
+            {spinPlayers.length > 0 && (
+              <p className="round-meta" data-testid="spin-pool-count" style={{ marginBottom: '0.75rem' }}>
+                {spinPlayers.length} player{spinPlayers.length === 1 ? '' : 's'}
+                {availablePlayers.length !== spinPlayers.length && (
+                  <> · {availablePlayers.length} fit an open slot</>
+                )}
+              </p>
+            )}
             {(needsRedraw || fairEmpty) && (
               <div className="empty-pool empty-pool-banner" data-testid="empty-pool">
                 <p data-testid="empty-pool-copy">
@@ -177,16 +188,14 @@ export function Draft() {
                 )}
               </div>
             )}
-            {!needsRedraw && !fairEmpty && (
-              <PlayerPicker
-                players={availablePlayers}
-                roster={state.roster}
-                showStats={state.showStats}
-                salaryMode={state.mode === 'salary'}
-                salaryRemaining={salaryRemaining}
-                onPick={pickPlayer}
-              />
-            )}
+            <PlayerPicker
+              players={spinPlayers}
+              roster={state.roster}
+              showStats={state.showStats}
+              salaryMode={state.mode === 'salary'}
+              salaryRemaining={salaryRemaining}
+              onPick={pickPlayer}
+            />
           </>
         )}
       </div>

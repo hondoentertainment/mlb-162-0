@@ -39,26 +39,37 @@ export function PlayerPicker({
     [roster],
   );
 
-  if (!players.length) {
+  const ordered = useMemo(() => {
+    return [...players].sort((a, b) => {
+      const aFit = a.positions.some((p) => open.has(p)) ? 0 : 1;
+      const bFit = b.positions.some((p) => open.has(p)) ? 0 : 1;
+      if (aFit !== bFit) return aFit - bFit;
+      return b.tier - a.tier || a.name.localeCompare(b.name);
+    });
+  }, [open, players]);
+
+  if (!ordered.length) {
     return (
       <div className="empty-pool" data-testid="empty-pool">
-        This franchise and decade have no legal picks for your open positions.
+        This franchise and decade have no players in the pool.
       </div>
     );
   }
 
   return (
     <div className="player-list" data-testid="player-list">
-      {players.map((player) => {
+      {ordered.map((player) => {
         const eligible = player.positions.filter((p) => open.has(p));
         const salary = playerSalary(player);
         const unaffordable =
           salaryMode && salaryRemaining != null && salary > salaryRemaining;
+        const noOpenSlot = eligible.length === 0;
         return (
           <div
             key={player.id}
-            className={`player-card ${unaffordable ? 'unaffordable' : ''}`}
+            className={`player-card${unaffordable ? ' unaffordable' : ''}${noOpenSlot ? ' no-slot' : ''}`}
             data-testid={`player-${player.id}`}
+            data-fits={noOpenSlot ? 'false' : 'true'}
           >
             <div className="player-top">
               <div>
@@ -71,8 +82,11 @@ export function PlayerPicker({
                   {salaryMode && (
                     <span className="badge salary">{formatSalary(salary)}</span>
                   )}
-                  {eligible.map((p) => (
-                    <span key={p} className="badge">
+                  {player.positions.map((p) => (
+                    <span
+                      key={p}
+                      className={`badge${open.has(p) ? ' badge-open' : ''}`}
+                    >
                       {p}
                     </span>
                   ))}
@@ -91,8 +105,10 @@ export function PlayerPicker({
             )}
 
             {unaffordable ? (
-              <div className="stats" style={{ opacity: 0.7 }}>
-                Over remaining cap
+              <div className="player-note">Over remaining cap</div>
+            ) : noOpenSlot ? (
+              <div className="player-note" data-testid={`no-slot-${player.id}`}>
+                No open slot for this player
               </div>
             ) : (
               <div className="pos-picks">

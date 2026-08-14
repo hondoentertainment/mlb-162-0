@@ -421,8 +421,20 @@ a {
   border-color: rgba(212, 168, 75, 0.5);
 }
 
-.player-card.unaffordable {
+.player-card.unaffordable,
+.player-card.no-slot {
   opacity: 0.55;
+}
+
+.badge-open {
+  border-color: rgba(212, 168, 75, 0.7);
+  color: var(--gold);
+}
+
+.player-note {
+  font-size: 0.85rem;
+  color: var(--cream);
+  opacity: 0.7;
 }
 
 .badge.salary {

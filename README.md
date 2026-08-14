@@ -15,7 +15,7 @@ Draft MLB legends across random franchises and decades, fill nine positions, and
 - **Daily Challenge** — same UTC-seeded spins, no skips or undo, global board via `/api/daily`, streak tracking
 - **Challenge a friend** — shareable codes / `#c=` links, identical spins, no skips or undo
 
-Empty franchise/decade spins with no legal picks redraw automatically in Classic, Diamond IQ, Salary Cap, and One Franchise (not a skip). Daily and Challenge never grant a redraw.
+Each spin lists every player from that franchise and decade. Only open eligible slots can be drafted; everyone else stays visible. Empty legal pools redraw automatically in Classic, Diamond IQ, Salary Cap, and One Franchise (not a skip). Daily and Challenge never grant a redraw.
 
 ## Career
 
