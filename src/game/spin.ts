@@ -32,15 +32,38 @@ export function spinNewFranchise(
   return { decade, franchiseId: franchise.id };
 }
 
+function uniqueByEraName(players: Player[]): Player[] {
+  const best = new Map<string, Player>();
+  for (const player of players) {
+    const key = `${player.name}|${player.franchiseId}|${player.decade}`;
+    const prev = best.get(key);
+    if (!prev || player.tier > prev.tier) best.set(key, player);
+  }
+  return [...best.values()];
+}
+
+function sortByTierName(a: Player, b: Player): number {
+  return b.tier - a.tier || a.name.localeCompare(b.name);
+}
+
+/** Every unique player on this franchise-decade, including those who do not fit an open slot. */
+export function playersOnSpin(
+  spin: SpinResult,
+  takenIds: Set<string> = new Set(),
+): Player[] {
+  return uniqueByEraName(
+    playersForSpin(spin.franchiseId, spin.decade).filter((p) => !takenIds.has(p.id)),
+  ).sort(sortByTierName);
+}
+
 export function getAvailablePlayers(
   spin: SpinResult,
   openPositions: string[],
   takenIds: Set<string>,
 ): Player[] {
-  return playersForSpin(spin.franchiseId, spin.decade)
-    .filter((p) => !takenIds.has(p.id))
+  return playersOnSpin(spin, takenIds)
     .filter((p) => p.positions.some((pos) => openPositions.includes(pos)))
-    .sort((a, b) => b.tier - a.tier || a.name.localeCompare(b.name));
+    .sort(sortByTierName);
 }
 
 export function decadesForFranchise(franchiseId: string): Decade[] {

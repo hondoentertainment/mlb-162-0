@@ -11,6 +11,20 @@ test.describe('classic draft', () => {
     await expect(page.getByTestId('final-record')).toHaveText(/\d+-\d+/);
   });
 
+  test('lists every player from the spun franchise-decade', async ({ page }) => {
+    await openApp(page);
+    await page.getByTestId('mode-classic').click();
+    await spinAndWait(page);
+    await expect(page.getByTestId('spin-pool-count')).toBeVisible();
+    const countText = await page.getByTestId('spin-pool-count').innerText();
+    const listed = Number.parseInt(countText, 10);
+    expect(listed).toBeGreaterThan(0);
+    await expect(page.getByTestId('player-list').locator('[data-testid^="player-"]')).toHaveCount(
+      listed,
+    );
+    await expect(page.getByText(/All players from this franchise and decade/i)).toBeVisible();
+  });
+
   test('undoes the last pick and restores that spin', async ({ page }) => {
     await openApp(page);
     await page.getByTestId('mode-classic').click();

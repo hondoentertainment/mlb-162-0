@@ -26,8 +26,9 @@ export function HowToPlay() {
 
       <h3>The spin</h3>
       <p>
-        Each round, a decade and franchise are drawn at random. Pick one available legend from that
-        team-era and assign them to an open slot. Nine rounds, nine legends.
+        Each round, a decade and franchise are drawn at random. You see every player from that
+        team-era — not just the ones who fit a remaining slot. Draft one legend into an open
+        eligible position. Nine rounds, nine legends.
       </p>
 
       <h3>Skips, redraws, and undo</h3>
