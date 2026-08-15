@@ -50,6 +50,7 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 | Achievements / badges | Done | 14 unlocks, result + Career screen |
 | Challenge a friend | Done | Shareable codes / `#c=` links |
 | Career screen | Done | Stats + achievement gallery |
+| Season log (all games) | Done | Local record of every finished season |
 
 ---
 
@@ -70,7 +71,7 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 | # | Feature | Priority | Complexity | Why |
 |---|---------|----------|------------|-----|
-| S1 | Daily history (last 14 days local) | High | Low | Streak context + pride |
+| S1 | Daily history (last 14 days local) | High | Low | Covered by Career season log — dedicated daily archive still optional |
 | S2 | Challenge rematch board (same code) | Medium | Medium | Compare friends’ records by code |
 | S3 | Anonymous display names on global daily | Medium | Medium | Identity without full accounts |
 | S4 | “Yesterday’s top 10” archive | Low | Medium | Blob retention / new keys |

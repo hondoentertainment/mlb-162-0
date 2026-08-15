@@ -164,6 +164,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
             mode: state.mode,
             result,
             dateKey: state.dateKey,
+            rosterNames,
+            challengeCode: state.challengeCode,
+            lockedFranchiseId: state.lockedFranchiseId,
           })
         : null;
 
@@ -194,7 +197,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         newAchievements,
       });
     })();
-  }, [state.dateKey, state.mode, state.roster]);
+  }, [state.challengeCode, state.dateKey, state.lockedFranchiseId, state.mode, state.roster]);
 
   const goHome = useCallback(() => dispatch({ type: 'RESET' }), []);
   const setScreen = useCallback(

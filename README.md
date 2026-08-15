@@ -19,7 +19,7 @@ Each spin lists every player from that franchise and decade. Only open eligible 
 
 ## Career
 
-Local career stats, daily streaks, and unlockable achievements live on the Career screen (this device only).
+Local career stats, a log of every finished season (record, mode, roster), daily streaks, and unlockable achievements live on the Career screen (this device only).
 
 ## Local
 

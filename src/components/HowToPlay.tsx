@@ -70,7 +70,8 @@ export function HowToPlay() {
       <h3>Career & achievements</h3>
       <p>
         Every finished season updates local career stats (best wins, mode breakdown, daily streak)
-        and can unlock badges. Progress stays on this device.
+        and is stored in a season log with the record, mode, and roster. Badges can unlock too.
+        Progress stays on this device.
       </p>
 
       <h3>Grades</h3>

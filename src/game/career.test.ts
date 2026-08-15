@@ -7,6 +7,7 @@ import {
   previousUtcDateKey,
   recordCareerResult,
 } from './career';
+import { loadGameLog } from './gameLog';
 
 const sampleResult = {
   wins: 120,
@@ -41,6 +42,10 @@ describe('career', () => {
     expect(c.bestWins).toBe(145);
     expect(c.byMode.classic?.plays).toBe(2);
     expect(c.byMode.classic?.bestWins).toBe(145);
+    const log = loadGameLog();
+    expect(log).toHaveLength(2);
+    expect(log[0]?.wins).toBe(145);
+    expect(log[1]?.wins).toBe(120);
   });
 
   it('increments daily streak across consecutive days', () => {
