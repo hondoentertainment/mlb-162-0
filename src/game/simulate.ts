@@ -1,5 +1,5 @@
 import { POSITIONS, SEASON_GAMES, type Position } from '../config/constants';
-import type { Player, RosterSlot, SeasonResult } from '../types/game';
+import type { Player, RosterSlot, SeasonResult, SlotContribution } from '../types/game';
 import { gradeForWins, scoreFromWins } from './grades';
 
 function clamp(n: number, min: number, max: number): number {
@@ -128,6 +128,16 @@ export function simulateSeason(roster: RosterSlot[]): SeasonResult {
   if (!strengths.length) strengths.push('A few bright spots to build on');
   if (!weaknesses.length) weaknesses.push('No glaring holes — chase perfection');
 
+  const filledMean = filled
+    ? filledRatings.reduce((sum, r) => sum + r, 0) / filled
+    : 0;
+  const contributions: SlotContribution[] = ratings.map((r) => ({
+    position: r.position,
+    playerName: r.player?.name ?? null,
+    rating: r.rating,
+    delta: r.player ? r.rating - filledMean : -filledMean,
+  }));
+
   return {
     wins,
     losses,
@@ -138,5 +148,6 @@ export function simulateSeason(roster: RosterSlot[]): SeasonResult {
     weaknesses: weaknesses.slice(0, 3),
     bestPickId: best?.player?.id ?? null,
     weakestSlot: worst?.position ?? null,
+    contributions,
   };
 }

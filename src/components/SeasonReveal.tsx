@@ -1,16 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 import { SEASON_GAMES } from '../config/constants';
 import { simulateSeason } from '../game/simulate';
+import { useReducedMotion } from '../hooks/useReducedMotion';
 import { useGame } from '../state/gameStore';
 
 export function SeasonReveal() {
   const { state, finishReveal } = useGame();
+  const reducedMotion = useReducedMotion();
   const preview = simulateSeason(state.roster);
   const [wins, setWins] = useState(0);
   const finished = useRef(false);
 
   useEffect(() => {
     const target = preview.wins;
+
+    if (reducedMotion) {
+      setWins(target);
+      const id = window.setTimeout(finishReveal, window.__E2E__ ? 40 : 600);
+      return () => window.clearTimeout(id);
+    }
+
     const duration = window.__E2E__ ? 80 : 1600;
     const start = performance.now();
     let frame = 0;
@@ -33,7 +42,7 @@ export function SeasonReveal() {
       cancelAnimationFrame(frame);
       window.clearTimeout(timeout);
     };
-  }, [finishReveal, preview.wins]);
+  }, [finishReveal, preview.wins, reducedMotion]);
 
   return (
     <section className="reveal-stage panel" data-testid="reveal">

@@ -101,13 +101,17 @@ export function spinWithEligibility(
   drafted: Set<string>,
   attempts = 40,
   lockedFranchiseId?: string | null,
+  lockedDecade?: Decade | null,
 ): SpinResult {
+  const draw = (): SpinResult =>
+    lockedFranchiseId
+      ? spinDecadeForFranchise(rand, lockedFranchiseId)
+      : spinDraw(rand, lockedDecade ? { decade: lockedDecade } : undefined);
+
   let best: SpinResult | null = null;
   let bestCount = -1;
   for (let i = 0; i < attempts; i++) {
-    const spin = lockedFranchiseId
-      ? spinDecadeForFranchise(rand, lockedFranchiseId)
-      : spinDraw(rand);
+    const spin = draw();
     const count = getAvailablePlayers(spin, openPositions, drafted).length;
     if (count > bestCount) {
       best = spin;
@@ -115,8 +119,16 @@ export function spinWithEligibility(
     }
     if (count > 0 && rand() < 0.65) return spin;
   }
-  if (best) return best;
-  return lockedFranchiseId
-    ? spinDecadeForFranchise(rand, lockedFranchiseId)
-    : spinDraw(rand);
+  return best ?? draw();
+}
+
+/** Decades that have at least one populated franchise — the Era Lock menu. */
+export function playableDecades(): Decade[] {
+  return DECADES.filter((decade) =>
+    FRANCHISES.some((f) => POPULATED_KEYS.has(`${f.id}|${decade}`)),
+  );
+}
+
+export function franchisesInDecade(decade: Decade): number {
+  return FRANCHISES.filter((f) => POPULATED_KEYS.has(`${f.id}|${decade}`)).length;
 }

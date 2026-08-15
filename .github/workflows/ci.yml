@@ -34,5 +34,7 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: End-to-end (Chromium)
-        run: npx playwright test --project=chromium
+      # Both projects run on Chromium; mobile is the primary form factor, so it
+      # is not optional.
+      - name: End-to-end (desktop + mobile)
+        run: npx playwright test

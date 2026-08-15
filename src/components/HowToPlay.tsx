@@ -32,8 +32,16 @@ export function HowToPlay() {
         You can also undo the last pick and choose again from that same spin.
       </p>
       <p>
-        Daily Challenge and Challenge a friend have no skips, no redraws, and no undo — everyone
-        faces the same draws.
+        Daily Challenge, Challenge a friend, and Ironman have no skips, no redraws, and no undo.
+        In the two seeded modes that keeps everyone on the same draws; in Ironman it is the whole
+        point.
+      </p>
+
+      <h3>Reading the result</h3>
+      <p>
+        Every finished season breaks down where the wins came from: each slot is scored against
+        your roster average, so you can see which picks carried the year and which dragged it
+        down.
       </p>
 
       <h3>Modes</h3>
@@ -50,6 +58,14 @@ export function HowToPlay() {
         </li>
         <li>
           <strong>One Franchise</strong> — lock a club, spin decades only, two decade skips.
+        </li>
+        <li>
+          <strong>Era Lock</strong> — lock a decade, spin franchises only. Two team skips, no
+          decade skips.
+        </li>
+        <li>
+          <strong>Ironman</strong> — Classic rules with nothing to fall back on: no skips, no
+          redraws, no undo.
         </li>
         <li>
           <strong>Daily</strong> — seeded by UTC date. One attempt per day. Results post to the

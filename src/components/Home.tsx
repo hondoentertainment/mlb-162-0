@@ -10,7 +10,7 @@ import { formatSalary, SALARY_CAP_M } from '../game/salary';
 import { useGame } from '../state/gameStore';
 
 export function Home() {
-  const { startGame, beginFranchiseSelect, setScreen } = useGame();
+  const { startGame, beginFranchiseSelect, beginDecadeSelect, setScreen } = useGame();
   const dailyDone = isDailyCompletedToday();
   const daily = loadDailyRecord();
   const today = utcDateKey();
@@ -117,6 +117,24 @@ export function Home() {
         >
           <h3>One Franchise</h3>
           <p>Lock a club, spin decades only, and build an all-time single-franchise nine.</p>
+        </button>
+        <button
+          type="button"
+          className="mode-card"
+          data-testid="mode-eralock"
+          onClick={beginDecadeSelect}
+        >
+          <h3>Era Lock</h3>
+          <p>Pick one decade and stay there. Two team skips, no decade skips.</p>
+        </button>
+        <button
+          type="button"
+          className="mode-card"
+          data-testid="mode-ironman"
+          onClick={() => startGame('ironman')}
+        >
+          <h3>Ironman</h3>
+          <p>Classic rules with no safety net — no skips, no redraws, no undo.</p>
         </button>
         <button
           type="button"

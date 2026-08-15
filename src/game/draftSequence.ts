@@ -1,5 +1,6 @@
-import type { GameMode, Position } from '../config/constants';
+import type { Decade, GameMode, Position } from '../config/constants';
 import { dailyRng, utcDateKey } from './dailySeed';
+import { allowsRedraw } from './draftRules';
 import { mulberry32 } from './rng';
 import { getAvailablePlayers, spinWithEligibility } from './spin';
 import type { SpinResult } from '../types/game';
@@ -17,6 +18,7 @@ export interface SpinRequest {
   openPositions: Position[];
   drafted: Set<string>;
   lockedFranchiseId?: string | null;
+  lockedDecade?: Decade | null;
 }
 
 export function isSeededMode(mode: GameMode | null): boolean {
@@ -39,18 +41,32 @@ function rngFor(req: SpinRequest): () => number {
 
 export function spinForRound(req: SpinRequest): SpinResult {
   const rand = rngFor(req);
-  const { openPositions, drafted, lockedFranchiseId } = req;
+  const { openPositions, drafted, lockedFranchiseId, lockedDecade } = req;
 
-  let result = spinWithEligibility(rand, openPositions, drafted, 40, lockedFranchiseId);
+  let result = spinWithEligibility(
+    rand,
+    openPositions,
+    drafted,
+    40,
+    lockedFranchiseId,
+    lockedDecade,
+  );
 
-  // Seeded modes never get a manual redraw, so keep drawing deterministically
-  // rather than soft-locking the player on an empty pool.
+  // Modes without a manual redraw keep drawing rather than soft-locking the
+  // player on an empty pool. In seeded modes the extra draws stay deterministic.
   if (
-    isSeededMode(req.mode) &&
+    !allowsRedraw(req.mode) &&
     getAvailablePlayers(result, openPositions, drafted).length === 0
   ) {
     for (let i = 0; i < 60; i++) {
-      result = spinWithEligibility(rand, openPositions, drafted, 20, lockedFranchiseId);
+      result = spinWithEligibility(
+        rand,
+        openPositions,
+        drafted,
+        20,
+        lockedFranchiseId,
+        lockedDecade,
+      );
       if (getAvailablePlayers(result, openPositions, drafted).length > 0) break;
     }
   }

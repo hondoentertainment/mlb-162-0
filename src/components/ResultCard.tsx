@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ACHIEVEMENT_BY_ID } from '../game/achievements';
 import { challengeShareUrl } from '../game/challenge';
 import { useGame } from '../state/gameStore';
+import { ContributionChart } from './ContributionChart';
 import { RosterBoard } from './RosterBoard';
 import { ShareCard } from './ShareCard';
 
@@ -122,6 +123,8 @@ export function ResultCard() {
           </ul>
         </div>
       </div>
+
+      <ContributionChart contributions={result.contributions} />
 
       <p className="section-label">Roster</p>
       <RosterBoard roster={state.roster} />

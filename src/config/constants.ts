@@ -47,7 +47,9 @@ export type GameMode =
   | 'daily'
   | 'salary'
   | 'franchise'
-  | 'challenge';
+  | 'challenge'
+  | 'eralock'
+  | 'ironman';
 
 export const MODE_LABELS: Record<GameMode, string> = {
   classic: 'Classic',
@@ -56,13 +58,15 @@ export const MODE_LABELS: Record<GameMode, string> = {
   salary: 'Salary Cap',
   franchise: 'One Franchise',
   challenge: 'Challenge',
+  eralock: 'Era Lock',
+  ironman: 'Ironman',
 };
 
-/** Spin animation duration; shortened when `window.__E2E__` is set */
+/** Spin animation duration; shortened for E2E and for reduced-motion users */
 export function spinDurationMs(): number {
-  if (typeof window !== 'undefined' && (window as Window & { __E2E__?: boolean }).__E2E__) {
-    return 40;
-  }
+  if (typeof window === 'undefined') return 900;
+  if ((window as Window & { __E2E__?: boolean }).__E2E__) return 40;
+  if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return 200;
   return 900;
 }
 

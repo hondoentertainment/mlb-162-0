@@ -30,6 +30,22 @@ button {
   cursor: pointer;
 }
 
+:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Keyboard focus must stay visible over the custom button styling */
+.btn:focus-visible,
+.mode-card:focus-visible,
+.player-card:focus-visible,
+.nav-links button:focus-visible,
+.app-header-brand:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -375,6 +391,22 @@ a {
 
 .reel.spinning .reel-value {
   animation: reelBlur 0.12s linear infinite;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 10;
+  padding: 0.75rem 1.25rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 @keyframes reelBlur {
@@ -850,4 +882,109 @@ a {
 .unlock-list span {
   opacity: 0.8;
   font-size: 0.9rem;
+}
+
+/* Respect reduced-motion: keep state changes legible, drop the movement */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reel.spinning .reel-value {
+    animation: none;
+    filter: none;
+    opacity: 1;
+  }
+
+  .slot.filled {
+    animation: none;
+  }
+
+  .btn:active {
+    transform: none;
+  }
+
+  .mode-card:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+/* Result: per-slot contribution */
+.contrib-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.contrib-list li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(6rem, 1fr) minmax(4rem, 2fr) 3rem;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+}
+
+.contrib-pos {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-soft);
+  font-weight: 700;
+}
+
+.contrib-name {
+  color: var(--chalk);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contrib-bar {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(244, 239, 228, 0.1);
+  overflow: hidden;
+}
+
+.contrib-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.contrib-fill.up {
+  background: linear-gradient(90deg, var(--success), var(--gold));
+}
+
+.contrib-fill.down {
+  background: linear-gradient(90deg, rgba(107, 124, 110, 0.8), rgba(181, 74, 58, 0.9));
+}
+
+.contrib-delta {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.contrib-delta.up {
+  color: #8fd4a8;
+}
+
+.contrib-delta.down {
+  color: #e0a294;
+}
+
+@media (max-width: 480px) {
+  .contrib-list li {
+    grid-template-columns: 2.2rem minmax(5rem, 1fr) 1.5fr 2.6rem;
+    font-size: 0.82rem;
+  }
 }

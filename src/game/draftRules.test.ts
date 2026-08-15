@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  allowsRedraw,
   canRespinEmptyPool,
   canUndoLastPick,
   emptyPoolCopy,
@@ -17,14 +18,24 @@ describe('draft fairness rules', () => {
     expect(isFairnessMode('franchise')).toBe(false);
   });
 
-  it('allows undo only in Classic, Diamond IQ, Salary Cap, and One Franchise', () => {
+  it('allows undo in the relaxed modes only', () => {
     expect(canUndoLastPick('classic')).toBe(true);
     expect(canUndoLastPick('diamondiq')).toBe(true);
     expect(canUndoLastPick('salary')).toBe(true);
     expect(canUndoLastPick('franchise')).toBe(true);
+    expect(canUndoLastPick('eralock')).toBe(true);
     expect(canUndoLastPick('daily')).toBe(false);
     expect(canUndoLastPick('challenge')).toBe(false);
+    expect(canUndoLastPick('ironman')).toBe(false);
     expect(canUndoLastPick(null)).toBe(false);
+  });
+
+  it('withholds redraws from seeded modes and Ironman', () => {
+    expect(allowsRedraw('classic')).toBe(true);
+    expect(allowsRedraw('eralock')).toBe(true);
+    expect(allowsRedraw('daily')).toBe(false);
+    expect(allowsRedraw('challenge')).toBe(false);
+    expect(allowsRedraw('ironman')).toBe(false);
   });
 
   it('classifies empty and over-cap pools', () => {
@@ -66,17 +77,19 @@ describe('draft fairness rules', () => {
     ).toBe('none');
   });
 
-  it('allows empty-pool redraw outside Daily and Challenge', () => {
+  it('allows empty-pool redraw only where the mode permits it', () => {
     expect(canRespinEmptyPool('classic', 'no-fits')).toBe(true);
     expect(canRespinEmptyPool('salary', 'over-cap')).toBe(true);
+    expect(canRespinEmptyPool('eralock', 'no-fits')).toBe(true);
     expect(canRespinEmptyPool('daily', 'no-fits')).toBe(false);
     expect(canRespinEmptyPool('challenge', 'no-fits')).toBe(false);
+    expect(canRespinEmptyPool('ironman', 'no-fits')).toBe(false);
     expect(canRespinEmptyPool('classic', 'none')).toBe(false);
   });
 
-  it('explains empty pools without offering a skip in fairness modes', () => {
+  it('explains empty pools without offering a redraw where there is none', () => {
     expect(emptyPoolCopy('no-fits', false)).toMatch(/no legal picks/i);
     expect(emptyPoolCopy('over-cap', false)).toMatch(/salary cap/i);
-    expect(emptyPoolCopy('no-fits', true)).toMatch(/do not allow a redraw/i);
+    expect(emptyPoolCopy('no-fits', true)).toMatch(/does not allow a redraw/i);
   });
 });

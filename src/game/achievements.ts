@@ -15,6 +15,8 @@ export type AchievementId =
   | 'franchise_debut'
   | 'diamond_debut'
   | 'challenge_debut'
+  | 'eralock_debut'
+  | 'ironman_debut'
   | 'hof_five'
   | 'centurion';
 
@@ -84,6 +86,16 @@ export const ACHIEVEMENTS: AchievementDef[] = [
     id: 'challenge_debut',
     title: 'Duel Ready',
     description: 'Finish a shared Challenge.',
+  },
+  {
+    id: 'eralock_debut',
+    title: 'Time Capsule',
+    description: 'Finish an Era Lock season.',
+  },
+  {
+    id: 'ironman_debut',
+    title: 'No Safety Net',
+    description: 'Finish an Ironman season.',
   },
   {
     id: 'hof_five',
@@ -158,6 +170,8 @@ export function evaluateAchievements(input: EvaluateAchievementsInput): Achievem
   if (input.mode === 'franchise') unlock('franchise_debut');
   if (input.mode === 'diamondiq') unlock('diamond_debut');
   if (input.mode === 'challenge') unlock('challenge_debut');
+  if (input.mode === 'eralock') unlock('eralock_debut');
+  if (input.mode === 'ironman') unlock('ironman_debut');
 
   const hofCount = input.rosterPlayers.filter((p) => p?.hof).length;
   if (hofCount >= 5) unlock('hof_five');

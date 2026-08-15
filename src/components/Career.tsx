@@ -11,6 +11,8 @@ const MODE_ORDER: GameMode[] = [
   'diamondiq',
   'salary',
   'franchise',
+  'eralock',
+  'ironman',
   'daily',
   'challenge',
 ];
