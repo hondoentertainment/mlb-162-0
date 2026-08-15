@@ -5,7 +5,6 @@ import {
   unlockedCount,
 } from '../game/achievements';
 import { displayDailyStreak, loadCareer } from '../game/career';
-import { useGame } from '../state/gameStore';
 
 const MODE_ORDER: GameMode[] = [
   'classic',
@@ -17,7 +16,6 @@ const MODE_ORDER: GameMode[] = [
 ];
 
 export function Career() {
-  const { setScreen } = useGame();
   const career = loadCareer();
   const unlocked = loadAchievements();
   const streak = displayDailyStreak(career);
@@ -26,9 +24,6 @@ export function Career() {
 
   return (
     <section data-testid="career">
-      <button type="button" className="btn btn-ghost back-link" onClick={() => setScreen('home')}>
-        ← Back
-      </button>
       <h2 className="headline" style={{ marginTop: 0 }}>
         Career
       </h2>

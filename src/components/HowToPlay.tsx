@@ -1,14 +1,8 @@
 import { SALARY_CAP_M, formatSalary } from '../game/salary';
-import { useGame } from '../state/gameStore';
 
 export function HowToPlay() {
-  const { setScreen } = useGame();
-
   return (
-    <section className="howto panel">
-      <button type="button" className="btn btn-ghost back-link" onClick={() => setScreen('home')}>
-        ← Back
-      </button>
+    <section className="howto panel" data-testid="how">
       <h2 className="headline" style={{ marginTop: 0 }}>
         How to play 162-0
       </h2>

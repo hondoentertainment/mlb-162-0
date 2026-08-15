@@ -1,3 +1,4 @@
+import { AppHeader } from './components/AppHeader';
 import { Career } from './components/Career';
 import { Draft } from './components/Draft';
 import { FranchiseSelect } from './components/FranchiseSelect';
@@ -36,6 +37,7 @@ export default function App() {
     <GameProvider>
       <div className="app-shell">
         <div className="ballpark-bg" aria-hidden="true" />
+        <AppHeader />
         <main className="app-content">
           <ScreenRouter />
         </main>
