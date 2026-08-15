@@ -1,10 +1,11 @@
 import { DECADES, type Decade } from '../config/constants';
 import { FRANCHISES, franchisesForDecade } from '../data/franchises';
-import { PLAYERS, playersForSpin } from '../data/players';
+import { playersForSpin } from '../data/pool';
+import { POPULATED_KEYS as POPULATED_KEY_LIST } from '../data/poolIndex';
 import type { Player, SpinResult } from '../types/game';
 import { pickRandom } from './rng';
 
-const POPULATED_KEYS = new Set(PLAYERS.map((p) => `${p.franchiseId}|${p.decade}`));
+const POPULATED_KEYS = new Set(POPULATED_KEY_LIST);
 
 function populatedFranchises(decade: Decade) {
   return franchisesForDecade(decade).filter((f) => POPULATED_KEYS.has(`${f.id}|${decade}`));

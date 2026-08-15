@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useEffect } from 'react';
 import { AppHeader } from './components/AppHeader';
 import { Career } from './components/Career';
@@ -54,6 +56,8 @@ export default function App() {
           <ScreenRouter />
         </main>
       </div>
+      <Analytics />
+      <SpeedInsights />
     </GameProvider>
   );
 }
