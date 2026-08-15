@@ -1,14 +1,8 @@
 import type { DailyRecord } from '../types/game';
 import { STORAGE_KEYS } from '../config/constants';
-import { hashString, mulberry32 } from './rng';
+import { utcDateKey } from './dailySeed';
 
-export function utcDateKey(date = new Date()): string {
-  return date.toISOString().slice(0, 10);
-}
-
-export function dailyRng(dateKey = utcDateKey()): () => number {
-  return mulberry32(hashString(`mlb1620-daily-${dateKey}`));
-}
+export { dailyRng, dailySeed, utcDateKey } from './dailySeed';
 
 export function loadDailyRecord(): DailyRecord | null {
   try {

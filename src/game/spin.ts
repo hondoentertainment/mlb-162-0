@@ -46,22 +46,31 @@ function sortByTierName(a: Player, b: Player): number {
   return b.tier - a.tier || a.name.localeCompare(b.name);
 }
 
+/**
+ * One human, regardless of era. Ids embed franchise and decade, so a player who
+ * appears in several team-eras has several ids — keying "already drafted" off the
+ * id would let the same person fill two slots.
+ */
+export function personKey(player: Player): string {
+  return player.name.trim().toLowerCase();
+}
+
 /** Every unique player on this franchise-decade, including those who do not fit an open slot. */
 export function playersOnSpin(
   spin: SpinResult,
-  takenIds: Set<string> = new Set(),
+  drafted: Set<string> = new Set(),
 ): Player[] {
   return uniqueByEraName(
-    playersForSpin(spin.franchiseId, spin.decade).filter((p) => !takenIds.has(p.id)),
+    playersForSpin(spin.franchiseId, spin.decade).filter((p) => !drafted.has(personKey(p))),
   ).sort(sortByTierName);
 }
 
 export function getAvailablePlayers(
   spin: SpinResult,
   openPositions: string[],
-  takenIds: Set<string>,
+  drafted: Set<string>,
 ): Player[] {
-  return playersOnSpin(spin, takenIds)
+  return playersOnSpin(spin, drafted)
     .filter((p) => p.positions.some((pos) => openPositions.includes(pos)))
     .sort(sortByTierName);
 }
@@ -88,7 +97,7 @@ export function spinDecadeForFranchise(
 export function spinWithEligibility(
   rand: () => number,
   openPositions: string[],
-  takenIds: Set<string>,
+  drafted: Set<string>,
   attempts = 40,
   lockedFranchiseId?: string | null,
 ): SpinResult {
@@ -98,7 +107,7 @@ export function spinWithEligibility(
     const spin = lockedFranchiseId
       ? spinDecadeForFranchise(rand, lockedFranchiseId)
       : spinDraw(rand);
-    const count = getAvailablePlayers(spin, openPositions, takenIds).length;
+    const count = getAvailablePlayers(spin, openPositions, drafted).length;
     if (count > bestCount) {
       best = spin;
       bestCount = count;

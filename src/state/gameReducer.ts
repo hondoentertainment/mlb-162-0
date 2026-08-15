@@ -5,17 +5,19 @@ import {
 } from '../config/constants';
 import { canUndoLastPick, isFairnessMode } from '../game/draftRules';
 import { decodeChallengeSeed, encodeChallengeSeed, newChallengeSeed } from '../game/challenge';
-import { utcDateKey } from '../game/daily';
-import { hashString, mulberry32 } from '../game/rng';
+import { dailySeed, utcDateKey } from '../game/dailySeed';
+import { mulberry32 } from '../game/rng';
 import { playerSalary, rosterSpend, SALARY_CAP_M } from '../game/salary';
 import {
   getAvailablePlayers,
+  personKey,
   spinDecadeForFranchise,
   spinNewFranchise,
   spinWithEligibility,
 } from '../game/spin';
 import type { Player, RosterSlot, SeasonResult, SpinResult } from '../types/game';
 import type { AchievementId } from '../game/achievements';
+import type { SubmittedPick } from '../game/verifyRun';
 
 export type Screen =
   | 'home'
@@ -35,6 +37,7 @@ export interface LastPickSnapshot {
   teamSkips: number;
   decadeSkips: number;
   randSeed: number;
+  picks: SubmittedPick[];
 }
 
 export interface GameState {
@@ -57,6 +60,8 @@ export interface GameState {
   challengeCode: string | null;
   newAchievements: AchievementId[];
   lastPick: LastPickSnapshot | null;
+  /** Draft order, so a finished run can be verified server-side. */
+  picks: SubmittedPick[];
 }
 
 export type Action =
@@ -90,8 +95,9 @@ export function openPositions(roster: RosterSlot[]): Position[] {
   return roster.filter((s) => !s.player).map((s) => s.position);
 }
 
-export function takenIds(roster: RosterSlot[]): Set<string> {
-  return new Set(roster.filter((s) => s.player).map((s) => s.player!.id));
+/** Keyed by person so a player cannot be drafted again from a different team-era. */
+export function draftedKeys(roster: RosterSlot[]): Set<string> {
+  return new Set(roster.filter((s) => s.player).map((s) => personKey(s.player!)));
 }
 
 export const initialState: GameState = {
@@ -114,6 +120,7 @@ export const initialState: GameState = {
   challengeCode: null,
   newAchievements: [],
   lastPick: null,
+  picks: [],
 };
 
 function snapshotLastPick(state: GameState): LastPickSnapshot | null {
@@ -125,6 +132,7 @@ function snapshotLastPick(state: GameState): LastPickSnapshot | null {
     teamSkips: state.teamSkips,
     decadeSkips: state.decadeSkips,
     randSeed: state.randSeed,
+    picks: state.picks,
   };
 }
 
@@ -141,7 +149,7 @@ export function reducer(state: GameState, action: Action): GameState {
       let seed: number;
       let challengeCode: string | null = null;
       if (isDaily) {
-        seed = hashString(`mlb1620-daily-${dateKey}`);
+        seed = dailySeed(dateKey!);
       } else if (isChallenge) {
         const fromCode = action.challengeCode
           ? decodeChallengeSeed(action.challengeCode)
@@ -191,7 +199,7 @@ export function reducer(state: GameState, action: Action): GameState {
         : spinWithEligibility(
             rand,
             openPositions(state.roster),
-            takenIds(state.roster),
+            draftedKeys(state.roster),
           );
       return {
         ...state,
@@ -203,7 +211,7 @@ export function reducer(state: GameState, action: Action): GameState {
     case 'RESPIN': {
       if (!state.spin || isFairnessMode(state.mode)) return state;
       const open = openPositions(state.roster);
-      const taken = takenIds(state.roster);
+      const taken = draftedKeys(state.roster);
       let nextSeed = state.randSeed + 41;
       let spin = state.spin;
       for (let i = 0; i < 24; i++) {
@@ -223,6 +231,7 @@ export function reducer(state: GameState, action: Action): GameState {
       return { ...state, spin, randSeed: nextSeed };
     }
     case 'PICK': {
+      if (draftedKeys(state.roster).has(personKey(action.player))) return state;
       if (state.salaryCap != null) {
         const spent = rosterSpend(state.roster.map((s) => s.player));
         if (spent + playerSalary(action.player) > state.salaryCap) return state;
@@ -241,6 +250,7 @@ export function reducer(state: GameState, action: Action): GameState {
         round: filled ? state.round : state.round + 1,
         screen: filled ? 'reveal' : 'draft',
         lastPick,
+        picks: [...state.picks, { position: action.position, playerId: action.player.id }],
       };
     }
     case 'UNDO_LAST_PICK': {
@@ -255,6 +265,7 @@ export function reducer(state: GameState, action: Action): GameState {
         teamSkips: snap.teamSkips,
         decadeSkips: snap.decadeSkips,
         randSeed: snap.randSeed,
+        picks: snap.picks,
         spinning: false,
         screen: 'draft',
         lastPick: null,
