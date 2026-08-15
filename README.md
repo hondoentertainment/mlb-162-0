@@ -17,7 +17,7 @@ Draft MLB legends across random franchises and decades, fill nine positions, and
 - **Daily Challenge** — same UTC-seeded spins, no skips or undo, global board via `/api/daily`, streak tracking
 - **Challenge a friend** — shareable `/c/CODE` links, identical spins, no skips or undo
 
-Each spin lists every player from that franchise and decade — 1,000+ unique names across every club era. A player can only be drafted once, even if he appears in several team-eras. Only open eligible slots can be drafted; everyone else stays visible. Empty legal pools redraw automatically in the relaxed modes (not a skip). Daily, Challenge, and Ironman never grant a redraw.
+Each spin lists every player from that franchise and decade — 1,600+ unique names, and every club era can field a full starting nine (C through SP). A player can only be drafted once, even if he appears in several team-eras. Only open eligible slots can be drafted; everyone else stays visible. Empty legal pools redraw automatically in the relaxed modes (not a skip). Daily, Challenge, and Ironman never grant a redraw.
 
 Every finished season breaks down where the wins came from, scoring each roster slot against your roster average.
 

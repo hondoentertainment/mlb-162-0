@@ -4986,22 +4986,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "roy-campanella-lad-1950s-2",
-    "name": "Roy Campanella",
-    "franchiseId": "lad",
-    "decade": "1950s",
-    "positions": [
-      "C"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.276,
-      "obp": 0.36,
-      "slg": 0.5
-    }
-  },
-  {
     "id": "ted-kluszewski-cin-1950s",
     "name": "Ted Kluszewski",
     "franchiseId": "cin",
@@ -5668,23 +5652,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.25,
       "obp": 0.34,
       "slg": 0.48
-    }
-  },
-  {
-    "id": "mookie-betts-bos-2010s-2",
-    "name": "Mookie Betts",
-    "franchiseId": "bos",
-    "decade": "2010s",
-    "positions": [
-      "RF",
-      "CF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.303,
-      "obp": 0.375,
-      "slg": 0.53
     }
   },
   {
@@ -6496,22 +6463,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "julio-rodriguez-sea-2020s-2",
-    "name": "Julio Rodriguez",
-    "franchiseId": "sea",
-    "decade": "2020s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.275,
-      "obp": 0.33,
-      "slg": 0.47
-    }
-  },
-  {
     "id": "cal-raleigh-sea-2020s",
     "name": "Cal Raleigh",
     "franchiseId": "sea",
@@ -6676,39 +6627,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "corbin-carroll-ari-2020s-2",
-    "name": "Corbin Carroll",
-    "franchiseId": "ari",
-    "decade": "2020s",
-    "positions": [
-      "CF",
-      "LF"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.35,
-      "slg": 0.48
-    }
-  },
-  {
-    "id": "ketel-marte-ari-2020s-2",
-    "name": "Ketel Marte",
-    "franchiseId": "ari",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.29,
-      "obp": 0.36,
-      "slg": 0.5
-    }
-  },
-  {
     "id": "christian-walker-ari-2020s",
     "name": "Christian Walker",
     "franchiseId": "ari",
@@ -6851,22 +6769,6 @@ export const PLAYERS: Player[] = [
       "era": 1.5,
       "whip": 0.75,
       "k9": 9
-    }
-  },
-  {
-    "id": "shane-bieber-cle-2020s-2",
-    "name": "Shane Bieber",
-    "franchiseId": "cle",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.3,
-      "whip": 1.1,
-      "k9": 10
     }
   },
   {
@@ -7031,22 +6933,6 @@ export const PLAYERS: Player[] = [
       "era": 3.8,
       "whip": 1.15,
       "k9": 9.5
-    }
-  },
-  {
-    "id": "carlos-correa-min-2020s-2",
-    "name": "Carlos Correa",
-    "franchiseId": "min",
-    "decade": "2020s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.34,
-      "slg": 0.44
     }
   },
   {
@@ -7517,39 +7403,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "gunnar-henderson-bal-2020s-2",
-    "name": "Gunnar Henderson",
-    "franchiseId": "bal",
-    "decade": "2020s",
-    "positions": [
-      "SS",
-      "3B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.34,
-      "slg": 0.5
-    }
-  },
-  {
-    "id": "adley-rutschman-bal-2020s-2",
-    "name": "Adley Rutschman",
-    "franchiseId": "bal",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.35,
-      "slg": 0.43
-    }
-  },
-  {
     "id": "anthony-santander-bal-2020s",
     "name": "Anthony Santander",
     "franchiseId": "bal",
@@ -7645,22 +7498,6 @@ export const PLAYERS: Player[] = [
       "era": 3.8,
       "whip": 1.2,
       "k9": 9
-    }
-  },
-  {
-    "id": "rafael-devers-bos-2020s-2",
-    "name": "Rafael Devers",
-    "franchiseId": "bos",
-    "decade": "2020s",
-    "positions": [
-      "3B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.35,
-      "slg": 0.51
     }
   },
   {
@@ -7763,38 +7600,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "pete-alonso-nym-2020s-2",
-    "name": "Pete Alonso",
-    "franchiseId": "nym",
-    "decade": "2020s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.24,
-      "obp": 0.33,
-      "slg": 0.5
-    }
-  },
-  {
-    "id": "francisco-lindor-nym-2020s-2",
-    "name": "Francisco Lindor",
-    "franchiseId": "nym",
-    "decade": "2020s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.34,
-      "slg": 0.47
-    }
-  },
-  {
     "id": "brandon-nimmo-nym-2020s",
     "name": "Brandon Nimmo",
     "franchiseId": "nym",
@@ -7878,22 +7683,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "gerrit-cole-nyy-2020s-2",
-    "name": "Gerrit Cole",
-    "franchiseId": "nyy",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": false,
-    "pitching": {
-      "era": 3.2,
-      "whip": 1.1,
-      "k9": 10
-    }
-  },
-  {
     "id": "aaron-judge-nyy-2020s",
     "name": "Aaron Judge",
     "franchiseId": "nyy",
@@ -7908,23 +7697,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.29,
       "obp": 0.41,
       "slg": 0.63
-    }
-  },
-  {
-    "id": "juan-soto-nyy-2020s-2",
-    "name": "Juan Soto",
-    "franchiseId": "nyy",
-    "decade": "2020s",
-    "positions": [
-      "RF",
-      "LF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.29,
-      "obp": 0.42,
-      "slg": 0.53
     }
   },
   {
@@ -8237,54 +8009,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "yadier-molina-stl-2010s-2",
-    "name": "Yadier Molina",
-    "franchiseId": "stl",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.33,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "buster-posey-sf-2010s-2",
-    "name": "Buster Posey",
-    "franchiseId": "sf",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.302,
-      "obp": 0.372,
-      "slg": 0.46
-    }
-  },
-  {
-    "id": "salvador-perez-kc-2010s-2",
-    "name": "Salvador Perez",
-    "franchiseId": "kc",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.3,
-      "slg": 0.45
-    }
-  },
-  {
     "id": "j-t-realmuto-mia-2010s",
     "name": "J.T. Realmuto",
     "franchiseId": "mia",
@@ -8458,22 +8182,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.29,
       "obp": 0.36,
       "slg": 0.42
-    }
-  },
-  {
-    "id": "jose-altuve-hou-2010s-2",
-    "name": "Jose Altuve",
-    "franchiseId": "hou",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.31,
-      "obp": 0.36,
-      "slg": 0.47
     }
   },
   {
@@ -10145,22 +9853,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "thurman-munson-nyy-1970s-2",
-    "name": "Thurman Munson",
-    "franchiseId": "nyy",
-    "decade": "1970s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.292,
-      "obp": 0.346,
-      "slg": 0.423
-    }
-  },
-  {
     "id": "bob-boone-phi-1970s",
     "name": "Bob Boone",
     "franchiseId": "phi",
@@ -10450,54 +10142,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "yadier-molina-stl-2010s-3",
-    "name": "Yadier Molina",
-    "franchiseId": "stl",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.33,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "buster-posey-sf-2010s-3",
-    "name": "Buster Posey",
-    "franchiseId": "sf",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.3,
-      "obp": 0.37,
-      "slg": 0.46
-    }
-  },
-  {
-    "id": "salvador-perez-kc-2010s-3",
-    "name": "Salvador Perez",
-    "franchiseId": "kc",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.3,
-      "slg": 0.45
-    }
-  },
-  {
     "id": "j-t-realmuto-phi-2010s",
     "name": "J.T. Realmuto",
     "franchiseId": "phi",
@@ -10527,22 +10171,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.24,
       "obp": 0.35,
       "slg": 0.45
-    }
-  },
-  {
-    "id": "willson-contreras-chc-2010s-2",
-    "name": "Willson Contreras",
-    "franchiseId": "chc",
-    "decade": "2010s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.35,
-      "slg": 0.46
     }
   },
   {
@@ -10578,70 +10206,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "will-smith-lad-2020s-2",
-    "name": "Will Smith",
-    "franchiseId": "lad",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.35,
-      "slg": 0.47
-    }
-  },
-  {
-    "id": "adley-rutschman-bal-2020s-3",
-    "name": "Adley Rutschman",
-    "franchiseId": "bal",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.36,
-      "slg": 0.44
-    }
-  },
-  {
-    "id": "william-contreras-mil-2020s-2",
-    "name": "William Contreras",
-    "franchiseId": "mil",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.36,
-      "slg": 0.48
-    }
-  },
-  {
-    "id": "cal-raleigh-sea-2020s-2",
-    "name": "Cal Raleigh",
-    "franchiseId": "sea",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.22,
-      "obp": 0.31,
-      "slg": 0.5
-    }
-  },
-  {
     "id": "logan-ohoppe-laa-2020s",
     "name": "Logan OHoppe",
     "franchiseId": "laa",
@@ -10654,22 +10218,6 @@ export const PLAYERS: Player[] = [
     "batting": {
       "avg": 0.25,
       "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "francisco-alvarez-nym-2020s-2",
-    "name": "Francisco Alvarez",
-    "franchiseId": "nym",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.23,
-      "obp": 0.3,
       "slg": 0.45
     }
   },
@@ -10703,22 +10251,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.23,
       "obp": 0.29,
       "slg": 0.35
-    }
-  },
-  {
-    "id": "connor-wong-bos-2020s-2",
-    "name": "Connor Wong",
-    "franchiseId": "bos",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 1,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.3,
-      "slg": 0.4
     }
   },
   {
@@ -10866,40 +10398,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "jackie-robinson-lad-1950s-2",
-    "name": "Jackie Robinson",
-    "franchiseId": "lad",
-    "decade": "1950s",
-    "positions": [
-      "2B",
-      "3B",
-      "1B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.311,
-      "obp": 0.409,
-      "slg": 0.474
-    }
-  },
-  {
-    "id": "nellie-fox-cws-1950s-2",
-    "name": "Nellie Fox",
-    "franchiseId": "cws",
-    "decade": "1950s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.288,
-      "obp": 0.348,
-      "slg": 0.363
-    }
-  },
-  {
     "id": "bill-mazeroski-pit-1950s",
     "name": "Bill Mazeroski",
     "franchiseId": "pit",
@@ -10962,22 +10460,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.26,
       "obp": 0.3,
       "slg": 0.36
-    }
-  },
-  {
-    "id": "joe-morgan-hou-1960s-2",
-    "name": "Joe Morgan",
-    "franchiseId": "hou",
-    "decade": "1960s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.37,
-      "slg": 0.4
     }
   },
   {
@@ -11094,22 +10576,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "joe-morgan-cin-1970s-2",
-    "name": "Joe Morgan",
-    "franchiseId": "cin",
-    "decade": "1970s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.288,
-      "obp": 0.408,
-      "slg": 0.445
-    }
-  },
-  {
     "id": "willie-randolph-nyy-1970s",
     "name": "Willie Randolph",
     "franchiseId": "nyy",
@@ -11123,22 +10589,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.27,
       "obp": 0.37,
       "slg": 0.36
-    }
-  },
-  {
-    "id": "bobby-grich-bal-1970s-2",
-    "name": "Bobby Grich",
-    "franchiseId": "bal",
-    "decade": "1970s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.37,
-      "slg": 0.42
     }
   },
   {
@@ -11238,38 +10688,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "lou-whitaker-det-1980s-2",
-    "name": "Lou Whitaker",
-    "franchiseId": "det",
-    "decade": "1980s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.276,
-      "obp": 0.363,
-      "slg": 0.426
-    }
-  },
-  {
-    "id": "ryne-sandberg-chc-1980s-2",
-    "name": "Ryne Sandberg",
-    "franchiseId": "chc",
-    "decade": "1980s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.285,
-      "obp": 0.344,
-      "slg": 0.452
-    }
-  },
-  {
     "id": "tom-herr-stl-1980s",
     "name": "Tom Herr",
     "franchiseId": "stl",
@@ -11315,23 +10733,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.29,
       "obp": 0.33,
       "slg": 0.39
-    }
-  },
-  {
-    "id": "julio-franco-cle-1980s-2",
-    "name": "Julio Franco",
-    "franchiseId": "cle",
-    "decade": "1980s",
-    "positions": [
-      "2B",
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.3,
-      "obp": 0.36,
-      "slg": 0.42
     }
   },
   {
@@ -11413,72 +10814,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.3,
       "obp": 0.34,
       "slg": 0.45
-    }
-  },
-  {
-    "id": "craig-biggio-hou-1990s-2",
-    "name": "Craig Biggio",
-    "franchiseId": "hou",
-    "decade": "1990s",
-    "positions": [
-      "2B",
-      "C",
-      "CF"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.281,
-      "obp": 0.363,
-      "slg": 0.433
-    }
-  },
-  {
-    "id": "roberto-alomar-tor-1990s-2",
-    "name": "Roberto Alomar",
-    "franchiseId": "tor",
-    "decade": "1990s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.307,
-      "obp": 0.375,
-      "slg": 0.451
-    }
-  },
-  {
-    "id": "roberto-alomar-bal-1990s-2",
-    "name": "Roberto Alomar",
-    "franchiseId": "bal",
-    "decade": "1990s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.31,
-      "obp": 0.38,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "chuck-knoblauch-min-1990s-2",
-    "name": "Chuck Knoblauch",
-    "franchiseId": "min",
-    "decade": "1990s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.3,
-      "obp": 0.39,
-      "slg": 0.42
     }
   },
   {
@@ -11610,38 +10945,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "jeff-kent-sf-2000s-2",
-    "name": "Jeff Kent",
-    "franchiseId": "sf",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.297,
-      "obp": 0.368,
-      "slg": 0.535
-    }
-  },
-  {
-    "id": "craig-biggio-hou-2000s-2",
-    "name": "Craig Biggio",
-    "franchiseId": "hou",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.36,
-      "slg": 0.43
-    }
-  },
-  {
     "id": "alfonso-soriano-nyy-2000s",
     "name": "Alfonso Soriano",
     "franchiseId": "nyy",
@@ -11672,54 +10975,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.28,
       "obp": 0.33,
       "slg": 0.52
-    }
-  },
-  {
-    "id": "chase-utley-phi-2000s-2",
-    "name": "Chase Utley",
-    "franchiseId": "phi",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.282,
-      "obp": 0.358,
-      "slg": 0.465
-    }
-  },
-  {
-    "id": "robinson-cano-nyy-2000s-2",
-    "name": "Robinson Cano",
-    "franchiseId": "nyy",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.309,
-      "obp": 0.355,
-      "slg": 0.504
-    }
-  },
-  {
-    "id": "dustin-pedroia-bos-2000s-2",
-    "name": "Dustin Pedroia",
-    "franchiseId": "bos",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.3,
-      "obp": 0.37,
-      "slg": 0.45
     }
   },
   {
@@ -11768,22 +11023,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.27,
       "obp": 0.34,
       "slg": 0.46
-    }
-  },
-  {
-    "id": "brian-roberts-bal-2000s-2",
-    "name": "Brian Roberts",
-    "franchiseId": "bal",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.35,
-      "slg": 0.42
     }
   },
   {
@@ -11850,70 +11089,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.26,
       "obp": 0.33,
       "slg": 0.4
-    }
-  },
-  {
-    "id": "jose-altuve-hou-2010s-3",
-    "name": "Jose Altuve",
-    "franchiseId": "hou",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.307,
-      "obp": 0.362,
-      "slg": 0.471
-    }
-  },
-  {
-    "id": "robinson-cano-sea-2010s-2",
-    "name": "Robinson Cano",
-    "franchiseId": "sea",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.288,
-      "obp": 0.345,
-      "slg": 0.48
-    }
-  },
-  {
-    "id": "dustin-pedroia-bos-2010s-2",
-    "name": "Dustin Pedroia",
-    "franchiseId": "bos",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.29,
-      "obp": 0.36,
-      "slg": 0.42
-    }
-  },
-  {
-    "id": "chase-utley-phi-2010s-2",
-    "name": "Chase Utley",
-    "franchiseId": "phi",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.35,
-      "slg": 0.43
     }
   },
   {
@@ -11984,22 +11159,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "ozzie-albies-atl-2010s-2",
-    "name": "Ozzie Albies",
-    "franchiseId": "atl",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.33,
-      "slg": 0.47
-    }
-  },
-  {
     "id": "whit-merrifield-kc-2010s",
     "name": "Whit Merrifield",
     "franchiseId": "kc",
@@ -12053,23 +11212,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "gleyber-torres-nyy-2010s-2",
-    "name": "Gleyber Torres",
-    "franchiseId": "nyy",
-    "decade": "2010s",
-    "positions": [
-      "2B",
-      "SS"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.33,
-      "slg": 0.45
-    }
-  },
-  {
     "id": "jonathan-schoop-bal-2010s",
     "name": "Jonathan Schoop",
     "franchiseId": "bal",
@@ -12114,187 +11256,6 @@ export const PLAYERS: Player[] = [
     "hof": false,
     "batting": {
       "avg": 0.26,
-      "obp": 0.34,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "jose-altuve-hou-2020s-2",
-    "name": "Jose Altuve",
-    "franchiseId": "hou",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.35,
-      "slg": 0.46
-    }
-  },
-  {
-    "id": "ozzie-albies-atl-2020s-2",
-    "name": "Ozzie Albies",
-    "franchiseId": "atl",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.33,
-      "slg": 0.47
-    }
-  },
-  {
-    "id": "ketel-marte-ari-2020s-3",
-    "name": "Ketel Marte",
-    "franchiseId": "ari",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.29,
-      "obp": 0.36,
-      "slg": 0.5
-    }
-  },
-  {
-    "id": "gleyber-torres-nyy-2020s-2",
-    "name": "Gleyber Torres",
-    "franchiseId": "nyy",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.33,
-      "slg": 0.41
-    }
-  },
-  {
-    "id": "brandon-lowe-tb-2020s-2",
-    "name": "Brandon Lowe",
-    "franchiseId": "tb",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.24,
-      "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "jazz-chisholm-jr--mia-2020s-2",
-    "name": "Jazz Chisholm Jr.",
-    "franchiseId": "mia",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "CF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "andres-gimenez-cle-2020s-2",
-    "name": "Andres Gimenez",
-    "franchiseId": "cle",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.32,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "marcus-semien-tex-2020s-2",
-    "name": "Marcus Semien",
-    "franchiseId": "tex",
-    "decade": "2020s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.255,
-      "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "luis-arraez-mia-2020s-2",
-    "name": "Luis Arraez",
-    "franchiseId": "mia",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.32,
-      "obp": 0.37,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "luis-arraez-sd-2020s-2",
-    "name": "Luis Arraez",
-    "franchiseId": "sd",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.31,
-      "obp": 0.36,
-      "slg": 0.39
-    }
-  },
-  {
-    "id": "jake-cronenworth-sd-2020s-2",
-    "name": "Jake Cronenworth",
-    "franchiseId": "sd",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "1B",
-      "SS"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
       "obp": 0.34,
       "slg": 0.4
     }
@@ -12384,23 +11345,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "jordan-westburg-bal-2020s-2",
-    "name": "Jordan Westburg",
-    "franchiseId": "bal",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "3B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.32,
-      "slg": 0.46
-    }
-  },
-  {
     "id": "spencer-horwitz-tor-2020s",
     "name": "Spencer Horwitz",
     "franchiseId": "tor",
@@ -12432,23 +11376,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.26,
       "obp": 0.31,
       "slg": 0.4
-    }
-  },
-  {
-    "id": "xander-bogaerts-sd-2020s-2",
-    "name": "Xander Bogaerts",
-    "franchiseId": "sd",
-    "decade": "2020s",
-    "positions": [
-      "SS",
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.34,
-      "slg": 0.42
     }
   },
   {
@@ -12761,22 +11688,6 @@ export const PLAYERS: Player[] = [
       "era": 2.41,
       "whip": 1.19,
       "k9": 5.8
-    }
-  },
-  {
-    "id": "willie-randolph-nyy-1970s-2",
-    "name": "Willie Randolph",
-    "franchiseId": "nyy",
-    "decade": "1970s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.275,
-      "obp": 0.373,
-      "slg": 0.351
     }
   },
   {
@@ -13827,38 +12738,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.293,
       "obp": 0.342,
       "slg": 0.389
-    }
-  },
-  {
-    "id": "julian-javier-stl-1960s-2",
-    "name": "Julian Javier",
-    "franchiseId": "stl",
-    "decade": "1960s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.257,
-      "obp": 0.297,
-      "slg": 0.357
-    }
-  },
-  {
-    "id": "tim-mccarver-stl-1960s-2",
-    "name": "Tim McCarver",
-    "franchiseId": "stl",
-    "decade": "1960s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.271,
-      "obp": 0.337,
-      "slg": 0.388
     }
   },
   {
@@ -15694,22 +14573,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "ken-griffey-jr--cin-2000s-2",
-    "name": "Ken Griffey Jr.",
-    "franchiseId": "cin",
-    "decade": "2000s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.284,
-      "obp": 0.37,
-      "slg": 0.538
-    }
-  },
-  {
     "id": "jay-bruce-cin-2010s",
     "name": "Jay Bruce",
     "franchiseId": "cin",
@@ -16404,22 +15267,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.242,
       "obp": 0.297,
       "slg": 0.366
-    }
-  },
-  {
-    "id": "chuck-knoblauch-min-1990s-3",
-    "name": "Chuck Knoblauch",
-    "franchiseId": "min",
-    "decade": "1990s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.289,
-      "obp": 0.378,
-      "slg": 0.406
     }
   },
   {
@@ -17717,38 +16564,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "harold-reynolds-sea-1980s-2",
-    "name": "Harold Reynolds",
-    "franchiseId": "sea",
-    "decade": "1980s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.258,
-      "obp": 0.328,
-      "slg": 0.327
-    }
-  },
-  {
-    "id": "cal-raleigh-sea-2020s-3",
-    "name": "Cal Raleigh",
-    "franchiseId": "sea",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.22,
-      "obp": 0.31,
-      "slg": 0.5
-    }
-  },
-  {
     "id": "carlos-delgado-tor-2000s",
     "name": "Carlos Delgado",
     "franchiseId": "tor",
@@ -18401,22 +17216,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "amos-otis-kc-1970s-2",
-    "name": "Amos Otis",
-    "franchiseId": "kc",
-    "decade": "1970s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.277,
-      "obp": 0.343,
-      "slg": 0.433
-    }
-  },
-  {
     "id": "hal-mcrae-kc-1970s",
     "name": "Hal McRae",
     "franchiseId": "kc",
@@ -18708,23 +17507,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.2,
       "obp": 0.28,
       "slg": 0.3
-    }
-  },
-  {
-    "id": "wil-myers-sd-2010s-2",
-    "name": "Wil Myers",
-    "franchiseId": "sd",
-    "decade": "2010s",
-    "positions": [
-      "1B",
-      "RF"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.253,
-      "obp": 0.328,
-      "slg": 0.444
     }
   },
   {
@@ -19599,22 +18381,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "eddie-murray-bal-1980s-2",
-    "name": "Eddie Murray",
-    "franchiseId": "bal",
-    "decade": "1980s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.287,
-      "obp": 0.359,
-      "slg": 0.476
-    }
-  },
-  {
     "id": "mike-boddicker-bal-1980s",
     "name": "Mike Boddicker",
     "franchiseId": "bal",
@@ -19644,22 +18410,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.283,
       "obp": 0.36,
       "slg": 0.484
-    }
-  },
-  {
-    "id": "eddie-murray-bal-1980s-3",
-    "name": "Eddie Murray",
-    "franchiseId": "bal",
-    "decade": "1980s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.287,
-      "obp": 0.359,
-      "slg": 0.476
     }
   },
   {
@@ -19971,22 +18721,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "joe-morgan-hou-1960s-3",
-    "name": "Joe Morgan",
-    "franchiseId": "hou",
-    "decade": "1960s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.263,
-      "obp": 0.372,
-      "slg": 0.39
-    }
-  },
-  {
     "id": "cesar-cedeno-hou-1970s",
     "name": "Cesar Cedeno",
     "franchiseId": "hou",
@@ -20248,23 +18982,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "george-springer-hou-2010s-2",
-    "name": "George Springer",
-    "franchiseId": "hou",
-    "decade": "2010s",
-    "positions": [
-      "CF",
-      "RF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.265,
-      "obp": 0.351,
-      "slg": 0.479
-    }
-  },
-  {
     "id": "dallas-keuchel-hou-2010s",
     "name": "Dallas Keuchel",
     "franchiseId": "hou",
@@ -20278,22 +18995,6 @@ export const PLAYERS: Player[] = [
       "era": 3.77,
       "whip": 1.28,
       "k9": 6.6
-    }
-  },
-  {
-    "id": "carlos-correa-hou-2010s-2",
-    "name": "Carlos Correa",
-    "franchiseId": "hou",
-    "decade": "2010s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.277,
-      "obp": 0.355,
-      "slg": 0.48
     }
   },
   {
@@ -20639,23 +19340,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "harvey-kuenn-det-1950s-2",
-    "name": "Harvey Kuenn",
-    "franchiseId": "det",
-    "decade": "1950s",
-    "positions": [
-      "SS",
-      "RF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.303,
-      "obp": 0.357,
-      "slg": 0.408
-    }
-  },
-  {
     "id": "ray-boone-det-1950s",
     "name": "Ray Boone",
     "franchiseId": "det",
@@ -20737,22 +19421,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "bill-freehan-det-1960s-2",
-    "name": "Bill Freehan",
-    "franchiseId": "det",
-    "decade": "1960s",
-    "positions": [
-      "C"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.262,
-      "obp": 0.34,
-      "slg": 0.412
-    }
-  },
-  {
     "id": "willie-horton-det-1960s",
     "name": "Willie Horton",
     "franchiseId": "det",
@@ -20766,22 +19434,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.273,
       "obp": 0.332,
       "slg": 0.457
-    }
-  },
-  {
-    "id": "norm-cash-det-1960s-2",
-    "name": "Norm Cash",
-    "franchiseId": "det",
-    "decade": "1960s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.271,
-      "obp": 0.374,
-      "slg": 0.462
     }
   },
   {
@@ -21598,22 +20250,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "tony-taylor-phi-1960s-2",
-    "name": "Tony Taylor",
-    "franchiseId": "phi",
-    "decade": "1960s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.261,
-      "obp": 0.321,
-      "slg": 0.353
-    }
-  },
-  {
     "id": "greg-luzinski-phi-1970s",
     "name": "Greg Luzinski",
     "franchiseId": "phi",
@@ -22116,22 +20752,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "dj-lemahieu-col-2010s-2",
-    "name": "DJ LeMahieu",
-    "franchiseId": "col",
-    "decade": "2010s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.297,
-      "obp": 0.348,
-      "slg": 0.4
-    }
-  },
-  {
     "id": "luis-castillo-mia-2000s",
     "name": "Luis Castillo",
     "franchiseId": "mia",
@@ -22245,22 +20865,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "charles-johnson-mia-1990s-2",
-    "name": "Charles Johnson",
-    "franchiseId": "mia",
-    "decade": "1990s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.245,
-      "obp": 0.32,
-      "slg": 0.4
-    }
-  },
-  {
     "id": "edgar-renteria-mia-1990s",
     "name": "Edgar Renteria",
     "franchiseId": "mia",
@@ -22291,38 +20895,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.285,
       "obp": 0.37,
       "slg": 0.463
-    }
-  },
-  {
-    "id": "giancarlo-stanton-mia-2010s-2",
-    "name": "Giancarlo Stanton",
-    "franchiseId": "mia",
-    "decade": "2010s",
-    "positions": [
-      "RF"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.268,
-      "obp": 0.36,
-      "slg": 0.55
-    }
-  },
-  {
-    "id": "jose-fernandez-mia-2010s-2",
-    "name": "Jose Fernandez",
-    "franchiseId": "mia",
-    "decade": "2010s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": false,
-    "pitching": {
-      "era": 2.58,
-      "whip": 0.96,
-      "k9": 11.5
     }
   },
   {
@@ -22573,55 +21145,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "wander-franco-tb-2020s-2",
-    "name": "Wander Franco",
-    "franchiseId": "tb",
-    "decade": "2020s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.32,
-      "slg": 0.41
-    }
-  },
-  {
-    "id": "randy-arozarena-tb-2020s-2",
-    "name": "Randy Arozarena",
-    "franchiseId": "tb",
-    "decade": "2020s",
-    "positions": [
-      "LF",
-      "RF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.34,
-      "slg": 0.44
-    }
-  },
-  {
-    "id": "shane-mcclanahan-tb-2020s-2",
-    "name": "Shane McClanahan",
-    "franchiseId": "tb",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 2.8,
-      "whip": 1.05,
-      "k9": 10
-    }
-  },
-  {
     "id": "jay-bell-ari-1990s",
     "name": "Jay Bell",
     "franchiseId": "ari",
@@ -22731,22 +21254,6 @@ export const PLAYERS: Player[] = [
       "era": 4.03,
       "whip": 1.3,
       "k9": 8.2
-    }
-  },
-  {
-    "id": "paul-goldschmidt-ari-2010s-2",
-    "name": "Paul Goldschmidt",
-    "franchiseId": "ari",
-    "decade": "2010s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.297,
-      "obp": 0.39,
-      "slg": 0.53
     }
   },
   {
@@ -22947,22 +21454,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "tim-raines-wsh-1980s-2",
-    "name": "Tim Raines",
-    "franchiseId": "wsh",
-    "decade": "1980s",
-    "positions": [
-      "LF"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.294,
-      "obp": 0.385,
-      "slg": 0.425
-    }
-  },
-  {
     "id": "andres-galarraga-wsh-1980s",
     "name": "Andres Galarraga",
     "franchiseId": "wsh",
@@ -23008,23 +21499,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.259,
       "obp": 0.316,
       "slg": 0.423
-    }
-  },
-  {
-    "id": "bryce-harper-wsh-2010s-2",
-    "name": "Bryce Harper",
-    "franchiseId": "wsh",
-    "decade": "2010s",
-    "positions": [
-      "RF",
-      "CF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.279,
-      "obp": 0.388,
-      "slg": 0.512
     }
   },
   {
@@ -23093,22 +21567,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "jose-vidro-wsh-2000s-2",
-    "name": "Jose Vidro",
-    "franchiseId": "wsh",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.298,
-      "obp": 0.359,
-      "slg": 0.443
-    }
-  },
-  {
     "id": "liv-n-hern-ndez-wsh-2000s",
     "name": "Liván Hernández",
     "franchiseId": "wsh",
@@ -23140,123 +21598,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.247,
       "obp": 0.354,
       "slg": 0.438
-    }
-  },
-  {
-    "id": "cody-bellinger-chc-2020s-2",
-    "name": "Cody Bellinger",
-    "franchiseId": "chc",
-    "decade": "2020s",
-    "positions": [
-      "CF",
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.33,
-      "slg": 0.46
-    }
-  },
-  {
-    "id": "ian-happ-chc-2020s-2",
-    "name": "Ian Happ",
-    "franchiseId": "chc",
-    "decade": "2020s",
-    "positions": [
-      "LF",
-      "CF"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.244,
-      "obp": 0.345,
-      "slg": 0.447
-    }
-  },
-  {
-    "id": "nico-hoerner-chc-2020s-2",
-    "name": "Nico Hoerner",
-    "franchiseId": "chc",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "SS"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.34,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "dansby-swanson-chc-2020s-2",
-    "name": "Dansby Swanson",
-    "franchiseId": "chc",
-    "decade": "2020s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.255,
-      "obp": 0.32,
-      "slg": 0.43
-    }
-  },
-  {
-    "id": "willson-contreras-stl-2020s-2",
-    "name": "Willson Contreras",
-    "franchiseId": "stl",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.34,
-      "slg": 0.43
-    }
-  },
-  {
-    "id": "nolan-arenado-stl-2020s-2",
-    "name": "Nolan Arenado",
-    "franchiseId": "stl",
-    "decade": "2020s",
-    "positions": [
-      "3B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.33,
-      "slg": 0.47
-    }
-  },
-  {
-    "id": "brendan-donovan-stl-2020s-2",
-    "name": "Brendan Donovan",
-    "franchiseId": "stl",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "LF",
-      "1B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.37,
-      "slg": 0.4
     }
   },
   {
@@ -23292,57 +21633,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "logan-ohoppe-laa-2020s-2",
-    "name": "Logan OHoppe",
-    "franchiseId": "laa",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "mike-trout-laa-2020s-2",
-    "name": "Mike Trout",
-    "franchiseId": "laa",
-    "decade": "2020s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.39,
-      "slg": 0.55
-    }
-  },
-  {
-    "id": "shohei-ohtani-laa-2020s-2",
-    "name": "Shohei Ohtani",
-    "franchiseId": "laa",
-    "decade": "2020s",
-    "positions": [
-      "SP",
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "pitching": {
-      "era": 2.5,
-      "whip": 0.95,
-      "k9": 12
-    }
-  },
-  {
     "id": "anthony-rendon-laa-2020s",
     "name": "Anthony Rendon",
     "franchiseId": "laa",
@@ -23356,38 +21646,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.28,
       "obp": 0.36,
       "slg": 0.45
-    }
-  },
-  {
-    "id": "patrick-bailey-sf-2020s-2",
-    "name": "Patrick Bailey",
-    "franchiseId": "sf",
-    "decade": "2020s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.23,
-      "obp": 0.29,
-      "slg": 0.35
-    }
-  },
-  {
-    "id": "logan-webb-sf-2020s-2",
-    "name": "Logan Webb",
-    "franchiseId": "sf",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.3,
-      "whip": 1.15,
-      "k9": 8
     }
   },
   {
@@ -23490,40 +21748,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "dave-winfield-nyy-1980s-2",
-    "name": "Dave Winfield",
-    "franchiseId": "nyy",
-    "decade": "1980s",
-    "positions": [
-      "RF",
-      "LF",
-      "CF"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.283,
-      "obp": 0.353,
-      "slg": 0.475
-    }
-  },
-  {
-    "id": "don-mattingly-nyy-1980s-2",
-    "name": "Don Mattingly",
-    "franchiseId": "nyy",
-    "decade": "1980s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.307,
-      "obp": 0.358,
-      "slg": 0.471
-    }
-  },
-  {
     "id": "rickey-henderson-nyy-1980s",
     "name": "Rickey Henderson",
     "franchiseId": "nyy",
@@ -23557,121 +21781,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "david-ortiz-bos-2000s-2",
-    "name": "David Ortiz",
-    "franchiseId": "bos",
-    "decade": "2000s",
-    "positions": [
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.286,
-      "obp": 0.38,
-      "slg": 0.552
-    }
-  },
-  {
-    "id": "manny-ramirez-bos-2000s-2",
-    "name": "Manny Ramirez",
-    "franchiseId": "bos",
-    "decade": "2000s",
-    "positions": [
-      "LF",
-      "RF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.312,
-      "obp": 0.411,
-      "slg": 0.585
-    }
-  },
-  {
-    "id": "dustin-pedroia-bos-2000s-3",
-    "name": "Dustin Pedroia",
-    "franchiseId": "bos",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.299,
-      "obp": 0.365,
-      "slg": 0.439
-    }
-  },
-  {
-    "id": "jason-varitek-bos-2000s-2",
-    "name": "Jason Varitek",
-    "franchiseId": "bos",
-    "decade": "2000s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.256,
-      "obp": 0.34,
-      "slg": 0.43
-    }
-  },
-  {
-    "id": "sandy-koufax-lad-1960s-2",
-    "name": "Sandy Koufax",
-    "franchiseId": "lad",
-    "decade": "1960s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 5,
-    "hof": true,
-    "pitching": {
-      "era": 2.36,
-      "whip": 1,
-      "k9": 9.3
-    }
-  },
-  {
-    "id": "don-drysdale-lad-1960s-2",
-    "name": "Don Drysdale",
-    "franchiseId": "lad",
-    "decade": "1960s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": true,
-    "pitching": {
-      "era": 2.95,
-      "whip": 1.15,
-      "k9": 6.8
-    }
-  },
-  {
-    "id": "maury-wills-lad-1960s-2",
-    "name": "Maury Wills",
-    "franchiseId": "lad",
-    "decade": "1960s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.281,
-      "obp": 0.33,
-      "slg": 0.331
-    }
-  },
-  {
     "id": "tommy-davis-lad-1960s",
     "name": "Tommy Davis",
     "franchiseId": "lad",
@@ -23686,38 +21795,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.294,
       "obp": 0.338,
       "slg": 0.413
-    }
-  },
-  {
-    "id": "fernando-valenzuela-lad-1980s-2",
-    "name": "Fernando Valenzuela",
-    "franchiseId": "lad",
-    "decade": "1980s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": false,
-    "pitching": {
-      "era": 3.3,
-      "whip": 1.25,
-      "k9": 7
-    }
-  },
-  {
-    "id": "orel-hershiser-lad-1980s-2",
-    "name": "Orel Hershiser",
-    "franchiseId": "lad",
-    "decade": "1980s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": false,
-    "pitching": {
-      "era": 3.1,
-      "whip": 1.18,
-      "k9": 6.5
     }
   },
   {
@@ -23739,70 +21816,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "mike-scioscia-lad-1980s-2",
-    "name": "Mike Scioscia",
-    "franchiseId": "lad",
-    "decade": "1980s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.259,
-      "obp": 0.344,
-      "slg": 0.356
-    }
-  },
-  {
-    "id": "paul-konerko-cws-2000s-2",
-    "name": "Paul Konerko",
-    "franchiseId": "cws",
-    "decade": "2000s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.279,
-      "obp": 0.354,
-      "slg": 0.486
-    }
-  },
-  {
-    "id": "magglio-ordonez-cws-2000s-2",
-    "name": "Magglio Ordonez",
-    "franchiseId": "cws",
-    "decade": "2000s",
-    "positions": [
-      "RF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.309,
-      "obp": 0.369,
-      "slg": 0.507
-    }
-  },
-  {
-    "id": "mark-buehrle-cws-2000s-2",
-    "name": "Mark Buehrle",
-    "franchiseId": "cws",
-    "decade": "2000s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.81,
-      "whip": 1.28,
-      "k9": 5.1
-    }
-  },
-  {
     "id": "jermaine-dye-cws-2000s",
     "name": "Jermaine Dye",
     "franchiseId": "cws",
@@ -23816,107 +21829,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.274,
       "obp": 0.338,
       "slg": 0.488
-    }
-  },
-  {
-    "id": "johnny-bench-cin-1970s-2",
-    "name": "Johnny Bench",
-    "franchiseId": "cin",
-    "decade": "1970s",
-    "positions": [
-      "C"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.267,
-      "obp": 0.342,
-      "slg": 0.476
-    }
-  },
-  {
-    "id": "joe-morgan-cin-1970s-3",
-    "name": "Joe Morgan",
-    "franchiseId": "cin",
-    "decade": "1970s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.288,
-      "obp": 0.408,
-      "slg": 0.445
-    }
-  },
-  {
-    "id": "pete-rose-cin-1970s-2",
-    "name": "Pete Rose",
-    "franchiseId": "cin",
-    "decade": "1970s",
-    "positions": [
-      "LF",
-      "3B",
-      "1B",
-      "2B"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.311,
-      "obp": 0.38,
-      "slg": 0.425
-    }
-  },
-  {
-    "id": "tony-perez-cin-1970s-2",
-    "name": "Tony Perez",
-    "franchiseId": "cin",
-    "decade": "1970s",
-    "positions": [
-      "1B",
-      "3B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.279,
-      "obp": 0.341,
-      "slg": 0.463
-    }
-  },
-  {
-    "id": "elly-de-la-cruz-cin-2020s-2",
-    "name": "Elly De La Cruz",
-    "franchiseId": "cin",
-    "decade": "2020s",
-    "positions": [
-      "SS",
-      "3B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.32,
-      "slg": 0.47
-    }
-  },
-  {
-    "id": "hunter-greene-cin-2020s-2",
-    "name": "Hunter Greene",
-    "franchiseId": "cin",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.6,
-      "whip": 1.15,
-      "k9": 11
     }
   },
   {
@@ -23955,103 +21867,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "chase-utley-phi-2000s-3",
-    "name": "Chase Utley",
-    "franchiseId": "phi",
-    "decade": "2000s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.282,
-      "obp": 0.358,
-      "slg": 0.465
-    }
-  },
-  {
-    "id": "jimmy-rollins-phi-2000s-2",
-    "name": "Jimmy Rollins",
-    "franchiseId": "phi",
-    "decade": "2000s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.264,
-      "obp": 0.324,
-      "slg": 0.418
-    }
-  },
-  {
-    "id": "ryan-howard-phi-2000s-2",
-    "name": "Ryan Howard",
-    "franchiseId": "phi",
-    "decade": "2000s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.258,
-      "obp": 0.343,
-      "slg": 0.515
-    }
-  },
-  {
-    "id": "cole-hamels-phi-2000s-2",
-    "name": "Cole Hamels",
-    "franchiseId": "phi",
-    "decade": "2000s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.43,
-      "whip": 1.18,
-      "k9": 8.2
-    }
-  },
-  {
-    "id": "bryce-harper-phi-2010s-2",
-    "name": "Bryce Harper",
-    "franchiseId": "phi",
-    "decade": "2010s",
-    "positions": [
-      "RF",
-      "1B"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.279,
-      "obp": 0.39,
-      "slg": 0.52
-    }
-  },
-  {
-    "id": "aaron-nola-phi-2010s-2",
-    "name": "Aaron Nola",
-    "franchiseId": "phi",
-    "decade": "2010s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.6,
-      "whip": 1.15,
-      "k9": 9.5
-    }
-  },
-  {
     "id": "rhys-hoskins-phi-2010s",
     "name": "Rhys Hoskins",
     "franchiseId": "phi",
@@ -24081,39 +21896,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.276,
       "obp": 0.33,
       "slg": 0.41
-    }
-  },
-  {
-    "id": "willie-stargell-pit-1970s-2",
-    "name": "Willie Stargell",
-    "franchiseId": "pit",
-    "decade": "1970s",
-    "positions": [
-      "LF",
-      "1B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.282,
-      "obp": 0.36,
-      "slg": 0.529
-    }
-  },
-  {
-    "id": "dave-parker-pit-1970s-2",
-    "name": "Dave Parker",
-    "franchiseId": "pit",
-    "decade": "1970s",
-    "positions": [
-      "RF"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.29,
-      "obp": 0.339,
-      "slg": 0.468
     }
   },
   {
@@ -24150,72 +21932,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "oneil-cruz-pit-2020s-2",
-    "name": "Oneil Cruz",
-    "franchiseId": "pit",
-    "decade": "2020s",
-    "positions": [
-      "SS",
-      "CF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.31,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "bryan-reynolds-pit-2020s-2",
-    "name": "Bryan Reynolds",
-    "franchiseId": "pit",
-    "decade": "2020s",
-    "positions": [
-      "CF",
-      "LF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.35,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "kebryan-hayes-pit-2020s-2",
-    "name": "KeBryan Hayes",
-    "franchiseId": "pit",
-    "decade": "2020s",
-    "positions": [
-      "3B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.32,
-      "slg": 0.38
-    }
-  },
-  {
-    "id": "paul-skenes-pit-2020s-2",
-    "name": "Paul Skenes",
-    "franchiseId": "pit",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 5,
-    "hof": false,
-    "pitching": {
-      "era": 2.5,
-      "whip": 0.98,
-      "k9": 11
-    }
-  },
-  {
     "id": "rafael-palmeiro-bal-1990s",
     "name": "Rafael Palmeiro",
     "franchiseId": "bal",
@@ -24249,87 +21965,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "mike-mussina-bal-1990s-2",
-    "name": "Mike Mussina",
-    "franchiseId": "bal",
-    "decade": "1990s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": true,
-    "pitching": {
-      "era": 3.68,
-      "whip": 1.19,
-      "k9": 7.1
-    }
-  },
-  {
-    "id": "cal-ripken-jr--bal-1990s-2",
-    "name": "Cal Ripken Jr.",
-    "franchiseId": "bal",
-    "decade": "1990s",
-    "positions": [
-      "SS",
-      "3B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.276,
-      "obp": 0.34,
-      "slg": 0.43
-    }
-  },
-  {
-    "id": "alan-trammell-det-1980s-2",
-    "name": "Alan Trammell",
-    "franchiseId": "det",
-    "decade": "1980s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.285,
-      "obp": 0.352,
-      "slg": 0.415
-    }
-  },
-  {
-    "id": "lou-whitaker-det-1980s-3",
-    "name": "Lou Whitaker",
-    "franchiseId": "det",
-    "decade": "1980s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.276,
-      "obp": 0.363,
-      "slg": 0.426
-    }
-  },
-  {
-    "id": "jack-morris-det-1980s-2",
-    "name": "Jack Morris",
-    "franchiseId": "det",
-    "decade": "1980s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": true,
-    "pitching": {
-      "era": 3.9,
-      "whip": 1.3,
-      "k9": 6.1
-    }
-  },
-  {
     "id": "kirk-gibson-det-1980s",
     "name": "Kirk Gibson",
     "franchiseId": "det",
@@ -24344,54 +21979,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.268,
       "obp": 0.352,
       "slg": 0.463
-    }
-  },
-  {
-    "id": "jason-giambi-oak-2000s-2",
-    "name": "Jason Giambi",
-    "franchiseId": "oak",
-    "decade": "2000s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.277,
-      "obp": 0.399,
-      "slg": 0.516
-    }
-  },
-  {
-    "id": "tim-hudson-oak-2000s-2",
-    "name": "Tim Hudson",
-    "franchiseId": "oak",
-    "decade": "2000s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.49,
-      "whip": 1.24,
-      "k9": 6.3
-    }
-  },
-  {
-    "id": "miguel-tejada-oak-2000s-2",
-    "name": "Miguel Tejada",
-    "franchiseId": "oak",
-    "decade": "2000s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.285,
-      "obp": 0.336,
-      "slg": 0.456
     }
   },
   {
@@ -24411,59 +21998,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "mike-trout-laa-2010s-2",
-    "name": "Mike Trout",
-    "franchiseId": "laa",
-    "decade": "2010s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "batting": {
-      "avg": 0.302,
-      "obp": 0.415,
-      "slg": 0.583
-    }
-  },
-  {
-    "id": "shohei-ohtani-laa-2010s-2",
-    "name": "Shohei Ohtani",
-    "franchiseId": "laa",
-    "decade": "2010s",
-    "positions": [
-      "SP",
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "tier": 5,
-    "hof": false,
-    "pitching": {
-      "era": 2.8,
-      "whip": 1.05,
-      "k9": 11
-    }
-  },
-  {
-    "id": "albert-pujols-laa-2010s-2",
-    "name": "Albert Pujols",
-    "franchiseId": "laa",
-    "decade": "2010s",
-    "positions": [
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
     "id": "kole-calhoun-laa-2010s",
     "name": "Kole Calhoun",
     "franchiseId": "laa",
@@ -24477,43 +22011,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.247,
       "obp": 0.322,
       "slg": 0.422
-    }
-  },
-  {
-    "id": "robin-yount-mil-1980s-2",
-    "name": "Robin Yount",
-    "franchiseId": "mil",
-    "decade": "1980s",
-    "positions": [
-      "SS",
-      "CF"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.285,
-      "obp": 0.342,
-      "slg": 0.43
-    }
-  },
-  {
-    "id": "paul-molitor-mil-1980s-2",
-    "name": "Paul Molitor",
-    "franchiseId": "mil",
-    "decade": "1980s",
-    "positions": [
-      "3B",
-      "2B",
-      "1B",
-      "LF",
-      "RF"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.303,
-      "obp": 0.369,
-      "slg": 0.438
     }
   },
   {
@@ -24546,38 +22043,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.274,
       "obp": 0.319,
       "slg": 0.351
-    }
-  },
-  {
-    "id": "george-brett-kc-1980s-2",
-    "name": "George Brett",
-    "franchiseId": "kc",
-    "decade": "1980s",
-    "positions": [
-      "3B"
-    ],
-    "tier": 5,
-    "hof": true,
-    "batting": {
-      "avg": 0.307,
-      "obp": 0.377,
-      "slg": 0.505
-    }
-  },
-  {
-    "id": "bret-saberhagen-kc-1980s-2",
-    "name": "Bret Saberhagen",
-    "franchiseId": "kc",
-    "decade": "1980s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 4,
-    "hof": false,
-    "pitching": {
-      "era": 3.34,
-      "whip": 1.14,
-      "k9": 6
     }
   },
   {
@@ -24614,56 +22079,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "jazz-chisholm-jr--mia-2020s-3",
-    "name": "Jazz Chisholm Jr.",
-    "franchiseId": "mia",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "CF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.32,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "luis-arraez-mia-2020s-3",
-    "name": "Luis Arraez",
-    "franchiseId": "mia",
-    "decade": "2020s",
-    "positions": [
-      "2B",
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.32,
-      "obp": 0.37,
-      "slg": 0.4
-    }
-  },
-  {
-    "id": "sandy-alcantara-mia-2020s-2",
-    "name": "Sandy Alcantara",
-    "franchiseId": "mia",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.5,
-      "whip": 1.2,
-      "k9": 8
-    }
-  },
-  {
     "id": "jorge-soler-mia-2020s",
     "name": "Jorge Soler",
     "franchiseId": "mia",
@@ -24682,54 +22097,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "luis-robert-jr--cws-2020s-2",
-    "name": "Luis Robert Jr.",
-    "franchiseId": "cws",
-    "decade": "2020s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.32,
-      "slg": 0.48
-    }
-  },
-  {
-    "id": "dylan-cease-cws-2020s-2",
-    "name": "Dylan Cease",
-    "franchiseId": "cws",
-    "decade": "2020s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.5,
-      "whip": 1.2,
-      "k9": 11
-    }
-  },
-  {
-    "id": "andrew-vaughn-cws-2020s-2",
-    "name": "Andrew Vaughn",
-    "franchiseId": "cws",
-    "decade": "2020s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 1,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.3,
-      "slg": 0.4
-    }
-  },
-  {
     "id": "andrew-benintendi-cws-2020s",
     "name": "Andrew Benintendi",
     "franchiseId": "cws",
@@ -24743,39 +22110,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.271,
       "obp": 0.347,
       "slg": 0.395
-    }
-  },
-  {
-    "id": "ryan-mcmahon-col-2020s-2",
-    "name": "Ryan McMahon",
-    "franchiseId": "col",
-    "decade": "2020s",
-    "positions": [
-      "3B",
-      "2B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.24,
-      "obp": 0.33,
-      "slg": 0.42
-    }
-  },
-  {
-    "id": "ezequiel-tovar-col-2020s-2",
-    "name": "Ezequiel Tovar",
-    "franchiseId": "col",
-    "decade": "2020s",
-    "positions": [
-      "SS"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.26,
-      "obp": 0.3,
-      "slg": 0.43
     }
   },
   {
@@ -24813,38 +22147,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "willie-horton-det-1970s-2",
-    "name": "Willie Horton",
-    "franchiseId": "det",
-    "decade": "1970s",
-    "positions": [
-      "LF"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.33,
-      "slg": 0.45
-    }
-  },
-  {
-    "id": "mickey-lolich-det-1970s-2",
-    "name": "Mickey Lolich",
-    "franchiseId": "det",
-    "decade": "1970s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.44,
-      "whip": 1.23,
-      "k9": 7
-    }
-  },
-  {
     "id": "aurelio-rodriguez-det-1970s",
     "name": "Aurelio Rodriguez",
     "franchiseId": "det",
@@ -24874,54 +22176,6 @@ export const PLAYERS: Player[] = [
       "era": 2.83,
       "whip": 1.22,
       "k9": 7
-    }
-  },
-  {
-    "id": "adrian-beltre-lad-2000s-2",
-    "name": "Adrian Beltre",
-    "franchiseId": "lad",
-    "decade": "2000s",
-    "positions": [
-      "3B"
-    ],
-    "tier": 4,
-    "hof": false,
-    "batting": {
-      "avg": 0.29,
-      "obp": 0.34,
-      "slg": 0.51
-    }
-  },
-  {
-    "id": "shawn-green-lad-2000s-2",
-    "name": "Shawn Green",
-    "franchiseId": "lad",
-    "decade": "2000s",
-    "positions": [
-      "RF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.28,
-      "obp": 0.36,
-      "slg": 0.5
-    }
-  },
-  {
-    "id": "eric-gagne-lad-2000s-2",
-    "name": "Eric Gagne",
-    "franchiseId": "lad",
-    "decade": "2000s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 2,
-    "hof": false,
-    "pitching": {
-      "era": 2.5,
-      "whip": 0.95,
-      "k9": 10
     }
   },
   {
@@ -24973,22 +22227,6 @@ export const PLAYERS: Player[] = [
       "era": 3.45,
       "whip": 1.26,
       "k9": 5.4
-    }
-  },
-  {
-    "id": "earl-battey-min-1950s-2",
-    "name": "Earl Battey",
-    "franchiseId": "min",
-    "decade": "1950s",
-    "positions": [
-      "C"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.349,
-      "slg": 0.409
     }
   },
   {
@@ -25053,22 +22291,6 @@ export const PLAYERS: Player[] = [
       "avg": 0.22,
       "obp": 0.281,
       "slg": 0.35
-    }
-  },
-  {
-    "id": "willie-mccovey-sf-1970s-2",
-    "name": "Willie McCovey",
-    "franchiseId": "sf",
-    "decade": "1970s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.27,
-      "obp": 0.374,
-      "slg": 0.515
     }
   },
   {
@@ -25171,55 +22393,6 @@ export const PLAYERS: Player[] = [
     }
   },
   {
-    "id": "nate-colbert-sd-1960s-2",
-    "name": "Nate Colbert",
-    "franchiseId": "sd",
-    "decade": "1960s",
-    "positions": [
-      "1B"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.243,
-      "obp": 0.317,
-      "slg": 0.437
-    }
-  },
-  {
-    "id": "cito-gaston-sd-1960s-2",
-    "name": "Cito Gaston",
-    "franchiseId": "sd",
-    "decade": "1960s",
-    "positions": [
-      "CF",
-      "LF"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.302,
-      "slg": 0.403
-    }
-  },
-  {
-    "id": "ollie-brown-sd-1960s-2",
-    "name": "Ollie Brown",
-    "franchiseId": "sd",
-    "decade": "1960s",
-    "positions": [
-      "RF"
-    ],
-    "tier": 2,
-    "hof": false,
-    "batting": {
-      "avg": 0.265,
-      "obp": 0.324,
-      "slg": 0.403
-    }
-  },
-  {
     "id": "steve-arlin-sd-1960s",
     "name": "Steve Arlin",
     "franchiseId": "sd",
@@ -25233,71 +22406,6 @@ export const PLAYERS: Player[] = [
       "era": 4.33,
       "whip": 1.44,
       "k9": 5.8
-    }
-  },
-  {
-    "id": "joe-morgan-hou-1960s-4",
-    "name": "Joe Morgan",
-    "franchiseId": "hou",
-    "decade": "1960s",
-    "positions": [
-      "2B"
-    ],
-    "tier": 4,
-    "hof": true,
-    "batting": {
-      "avg": 0.263,
-      "obp": 0.372,
-      "slg": 0.39
-    }
-  },
-  {
-    "id": "jimmy-wynn-hou-1960s-2",
-    "name": "Jimmy Wynn",
-    "franchiseId": "hou",
-    "decade": "1960s",
-    "positions": [
-      "CF"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.25,
-      "obp": 0.357,
-      "slg": 0.436
-    }
-  },
-  {
-    "id": "larry-dierker-hou-1960s-2",
-    "name": "Larry Dierker",
-    "franchiseId": "hou",
-    "decade": "1960s",
-    "positions": [
-      "SP"
-    ],
-    "tier": 3,
-    "hof": false,
-    "pitching": {
-      "era": 3.31,
-      "whip": 1.21,
-      "k9": 6.2
-    }
-  },
-  {
-    "id": "rusty-staub-hou-1960s-2",
-    "name": "Rusty Staub",
-    "franchiseId": "hou",
-    "decade": "1960s",
-    "positions": [
-      "RF",
-      "1B"
-    ],
-    "tier": 3,
-    "hof": false,
-    "batting": {
-      "avg": 0.279,
-      "obp": 0.362,
-      "slg": 0.431
     }
   },
   {
@@ -25577,6 +22685,11318 @@ export const PLAYERS: Player[] = [
       "avg": 0.238,
       "obp": 0.339,
       "slg": 0.389
+    }
+  },
+  {
+    "id": "kelly-stinnett-ari-1990s",
+    "name": "Kelly Stinnett",
+    "franchiseId": "ari",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.299,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "andy-fox-ari-1990s",
+    "name": "Andy Fox",
+    "franchiseId": "ari",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.318,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "bernard-gilkey-ari-1990s",
+    "name": "Bernard Gilkey",
+    "franchiseId": "ari",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.348,
+      "slg": 0.432
+    }
+  },
+  {
+    "id": "damian-miller-ari-2000s",
+    "name": "Damian Miller",
+    "franchiseId": "ari",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.323,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "shea-hillenbrand-ari-2000s",
+    "name": "Shea Hillenbrand",
+    "franchiseId": "ari",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.322,
+      "slg": 0.428
+    }
+  },
+  {
+    "id": "chad-tracy-ari-2000s",
+    "name": "Chad Tracy",
+    "franchiseId": "ari",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.329,
+      "slg": 0.438
+    }
+  },
+  {
+    "id": "shawn-green-ari-2000s",
+    "name": "Shawn Green",
+    "franchiseId": "ari",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.28,
+      "obp": 0.355,
+      "slg": 0.494
+    }
+  },
+  {
+    "id": "miguel-montero-ari-2010s",
+    "name": "Miguel Montero",
+    "franchiseId": "ari",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.342,
+      "slg": 0.441
+    }
+  },
+  {
+    "id": "jake-lamb-ari-2010s",
+    "name": "Jake Lamb",
+    "franchiseId": "ari",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.333,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "nick-ahmed-ari-2010s",
+    "name": "Nick Ahmed",
+    "franchiseId": "ari",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.291,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "gerardo-parra-ari-2010s",
+    "name": "Gerardo Parra",
+    "franchiseId": "ari",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.325,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "josh-rojas-ari-2020s",
+    "name": "Josh Rojas",
+    "franchiseId": "ari",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.338,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "geraldo-perdomo-ari-2020s",
+    "name": "Geraldo Perdomo",
+    "franchiseId": "ari",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.335,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "red-schoendienst-atl-1950s",
+    "name": "Red Schoendienst",
+    "franchiseId": "atl",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 4,
+    "hof": true,
+    "batting": {
+      "avg": 0.289,
+      "obp": 0.337,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "johnny-logan-atl-1950s",
+    "name": "Johnny Logan",
+    "franchiseId": "atl",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.33,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "bill-bruton-atl-1950s",
+    "name": "Bill Bruton",
+    "franchiseId": "atl",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.327,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "frank-bolling-atl-1960s",
+    "name": "Frank Bolling",
+    "franchiseId": "atl",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.309,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "felix-millan-atl-1970s",
+    "name": "Felix Millan",
+    "franchiseId": "atl",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.322,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "marty-perez-atl-1970s",
+    "name": "Marty Perez",
+    "franchiseId": "atl",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.301,
+      "slg": 0.317
+    }
+  },
+  {
+    "id": "bruce-benedict-atl-1980s",
+    "name": "Bruce Benedict",
+    "franchiseId": "atl",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.309,
+      "slg": 0.312
+    }
+  },
+  {
+    "id": "terry-harper-atl-1980s",
+    "name": "Terry Harper",
+    "franchiseId": "atl",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.323,
+      "slg": 0.382
+    }
+  },
+  {
+    "id": "javy-lopez-atl-1990s",
+    "name": "Javy Lopez",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.337,
+      "slg": 0.491
+    }
+  },
+  {
+    "id": "fred-mcgriff-atl-1990s",
+    "name": "Fred McGriff",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 4,
+    "hof": true,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.377,
+      "slg": 0.509
+    }
+  },
+  {
+    "id": "mark-lemke-atl-1990s",
+    "name": "Mark Lemke",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.317,
+      "slg": 0.318
+    }
+  },
+  {
+    "id": "jeff-blauser-atl-1990s",
+    "name": "Jeff Blauser",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.353,
+      "slg": 0.406
+    }
+  },
+  {
+    "id": "ryan-klesko-atl-1990s",
+    "name": "Ryan Klesko",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.37,
+      "slg": 0.5
+    }
+  },
+  {
+    "id": "marquis-grissom-atl-1990s",
+    "name": "Marquis Grissom",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.322,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "david-justice-atl-1990s",
+    "name": "David Justice",
+    "franchiseId": "atl",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.378,
+      "slg": 0.476
+    }
+  },
+  {
+    "id": "adam-laroche-atl-2000s",
+    "name": "Adam LaRoche",
+    "franchiseId": "atl",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.336,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "ryan-langerhans-atl-2000s",
+    "name": "Ryan Langerhans",
+    "franchiseId": "atl",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.228,
+      "obp": 0.328,
+      "slg": 0.373
+    }
+  },
+  {
+    "id": "jeff-francoeur-atl-2000s",
+    "name": "Jeff Francoeur",
+    "franchiseId": "atl",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.309,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "brian-mccann-atl-2010s",
+    "name": "Brian McCann",
+    "franchiseId": "atl",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.337,
+      "slg": 0.452
+    }
+  },
+  {
+    "id": "chris-johnson-atl-2010s",
+    "name": "Chris Johnson",
+    "franchiseId": "atl",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.316,
+      "slg": 0.411
+    }
+  },
+  {
+    "id": "justin-upton-atl-2010s",
+    "name": "Justin Upton",
+    "franchiseId": "atl",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.348,
+      "slg": 0.475
+    }
+  },
+  {
+    "id": "orlando-arcia-atl-2020s",
+    "name": "Orlando Arcia",
+    "franchiseId": "atl",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.305,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "bob-boyd-bal-1950s",
+    "name": "Bob Boyd",
+    "franchiseId": "bal",
+    "decade": "1950s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.293,
+      "obp": 0.348,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "billy-gardner-bal-1950s",
+    "name": "Billy Gardner",
+    "franchiseId": "bal",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.292,
+      "slg": 0.318
+    }
+  },
+  {
+    "id": "willy-miranda-bal-1950s",
+    "name": "Willy Miranda",
+    "franchiseId": "bal",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.221,
+      "obp": 0.286,
+      "slg": 0.277
+    }
+  },
+  {
+    "id": "jim-busby-bal-1950s",
+    "name": "Jim Busby",
+    "franchiseId": "bal",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.32,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "andy-etchebarren-bal-1960s",
+    "name": "Andy Etchebarren",
+    "franchiseId": "bal",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.235,
+      "obp": 0.306,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "lee-may-bal-1970s",
+    "name": "Lee May",
+    "franchiseId": "bal",
+    "decade": "1970s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.313,
+      "slg": 0.459
+    }
+  },
+  {
+    "id": "don-baylor-bal-1970s",
+    "name": "Don Baylor",
+    "franchiseId": "bal",
+    "decade": "1970s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.339,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "al-bumbry-bal-1970s",
+    "name": "Al Bumbry",
+    "franchiseId": "bal",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.343,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "rick-dempsey-bal-1980s",
+    "name": "Rick Dempsey",
+    "franchiseId": "bal",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.238,
+      "obp": 0.315,
+      "slg": 0.352
+    }
+  },
+  {
+    "id": "rich-dauer-bal-1980s",
+    "name": "Rich Dauer",
+    "franchiseId": "bal",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.309,
+      "slg": 0.337
+    }
+  },
+  {
+    "id": "b-j-surhoff-bal-1990s",
+    "name": "B.J. Surhoff",
+    "franchiseId": "bal",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.282,
+      "obp": 0.332,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "javy-lopez-bal-2000s",
+    "name": "Javy Lopez",
+    "franchiseId": "bal",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.322,
+      "slg": 0.46
+    }
+  },
+  {
+    "id": "aubrey-huff-bal-2000s",
+    "name": "Aubrey Huff",
+    "franchiseId": "bal",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.339,
+      "slg": 0.464
+    }
+  },
+  {
+    "id": "larry-bigbie-bal-2000s",
+    "name": "Larry Bigbie",
+    "franchiseId": "bal",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.328,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "luis-matos-bal-2000s",
+    "name": "Luis Matos",
+    "franchiseId": "bal",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.305,
+      "slg": 0.364
+    }
+  },
+  {
+    "id": "nate-mclouth-bal-2010s",
+    "name": "Nate McLouth",
+    "franchiseId": "bal",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.322,
+      "slg": 0.389
+    }
+  },
+  {
+    "id": "sammy-white-bos-1950s",
+    "name": "Sammy White",
+    "franchiseId": "bos",
+    "decade": "1950s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.315,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "frank-malzone-bos-1950s",
+    "name": "Frank Malzone",
+    "franchiseId": "bos",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.276,
+      "obp": 0.318,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "billy-goodman-bos-1950s",
+    "name": "Billy Goodman",
+    "franchiseId": "bos",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.3,
+      "obp": 0.376,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "dom-dimaggio-bos-1950s",
+    "name": "Dom DiMaggio",
+    "franchiseId": "bos",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.298,
+      "obp": 0.383,
+      "slg": 0.419
+    }
+  },
+  {
+    "id": "russ-nixon-bos-1960s",
+    "name": "Russ Nixon",
+    "franchiseId": "bos",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.31,
+      "slg": 0.353
+    }
+  },
+  {
+    "id": "mike-andrews-bos-1960s",
+    "name": "Mike Andrews",
+    "franchiseId": "bos",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.344,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "denny-doyle-bos-1970s",
+    "name": "Denny Doyle",
+    "franchiseId": "bos",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.297,
+      "slg": 0.314
+    }
+  },
+  {
+    "id": "bill-buckner-bos-1980s",
+    "name": "Bill Buckner",
+    "franchiseId": "bos",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.289,
+      "obp": 0.321,
+      "slg": 0.401
+    }
+  },
+  {
+    "id": "glenn-hoffman-bos-1980s",
+    "name": "Glenn Hoffman",
+    "franchiseId": "bos",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.292,
+      "slg": 0.332
+    }
+  },
+  {
+    "id": "ellis-burks-bos-1980s",
+    "name": "Ellis Burks",
+    "franchiseId": "bos",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.345,
+      "slg": 0.472
+    }
+  },
+  {
+    "id": "scott-hatteberg-bos-1990s",
+    "name": "Scott Hatteberg",
+    "franchiseId": "bos",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.352,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "jeff-frye-bos-1990s",
+    "name": "Jeff Frye",
+    "franchiseId": "bos",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.349,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "darren-lewis-bos-1990s",
+    "name": "Darren Lewis",
+    "franchiseId": "bos",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.317,
+      "slg": 0.323
+    }
+  },
+  {
+    "id": "orlando-cabrera-bos-2000s",
+    "name": "Orlando Cabrera",
+    "franchiseId": "bos",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.317,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "christian-vazquez-bos-2010s",
+    "name": "Christian Vazquez",
+    "franchiseId": "bos",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.305,
+      "slg": 0.379
+    }
+  },
+  {
+    "id": "mitch-moreland-bos-2010s",
+    "name": "Mitch Moreland",
+    "franchiseId": "bos",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.319,
+      "slg": 0.449
+    }
+  },
+  {
+    "id": "pablo-sandoval-bos-2010s",
+    "name": "Pablo Sandoval",
+    "franchiseId": "bos",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.32,
+      "slg": 0.427
+    }
+  },
+  {
+    "id": "andrew-benintendi-bos-2010s",
+    "name": "Andrew Benintendi",
+    "franchiseId": "bos",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.352,
+      "slg": 0.424
+    }
+  },
+  {
+    "id": "trevor-story-bos-2020s",
+    "name": "Trevor Story",
+    "franchiseId": "bos",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.305,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "ceddanne-rafaela-bos-2020s",
+    "name": "Ceddanne Rafaela",
+    "franchiseId": "bos",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.288,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "harry-chiti-chc-1950s",
+    "name": "Harry Chiti",
+    "franchiseId": "chc",
+    "decade": "1950s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.231,
+      "obp": 0.289,
+      "slg": 0.348
+    }
+  },
+  {
+    "id": "frankie-baumholtz-chc-1950s",
+    "name": "Frankie Baumholtz",
+    "franchiseId": "chc",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.343,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "adolfo-phillips-chc-1960s",
+    "name": "Adolfo Phillips",
+    "franchiseId": "chc",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.328,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "jim-hickman-chc-1960s",
+    "name": "Jim Hickman",
+    "franchiseId": "chc",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.332,
+      "slg": 0.43
+    }
+  },
+  {
+    "id": "steve-swisher-chc-1970s",
+    "name": "Steve Swisher",
+    "franchiseId": "chc",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.216,
+      "obp": 0.293,
+      "slg": 0.313
+    }
+  },
+  {
+    "id": "ivan-dejesus-chc-1970s",
+    "name": "Ivan DeJesus",
+    "franchiseId": "chc",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.327,
+      "slg": 0.317
+    }
+  },
+  {
+    "id": "keith-moreland-chc-1980s",
+    "name": "Keith Moreland",
+    "franchiseId": "chc",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.335,
+      "slg": 0.411
+    }
+  },
+  {
+    "id": "steve-buechele-chc-1990s",
+    "name": "Steve Buechele",
+    "franchiseId": "chc",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.313,
+      "slg": 0.393
+    }
+  },
+  {
+    "id": "rey-sanchez-chc-1990s",
+    "name": "Rey Sanchez",
+    "franchiseId": "chc",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.309,
+      "slg": 0.332
+    }
+  },
+  {
+    "id": "luis-gonzalez-chc-1990s",
+    "name": "Luis Gonzalez",
+    "franchiseId": "chc",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.343,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "brian-mcrae-chc-1990s",
+    "name": "Brian McRae",
+    "franchiseId": "chc",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.331,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "mark-derosa-chc-2000s",
+    "name": "Mark DeRosa",
+    "franchiseId": "chc",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.34,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "ryan-theriot-chc-2000s",
+    "name": "Ryan Theriot",
+    "franchiseId": "chc",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.342,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "jim-edmonds-chc-2000s",
+    "name": "Jim Edmonds",
+    "franchiseId": "chc",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.376,
+      "slg": 0.527
+    }
+  },
+  {
+    "id": "kosuke-fukudome-chc-2000s",
+    "name": "Kosuke Fukudome",
+    "franchiseId": "chc",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.359,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "albert-almora-jr--chc-2010s",
+    "name": "Albert Almora Jr.",
+    "franchiseId": "chc",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.297,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "miguel-amaya-chc-2020s",
+    "name": "Miguel Amaya",
+    "franchiseId": "chc",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.232,
+      "obp": 0.296,
+      "slg": 0.392
+    }
+  },
+  {
+    "id": "earl-torgeson-cws-1950s",
+    "name": "Earl Torgeson",
+    "franchiseId": "cws",
+    "decade": "1950s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.385,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "george-kell-cws-1950s",
+    "name": "George Kell",
+    "franchiseId": "cws",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": true,
+    "batting": {
+      "avg": 0.306,
+      "obp": 0.367,
+      "slg": 0.414
+    }
+  },
+  {
+    "id": "jim-landis-cws-1950s",
+    "name": "Jim Landis",
+    "franchiseId": "cws",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.344,
+      "slg": 0.375
+    }
+  },
+  {
+    "id": "jim-rivera-cws-1950s",
+    "name": "Jim Rivera",
+    "franchiseId": "cws",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.327,
+      "slg": 0.386
+    }
+  },
+  {
+    "id": "j-c-martin-cws-1960s",
+    "name": "J.C. Martin",
+    "franchiseId": "cws",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.222,
+      "obp": 0.286,
+      "slg": 0.307
+    }
+  },
+  {
+    "id": "tommy-mccraw-cws-1960s",
+    "name": "Tommy McCraw",
+    "franchiseId": "cws",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.311,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "ken-berry-cws-1960s",
+    "name": "Ken Berry",
+    "franchiseId": "cws",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.308,
+      "slg": 0.348
+    }
+  },
+  {
+    "id": "ed-herrmann-cws-1970s",
+    "name": "Ed Herrmann",
+    "franchiseId": "cws",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.31,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "jorge-orta-cws-1970s",
+    "name": "Jorge Orta",
+    "franchiseId": "cws",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.332,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "bucky-dent-cws-1970s",
+    "name": "Bucky Dent",
+    "franchiseId": "cws",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.295,
+      "slg": 0.321
+    }
+  },
+  {
+    "id": "ken-henderson-cws-1970s",
+    "name": "Ken Henderson",
+    "franchiseId": "cws",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.345,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "buddy-bradford-cws-1970s",
+    "name": "Buddy Bradford",
+    "franchiseId": "cws",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.226,
+      "obp": 0.309,
+      "slg": 0.368
+    }
+  },
+  {
+    "id": "julio-cruz-cws-1980s",
+    "name": "Julio Cruz",
+    "franchiseId": "cws",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.334,
+      "slg": 0.31
+    }
+  },
+  {
+    "id": "vance-law-cws-1980s",
+    "name": "Vance Law",
+    "franchiseId": "cws",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.328,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "rudy-law-cws-1980s",
+    "name": "Rudy Law",
+    "franchiseId": "cws",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.322,
+      "slg": 0.346
+    }
+  },
+  {
+    "id": "ron-karkovice-cws-1990s",
+    "name": "Ron Karkovice",
+    "franchiseId": "cws",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.221,
+      "obp": 0.281,
+      "slg": 0.391
+    }
+  },
+  {
+    "id": "lance-johnson-cws-1990s",
+    "name": "Lance Johnson",
+    "franchiseId": "cws",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.291,
+      "obp": 0.334,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "tadahito-iguchi-cws-2000s",
+    "name": "Tadahito Iguchi",
+    "franchiseId": "cws",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.346,
+      "slg": 0.393
+    }
+  },
+  {
+    "id": "joe-crede-cws-2000s",
+    "name": "Joe Crede",
+    "franchiseId": "cws",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.304,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "juan-uribe-cws-2000s",
+    "name": "Juan Uribe",
+    "franchiseId": "cws",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.301,
+      "slg": 0.417
+    }
+  },
+  {
+    "id": "scott-podsednik-cws-2000s",
+    "name": "Scott Podsednik",
+    "franchiseId": "cws",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.34,
+      "slg": 0.368
+    }
+  },
+  {
+    "id": "aaron-rowand-cws-2000s",
+    "name": "Aaron Rowand",
+    "franchiseId": "cws",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.336,
+      "slg": 0.426
+    }
+  },
+  {
+    "id": "tyler-flowers-cws-2010s",
+    "name": "Tyler Flowers",
+    "franchiseId": "cws",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.319,
+      "slg": 0.393
+    }
+  },
+  {
+    "id": "gordon-beckham-cws-2010s",
+    "name": "Gordon Beckham",
+    "franchiseId": "cws",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.3,
+      "slg": 0.371
+    }
+  },
+  {
+    "id": "todd-frazier-cws-2010s",
+    "name": "Todd Frazier",
+    "franchiseId": "cws",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.318,
+      "slg": 0.453
+    }
+  },
+  {
+    "id": "melky-cabrera-cws-2010s",
+    "name": "Melky Cabrera",
+    "franchiseId": "cws",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.335,
+      "slg": 0.417
+    }
+  },
+  {
+    "id": "yasmani-grandal-cws-2020s",
+    "name": "Yasmani Grandal",
+    "franchiseId": "cws",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.338,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "nick-madrigal-cws-2020s",
+    "name": "Nick Madrigal",
+    "franchiseId": "cws",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.283,
+      "obp": 0.327,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "yoan-moncada-cws-2020s",
+    "name": "Yoan Moncada",
+    "franchiseId": "cws",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.337,
+      "slg": 0.425
+    }
+  },
+  {
+    "id": "tim-anderson-cws-2020s",
+    "name": "Tim Anderson",
+    "franchiseId": "cws",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.322,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "ed-bailey-cin-1950s",
+    "name": "Ed Bailey",
+    "franchiseId": "cin",
+    "decade": "1950s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.345,
+      "slg": 0.426
+    }
+  },
+  {
+    "id": "don-hoak-cin-1950s",
+    "name": "Don Hoak",
+    "franchiseId": "cin",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.345,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "frank-robinson-cin-1950s",
+    "name": "Frank Robinson",
+    "franchiseId": "cin",
+    "decade": "1950s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 5,
+    "hof": true,
+    "batting": {
+      "avg": 0.3,
+      "obp": 0.389,
+      "slg": 0.554
+    }
+  },
+  {
+    "id": "johnny-edwards-cin-1960s",
+    "name": "Johnny Edwards",
+    "franchiseId": "cin",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.311,
+      "slg": 0.36
+    }
+  },
+  {
+    "id": "don-gullett-cin-1970s",
+    "name": "Don Gullett",
+    "franchiseId": "cin",
+    "decade": "1970s",
+    "positions": [
+      "SP"
+    ],
+    "tier": 3,
+    "hof": false,
+    "pitching": {
+      "era": 3.11,
+      "whip": 1.23,
+      "k9": 6.1
+    }
+  },
+  {
+    "id": "bo-diaz-cin-1980s",
+    "name": "Bo Diaz",
+    "franchiseId": "cin",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.305,
+      "slg": 0.414
+    }
+  },
+  {
+    "id": "nick-esasky-cin-1980s",
+    "name": "Nick Esasky",
+    "franchiseId": "cin",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.322,
+      "slg": 0.459
+    }
+  },
+  {
+    "id": "dave-concepcion-cin-1980s",
+    "name": "Dave Concepcion",
+    "franchiseId": "cin",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.322,
+      "slg": 0.357
+    }
+  },
+  {
+    "id": "joe-oliver-cin-1990s",
+    "name": "Joe Oliver",
+    "franchiseId": "cin",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.297,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "mariano-duncan-cin-1990s",
+    "name": "Mariano Duncan",
+    "franchiseId": "cin",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.309,
+      "slg": 0.393
+    }
+  },
+  {
+    "id": "kevin-mitchell-cin-1990s",
+    "name": "Kevin Mitchell",
+    "franchiseId": "cin",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.344,
+      "slg": 0.49
+    }
+  },
+  {
+    "id": "jason-larue-cin-2000s",
+    "name": "Jason LaRue",
+    "franchiseId": "cin",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.231,
+      "obp": 0.312,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "edwin-encarnacion-cin-2000s",
+    "name": "Edwin Encarnacion",
+    "franchiseId": "cin",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.339,
+      "slg": 0.46
+    }
+  },
+  {
+    "id": "felipe-lopez-cin-2000s",
+    "name": "Felipe Lopez",
+    "franchiseId": "cin",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.337,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "austin-kearns-cin-2000s",
+    "name": "Austin Kearns",
+    "franchiseId": "cin",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.352,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "devin-mesoraco-cin-2010s",
+    "name": "Devin Mesoraco",
+    "franchiseId": "cin",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.305,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "zack-cozart-cin-2010s",
+    "name": "Zack Cozart",
+    "franchiseId": "cin",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.3,
+      "slg": 0.395
+    }
+  },
+  {
+    "id": "ryan-ludwick-cin-2010s",
+    "name": "Ryan Ludwick",
+    "franchiseId": "cin",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.329,
+      "slg": 0.447
+    }
+  },
+  {
+    "id": "billy-hamilton-cin-2010s",
+    "name": "Billy Hamilton",
+    "franchiseId": "cin",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.299,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "tj-friedl-cin-2020s",
+    "name": "TJ Friedl",
+    "franchiseId": "cin",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.335,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "jake-fraley-cin-2020s",
+    "name": "Jake Fraley",
+    "franchiseId": "cin",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.338,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "luke-easter-cle-1950s",
+    "name": "Luke Easter",
+    "franchiseId": "cle",
+    "decade": "1950s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.359,
+      "slg": 0.481
+    }
+  },
+  {
+    "id": "george-strickland-cle-1950s",
+    "name": "George Strickland",
+    "franchiseId": "cle",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.224,
+      "obp": 0.315,
+      "slg": 0.325
+    }
+  },
+  {
+    "id": "dale-mitchell-cle-1950s",
+    "name": "Dale Mitchell",
+    "franchiseId": "cle",
+    "decade": "1950s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.312,
+      "obp": 0.367,
+      "slg": 0.414
+    }
+  },
+  {
+    "id": "joe-azcue-cle-1960s",
+    "name": "Joe Azcue",
+    "franchiseId": "cle",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.3,
+      "slg": 0.344
+    }
+  },
+  {
+    "id": "fred-whitfield-cle-1960s",
+    "name": "Fred Whitfield",
+    "franchiseId": "cle",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.303,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "larry-brown-cle-1960s",
+    "name": "Larry Brown",
+    "franchiseId": "cle",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.297,
+      "slg": 0.313
+    }
+  },
+  {
+    "id": "leon-wagner-cle-1960s",
+    "name": "Leon Wagner",
+    "franchiseId": "cle",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.335,
+      "slg": 0.46
+    }
+  },
+  {
+    "id": "ray-fosse-cle-1970s",
+    "name": "Ray Fosse",
+    "franchiseId": "cle",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.307,
+      "slg": 0.369
+    }
+  },
+  {
+    "id": "frank-duffy-cle-1970s",
+    "name": "Frank Duffy",
+    "franchiseId": "cle",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.232,
+      "obp": 0.28,
+      "slg": 0.305
+    }
+  },
+  {
+    "id": "ron-hassey-cle-1980s",
+    "name": "Ron Hassey",
+    "franchiseId": "cle",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.34,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "omar-vizquel-cle-1990s",
+    "name": "Omar Vizquel",
+    "franchiseId": "cle",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.336,
+      "slg": 0.352
+    }
+  },
+  {
+    "id": "charles-nagy-cle-1990s",
+    "name": "Charles Nagy",
+    "franchiseId": "cle",
+    "decade": "1990s",
+    "positions": [
+      "SP"
+    ],
+    "tier": 3,
+    "hof": false,
+    "pitching": {
+      "era": 4.16,
+      "whip": 1.37,
+      "k9": 5.8
+    }
+  },
+  {
+    "id": "ronnie-belliard-cle-2000s",
+    "name": "Ronnie Belliard",
+    "franchiseId": "cle",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.337,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "casey-blake-cle-2000s",
+    "name": "Casey Blake",
+    "franchiseId": "cle",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.336,
+      "slg": 0.442
+    }
+  },
+  {
+    "id": "nick-swisher-cle-2010s",
+    "name": "Nick Swisher",
+    "franchiseId": "cle",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.351,
+      "slg": 0.451
+    }
+  },
+  {
+    "id": "amed-rosario-cle-2020s",
+    "name": "Amed Rosario",
+    "franchiseId": "cle",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.31,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "myles-straw-cle-2020s",
+    "name": "Myles Straw",
+    "franchiseId": "cle",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.313,
+      "slg": 0.31
+    }
+  },
+  {
+    "id": "will-brennan-cle-2020s",
+    "name": "Will Brennan",
+    "franchiseId": "cle",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.309,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "neifi-perez-col-1990s",
+    "name": "Neifi Perez",
+    "franchiseId": "col",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.27,
+      "obp": 0.303,
+      "slg": 0.372
+    }
+  },
+  {
+    "id": "yorvit-torrealba-col-2000s",
+    "name": "Yorvit Torrealba",
+    "franchiseId": "col",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.305,
+      "slg": 0.365
+    }
+  },
+  {
+    "id": "kazuo-matsui-col-2000s",
+    "name": "Kazuo Matsui",
+    "franchiseId": "col",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.321,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "garrett-atkins-col-2000s",
+    "name": "Garrett Atkins",
+    "franchiseId": "col",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.347,
+      "slg": 0.452
+    }
+  },
+  {
+    "id": "willy-taveras-col-2000s",
+    "name": "Willy Taveras",
+    "franchiseId": "col",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.32,
+      "slg": 0.333
+    }
+  },
+  {
+    "id": "wilin-rosario-col-2010s",
+    "name": "Wilin Rosario",
+    "franchiseId": "col",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.305,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "justin-morneau-col-2010s",
+    "name": "Justin Morneau",
+    "franchiseId": "col",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.345,
+      "slg": 0.481
+    }
+  },
+  {
+    "id": "elias-diaz-col-2020s",
+    "name": "Elias Diaz",
+    "franchiseId": "col",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.313,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "brenton-doyle-col-2020s",
+    "name": "Brenton Doyle",
+    "franchiseId": "col",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.232,
+      "obp": 0.286,
+      "slg": 0.406
+    }
+  },
+  {
+    "id": "charlie-blackmon-col-2020s",
+    "name": "Charlie Blackmon",
+    "franchiseId": "col",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.297,
+      "obp": 0.356,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "red-wilson-det-1950s",
+    "name": "Red Wilson",
+    "franchiseId": "det",
+    "decade": "1950s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.335,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "frank-bolling-det-1950s",
+    "name": "Frank Bolling",
+    "franchiseId": "det",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.309,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "don-wert-det-1960s",
+    "name": "Don Wert",
+    "franchiseId": "det",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.323,
+      "slg": 0.334
+    }
+  },
+  {
+    "id": "mickey-stanley-det-1960s",
+    "name": "Mickey Stanley",
+    "franchiseId": "det",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.298,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "jason-thompson-det-1970s",
+    "name": "Jason Thompson",
+    "franchiseId": "det",
+    "decade": "1970s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.366,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "alan-trammell-det-1970s",
+    "name": "Alan Trammell",
+    "franchiseId": "det",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": true,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.352,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "ron-leflore-det-1970s",
+    "name": "Ron LeFlore",
+    "franchiseId": "det",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.288,
+      "obp": 0.342,
+      "slg": 0.392
+    }
+  },
+  {
+    "id": "ben-oglivie-det-1970s",
+    "name": "Ben Oglivie",
+    "franchiseId": "det",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.336,
+      "slg": 0.459
+    }
+  },
+  {
+    "id": "darrell-evans-det-1980s",
+    "name": "Darrell Evans",
+    "franchiseId": "det",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.361,
+      "slg": 0.431
+    }
+  },
+  {
+    "id": "tom-brookens-det-1980s",
+    "name": "Tom Brookens",
+    "franchiseId": "det",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.299,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "chet-lemon-det-1980s",
+    "name": "Chet Lemon",
+    "franchiseId": "det",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.355,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "milt-cuyler-det-1990s",
+    "name": "Milt Cuyler",
+    "franchiseId": "det",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.307,
+      "slg": 0.322
+    }
+  },
+  {
+    "id": "rob-deer-det-1990s",
+    "name": "Rob Deer",
+    "franchiseId": "det",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.22,
+      "obp": 0.34,
+      "slg": 0.442
+    }
+  },
+  {
+    "id": "carlos-pena-det-2000s",
+    "name": "Carlos Pena",
+    "franchiseId": "det",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.232,
+      "obp": 0.346,
+      "slg": 0.462
+    }
+  },
+  {
+    "id": "brandon-inge-det-2000s",
+    "name": "Brandon Inge",
+    "franchiseId": "det",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.304,
+      "slg": 0.385
+    }
+  },
+  {
+    "id": "craig-monroe-det-2000s",
+    "name": "Craig Monroe",
+    "franchiseId": "det",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.307,
+      "slg": 0.446
+    }
+  },
+  {
+    "id": "alex-avila-det-2010s",
+    "name": "Alex Avila",
+    "franchiseId": "det",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.337,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "andy-dirks-det-2010s",
+    "name": "Andy Dirks",
+    "franchiseId": "det",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.333,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "torii-hunter-det-2010s",
+    "name": "Torii Hunter",
+    "franchiseId": "det",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.331,
+      "slg": 0.461
+    }
+  },
+  {
+    "id": "john-bateman-hou-1960s",
+    "name": "John Bateman",
+    "franchiseId": "hou",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.273,
+      "slg": 0.348
+    }
+  },
+  {
+    "id": "denis-menke-hou-1960s",
+    "name": "Denis Menke",
+    "franchiseId": "hou",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.342,
+      "slg": 0.379
+    }
+  },
+  {
+    "id": "lee-maye-hou-1960s",
+    "name": "Lee Maye",
+    "franchiseId": "hou",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.33,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "alan-ashby-hou-1970s",
+    "name": "Alan Ashby",
+    "franchiseId": "hou",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.326,
+      "slg": 0.358
+    }
+  },
+  {
+    "id": "art-howe-hou-1970s",
+    "name": "Art Howe",
+    "franchiseId": "hou",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.326,
+      "slg": 0.367
+    }
+  },
+  {
+    "id": "roger-metzger-hou-1970s",
+    "name": "Roger Metzger",
+    "franchiseId": "hou",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.231,
+      "obp": 0.292,
+      "slg": 0.287
+    }
+  },
+  {
+    "id": "phil-garner-hou-1980s",
+    "name": "Phil Garner",
+    "franchiseId": "hou",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.327,
+      "slg": 0.379
+    }
+  },
+  {
+    "id": "dickie-thon-hou-1980s",
+    "name": "Dickie Thon",
+    "franchiseId": "hou",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.318,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "terry-puhl-hou-1980s",
+    "name": "Terry Puhl",
+    "franchiseId": "hou",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.28,
+      "obp": 0.349,
+      "slg": 0.383
+    }
+  },
+  {
+    "id": "ricky-gutierrez-hou-1990s",
+    "name": "Ricky Gutierrez",
+    "franchiseId": "hou",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.339,
+      "slg": 0.352
+    }
+  },
+  {
+    "id": "moises-alou-hou-1990s",
+    "name": "Moises Alou",
+    "franchiseId": "hou",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.369,
+      "slg": 0.516
+    }
+  },
+  {
+    "id": "adam-everett-hou-2000s",
+    "name": "Adam Everett",
+    "franchiseId": "hou",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.299,
+      "slg": 0.341
+    }
+  },
+  {
+    "id": "jason-castro-hou-2010s",
+    "name": "Jason Castro",
+    "franchiseId": "hou",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.226,
+      "obp": 0.312,
+      "slg": 0.384
+    }
+  },
+  {
+    "id": "jon-singleton-hou-2010s",
+    "name": "Jon Singleton",
+    "franchiseId": "hou",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.188,
+      "obp": 0.29,
+      "slg": 0.335
+    }
+  },
+  {
+    "id": "colby-rasmus-hou-2010s",
+    "name": "Colby Rasmus",
+    "franchiseId": "hou",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.317,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "jeremy-pena-hou-2020s",
+    "name": "Jeremy Pena",
+    "franchiseId": "hou",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.313,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "chas-mccormick-hou-2020s",
+    "name": "Chas McCormick",
+    "franchiseId": "hou",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.328,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "ellie-rodriguez-kc-1960s",
+    "name": "Ellie Rodriguez",
+    "franchiseId": "kc",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.342,
+      "slg": 0.318
+    }
+  },
+  {
+    "id": "jackie-hernandez-kc-1960s",
+    "name": "Jackie Hernandez",
+    "franchiseId": "kc",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.208,
+      "obp": 0.259,
+      "slg": 0.27
+    }
+  },
+  {
+    "id": "pat-kelly-kc-1960s",
+    "name": "Pat Kelly",
+    "franchiseId": "kc",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.333,
+      "slg": 0.357
+    }
+  },
+  {
+    "id": "john-wathan-kc-1980s",
+    "name": "John Wathan",
+    "franchiseId": "kc",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.318,
+      "slg": 0.343
+    }
+  },
+  {
+    "id": "willie-aikens-kc-1980s",
+    "name": "Willie Aikens",
+    "franchiseId": "kc",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.354,
+      "slg": 0.433
+    }
+  },
+  {
+    "id": "u-l-washington-kc-1980s",
+    "name": "U.L. Washington",
+    "franchiseId": "kc",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.316,
+      "slg": 0.344
+    }
+  },
+  {
+    "id": "darryl-motley-kc-1980s",
+    "name": "Darryl Motley",
+    "franchiseId": "kc",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.292,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "mike-macfarlane-kc-1990s",
+    "name": "Mike Macfarlane",
+    "franchiseId": "kc",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.324,
+      "slg": 0.419
+    }
+  },
+  {
+    "id": "jose-lind-kc-1990s",
+    "name": "Jose Lind",
+    "franchiseId": "kc",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.293,
+      "slg": 0.326
+    }
+  },
+  {
+    "id": "vince-coleman-kc-1990s",
+    "name": "Vince Coleman",
+    "franchiseId": "kc",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.324,
+      "slg": 0.345
+    }
+  },
+  {
+    "id": "felix-jose-kc-1990s",
+    "name": "Felix Jose",
+    "franchiseId": "kc",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.28,
+      "obp": 0.336,
+      "slg": 0.428
+    }
+  },
+  {
+    "id": "john-buck-kc-2000s",
+    "name": "John Buck",
+    "franchiseId": "kc",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.3,
+      "slg": 0.401
+    }
+  },
+  {
+    "id": "mark-grudzielanek-kc-2000s",
+    "name": "Mark Grudzielanek",
+    "franchiseId": "kc",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.289,
+      "obp": 0.332,
+      "slg": 0.393
+    }
+  },
+  {
+    "id": "mark-teahen-kc-2000s",
+    "name": "Mark Teahen",
+    "franchiseId": "kc",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.324,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "angel-berroa-kc-2000s",
+    "name": "Angel Berroa",
+    "franchiseId": "kc",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.304,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "mike-moustakas-kc-2010s",
+    "name": "Mike Moustakas",
+    "franchiseId": "kc",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.307,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "alcides-escobar-kc-2010s",
+    "name": "Alcides Escobar",
+    "franchiseId": "kc",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.297,
+      "slg": 0.336
+    }
+  },
+  {
+    "id": "michael-massey-kc-2020s",
+    "name": "Michael Massey",
+    "franchiseId": "kc",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.292,
+      "slg": 0.401
+    }
+  },
+  {
+    "id": "kyle-isbel-kc-2020s",
+    "name": "Kyle Isbel",
+    "franchiseId": "kc",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.296,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "hunter-renfroe-kc-2020s",
+    "name": "Hunter Renfroe",
+    "franchiseId": "kc",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.238,
+      "obp": 0.3,
+      "slg": 0.466
+    }
+  },
+  {
+    "id": "buck-rodgers-laa-1960s",
+    "name": "Buck Rodgers",
+    "franchiseId": "laa",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.232,
+      "obp": 0.297,
+      "slg": 0.325
+    }
+  },
+  {
+    "id": "joe-adcock-laa-1960s",
+    "name": "Joe Adcock",
+    "franchiseId": "laa",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.337,
+      "slg": 0.485
+    }
+  },
+  {
+    "id": "bobby-knoop-laa-1960s",
+    "name": "Bobby Knoop",
+    "franchiseId": "laa",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.304,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "paul-schaal-laa-1960s",
+    "name": "Paul Schaal",
+    "franchiseId": "laa",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.343,
+      "slg": 0.344
+    }
+  },
+  {
+    "id": "rick-reichardt-laa-1960s",
+    "name": "Rick Reichardt",
+    "franchiseId": "laa",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.334,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "andy-etchebarren-laa-1970s",
+    "name": "Andy Etchebarren",
+    "franchiseId": "laa",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.235,
+      "obp": 0.306,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "jerry-remy-laa-1970s",
+    "name": "Jerry Remy",
+    "franchiseId": "laa",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.327,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "lyman-bostock-laa-1970s",
+    "name": "Lyman Bostock",
+    "franchiseId": "laa",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.311,
+      "obp": 0.365,
+      "slg": 0.421
+    }
+  },
+  {
+    "id": "doug-decinces-laa-1980s",
+    "name": "Doug DeCinces",
+    "franchiseId": "laa",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.329,
+      "slg": 0.445
+    }
+  },
+  {
+    "id": "gary-pettis-laa-1980s",
+    "name": "Gary Pettis",
+    "franchiseId": "laa",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.327,
+      "slg": 0.312
+    }
+  },
+  {
+    "id": "jorge-fabregas-laa-1990s",
+    "name": "Jorge Fabregas",
+    "franchiseId": "laa",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.288,
+      "slg": 0.323
+    }
+  },
+  {
+    "id": "j-t-snow-laa-1990s",
+    "name": "J.T. Snow",
+    "franchiseId": "laa",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.351,
+      "slg": 0.427
+    }
+  },
+  {
+    "id": "damion-easley-laa-1990s",
+    "name": "Damion Easley",
+    "franchiseId": "laa",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.332,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "dave-hollins-laa-1990s",
+    "name": "Dave Hollins",
+    "franchiseId": "laa",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.358,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "bengie-molina-laa-2000s",
+    "name": "Bengie Molina",
+    "franchiseId": "laa",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.307,
+      "slg": 0.411
+    }
+  },
+  {
+    "id": "david-eckstein-laa-2000s",
+    "name": "David Eckstein",
+    "franchiseId": "laa",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.28,
+      "obp": 0.345,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "chris-iannetta-laa-2010s",
+    "name": "Chris Iannetta",
+    "franchiseId": "laa",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.347,
+      "slg": 0.4
+    }
+  },
+  {
+    "id": "howie-kendrick-laa-2010s",
+    "name": "Howie Kendrick",
+    "franchiseId": "laa",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.293,
+      "obp": 0.335,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "david-freese-laa-2010s",
+    "name": "David Freese",
+    "franchiseId": "laa",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.348,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "erick-aybar-laa-2010s",
+    "name": "Erick Aybar",
+    "franchiseId": "laa",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.312,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "luis-rengifo-laa-2020s",
+    "name": "Luis Rengifo",
+    "franchiseId": "laa",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.313,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "sandy-amoros-lad-1950s",
+    "name": "Sandy Amoros",
+    "franchiseId": "lad",
+    "decade": "1950s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.353,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "carl-furillo-lad-1950s",
+    "name": "Carl Furillo",
+    "franchiseId": "lad",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.299,
+      "obp": 0.355,
+      "slg": 0.458
+    }
+  },
+  {
+    "id": "don-newcombe-lad-1950s",
+    "name": "Don Newcombe",
+    "franchiseId": "lad",
+    "decade": "1950s",
+    "positions": [
+      "SP"
+    ],
+    "tier": 4,
+    "hof": true,
+    "pitching": {
+      "era": 3.56,
+      "whip": 1.2,
+      "k9": 5
+    }
+  },
+  {
+    "id": "wes-parker-lad-1960s",
+    "name": "Wes Parker",
+    "franchiseId": "lad",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.351,
+      "slg": 0.375
+    }
+  },
+  {
+    "id": "jim-lefebvre-lad-1960s",
+    "name": "Jim Lefebvre",
+    "franchiseId": "lad",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.329,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "jim-gilliam-lad-1960s",
+    "name": "Jim Gilliam",
+    "franchiseId": "lad",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.36,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "ron-fairly-lad-1960s",
+    "name": "Ron Fairly",
+    "franchiseId": "lad",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.36,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "bill-russell-lad-1980s",
+    "name": "Bill Russell",
+    "franchiseId": "lad",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.31,
+      "slg": 0.338
+    }
+  },
+  {
+    "id": "ken-landreaux-lad-1980s",
+    "name": "Ken Landreaux",
+    "franchiseId": "lad",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.322,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "tim-wallach-lad-1990s",
+    "name": "Tim Wallach",
+    "franchiseId": "lad",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.316,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "jose-offerman-lad-1990s",
+    "name": "Jose Offerman",
+    "franchiseId": "lad",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.342,
+      "slg": 0.347
+    }
+  },
+  {
+    "id": "hee-seop-choi-lad-2000s",
+    "name": "Hee-Seop Choi",
+    "franchiseId": "lad",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.349,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "jeff-kent-lad-2000s",
+    "name": "Jeff Kent",
+    "franchiseId": "lad",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.356,
+      "slg": 0.5
+    }
+  },
+  {
+    "id": "cesar-izturis-lad-2000s",
+    "name": "Cesar Izturis",
+    "franchiseId": "lad",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.294,
+      "slg": 0.316
+    }
+  },
+  {
+    "id": "jayson-werth-lad-2000s",
+    "name": "Jayson Werth",
+    "franchiseId": "lad",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.36,
+      "slg": 0.462
+    }
+  },
+  {
+    "id": "corey-seager-lad-2010s",
+    "name": "Corey Seager",
+    "franchiseId": "lad",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.292,
+      "obp": 0.359,
+      "slg": 0.5
+    }
+  },
+  {
+    "id": "joc-pederson-lad-2010s",
+    "name": "Joc Pederson",
+    "franchiseId": "lad",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.226,
+      "obp": 0.335,
+      "slg": 0.457
+    }
+  },
+  {
+    "id": "devon-white-mia-1990s",
+    "name": "Devon White",
+    "franchiseId": "mia",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.319,
+      "slg": 0.419
+    }
+  },
+  {
+    "id": "mike-redmond-mia-2000s",
+    "name": "Mike Redmond",
+    "franchiseId": "mia",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.334,
+      "slg": 0.358
+    }
+  },
+  {
+    "id": "derrek-lee-mia-2000s",
+    "name": "Derrek Lee",
+    "franchiseId": "mia",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.365,
+      "slg": 0.495
+    }
+  },
+  {
+    "id": "juan-encarnacion-mia-2000s",
+    "name": "Juan Encarnacion",
+    "franchiseId": "mia",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.317,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "gaby-sanchez-mia-2010s",
+    "name": "Gaby Sanchez",
+    "franchiseId": "mia",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.337,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "martin-prado-mia-2010s",
+    "name": "Martin Prado",
+    "franchiseId": "mia",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.335,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "nick-fortes-mia-2020s",
+    "name": "Nick Fortes",
+    "franchiseId": "mia",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.223,
+      "obp": 0.281,
+      "slg": 0.346
+    }
+  },
+  {
+    "id": "jake-burger-mia-2020s",
+    "name": "Jake Burger",
+    "franchiseId": "mia",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.301,
+      "slg": 0.48
+    }
+  },
+  {
+    "id": "tim-anderson-mia-2020s",
+    "name": "Tim Anderson",
+    "franchiseId": "mia",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.322,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "charlie-moore-mil-1970s",
+    "name": "Charlie Moore",
+    "franchiseId": "mil",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.313,
+      "slg": 0.347
+    }
+  },
+  {
+    "id": "george-scott-mil-1970s",
+    "name": "George Scott",
+    "franchiseId": "mil",
+    "decade": "1970s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.333,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "bill-schroeder-mil-1980s",
+    "name": "Bill Schroeder",
+    "franchiseId": "mil",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.227,
+      "obp": 0.273,
+      "slg": 0.411
+    }
+  },
+  {
+    "id": "strawberry-mil-1990s",
+    "name": "Strawberry",
+    "franchiseId": "mil",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.3,
+      "slg": 0.33
+    }
+  },
+  {
+    "id": "jose-valentin-mil-1990s",
+    "name": "Jose Valentin",
+    "franchiseId": "mil",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.326,
+      "slg": 0.448
+    }
+  },
+  {
+    "id": "marquis-grissom-mil-1990s",
+    "name": "Marquis Grissom",
+    "franchiseId": "mil",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.322,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "jason-kendall-mil-2000s",
+    "name": "Jason Kendall",
+    "franchiseId": "mil",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.288,
+      "obp": 0.366,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "bill-hall-mil-2000s",
+    "name": "Bill Hall",
+    "franchiseId": "mil",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.316,
+      "slg": 0.441
+    }
+  },
+  {
+    "id": "scott-podsednik-mil-2000s",
+    "name": "Scott Podsednik",
+    "franchiseId": "mil",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.34,
+      "slg": 0.368
+    }
+  },
+  {
+    "id": "jesus-aguilar-mil-2010s",
+    "name": "Jesus Aguilar",
+    "franchiseId": "mil",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.332,
+      "slg": 0.477
+    }
+  },
+  {
+    "id": "scooter-gennett-mil-2010s",
+    "name": "Scooter Gennett",
+    "franchiseId": "mil",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.325,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "travis-shaw-mil-2010s",
+    "name": "Travis Shaw",
+    "franchiseId": "mil",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.325,
+      "slg": 0.447
+    }
+  },
+  {
+    "id": "domingo-santana-mil-2010s",
+    "name": "Domingo Santana",
+    "franchiseId": "mil",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.344,
+      "slg": 0.46
+    }
+  },
+  {
+    "id": "rowdy-tellez-mil-2020s",
+    "name": "Rowdy Tellez",
+    "franchiseId": "mil",
+    "decade": "2020s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.228,
+      "obp": 0.305,
+      "slg": 0.44
+    }
+  },
+  {
+    "id": "brice-turang-mil-2020s",
+    "name": "Brice Turang",
+    "franchiseId": "mil",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.316,
+      "slg": 0.355
+    }
+  },
+  {
+    "id": "johnny-schmitz-min-1950s",
+    "name": "Johnny Schmitz",
+    "franchiseId": "min",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.3,
+      "slg": 0.32
+    }
+  },
+  {
+    "id": "billy-gardner-min-1950s",
+    "name": "Billy Gardner",
+    "franchiseId": "min",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.292,
+      "slg": 0.318
+    }
+  },
+  {
+    "id": "zoilo-versalles-min-1950s",
+    "name": "Zoilo Versalles",
+    "franchiseId": "min",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.297,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "bernie-allen-min-1960s",
+    "name": "Bernie Allen",
+    "franchiseId": "min",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.306,
+      "slg": 0.346
+    }
+  },
+  {
+    "id": "jimmie-hall-min-1960s",
+    "name": "Jimmie Hall",
+    "franchiseId": "min",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.321,
+      "slg": 0.445
+    }
+  },
+  {
+    "id": "eric-soderholm-min-1970s",
+    "name": "Eric Soderholm",
+    "franchiseId": "min",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.328,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "dan-ford-min-1970s",
+    "name": "Dan Ford",
+    "franchiseId": "min",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.32,
+      "slg": 0.418
+    }
+  },
+  {
+    "id": "tim-laudner-min-1980s",
+    "name": "Tim Laudner",
+    "franchiseId": "min",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.225,
+      "obp": 0.287,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "steve-lombardozzi-min-1980s",
+    "name": "Steve Lombardozzi",
+    "franchiseId": "min",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.3,
+      "slg": 0.335
+    }
+  },
+  {
+    "id": "dan-gladden-min-1980s",
+    "name": "Dan Gladden",
+    "franchiseId": "min",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.27,
+      "obp": 0.327,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "brian-harper-min-1990s",
+    "name": "Brian Harper",
+    "franchiseId": "min",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.295,
+      "obp": 0.327,
+      "slg": 0.391
+    }
+  },
+  {
+    "id": "kent-hrbek-min-1990s",
+    "name": "Kent Hrbek",
+    "franchiseId": "min",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.282,
+      "obp": 0.367,
+      "slg": 0.481
+    }
+  },
+  {
+    "id": "gary-gaetti-min-1990s",
+    "name": "Gary Gaetti",
+    "franchiseId": "min",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.308,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "greg-gagne-min-1990s",
+    "name": "Greg Gagne",
+    "franchiseId": "min",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.302,
+      "slg": 0.382
+    }
+  },
+  {
+    "id": "dan-gladden-min-1990s",
+    "name": "Dan Gladden",
+    "franchiseId": "min",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.27,
+      "obp": 0.327,
+      "slg": 0.378
+    }
+  },
+  {
+    "id": "luis-castillo-min-2000s",
+    "name": "Luis Castillo",
+    "franchiseId": "min",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.357,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "corey-koskie-min-2000s",
+    "name": "Corey Koskie",
+    "franchiseId": "min",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.367,
+      "slg": 0.463
+    }
+  },
+  {
+    "id": "cristian-guzman-min-2000s",
+    "name": "Cristian Guzman",
+    "franchiseId": "min",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.303,
+      "slg": 0.358
+    }
+  },
+  {
+    "id": "eduardo-escobar-min-2010s",
+    "name": "Eduardo Escobar",
+    "franchiseId": "min",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.309,
+      "slg": 0.421
+    }
+  },
+  {
+    "id": "alex-kirilloff-min-2020s",
+    "name": "Alex Kirilloff",
+    "franchiseId": "min",
+    "decade": "2020s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.314,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "matt-wallner-min-2020s",
+    "name": "Matt Wallner",
+    "franchiseId": "min",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.37,
+      "slg": 0.52
+    }
+  },
+  {
+    "id": "max-kepler-min-2020s",
+    "name": "Max Kepler",
+    "franchiseId": "min",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.325,
+      "slg": 0.432
+    }
+  },
+  {
+    "id": "ken-boswell-nym-1960s",
+    "name": "Ken Boswell",
+    "franchiseId": "nym",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.317,
+      "slg": 0.337
+    }
+  },
+  {
+    "id": "ed-charles-nym-1960s",
+    "name": "Ed Charles",
+    "franchiseId": "nym",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.328,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "bud-harrelson-nym-1960s",
+    "name": "Bud Harrelson",
+    "franchiseId": "nym",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.327,
+      "slg": 0.287
+    }
+  },
+  {
+    "id": "ron-swoboda-nym-1960s",
+    "name": "Ron Swoboda",
+    "franchiseId": "nym",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.312,
+      "slg": 0.389
+    }
+  },
+  {
+    "id": "wayne-garrett-nym-1970s",
+    "name": "Wayne Garrett",
+    "franchiseId": "nym",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.348,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "del-unser-nym-1970s",
+    "name": "Del Unser",
+    "franchiseId": "nym",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.327,
+      "slg": 0.357
+    }
+  },
+  {
+    "id": "wally-backman-nym-1980s",
+    "name": "Wally Backman",
+    "franchiseId": "nym",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.344,
+      "slg": 0.328
+    }
+  },
+  {
+    "id": "howard-johnson-nym-1980s",
+    "name": "Howard Johnson",
+    "franchiseId": "nym",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.34,
+      "slg": 0.459
+    }
+  },
+  {
+    "id": "rafael-santana-nym-1980s",
+    "name": "Rafael Santana",
+    "franchiseId": "nym",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.28,
+      "slg": 0.3
+    }
+  },
+  {
+    "id": "kevin-mcreynolds-nym-1980s",
+    "name": "Kevin McReynolds",
+    "franchiseId": "nym",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.328,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "john-olerud-nym-1990s",
+    "name": "John Olerud",
+    "franchiseId": "nym",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.295,
+      "obp": 0.398,
+      "slg": 0.465
+    }
+  },
+  {
+    "id": "lance-johnson-nym-1990s",
+    "name": "Lance Johnson",
+    "franchiseId": "nym",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.291,
+      "obp": 0.334,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "bobby-bonilla-nym-1990s",
+    "name": "Bobby Bonilla",
+    "franchiseId": "nym",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.358,
+      "slg": 0.472
+    }
+  },
+  {
+    "id": "luis-castillo-nym-2000s",
+    "name": "Luis Castillo",
+    "franchiseId": "nym",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.357,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "moises-alou-nym-2000s",
+    "name": "Moises Alou",
+    "franchiseId": "nym",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.369,
+      "slg": 0.516
+    }
+  },
+  {
+    "id": "shawn-green-nym-2000s",
+    "name": "Shawn Green",
+    "franchiseId": "nym",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.283,
+      "obp": 0.355,
+      "slg": 0.494
+    }
+  },
+  {
+    "id": "amed-rosario-nym-2010s",
+    "name": "Amed Rosario",
+    "franchiseId": "nym",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.31,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "brett-baty-nym-2020s",
+    "name": "Brett Baty",
+    "franchiseId": "nym",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.22,
+      "obp": 0.3,
+      "slg": 0.36
+    }
+  },
+  {
+    "id": "bucky-dent-nyy-1970s",
+    "name": "Bucky Dent",
+    "franchiseId": "nyy",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.295,
+      "slg": 0.321
+    }
+  },
+  {
+    "id": "mickey-rivers-nyy-1970s",
+    "name": "Mickey Rivers",
+    "franchiseId": "nyy",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.295,
+      "obp": 0.327,
+      "slg": 0.386
+    }
+  },
+  {
+    "id": "rick-cerone-nyy-1980s",
+    "name": "Rick Cerone",
+    "franchiseId": "nyy",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.296,
+      "slg": 0.346
+    }
+  },
+  {
+    "id": "graig-nettles-nyy-1980s",
+    "name": "Graig Nettles",
+    "franchiseId": "nyy",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.329,
+      "slg": 0.421
+    }
+  },
+  {
+    "id": "andre-robertson-nyy-1980s",
+    "name": "Andre Robertson",
+    "franchiseId": "nyy",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.283,
+      "slg": 0.325
+    }
+  },
+  {
+    "id": "chuck-knoblauch-nyy-1990s",
+    "name": "Chuck Knoblauch",
+    "franchiseId": "nyy",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.289,
+      "obp": 0.378,
+      "slg": 0.406
+    }
+  },
+  {
+    "id": "chad-curtis-nyy-1990s",
+    "name": "Chad Curtis",
+    "franchiseId": "nyy",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.337,
+      "slg": 0.386
+    }
+  },
+  {
+    "id": "jason-giambi-nyy-2000s",
+    "name": "Jason Giambi",
+    "franchiseId": "nyy",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.399,
+      "slg": 0.516
+    }
+  },
+  {
+    "id": "hideki-matsui-nyy-2000s",
+    "name": "Hideki Matsui",
+    "franchiseId": "nyy",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.282,
+      "obp": 0.36,
+      "slg": 0.462
+    }
+  },
+  {
+    "id": "johnny-damon-nyy-2000s",
+    "name": "Johnny Damon",
+    "franchiseId": "nyy",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.352,
+      "slg": 0.433
+    }
+  },
+  {
+    "id": "gary-sheffield-nyy-2000s",
+    "name": "Gary Sheffield",
+    "franchiseId": "nyy",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.292,
+      "obp": 0.393,
+      "slg": 0.514
+    }
+  },
+  {
+    "id": "joe-astroth-oak-1950s",
+    "name": "Joe Astroth",
+    "franchiseId": "oak",
+    "decade": "1950s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.323,
+      "slg": 0.311
+    }
+  },
+  {
+    "id": "pete-suder-oak-1950s",
+    "name": "Pete Suder",
+    "franchiseId": "oak",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.293,
+      "slg": 0.332
+    }
+  },
+  {
+    "id": "hank-majeski-oak-1950s",
+    "name": "Hank Majeski",
+    "franchiseId": "oak",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.336,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "dave-philley-oak-1950s",
+    "name": "Dave Philley",
+    "franchiseId": "oak",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.27,
+      "obp": 0.34,
+      "slg": 0.389
+    }
+  },
+  {
+    "id": "elmer-valo-oak-1950s",
+    "name": "Elmer Valo",
+    "franchiseId": "oak",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.282,
+      "obp": 0.398,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "dick-green-oak-1960s",
+    "name": "Dick Green",
+    "franchiseId": "oak",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.3,
+      "slg": 0.35
+    }
+  },
+  {
+    "id": "dave-duncan-oak-1960s",
+    "name": "Dave Duncan",
+    "franchiseId": "oak",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.214,
+      "obp": 0.28,
+      "slg": 0.36
+    }
+  },
+  {
+    "id": "danny-cater-oak-1960s",
+    "name": "Danny Cater",
+    "franchiseId": "oak",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.276,
+      "obp": 0.317,
+      "slg": 0.391
+    }
+  },
+  {
+    "id": "felipe-alou-oak-1960s",
+    "name": "Felipe Alou",
+    "franchiseId": "oak",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.328,
+      "slg": 0.433
+    }
+  },
+  {
+    "id": "gene-tenace-oak-1970s",
+    "name": "Gene Tenace",
+    "franchiseId": "oak",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.388,
+      "slg": 0.429
+    }
+  },
+  {
+    "id": "dick-green-oak-1970s",
+    "name": "Dick Green",
+    "franchiseId": "oak",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.303,
+      "slg": 0.352
+    }
+  },
+  {
+    "id": "bert-campaneris-oak-1970s",
+    "name": "Bert Campaneris",
+    "franchiseId": "oak",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.311,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "bill-north-oak-1970s",
+    "name": "Bill North",
+    "franchiseId": "oak",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.356,
+      "slg": 0.333
+    }
+  },
+  {
+    "id": "tony-phillips-oak-1980s",
+    "name": "Tony Phillips",
+    "franchiseId": "oak",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.374,
+      "slg": 0.389
+    }
+  },
+  {
+    "id": "brent-gates-oak-1990s",
+    "name": "Brent Gates",
+    "franchiseId": "oak",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.327,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "mike-bordick-oak-1990s",
+    "name": "Mike Bordick",
+    "franchiseId": "oak",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.326,
+      "slg": 0.349
+    }
+  },
+  {
+    "id": "stan-javier-oak-1990s",
+    "name": "Stan Javier",
+    "franchiseId": "oak",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.344,
+      "slg": 0.365
+    }
+  },
+  {
+    "id": "ruben-sierra-oak-1990s",
+    "name": "Ruben Sierra",
+    "franchiseId": "oak",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.315,
+      "slg": 0.45
+    }
+  },
+  {
+    "id": "ramon-hernandez-oak-2000s",
+    "name": "Ramon Hernandez",
+    "franchiseId": "oak",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.324,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "terrence-long-oak-2000s",
+    "name": "Terrence Long",
+    "franchiseId": "oak",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.323,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "johnny-damon-oak-2000s",
+    "name": "Johnny Damon",
+    "franchiseId": "oak",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.352,
+      "slg": 0.433
+    }
+  },
+  {
+    "id": "jermaine-dye-oak-2000s",
+    "name": "Jermaine Dye",
+    "franchiseId": "oak",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.338,
+      "slg": 0.488
+    }
+  },
+  {
+    "id": "stephen-vogt-oak-2010s",
+    "name": "Stephen Vogt",
+    "franchiseId": "oak",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.311,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "khris-davis-oak-2010s",
+    "name": "Khris Davis",
+    "franchiseId": "oak",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.312,
+      "slg": 0.498
+    }
+  },
+  {
+    "id": "josh-reddick-oak-2010s",
+    "name": "Josh Reddick",
+    "franchiseId": "oak",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.322,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "j-d-davis-oak-2020s",
+    "name": "J.D. Davis",
+    "franchiseId": "oak",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.337,
+      "slg": 0.43
+    }
+  },
+  {
+    "id": "nick-allen-oak-2020s",
+    "name": "Nick Allen",
+    "franchiseId": "oak",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.22,
+      "obp": 0.273,
+      "slg": 0.3
+    }
+  },
+  {
+    "id": "stan-lopata-phi-1950s",
+    "name": "Stan Lopata",
+    "franchiseId": "phi",
+    "decade": "1950s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.347,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "eddie-waitkus-phi-1950s",
+    "name": "Eddie Waitkus",
+    "franchiseId": "phi",
+    "decade": "1950s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.354,
+      "slg": 0.363
+    }
+  },
+  {
+    "id": "clay-dalrymple-phi-1960s",
+    "name": "Clay Dalrymple",
+    "franchiseId": "phi",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.319,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "bill-white-phi-1960s",
+    "name": "Bill White",
+    "franchiseId": "phi",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.351,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "bobby-wine-phi-1960s",
+    "name": "Bobby Wine",
+    "franchiseId": "phi",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.215,
+      "obp": 0.264,
+      "slg": 0.281
+    }
+  },
+  {
+    "id": "pete-rose-phi-1970s",
+    "name": "Pete Rose",
+    "franchiseId": "phi",
+    "decade": "1970s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 5,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.375,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "ozzie-virgil-phi-1980s",
+    "name": "Ozzie Virgil",
+    "franchiseId": "phi",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.305,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "ivan-dejesus-phi-1980s",
+    "name": "Ivan DeJesus",
+    "franchiseId": "phi",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.327,
+      "slg": 0.317
+    }
+  },
+  {
+    "id": "gary-matthews-phi-1980s",
+    "name": "Gary Matthews",
+    "franchiseId": "phi",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.364,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "kevin-stocker-phi-1990s",
+    "name": "Kevin Stocker",
+    "franchiseId": "phi",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.336,
+      "slg": 0.335
+    }
+  },
+  {
+    "id": "jim-eisenreich-phi-1990s",
+    "name": "Jim Eisenreich",
+    "franchiseId": "phi",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.341,
+      "slg": 0.404
+    }
+  },
+  {
+    "id": "david-bell-phi-2000s",
+    "name": "David Bell",
+    "franchiseId": "phi",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.32,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "maikel-franco-phi-2010s",
+    "name": "Maikel Franco",
+    "franchiseId": "phi",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.292,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "freddy-galvis-phi-2010s",
+    "name": "Freddy Galvis",
+    "franchiseId": "phi",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.292,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "domonic-brown-phi-2010s",
+    "name": "Domonic Brown",
+    "franchiseId": "phi",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.304,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "dale-long-pit-1950s",
+    "name": "Dale Long",
+    "franchiseId": "pit",
+    "decade": "1950s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.335,
+      "slg": 0.46
+    }
+  },
+  {
+    "id": "frank-thomas-pit-1950s",
+    "name": "Frank Thomas",
+    "franchiseId": "pit",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.328,
+      "slg": 0.454
+    }
+  },
+  {
+    "id": "bill-virdon-pit-1950s",
+    "name": "Bill Virdon",
+    "franchiseId": "pit",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.325,
+      "slg": 0.373
+    }
+  },
+  {
+    "id": "jerry-may-pit-1960s",
+    "name": "Jerry May",
+    "franchiseId": "pit",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.3,
+      "slg": 0.312
+    }
+  },
+  {
+    "id": "don-hoak-pit-1960s",
+    "name": "Don Hoak",
+    "franchiseId": "pit",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.345,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "richie-hebner-pit-1970s",
+    "name": "Richie Hebner",
+    "franchiseId": "pit",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.276,
+      "obp": 0.352,
+      "slg": 0.438
+    }
+  },
+  {
+    "id": "frank-taveras-pit-1970s",
+    "name": "Frank Taveras",
+    "franchiseId": "pit",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.304,
+      "slg": 0.304
+    }
+  },
+  {
+    "id": "jason-thompson-pit-1980s",
+    "name": "Jason Thompson",
+    "franchiseId": "pit",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.366,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "bill-madlock-pit-1980s",
+    "name": "Bill Madlock",
+    "franchiseId": "pit",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.305,
+      "obp": 0.365,
+      "slg": 0.442
+    }
+  },
+  {
+    "id": "dale-berra-pit-1980s",
+    "name": "Dale Berra",
+    "franchiseId": "pit",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.299,
+      "slg": 0.336
+    }
+  },
+  {
+    "id": "omar-moreno-pit-1980s",
+    "name": "Omar Moreno",
+    "franchiseId": "pit",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.306,
+      "slg": 0.331
+    }
+  },
+  {
+    "id": "jose-lind-pit-1990s",
+    "name": "Jose Lind",
+    "franchiseId": "pit",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.292,
+      "slg": 0.326
+    }
+  },
+  {
+    "id": "barry-bonds-pit-1990s",
+    "name": "Barry Bonds",
+    "franchiseId": "pit",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 5,
+    "hof": false,
+    "batting": {
+      "avg": 0.298,
+      "obp": 0.411,
+      "slg": 0.559
+    }
+  },
+  {
+    "id": "craig-wilson-pit-2000s",
+    "name": "Craig Wilson",
+    "franchiseId": "pit",
+    "decade": "2000s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.354,
+      "slg": 0.479
+    }
+  },
+  {
+    "id": "pokey-reese-pit-2000s",
+    "name": "Pokey Reese",
+    "franchiseId": "pit",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.307,
+      "slg": 0.358
+    }
+  },
+  {
+    "id": "aramis-ramirez-pit-2000s",
+    "name": "Aramis Ramirez",
+    "franchiseId": "pit",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.283,
+      "obp": 0.341,
+      "slg": 0.492
+    }
+  },
+  {
+    "id": "ike-davis-pit-2010s",
+    "name": "Ike Davis",
+    "franchiseId": "pit",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.326,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "pedro-alvarez-pit-2010s",
+    "name": "Pedro Alvarez",
+    "franchiseId": "pit",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.309,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "jordy-mercer-pit-2010s",
+    "name": "Jordy Mercer",
+    "franchiseId": "pit",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.313,
+      "slg": 0.375
+    }
+  },
+  {
+    "id": "nick-gonzales-pit-2020s",
+    "name": "Nick Gonzales",
+    "franchiseId": "pit",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.311,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "chris-cannizzaro-sd-1960s",
+    "name": "Chris Cannizzaro",
+    "franchiseId": "sd",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.235,
+      "obp": 0.309,
+      "slg": 0.301
+    }
+  },
+  {
+    "id": "roberto-pena-sd-1960s",
+    "name": "Roberto Pena",
+    "franchiseId": "sd",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.297,
+      "slg": 0.322
+    }
+  },
+  {
+    "id": "ed-spiezio-sd-1960s",
+    "name": "Ed Spiezio",
+    "franchiseId": "sd",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.238,
+      "obp": 0.303,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "ivan-murrell-sd-1960s",
+    "name": "Ivan Murrell",
+    "franchiseId": "sd",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.275,
+      "slg": 0.35
+    }
+  },
+  {
+    "id": "tito-fuentes-sd-1970s",
+    "name": "Tito Fuentes",
+    "franchiseId": "sd",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.306,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "dave-roberts-sd-1970s",
+    "name": "Dave Roberts",
+    "franchiseId": "sd",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.31,
+      "slg": 0.323
+    }
+  },
+  {
+    "id": "jerry-turner-sd-1970s",
+    "name": "Jerry Turner",
+    "franchiseId": "sd",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.32,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "luis-salazar-sd-1980s",
+    "name": "Luis Salazar",
+    "franchiseId": "sd",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.297,
+      "slg": 0.379
+    }
+  },
+  {
+    "id": "garry-templeton-sd-1980s",
+    "name": "Garry Templeton",
+    "franchiseId": "sd",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.304,
+      "slg": 0.369
+    }
+  },
+  {
+    "id": "carmelo-martinez-sd-1980s",
+    "name": "Carmelo Martinez",
+    "franchiseId": "sd",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.328,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "kevin-mcreynolds-sd-1980s",
+    "name": "Kevin McReynolds",
+    "franchiseId": "sd",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.328,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "eric-show-sd-1980s",
+    "name": "Eric Show",
+    "franchiseId": "sd",
+    "decade": "1980s",
+    "positions": [
+      "SP"
+    ],
+    "tier": 2,
+    "hof": false,
+    "pitching": {
+      "era": 3.66,
+      "whip": 1.29,
+      "k9": 5.2
+    }
+  },
+  {
+    "id": "brad-ausmus-sd-1990s",
+    "name": "Brad Ausmus",
+    "franchiseId": "sd",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.325,
+      "slg": 0.344
+    }
+  },
+  {
+    "id": "wally-joyner-sd-1990s",
+    "name": "Wally Joyner",
+    "franchiseId": "sd",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.362,
+      "slg": 0.439
+    }
+  },
+  {
+    "id": "chris-gomez-sd-1990s",
+    "name": "Chris Gomez",
+    "franchiseId": "sd",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.328,
+      "slg": 0.347
+    }
+  },
+  {
+    "id": "greg-vaughn-sd-1990s",
+    "name": "Greg Vaughn",
+    "franchiseId": "sd",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.324,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "miguel-ojeda-sd-2000s",
+    "name": "Miguel Ojeda",
+    "franchiseId": "sd",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.227,
+      "obp": 0.305,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "sean-burroughs-sd-2000s",
+    "name": "Sean Burroughs",
+    "franchiseId": "sd",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.336,
+      "slg": 0.375
+    }
+  },
+  {
+    "id": "dave-roberts-sd-2000s",
+    "name": "Dave Roberts",
+    "franchiseId": "sd",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.345,
+      "slg": 0.343
+    }
+  },
+  {
+    "id": "yasmani-grandal-sd-2010s",
+    "name": "Yasmani Grandal",
+    "franchiseId": "sd",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.338,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "carlos-quentin-sd-2010s",
+    "name": "Carlos Quentin",
+    "franchiseId": "sd",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.347,
+      "slg": 0.484
+    }
+  },
+  {
+    "id": "cameron-maybin-sd-2010s",
+    "name": "Cameron Maybin",
+    "franchiseId": "sd",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.322,
+      "slg": 0.375
+    }
+  },
+  {
+    "id": "luis-campusano-sd-2020s",
+    "name": "Luis Campusano",
+    "franchiseId": "sd",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.309,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "daryl-spencer-sf-1950s",
+    "name": "Daryl Spencer",
+    "franchiseId": "sf",
+    "decade": "1950s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.319,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "hank-thompson-sf-1950s",
+    "name": "Hank Thompson",
+    "franchiseId": "sf",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.366,
+      "slg": 0.435
+    }
+  },
+  {
+    "id": "hal-lanier-sf-1960s",
+    "name": "Hal Lanier",
+    "franchiseId": "sf",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.228,
+      "obp": 0.257,
+      "slg": 0.275
+    }
+  },
+  {
+    "id": "jim-davenport-sf-1960s",
+    "name": "Jim Davenport",
+    "franchiseId": "sf",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.32,
+      "slg": 0.369
+    }
+  },
+  {
+    "id": "jose-pagan-sf-1960s",
+    "name": "Jose Pagan",
+    "franchiseId": "sf",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.3,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "harvey-kuenn-sf-1960s",
+    "name": "Harvey Kuenn",
+    "franchiseId": "sf",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.357,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "felipe-alou-sf-1960s",
+    "name": "Felipe Alou",
+    "franchiseId": "sf",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.328,
+      "slg": 0.433
+    }
+  },
+  {
+    "id": "dave-rader-sf-1970s",
+    "name": "Dave Rader",
+    "franchiseId": "sf",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.317,
+      "slg": 0.339
+    }
+  },
+  {
+    "id": "darrell-evans-sf-1970s",
+    "name": "Darrell Evans",
+    "franchiseId": "sf",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.361,
+      "slg": 0.431
+    }
+  },
+  {
+    "id": "gary-matthews-sf-1970s",
+    "name": "Gary Matthews",
+    "franchiseId": "sf",
+    "decade": "1970s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.364,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "bob-brenly-sf-1980s",
+    "name": "Bob Brenly",
+    "franchiseId": "sf",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.329,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "chris-brown-sf-1980s",
+    "name": "Chris Brown",
+    "franchiseId": "sf",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.327,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "jose-uribe-sf-1980s",
+    "name": "Jose Uribe",
+    "franchiseId": "sf",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.301,
+      "slg": 0.335
+    }
+  },
+  {
+    "id": "j-t-snow-sf-1990s",
+    "name": "J.T. Snow",
+    "franchiseId": "sf",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.351,
+      "slg": 0.427
+    }
+  },
+  {
+    "id": "darren-lewis-sf-1990s",
+    "name": "Darren Lewis",
+    "franchiseId": "sf",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.317,
+      "slg": 0.323
+    }
+  },
+  {
+    "id": "glenallen-hill-sf-1990s",
+    "name": "Glenallen Hill",
+    "franchiseId": "sf",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.321,
+      "slg": 0.477
+    }
+  },
+  {
+    "id": "benito-santiago-sf-2000s",
+    "name": "Benito Santiago",
+    "franchiseId": "sf",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.307,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "david-bell-sf-2000s",
+    "name": "David Bell",
+    "franchiseId": "sf",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.32,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "marvin-benard-sf-2000s",
+    "name": "Marvin Benard",
+    "franchiseId": "sf",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.337,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "reggie-sanders-sf-2000s",
+    "name": "Reggie Sanders",
+    "franchiseId": "sf",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.343,
+      "slg": 0.487
+    }
+  },
+  {
+    "id": "brandon-belt-sf-2010s",
+    "name": "Brandon Belt",
+    "franchiseId": "sf",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.356,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "joe-panik-sf-2010s",
+    "name": "Joe Panik",
+    "franchiseId": "sf",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.33,
+      "slg": 0.367
+    }
+  },
+  {
+    "id": "gregor-blanco-sf-2010s",
+    "name": "Gregor Blanco",
+    "franchiseId": "sf",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.34,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "angel-pagan-sf-2010s",
+    "name": "Angel Pagan",
+    "franchiseId": "sf",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.28,
+      "obp": 0.333,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "lamonte-wade-jr--sf-2020s",
+    "name": "LaMonte Wade Jr.",
+    "franchiseId": "sf",
+    "decade": "2020s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.339,
+      "slg": 0.386
+    }
+  },
+  {
+    "id": "bob-stinson-sea-1970s",
+    "name": "Bob Stinson",
+    "franchiseId": "sea",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.31,
+      "slg": 0.35
+    }
+  },
+  {
+    "id": "julio-cruz-sea-1970s",
+    "name": "Julio Cruz",
+    "franchiseId": "sea",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.334,
+      "slg": 0.31
+    }
+  },
+  {
+    "id": "bill-stein-sea-1970s",
+    "name": "Bill Stein",
+    "franchiseId": "sea",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.317,
+      "slg": 0.357
+    }
+  },
+  {
+    "id": "craig-reynolds-sea-1970s",
+    "name": "Craig Reynolds",
+    "franchiseId": "sea",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.297,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "leon-roberts-sea-1970s",
+    "name": "Leon Roberts",
+    "franchiseId": "sea",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.335,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "bob-kearney-sea-1980s",
+    "name": "Bob Kearney",
+    "franchiseId": "sea",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.277,
+      "slg": 0.347
+    }
+  },
+  {
+    "id": "spike-owen-sea-1980s",
+    "name": "Spike Owen",
+    "franchiseId": "sea",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.319,
+      "slg": 0.326
+    }
+  },
+  {
+    "id": "joey-cora-sea-1990s",
+    "name": "Joey Cora",
+    "franchiseId": "sea",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.348,
+      "slg": 0.365
+    }
+  },
+  {
+    "id": "dan-wilson-sea-2000s",
+    "name": "Dan Wilson",
+    "franchiseId": "sea",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.309,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "carlos-guillen-sea-2000s",
+    "name": "Carlos Guillen",
+    "franchiseId": "sea",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.355,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "mike-zunino-sea-2010s",
+    "name": "Mike Zunino",
+    "franchiseId": "sea",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.199,
+      "obp": 0.269,
+      "slg": 0.401
+    }
+  },
+  {
+    "id": "jean-segura-sea-2010s",
+    "name": "Jean Segura",
+    "franchiseId": "sea",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.28,
+      "obp": 0.323,
+      "slg": 0.398
+    }
+  },
+  {
+    "id": "franklin-gutierrez-sea-2010s",
+    "name": "Franklin Gutierrez",
+    "franchiseId": "sea",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.314,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "ty-france-sea-2020s",
+    "name": "Ty France",
+    "franchiseId": "sea",
+    "decade": "2020s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.334,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "adam-frazier-sea-2020s",
+    "name": "Adam Frazier",
+    "franchiseId": "sea",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.327,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "eugenio-suarez-sea-2020s",
+    "name": "Eugenio Suarez",
+    "franchiseId": "sea",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.323,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "j-p-crawford-sea-2020s",
+    "name": "J.P. Crawford",
+    "franchiseId": "sea",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.332,
+      "slg": 0.356
+    }
+  },
+  {
+    "id": "teoscar-hernandez-sea-2020s",
+    "name": "Teoscar Hernandez",
+    "franchiseId": "sea",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.322,
+      "slg": 0.49
+    }
+  },
+  {
+    "id": "alvin-dark-stl-1950s",
+    "name": "Alvin Dark",
+    "franchiseId": "stl",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.289,
+      "obp": 0.333,
+      "slg": 0.411
+    }
+  },
+  {
+    "id": "bill-white-stl-1960s",
+    "name": "Bill White",
+    "franchiseId": "stl",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.351,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "dal-maxvill-stl-1960s",
+    "name": "Dal Maxvill",
+    "franchiseId": "stl",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.217,
+      "obp": 0.293,
+      "slg": 0.259
+    }
+  },
+  {
+    "id": "mike-shannon-stl-1960s",
+    "name": "Mike Shannon",
+    "franchiseId": "stl",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.307,
+      "slg": 0.391
+    }
+  },
+  {
+    "id": "ted-sizemore-stl-1970s",
+    "name": "Ted Sizemore",
+    "franchiseId": "stl",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.327,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "darrell-porter-stl-1980s",
+    "name": "Darrell Porter",
+    "franchiseId": "stl",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.354,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "terry-pendleton-stl-1980s",
+    "name": "Terry Pendleton",
+    "franchiseId": "stl",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.27,
+      "obp": 0.316,
+      "slg": 0.392
+    }
+  },
+  {
+    "id": "vince-coleman-stl-1980s",
+    "name": "Vince Coleman",
+    "franchiseId": "stl",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.324,
+      "slg": 0.345
+    }
+  },
+  {
+    "id": "luis-alicea-stl-1990s",
+    "name": "Luis Alicea",
+    "franchiseId": "stl",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.346,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "gary-gaetti-stl-1990s",
+    "name": "Gary Gaetti",
+    "franchiseId": "stl",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.308,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "fernando-vina-stl-2000s",
+    "name": "Fernando Vina",
+    "franchiseId": "stl",
+    "decade": "2000s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.282,
+      "obp": 0.348,
+      "slg": 0.367
+    }
+  },
+  {
+    "id": "edgar-renteria-stl-2000s",
+    "name": "Edgar Renteria",
+    "franchiseId": "stl",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.343,
+      "slg": 0.398
+    }
+  },
+  {
+    "id": "j-d-drew-stl-2000s",
+    "name": "J.D. Drew",
+    "franchiseId": "stl",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.384,
+      "slg": 0.489
+    }
+  },
+  {
+    "id": "jhonny-peralta-stl-2010s",
+    "name": "Jhonny Peralta",
+    "franchiseId": "stl",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.329,
+      "slg": 0.442
+    }
+  },
+  {
+    "id": "jon-jay-stl-2010s",
+    "name": "Jon Jay",
+    "franchiseId": "stl",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.348,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "carlos-beltran-stl-2010s",
+    "name": "Carlos Beltran",
+    "franchiseId": "stl",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.35,
+      "slg": 0.491
+    }
+  },
+  {
+    "id": "lars-nootbaar-stl-2020s",
+    "name": "Lars Nootbaar",
+    "franchiseId": "stl",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.351,
+      "slg": 0.415
+    }
+  },
+  {
+    "id": "john-flaherty-tb-1990s",
+    "name": "John Flaherty",
+    "franchiseId": "tb",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.296,
+      "slg": 0.365
+    }
+  },
+  {
+    "id": "randy-winn-tb-1990s",
+    "name": "Randy Winn",
+    "franchiseId": "tb",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.343,
+      "slg": 0.406
+    }
+  },
+  {
+    "id": "toby-hall-tb-2000s",
+    "name": "Toby Hall",
+    "franchiseId": "tb",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.297,
+      "slg": 0.374
+    }
+  },
+  {
+    "id": "jose-molina-tb-2010s",
+    "name": "Jose Molina",
+    "franchiseId": "tb",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.233,
+      "obp": 0.282,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "casey-kotchman-tb-2010s",
+    "name": "Casey Kotchman",
+    "franchiseId": "tb",
+    "decade": "2010s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.336,
+      "slg": 0.394
+    }
+  },
+  {
+    "id": "mike-zunino-tb-2020s",
+    "name": "Mike Zunino",
+    "franchiseId": "tb",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.199,
+      "obp": 0.269,
+      "slg": 0.401
+    }
+  },
+  {
+    "id": "kevin-kiermaier-tb-2020s",
+    "name": "Kevin Kiermaier",
+    "franchiseId": "tb",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.306,
+      "slg": 0.398
+    }
+  },
+  {
+    "id": "paul-casanova-tex-1960s",
+    "name": "Paul Casanova",
+    "franchiseId": "tex",
+    "decade": "1960s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.225,
+      "obp": 0.259,
+      "slg": 0.312
+    }
+  },
+  {
+    "id": "bernie-allen-tex-1960s",
+    "name": "Bernie Allen",
+    "franchiseId": "tex",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.306,
+      "slg": 0.346
+    }
+  },
+  {
+    "id": "ed-brinkman-tex-1960s",
+    "name": "Ed Brinkman",
+    "franchiseId": "tex",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.224,
+      "obp": 0.28,
+      "slg": 0.3
+    }
+  },
+  {
+    "id": "cap-peterson-tex-1960s",
+    "name": "Cap Peterson",
+    "franchiseId": "tex",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.3,
+      "slg": 0.34
+    }
+  },
+  {
+    "id": "bump-wills-tex-1970s",
+    "name": "Bump Wills",
+    "franchiseId": "tex",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.333,
+      "slg": 0.373
+    }
+  },
+  {
+    "id": "juan-beniquez-tex-1970s",
+    "name": "Juan Beniquez",
+    "franchiseId": "tex",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.327,
+      "slg": 0.379
+    }
+  },
+  {
+    "id": "al-oliver-tex-1970s",
+    "name": "Al Oliver",
+    "franchiseId": "tex",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.344,
+      "slg": 0.451
+    }
+  },
+  {
+    "id": "don-slaught-tex-1980s",
+    "name": "Don Slaught",
+    "franchiseId": "tex",
+    "decade": "1980s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.283,
+      "obp": 0.333,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "pete-obrien-tex-1980s",
+    "name": "Pete OBrien",
+    "franchiseId": "tex",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.33,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "toby-harrah-tex-1980s",
+    "name": "Toby Harrah",
+    "franchiseId": "tex",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.365,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "scott-fletcher-tex-1980s",
+    "name": "Scott Fletcher",
+    "franchiseId": "tex",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.332,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "dean-palmer-tex-1990s",
+    "name": "Dean Palmer",
+    "franchiseId": "tex",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.309,
+      "slg": 0.458
+    }
+  },
+  {
+    "id": "benji-gil-tex-1990s",
+    "name": "Benji Gil",
+    "franchiseId": "tex",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.286,
+      "slg": 0.356
+    }
+  },
+  {
+    "id": "rusty-greer-tex-1990s",
+    "name": "Rusty Greer",
+    "franchiseId": "tex",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.305,
+      "obp": 0.387,
+      "slg": 0.478
+    }
+  },
+  {
+    "id": "ivan-rodriguez-tex-2000s",
+    "name": "Ivan Rodriguez",
+    "franchiseId": "tex",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 4,
+    "hof": true,
+    "batting": {
+      "avg": 0.296,
+      "obp": 0.334,
+      "slg": 0.464
+    }
+  },
+  {
+    "id": "kevin-mench-tex-2000s",
+    "name": "Kevin Mench",
+    "franchiseId": "tex",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.326,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "laynce-nix-tex-2000s",
+    "name": "Laynce Nix",
+    "franchiseId": "tex",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.288,
+      "slg": 0.424
+    }
+  },
+  {
+    "id": "gabe-kapler-tex-2000s",
+    "name": "Gabe Kapler",
+    "franchiseId": "tex",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.337,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "yorvit-torrealba-tex-2010s",
+    "name": "Yorvit Torrealba",
+    "franchiseId": "tex",
+    "decade": "2010s",
+    "positions": [
+      "C"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.305,
+      "slg": 0.365
+    }
+  },
+  {
+    "id": "josh-jung-tex-2020s",
+    "name": "Josh Jung",
+    "franchiseId": "tex",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.315,
+      "slg": 0.45
+    }
+  },
+  {
+    "id": "evan-carter-tex-2020s",
+    "name": "Evan Carter",
+    "franchiseId": "tex",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.35,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "alan-ashby-tor-1970s",
+    "name": "Alan Ashby",
+    "franchiseId": "tor",
+    "decade": "1970s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.326,
+      "slg": 0.358
+    }
+  },
+  {
+    "id": "dave-mckay-tor-1970s",
+    "name": "Dave McKay",
+    "franchiseId": "tor",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.229,
+      "obp": 0.282,
+      "slg": 0.31
+    }
+  },
+  {
+    "id": "roy-howell-tor-1970s",
+    "name": "Roy Howell",
+    "franchiseId": "tor",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.325,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "willie-upshaw-tor-1980s",
+    "name": "Willie Upshaw",
+    "franchiseId": "tor",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.337,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "damaso-garcia-tor-1980s",
+    "name": "Damaso Garcia",
+    "franchiseId": "tor",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.283,
+      "obp": 0.311,
+      "slg": 0.364
+    }
+  },
+  {
+    "id": "rance-mulliniks-tor-1980s",
+    "name": "Rance Mulliniks",
+    "franchiseId": "tor",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.365,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "pat-borders-tor-1990s",
+    "name": "Pat Borders",
+    "franchiseId": "tor",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.288,
+      "slg": 0.374
+    }
+  },
+  {
+    "id": "kelly-gruber-tor-1990s",
+    "name": "Kelly Gruber",
+    "franchiseId": "tor",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.307,
+      "slg": 0.426
+    }
+  },
+  {
+    "id": "gregg-zaun-tor-2000s",
+    "name": "Gregg Zaun",
+    "franchiseId": "tor",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.351,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "eric-hinske-tor-2000s",
+    "name": "Eric Hinske",
+    "franchiseId": "tor",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.333,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "alex-gonzalez-tor-2000s",
+    "name": "Alex Gonzalez",
+    "franchiseId": "tor",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.302,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "ryan-goins-tor-2010s",
+    "name": "Ryan Goins",
+    "franchiseId": "tor",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.228,
+      "obp": 0.278,
+      "slg": 0.322
+    }
+  },
+  {
+    "id": "alejandro-kirk-tor-2020s",
+    "name": "Alejandro Kirk",
+    "franchiseId": "tor",
+    "decade": "2020s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.351,
+      "slg": 0.394
+    }
+  },
+  {
+    "id": "lourdes-gurriel-jr--tor-2020s",
+    "name": "Lourdes Gurriel Jr.",
+    "franchiseId": "tor",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.325,
+      "slg": 0.45
+    }
+  },
+  {
+    "id": "kevin-gausman-tor-2020s",
+    "name": "Kevin Gausman",
+    "franchiseId": "tor",
+    "decade": "2020s",
+    "positions": [
+      "SP"
+    ],
+    "tier": 3,
+    "hof": false,
+    "pitching": {
+      "era": 3.32,
+      "whip": 1.1,
+      "k9": 9.8
+    }
+  },
+  {
+    "id": "ron-hunt-wsh-1960s",
+    "name": "Ron Hunt",
+    "franchiseId": "wsh",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.368,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "coco-laboy-wsh-1960s",
+    "name": "Coco Laboy",
+    "franchiseId": "wsh",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.31,
+      "slg": 0.383
+    }
+  },
+  {
+    "id": "chris-speier-wsh-1970s",
+    "name": "Chris Speier",
+    "franchiseId": "wsh",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.327,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "doug-flynn-wsh-1980s",
+    "name": "Doug Flynn",
+    "franchiseId": "wsh",
+    "decade": "1980s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.238,
+      "obp": 0.266,
+      "slg": 0.294
+    }
+  },
+  {
+    "id": "hubie-brooks-wsh-1980s",
+    "name": "Hubie Brooks",
+    "franchiseId": "wsh",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.315,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "darrin-fletcher-wsh-1990s",
+    "name": "Darrin Fletcher",
+    "franchiseId": "wsh",
+    "decade": "1990s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.318,
+      "slg": 0.401
+    }
+  },
+  {
+    "id": "david-segui-wsh-1990s",
+    "name": "David Segui",
+    "franchiseId": "wsh",
+    "decade": "1990s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.291,
+      "obp": 0.353,
+      "slg": 0.412
+    }
+  },
+  {
+    "id": "sean-berry-wsh-1990s",
+    "name": "Sean Berry",
+    "franchiseId": "wsh",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.336,
+      "slg": 0.43
+    }
+  },
+  {
+    "id": "wil-cordero-wsh-1990s",
+    "name": "Wil Cordero",
+    "franchiseId": "wsh",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.328,
+      "slg": 0.425
+    }
+  },
+  {
+    "id": "moises-alou-wsh-1990s",
+    "name": "Moises Alou",
+    "franchiseId": "wsh",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.369,
+      "slg": 0.516
+    }
+  },
+  {
+    "id": "rondell-white-wsh-1990s",
+    "name": "Rondell White",
+    "franchiseId": "wsh",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.336,
+      "slg": 0.462
+    }
+  },
+  {
+    "id": "brian-schneider-wsh-2000s",
+    "name": "Brian Schneider",
+    "franchiseId": "wsh",
+    "decade": "2000s",
+    "positions": [
+      "C"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.323,
+      "slg": 0.372
+    }
+  },
+  {
+    "id": "vinny-castilla-wsh-2000s",
+    "name": "Vinny Castilla",
+    "franchiseId": "wsh",
+    "decade": "2000s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.276,
+      "obp": 0.321,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "orlando-cabrera-wsh-2000s",
+    "name": "Orlando Cabrera",
+    "franchiseId": "wsh",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.317,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "danny-espinosa-wsh-2010s",
+    "name": "Danny Espinosa",
+    "franchiseId": "wsh",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.221,
+      "obp": 0.295,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "josh-bell-wsh-2020s",
+    "name": "Josh Bell",
+    "franchiseId": "wsh",
+    "decade": "2020s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.341,
+      "slg": 0.458
+    }
+  },
+  {
+    "id": "luis-garcia-jr--wsh-2020s",
+    "name": "Luis Garcia Jr.",
+    "franchiseId": "wsh",
+    "decade": "2020s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.302,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "carter-kieboom-wsh-2020s",
+    "name": "Carter Kieboom",
+    "franchiseId": "wsh",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.206,
+      "obp": 0.299,
+      "slg": 0.322
+    }
+  },
+  {
+    "id": "jesse-winker-wsh-2020s",
+    "name": "Jesse Winker",
+    "franchiseId": "wsh",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.371,
+      "slg": 0.447
+    }
+  },
+  {
+    "id": "alek-thomas-ari-2020s",
+    "name": "Alek Thomas",
+    "franchiseId": "ari",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.284,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "jake-mccarthy-ari-2020s",
+    "name": "Jake McCarthy",
+    "franchiseId": "ari",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.318,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "andy-pafko-atl-1950s",
+    "name": "Andy Pafko",
+    "franchiseId": "atl",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.319,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "orlando-cepeda-atl-1960s",
+    "name": "Orlando Cepeda",
+    "franchiseId": "atl",
+    "decade": "1960s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 4,
+    "hof": true,
+    "batting": {
+      "avg": 0.305,
+      "obp": 0.356,
+      "slg": 0.499
+    }
+  },
+  {
+    "id": "sonny-jackson-atl-1960s",
+    "name": "Sonny Jackson",
+    "franchiseId": "atl",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.305,
+      "slg": 0.307
+    }
+  },
+  {
+    "id": "jerry-royster-atl-1970s",
+    "name": "Jerry Royster",
+    "franchiseId": "atl",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.316,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "ken-oberkfell-atl-1980s",
+    "name": "Ken Oberkfell",
+    "franchiseId": "atl",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.348,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "claudell-washington-atl-1980s",
+    "name": "Claudell Washington",
+    "franchiseId": "atl",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.331,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "dave-philley-bal-1950s",
+    "name": "Dave Philley",
+    "franchiseId": "bal",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.327,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "curt-blefary-bal-1960s",
+    "name": "Curt Blefary",
+    "franchiseId": "bal",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.347,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "lenn-sakata-bal-1980s",
+    "name": "Lenn Sakata",
+    "franchiseId": "bal",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.226,
+      "obp": 0.279,
+      "slg": 0.309
+    }
+  },
+  {
+    "id": "john-lowenstein-bal-1980s",
+    "name": "John Lowenstein",
+    "franchiseId": "bal",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.341,
+      "slg": 0.421
+    }
+  },
+  {
+    "id": "mike-bordick-bal-1990s",
+    "name": "Mike Bordick",
+    "franchiseId": "bal",
+    "decade": "1990s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.327,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "mike-devereaux-bal-1990s",
+    "name": "Mike Devereaux",
+    "franchiseId": "bal",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.309,
+      "slg": 0.398
+    }
+  },
+  {
+    "id": "j-j-hardy-bal-2010s",
+    "name": "J.J. Hardy",
+    "franchiseId": "bal",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.295,
+      "slg": 0.388
+    }
+  },
+  {
+    "id": "jorge-mateo-bal-2020s",
+    "name": "Jorge Mateo",
+    "franchiseId": "bal",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.229,
+      "obp": 0.275,
+      "slg": 0.383
+    }
+  },
+  {
+    "id": "austin-hays-bal-2020s",
+    "name": "Austin Hays",
+    "franchiseId": "bal",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.309,
+      "slg": 0.434
+    }
+  },
+  {
+    "id": "shane-victorino-bos-2010s",
+    "name": "Shane Victorino",
+    "franchiseId": "bos",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.331,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "don-kessinger-chc-1960s",
+    "name": "Don Kessinger",
+    "franchiseId": "chc",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.314,
+      "slg": 0.314
+    }
+  },
+  {
+    "id": "bobby-murcer-chc-1970s",
+    "name": "Bobby Murcer",
+    "franchiseId": "chc",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.357,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "gary-matthews-chc-1980s",
+    "name": "Gary Matthews",
+    "franchiseId": "chc",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.364,
+      "slg": 0.431
+    }
+  },
+  {
+    "id": "jerry-mumphrey-chc-1980s",
+    "name": "Jerry Mumphrey",
+    "franchiseId": "chc",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.289,
+      "obp": 0.353,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "starlin-castro-chc-2010s",
+    "name": "Starlin Castro",
+    "franchiseId": "chc",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.281,
+      "obp": 0.32,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "kyle-schwarber-chc-2010s",
+    "name": "Kyle Schwarber",
+    "franchiseId": "chc",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.226,
+      "obp": 0.342,
+      "slg": 0.48
+    }
+  },
+  {
+    "id": "jason-heyward-chc-2010s",
+    "name": "Jason Heyward",
+    "franchiseId": "chc",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.337,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "pete-crow-armstrong-chc-2020s",
+    "name": "Pete Crow-Armstrong",
+    "franchiseId": "chc",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.286,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "tony-perez-cin-1960s",
+    "name": "Tony Perez",
+    "franchiseId": "cin",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 4,
+    "hof": true,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.341,
+      "slg": 0.463
+    }
+  },
+  {
+    "id": "tommy-harper-cin-1960s",
+    "name": "Tommy Harper",
+    "franchiseId": "cin",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.256,
+      "obp": 0.328,
+      "slg": 0.379
+    }
+  },
+  {
+    "id": "eddie-milner-cin-1980s",
+    "name": "Eddie Milner",
+    "franchiseId": "cin",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.334,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "jose-barrero-cin-2020s",
+    "name": "Jose Barrero",
+    "franchiseId": "cin",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.205,
+      "obp": 0.26,
+      "slg": 0.337
+    }
+  },
+  {
+    "id": "will-benson-cin-2020s",
+    "name": "Will Benson",
+    "franchiseId": "cin",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.335,
+      "slg": 0.447
+    }
+  },
+  {
+    "id": "vic-davalillo-cle-1960s",
+    "name": "Vic Davalillo",
+    "franchiseId": "cle",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.315,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "charlie-spikes-cle-1970s",
+    "name": "Charlie Spikes",
+    "franchiseId": "cle",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.297,
+      "slg": 0.41
+    }
+  },
+  {
+    "id": "john-lowenstein-cle-1970s",
+    "name": "John Lowenstein",
+    "franchiseId": "cle",
+    "decade": "1970s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.325,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "felix-fermin-cle-1980s",
+    "name": "Felix Fermin",
+    "franchiseId": "cle",
+    "decade": "1980s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.305,
+      "slg": 0.314
+    }
+  },
+  {
+    "id": "cory-snyder-cle-1980s",
+    "name": "Cory Snyder",
+    "franchiseId": "cle",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.292,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "travis-fryman-cle-1990s",
+    "name": "Travis Fryman",
+    "franchiseId": "cle",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.336,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "david-justice-cle-1990s",
+    "name": "David Justice",
+    "franchiseId": "cle",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.378,
+      "slg": 0.5
+    }
+  },
+  {
+    "id": "coco-crisp-cle-2000s",
+    "name": "Coco Crisp",
+    "franchiseId": "cle",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.327,
+      "slg": 0.414
+    }
+  },
+  {
+    "id": "shin-soo-choo-cle-2000s",
+    "name": "Shin-Soo Choo",
+    "franchiseId": "cle",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.288,
+      "obp": 0.372,
+      "slg": 0.452
+    }
+  },
+  {
+    "id": "michael-bourn-cle-2010s",
+    "name": "Michael Bourn",
+    "franchiseId": "cle",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.266,
+      "obp": 0.333,
+      "slg": 0.354
+    }
+  },
+  {
+    "id": "gerardo-parra-col-2010s",
+    "name": "Gerardo Parra",
+    "franchiseId": "col",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.325,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "raimel-tapia-col-2020s",
+    "name": "Raimel Tapia",
+    "franchiseId": "col",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.321,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "dave-nicholson-cws-1960s",
+    "name": "Dave Nicholson",
+    "franchiseId": "cws",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.212,
+      "obp": 0.318,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "darrin-jackson-cws-1990s",
+    "name": "Darrin Jackson",
+    "franchiseId": "cws",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.29,
+      "slg": 0.405
+    }
+  },
+  {
+    "id": "george-kell-det-1950s",
+    "name": "George Kell",
+    "franchiseId": "det",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": true,
+    "batting": {
+      "avg": 0.306,
+      "obp": 0.367,
+      "slg": 0.414
+    }
+  },
+  {
+    "id": "vic-wertz-det-1950s",
+    "name": "Vic Wertz",
+    "franchiseId": "det",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.35,
+      "slg": 0.469
+    }
+  },
+  {
+    "id": "ray-oyler-det-1960s",
+    "name": "Ray Oyler",
+    "franchiseId": "det",
+    "decade": "1960s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.175,
+      "obp": 0.258,
+      "slg": 0.251
+    }
+  },
+  {
+    "id": "larry-herndon-det-1980s",
+    "name": "Larry Herndon",
+    "franchiseId": "det",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.323,
+      "slg": 0.419
+    }
+  },
+  {
+    "id": "nick-castellanos-det-2010s",
+    "name": "Nick Castellanos",
+    "franchiseId": "det",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.316,
+      "slg": 0.458
+    }
+  },
+  {
+    "id": "zach-mckinstry-det-2020s",
+    "name": "Zach McKinstry",
+    "franchiseId": "det",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.23,
+      "obp": 0.294,
+      "slg": 0.363
+    }
+  },
+  {
+    "id": "matt-vierling-det-2020s",
+    "name": "Matt Vierling",
+    "franchiseId": "det",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.318,
+      "slg": 0.394
+    }
+  },
+  {
+    "id": "norm-miller-hou-1960s",
+    "name": "Norm Miller",
+    "franchiseId": "hou",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.245,
+      "obp": 0.317,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "doug-rader-hou-1970s",
+    "name": "Doug Rader",
+    "franchiseId": "hou",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.251,
+      "obp": 0.328,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "bill-spiers-hou-1990s",
+    "name": "Bill Spiers",
+    "franchiseId": "hou",
+    "decade": "1990s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.345,
+      "slg": 0.369
+    }
+  },
+  {
+    "id": "richard-hidalgo-hou-1990s",
+    "name": "Richard Hidalgo",
+    "franchiseId": "hou",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.338,
+      "slg": 0.49
+    }
+  },
+  {
+    "id": "moises-alou-hou-2000s",
+    "name": "Moises Alou",
+    "franchiseId": "hou",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.303,
+      "obp": 0.369,
+      "slg": 0.516
+    }
+  },
+  {
+    "id": "jason-lane-hou-2000s",
+    "name": "Jason Lane",
+    "franchiseId": "hou",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.307,
+      "slg": 0.433
+    }
+  },
+  {
+    "id": "josh-reddick-hou-2010s",
+    "name": "Josh Reddick",
+    "franchiseId": "hou",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.318,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "michael-brantley-hou-2020s",
+    "name": "Michael Brantley",
+    "franchiseId": "hou",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.298,
+      "obp": 0.358,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "joe-foy-kc-1960s",
+    "name": "Joe Foy",
+    "franchiseId": "kc",
+    "decade": "1960s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.341,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "lou-piniella-kc-1970s",
+    "name": "Lou Piniella",
+    "franchiseId": "kc",
+    "decade": "1970s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.291,
+      "obp": 0.333,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "al-cowens-kc-1970s",
+    "name": "Al Cowens",
+    "franchiseId": "kc",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.27,
+      "obp": 0.317,
+      "slg": 0.404
+    }
+  },
+  {
+    "id": "jorge-soler-kc-2010s",
+    "name": "Jorge Soler",
+    "franchiseId": "kc",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.328,
+      "slg": 0.48
+    }
+  },
+  {
+    "id": "adalberto-mondesi-kc-2020s",
+    "name": "Adalberto Mondesi",
+    "franchiseId": "kc",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.28,
+      "slg": 0.408
+    }
+  },
+  {
+    "id": "fred-lynn-laa-1980s",
+    "name": "Fred Lynn",
+    "franchiseId": "laa",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.283,
+      "obp": 0.36,
+      "slg": 0.484
+    }
+  },
+  {
+    "id": "hunter-renfroe-laa-2020s",
+    "name": "Hunter Renfroe",
+    "franchiseId": "laa",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.237,
+      "obp": 0.294,
+      "slg": 0.479
+    }
+  },
+  {
+    "id": "billy-cox-lad-1950s",
+    "name": "Billy Cox",
+    "franchiseId": "lad",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.321,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "willie-davis-lad-1960s",
+    "name": "Willie Davis",
+    "franchiseId": "lad",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.279,
+      "obp": 0.311,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "rick-monday-lad-1970s",
+    "name": "Rick Monday",
+    "franchiseId": "lad",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.361,
+      "slg": 0.425
+    }
+  },
+  {
+    "id": "greg-brock-lad-1980s",
+    "name": "Greg Brock",
+    "franchiseId": "lad",
+    "decade": "1980s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.33,
+      "slg": 0.419
+    }
+  },
+  {
+    "id": "jeff-hamilton-lad-1980s",
+    "name": "Jeff Hamilton",
+    "franchiseId": "lad",
+    "decade": "1980s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.234,
+      "obp": 0.267,
+      "slg": 0.35
+    }
+  },
+  {
+    "id": "candy-maldonado-lad-1980s",
+    "name": "Candy Maldonado",
+    "franchiseId": "lad",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.316,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "mike-marshall-lad-1980s",
+    "name": "Mike Marshall",
+    "franchiseId": "lad",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.32,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "brett-butler-lad-1990s",
+    "name": "Brett Butler",
+    "franchiseId": "lad",
+    "decade": "1990s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.29,
+      "obp": 0.377,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "justin-turner-lad-2010s",
+    "name": "Justin Turner",
+    "franchiseId": "lad",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.361,
+      "slg": 0.459
+    }
+  },
+  {
+    "id": "yasiel-puig-lad-2010s",
+    "name": "Yasiel Puig",
+    "franchiseId": "lad",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.348,
+      "slg": 0.478
+    }
+  },
+  {
+    "id": "justin-turner-lad-2020s",
+    "name": "Justin Turner",
+    "franchiseId": "lad",
+    "decade": "2020s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.276,
+      "obp": 0.353,
+      "slg": 0.43
+    }
+  },
+  {
+    "id": "cliff-floyd-mia-1990s",
+    "name": "Cliff Floyd",
+    "franchiseId": "mia",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.358,
+      "slg": 0.482
+    }
+  },
+  {
+    "id": "mark-kotsay-mia-1990s",
+    "name": "Mark Kotsay",
+    "franchiseId": "mia",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.276,
+      "obp": 0.332,
+      "slg": 0.404
+    }
+  },
+  {
+    "id": "bryan-de-la-cruz-mia-2020s",
+    "name": "Bryan De La Cruz",
+    "franchiseId": "mia",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.297,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "avisail-garcia-mia-2020s",
+    "name": "Avisail Garcia",
+    "franchiseId": "mia",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.315,
+      "slg": 0.427
+    }
+  },
+  {
+    "id": "ben-oglivie-mil-1980s",
+    "name": "Ben Oglivie",
+    "franchiseId": "mil",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.336,
+      "slg": 0.473
+    }
+  },
+  {
+    "id": "gorman-thomas-mil-1980s",
+    "name": "Gorman Thomas",
+    "franchiseId": "mil",
+    "decade": "1980s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.225,
+      "obp": 0.324,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "sixto-lezcano-mil-1980s",
+    "name": "Sixto Lezcano",
+    "franchiseId": "mil",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.36,
+      "slg": 0.448
+    }
+  },
+  {
+    "id": "garrett-mitchell-mil-2020s",
+    "name": "Garrett Mitchell",
+    "franchiseId": "mil",
+    "decade": "2020s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.255,
+      "obp": 0.323,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "christian-yelich-mil-2020s",
+    "name": "Christian Yelich",
+    "franchiseId": "mil",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.376,
+      "slg": 0.47
+    }
+  },
+  {
+    "id": "eddie-yost-min-1950s",
+    "name": "Eddie Yost",
+    "franchiseId": "min",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.394,
+      "slg": 0.371
+    }
+  },
+  {
+    "id": "jim-lemon-min-1950s",
+    "name": "Jim Lemon",
+    "franchiseId": "min",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.332,
+      "slg": 0.46
+    }
+  },
+  {
+    "id": "jim-busby-min-1950s",
+    "name": "Jim Busby",
+    "franchiseId": "min",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.262,
+      "obp": 0.32,
+      "slg": 0.358
+    }
+  },
+  {
+    "id": "ted-uhlaender-min-1960s",
+    "name": "Ted Uhlaender",
+    "franchiseId": "min",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.315,
+      "slg": 0.351
+    }
+  },
+  {
+    "id": "rob-wilfong-min-1970s",
+    "name": "Rob Wilfong",
+    "franchiseId": "min",
+    "decade": "1970s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.248,
+      "obp": 0.306,
+      "slg": 0.327
+    }
+  },
+  {
+    "id": "trevor-plouffe-min-2010s",
+    "name": "Trevor Plouffe",
+    "franchiseId": "min",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.303,
+      "slg": 0.413
+    }
+  },
+  {
+    "id": "dave-kingman-nym-1970s",
+    "name": "Dave Kingman",
+    "franchiseId": "nym",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.236,
+      "obp": 0.302,
+      "slg": 0.478
+    }
+  },
+  {
+    "id": "robin-ventura-nym-1990s",
+    "name": "Robin Ventura",
+    "franchiseId": "nym",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.36,
+      "slg": 0.444
+    }
+  },
+  {
+    "id": "daniel-murphy-nym-2010s",
+    "name": "Daniel Murphy",
+    "franchiseId": "nym",
+    "decade": "2010s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.296,
+      "obp": 0.341,
+      "slg": 0.455
+    }
+  },
+  {
+    "id": "david-wright-nym-2010s",
+    "name": "David Wright",
+    "franchiseId": "nym",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 4,
+    "hof": false,
+    "batting": {
+      "avg": 0.296,
+      "obp": 0.376,
+      "slg": 0.491
+    }
+  },
+  {
+    "id": "curtis-granderson-nym-2010s",
+    "name": "Curtis Granderson",
+    "franchiseId": "nym",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.337,
+      "slg": 0.465
+    }
+  },
+  {
+    "id": "mark-canha-nym-2020s",
+    "name": "Mark Canha",
+    "franchiseId": "nym",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.244,
+      "obp": 0.343,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "andy-carey-nyy-1950s",
+    "name": "Andy Carey",
+    "franchiseId": "nyy",
+    "decade": "1950s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.26,
+      "obp": 0.326,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "mickey-mantle-nyy-1960s",
+    "name": "Mickey Mantle",
+    "franchiseId": "nyy",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 5,
+    "hof": true,
+    "batting": {
+      "avg": 0.298,
+      "obp": 0.421,
+      "slg": 0.557
+    }
+  },
+  {
+    "id": "ken-griffey-sr--nyy-1980s",
+    "name": "Ken Griffey Sr.",
+    "franchiseId": "nyy",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.296,
+      "obp": 0.359,
+      "slg": 0.431
+    }
+  },
+  {
+    "id": "derek-jeter-nyy-2000s",
+    "name": "Derek Jeter",
+    "franchiseId": "nyy",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 5,
+    "hof": true,
+    "batting": {
+      "avg": 0.31,
+      "obp": 0.377,
+      "slg": 0.44
+    }
+  },
+  {
+    "id": "chase-headley-nyy-2010s",
+    "name": "Chase Headley",
+    "franchiseId": "nyy",
+    "decade": "2010s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.347,
+      "slg": 0.399
+    }
+  },
+  {
+    "id": "didi-gregorius-nyy-2010s",
+    "name": "Didi Gregorius",
+    "franchiseId": "nyy",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.261,
+      "obp": 0.304,
+      "slg": 0.427
+    }
+  },
+  {
+    "id": "alex-verdugo-nyy-2020s",
+    "name": "Alex Verdugo",
+    "franchiseId": "nyy",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.33,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "jerry-lumpe-oak-1960s",
+    "name": "Jerry Lumpe",
+    "franchiseId": "oak",
+    "decade": "1960s",
+    "positions": [
+      "2B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.325,
+      "slg": 0.366
+    }
+  },
+  {
+    "id": "claudell-washington-oak-1970s",
+    "name": "Claudell Washington",
+    "franchiseId": "oak",
+    "decade": "1970s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.331,
+      "slg": 0.42
+    }
+  },
+  {
+    "id": "dave-henderson-oak-1980s",
+    "name": "Dave Henderson",
+    "franchiseId": "oak",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.258,
+      "obp": 0.324,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "jed-lowrie-oak-2010s",
+    "name": "Jed Lowrie",
+    "franchiseId": "oak",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.337,
+      "slg": 0.414
+    }
+  },
+  {
+    "id": "seth-brown-oak-2020s",
+    "name": "Seth Brown",
+    "franchiseId": "oak",
+    "decade": "2020s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.231,
+      "obp": 0.295,
+      "slg": 0.436
+    }
+  },
+  {
+    "id": "lawrence-butler-oak-2020s",
+    "name": "Lawrence Butler",
+    "franchiseId": "oak",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.304,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "ted-kazanski-phi-1950s",
+    "name": "Ted Kazanski",
+    "franchiseId": "phi",
+    "decade": "1950s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.217,
+      "obp": 0.286,
+      "slg": 0.302
+    }
+  },
+  {
+    "id": "rip-repulski-phi-1950s",
+    "name": "Rip Repulski",
+    "franchiseId": "phi",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.323,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "tony-gonzalez-phi-1960s",
+    "name": "Tony Gonzalez",
+    "franchiseId": "phi",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.337,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "jay-johnstone-phi-1970s",
+    "name": "Jay Johnstone",
+    "franchiseId": "phi",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.329,
+      "slg": 0.394
+    }
+  },
+  {
+    "id": "milt-thompson-phi-1990s",
+    "name": "Milt Thompson",
+    "franchiseId": "phi",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.334,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "omar-moreno-pit-1970s",
+    "name": "Omar Moreno",
+    "franchiseId": "pit",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.252,
+      "obp": 0.306,
+      "slg": 0.343
+    }
+  },
+  {
+    "id": "glenn-wilson-pit-1980s",
+    "name": "Glenn Wilson",
+    "franchiseId": "pit",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.306,
+      "slg": 0.394
+    }
+  },
+  {
+    "id": "dave-clark-pit-1990s",
+    "name": "Dave Clark",
+    "franchiseId": "pit",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.332,
+      "slg": 0.43
+    }
+  },
+  {
+    "id": "joshua-palacios-pit-2020s",
+    "name": "Joshua Palacios",
+    "franchiseId": "pit",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.239,
+      "obp": 0.3,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "al-ferrara-sd-1960s",
+    "name": "Al Ferrara",
+    "franchiseId": "sd",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.337,
+      "slg": 0.423
+    }
+  },
+  {
+    "id": "nate-colbert-sd-1970s",
+    "name": "Nate Colbert",
+    "franchiseId": "sd",
+    "decade": "1970s",
+    "positions": [
+      "1B"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.329,
+      "slg": 0.451
+    }
+  },
+  {
+    "id": "xavier-nady-sd-2000s",
+    "name": "Xavier Nady",
+    "franchiseId": "sd",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.324,
+      "slg": 0.438
+    }
+  },
+  {
+    "id": "will-venable-sd-2010s",
+    "name": "Will Venable",
+    "franchiseId": "sd",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.249,
+      "obp": 0.318,
+      "slg": 0.403
+    }
+  },
+  {
+    "id": "phil-bradley-sea-1980s",
+    "name": "Phil Bradley",
+    "franchiseId": "sea",
+    "decade": "1980s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.286,
+      "obp": 0.355,
+      "slg": 0.421
+    }
+  },
+  {
+    "id": "mike-blowers-sea-1990s",
+    "name": "Mike Blowers",
+    "franchiseId": "sea",
+    "decade": "1990s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.257,
+      "obp": 0.322,
+      "slg": 0.423
+    }
+  },
+  {
+    "id": "vince-coleman-sea-1990s",
+    "name": "Vince Coleman",
+    "franchiseId": "sea",
+    "decade": "1990s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.326,
+      "slg": 0.345
+    }
+  },
+  {
+    "id": "randy-winn-sea-2000s",
+    "name": "Randy Winn",
+    "franchiseId": "sea",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.284,
+      "obp": 0.343,
+      "slg": 0.416
+    }
+  },
+  {
+    "id": "michael-saunders-sea-2010s",
+    "name": "Michael Saunders",
+    "franchiseId": "sea",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.232,
+      "obp": 0.306,
+      "slg": 0.407
+    }
+  },
+  {
+    "id": "austin-jackson-sea-2010s",
+    "name": "Austin Jackson",
+    "franchiseId": "sea",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.273,
+      "obp": 0.333,
+      "slg": 0.395
+    }
+  },
+  {
+    "id": "candy-maldonado-sf-1980s",
+    "name": "Candy Maldonado",
+    "franchiseId": "sf",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.316,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "brandon-crawford-sf-2020s",
+    "name": "Brandon Crawford",
+    "franchiseId": "sf",
+    "decade": "2020s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.254,
+      "obp": 0.321,
+      "slg": 0.405
+    }
+  },
+  {
+    "id": "mike-yastrzemski-sf-2020s",
+    "name": "Mike Yastrzemski",
+    "franchiseId": "sf",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.24,
+      "obp": 0.323,
+      "slg": 0.45
+    }
+  },
+  {
+    "id": "bill-virdon-stl-1950s",
+    "name": "Bill Virdon",
+    "franchiseId": "stl",
+    "decade": "1950s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.325,
+      "slg": 0.387
+    }
+  },
+  {
+    "id": "rip-repulski-stl-1950s",
+    "name": "Rip Repulski",
+    "franchiseId": "stl",
+    "decade": "1950s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.323,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "reggie-smith-stl-1970s",
+    "name": "Reggie Smith",
+    "franchiseId": "stl",
+    "decade": "1970s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.287,
+      "obp": 0.366,
+      "slg": 0.489
+    }
+  },
+  {
+    "id": "george-hendrick-stl-1980s",
+    "name": "George Hendrick",
+    "franchiseId": "stl",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.329,
+      "slg": 0.439
+    }
+  },
+  {
+    "id": "ray-lankford-stl-2000s",
+    "name": "Ray Lankford",
+    "franchiseId": "stl",
+    "decade": "2000s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.272,
+      "obp": 0.364,
+      "slg": 0.48
+    }
+  },
+  {
+    "id": "quinton-mccracken-tb-1990s",
+    "name": "Quinton McCracken",
+    "franchiseId": "tb",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.274,
+      "obp": 0.339,
+      "slg": 0.375
+    }
+  },
+  {
+    "id": "julio-lugo-tb-2000s",
+    "name": "Julio Lugo",
+    "franchiseId": "tb",
+    "decade": "2000s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.269,
+      "obp": 0.328,
+      "slg": 0.389
+    }
+  },
+  {
+    "id": "rocco-baldelli-tb-2000s",
+    "name": "Rocco Baldelli",
+    "franchiseId": "tb",
+    "decade": "2000s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.328,
+      "slg": 0.443
+    }
+  },
+  {
+    "id": "yunel-escobar-tb-2010s",
+    "name": "Yunel Escobar",
+    "franchiseId": "tb",
+    "decade": "2010s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.278,
+      "obp": 0.348,
+      "slg": 0.377
+    }
+  },
+  {
+    "id": "kevin-kiermaier-tb-2010s",
+    "name": "Kevin Kiermaier",
+    "franchiseId": "tb",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.302,
+      "slg": 0.398
+    }
+  },
+  {
+    "id": "matt-joyce-tb-2010s",
+    "name": "Matt Joyce",
+    "franchiseId": "tb",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.242,
+      "obp": 0.34,
+      "slg": 0.428
+    }
+  },
+  {
+    "id": "josh-lowe-tb-2020s",
+    "name": "Josh Lowe",
+    "franchiseId": "tb",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.246,
+      "obp": 0.316,
+      "slg": 0.427
+    }
+  },
+  {
+    "id": "fred-valentine-tex-1960s",
+    "name": "Fred Valentine",
+    "franchiseId": "tex",
+    "decade": "1960s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.247,
+      "obp": 0.326,
+      "slg": 0.376
+    }
+  },
+  {
+    "id": "bert-campaneris-tex-1970s",
+    "name": "Bert Campaneris",
+    "franchiseId": "tex",
+    "decade": "1970s",
+    "positions": [
+      "SS"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.259,
+      "obp": 0.311,
+      "slg": 0.342
+    }
+  },
+  {
+    "id": "ruben-sierra-tex-1990s",
+    "name": "Ruben Sierra",
+    "franchiseId": "tex",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.268,
+      "obp": 0.315,
+      "slg": 0.452
+    }
+  },
+  {
+    "id": "leonys-martin-tex-2010s",
+    "name": "Leonys Martin",
+    "franchiseId": "tex",
+    "decade": "2010s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.322,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "shin-soo-choo-tex-2010s",
+    "name": "Shin-Soo Choo",
+    "franchiseId": "tex",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.275,
+      "obp": 0.377,
+      "slg": 0.437
+    }
+  },
+  {
+    "id": "robbie-grossman-tex-2020s",
+    "name": "Robbie Grossman",
+    "franchiseId": "tex",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.241,
+      "obp": 0.341,
+      "slg": 0.38
+    }
+  },
+  {
+    "id": "al-woods-tor-1970s",
+    "name": "Al Woods",
+    "franchiseId": "tor",
+    "decade": "1970s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.271,
+      "obp": 0.332,
+      "slg": 0.39
+    }
+  },
+  {
+    "id": "rick-bosetti-tor-1970s",
+    "name": "Rick Bosetti",
+    "franchiseId": "tor",
+    "decade": "1970s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.25,
+      "obp": 0.297,
+      "slg": 0.346
+    }
+  },
+  {
+    "id": "candy-maldonado-tor-1990s",
+    "name": "Candy Maldonado",
+    "franchiseId": "tor",
+    "decade": "1990s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.253,
+      "obp": 0.316,
+      "slg": 0.409
+    }
+  },
+  {
+    "id": "melky-cabrera-tor-2010s",
+    "name": "Melky Cabrera",
+    "franchiseId": "tor",
+    "decade": "2010s",
+    "positions": [
+      "LF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.285,
+      "obp": 0.334,
+      "slg": 0.417
+    }
+  },
+  {
+    "id": "teoscar-hernandez-tor-2020s",
+    "name": "Teoscar Hernandez",
+    "franchiseId": "tor",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.264,
+      "obp": 0.322,
+      "slg": 0.49
+    }
+  },
+  {
+    "id": "don-bosch-wsh-1960s",
+    "name": "Don Bosch",
+    "franchiseId": "wsh",
+    "decade": "1960s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.164,
+      "obp": 0.227,
+      "slg": 0.22
+    }
+  },
+  {
+    "id": "jim-fairey-wsh-1960s",
+    "name": "Jim Fairey",
+    "franchiseId": "wsh",
+    "decade": "1960s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.243,
+      "obp": 0.3,
+      "slg": 0.344
+    }
+  },
+  {
+    "id": "larry-parrish-wsh-1970s",
+    "name": "Larry Parrish",
+    "franchiseId": "wsh",
+    "decade": "1970s",
+    "positions": [
+      "3B"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.317,
+      "slg": 0.429
+    }
+  },
+  {
+    "id": "mitch-webster-wsh-1980s",
+    "name": "Mitch Webster",
+    "franchiseId": "wsh",
+    "decade": "1980s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.263,
+      "obp": 0.328,
+      "slg": 0.396
+    }
+  },
+  {
+    "id": "endy-chavez-wsh-2000s",
+    "name": "Endy Chavez",
+    "franchiseId": "wsh",
+    "decade": "2000s",
+    "positions": [
+      "CF"
+    ],
+    "tier": 1,
+    "hof": false,
+    "batting": {
+      "avg": 0.277,
+      "obp": 0.325,
+      "slg": 0.367
+    }
+  },
+  {
+    "id": "jayson-werth-wsh-2010s",
+    "name": "Jayson Werth",
+    "franchiseId": "wsh",
+    "decade": "2010s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 3,
+    "hof": false,
+    "batting": {
+      "avg": 0.267,
+      "obp": 0.36,
+      "slg": 0.454
+    }
+  },
+  {
+    "id": "joey-meneses-wsh-2020s",
+    "name": "Joey Meneses",
+    "franchiseId": "wsh",
+    "decade": "2020s",
+    "positions": [
+      "RF"
+    ],
+    "tier": 2,
+    "hof": false,
+    "batting": {
+      "avg": 0.265,
+      "obp": 0.312,
+      "slg": 0.412
     }
   }
 ];
