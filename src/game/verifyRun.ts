@@ -1,5 +1,6 @@
 import { POSITIONS, type Position } from '../config/constants';
 import { PLAYERS } from '../data/players';
+import { isPoolLoaded, setPool } from '../data/pool';
 import { spinForRound } from './draftSequence';
 import { simulateSeason } from './simulate';
 import { getAvailablePlayers, personKey } from './spin';
@@ -41,6 +42,9 @@ export function parsePicks(value: unknown): SubmittedPick[] | null {
  * cannot post a roster it never drafted or a record it never earned.
  */
 export function verifyDailyRun(dateKey: string, picks: SubmittedPick[]): VerifyResult {
+  // Server-side there is no bundle to protect, so prime the pool directly.
+  if (!isPoolLoaded()) setPool(PLAYERS);
+
   if (picks.length !== POSITIONS.length) {
     return { ok: false, error: `Expected ${POSITIONS.length} picks` };
   }

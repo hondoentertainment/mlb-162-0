@@ -4,6 +4,7 @@ import {
   decodeChallengeSeed,
   parseChallengeFromLocation,
 } from '../game/challenge';
+import { ensurePool } from '../data/pool';
 import { isDailyCompletedToday, loadDailyRecord, utcDateKey } from '../game/daily';
 import { formatSalary, SALARY_CAP_M } from '../game/salary';
 import { useGame } from '../state/gameStore';
@@ -23,8 +24,21 @@ export function Home() {
     if (!fromUrl) return;
     setChallengeCode(fromUrl);
     startGame('challenge', undefined, fromUrl);
-    history.replaceState(null, '', window.location.pathname);
+    history.replaceState(null, '', '/');
   }, [startGame]);
+
+  // Warm the code-split player table during idle time so the first mode tap
+  // does not wait on a network round trip.
+  useEffect(() => {
+    const warm = () => void ensurePool();
+    const idle = window.requestIdleCallback;
+    if (idle) {
+      const handle = idle(warm, { timeout: 3000 });
+      return () => window.cancelIdleCallback?.(handle);
+    }
+    const timer = window.setTimeout(warm, 1200);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const joinChallenge = () => {
     const code = challengeCode.trim().toUpperCase();

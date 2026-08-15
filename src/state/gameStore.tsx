@@ -8,6 +8,7 @@ import {
 } from 'react';
 import { MODE_LABELS, spinDurationMs, type GameMode, type Position } from '../config/constants';
 import { FRANCHISE_BY_ID } from '../data/franchises';
+import { ensurePool } from '../data/pool';
 import { evaluateAchievements } from '../game/achievements';
 import { recordCareerResult } from '../game/career';
 import { saveDailyRecord } from '../game/daily';
@@ -59,7 +60,11 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const startGame = useCallback(
     (mode: GameMode, franchiseId?: string, challengeCode?: string) => {
-      dispatch({ type: 'START', mode, franchiseId, challengeCode });
+      // The player table is code-split, so make sure it is in memory before the
+      // draft screen tries to spin.
+      void ensurePool().then(() =>
+        dispatch({ type: 'START', mode, franchiseId, challengeCode }),
+      );
     },
     [],
   );
