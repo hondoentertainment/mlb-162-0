@@ -36,6 +36,15 @@ test.describe('home', () => {
     await expectHomeFrom(page);
   });
 
+  test('scrolls to top so the home header is visible', async ({ page }) => {
+    await openApp(page);
+    await page.getByTestId('nav-how').scrollIntoViewIfNeeded();
+    await page.getByTestId('nav-how').click();
+    await expect(page.getByTestId('app-header')).toBeInViewport();
+    await expect(page.getByRole('heading', { name: /How to play/i })).toBeInViewport();
+    await expectHomeFrom(page);
+  });
+
   test('returns home from franchise select and draft', async ({ page }) => {
     await openApp(page);
     await page.getByTestId('mode-franchise').click();

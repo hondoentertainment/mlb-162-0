@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { AppHeader } from './components/AppHeader';
 import { Career } from './components/Career';
 import { Draft } from './components/Draft';
@@ -8,6 +9,16 @@ import { Leaderboard } from './components/Leaderboard';
 import { ResultCard } from './components/ResultCard';
 import { SeasonReveal } from './components/SeasonReveal';
 import { GameProvider, useGame } from './state/gameStore';
+
+function ScrollToTop() {
+  const { state } = useGame();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [state.screen]);
+
+  return null;
+}
 
 function ScreenRouter() {
   const { state } = useGame();
@@ -37,6 +48,7 @@ export default function App() {
     <GameProvider>
       <div className="app-shell">
         <div className="ballpark-bg" aria-hidden="true" />
+        <ScrollToTop />
         <AppHeader />
         <main className="app-content">
           <ScreenRouter />
