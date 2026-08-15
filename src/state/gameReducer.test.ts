@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { PLAYERS } from '../data/players';
 import { getAvailablePlayers } from '../game/spin';
-import { initialState, openPositions, reducer, takenIds } from './gameReducer';
+import { draftedKeys, initialState, openPositions, reducer } from './gameReducer';
 
 const yogi = PLAYERS.find((p) => p.id === 'yogi-berra-nyy-1950s');
 const mantle = PLAYERS.find((p) => p.id === 'mickey-mantle-nyy-1950s');
@@ -74,6 +74,35 @@ describe('undo last pick', () => {
   });
 });
 
+describe('one person per roster', () => {
+  it('rejects a pick for someone already on the roster in another era', () => {
+    const seattleARod = PLAYERS.find((p) => p.id === 'alex-rodriguez-sea-1990s')!;
+    const yankeeARod = PLAYERS.find((p) => p.id === 'alex-rodriguez-nyy-2000s')!;
+
+    const drafted = reducer(withSpin('classic'), {
+      type: 'PICK',
+      player: seattleARod,
+      position: 'SS',
+    });
+    expect(drafted.roster.find((s) => s.position === 'SS')?.player?.id).toBe(seattleARod.id);
+
+    const again = reducer(drafted, { type: 'PICK', player: yankeeARod, position: '3B' });
+    expect(again).toBe(drafted);
+    expect(again.roster.find((s) => s.position === '3B')?.player).toBeNull();
+  });
+
+  it('still allows a different player at that slot', () => {
+    const seattleARod = PLAYERS.find((p) => p.id === 'alex-rodriguez-sea-1990s')!;
+    const drafted = reducer(withSpin('classic'), {
+      type: 'PICK',
+      player: seattleARod,
+      position: 'SS',
+    });
+    const next = reducer(drafted, { type: 'PICK', player: mantle, position: 'CF' });
+    expect(next.roster.find((s) => s.position === 'CF')?.player?.id).toBe(mantle.id);
+  });
+});
+
 describe('empty-pool respin', () => {
   const emptySpin = { decade: '1950s' as const, franchiseId: 'zzz-empty' };
 
@@ -81,13 +110,13 @@ describe('empty-pool respin', () => {
     let state = start('classic');
     state = { ...state, spin: emptySpin, randSeed: 1 };
     expect(
-      getAvailablePlayers(emptySpin, openPositions(state.roster), takenIds(state.roster)),
+      getAvailablePlayers(emptySpin, openPositions(state.roster), draftedKeys(state.roster)),
     ).toHaveLength(0);
 
     const next = reducer(state, { type: 'RESPIN' });
     expect(next.spin).not.toEqual(emptySpin);
     expect(
-      getAvailablePlayers(next.spin!, openPositions(next.roster), takenIds(next.roster)).length,
+      getAvailablePlayers(next.spin!, openPositions(next.roster), draftedKeys(next.roster)).length,
     ).toBeGreaterThan(0);
   });
 

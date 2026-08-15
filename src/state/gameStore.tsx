@@ -10,20 +10,20 @@ import { MODE_LABELS, spinDurationMs, type GameMode, type Position } from '../co
 import { FRANCHISE_BY_ID } from '../data/franchises';
 import { evaluateAchievements } from '../game/achievements';
 import { recordCareerResult } from '../game/career';
-import { dailyRng, saveDailyRecord, utcDateKey } from '../game/daily';
+import { saveDailyRecord } from '../game/daily';
 import { submitDailyBoard } from '../game/dailyBoard';
+import { spinForRound } from '../game/draftSequence';
 import { canUndoLastPick } from '../game/draftRules';
 import { tryAddLeaderboardEntry } from '../game/leaderboard';
 import { rosterSpend } from '../game/salary';
 import { simulateSeason } from '../game/simulate';
-import { getAvailablePlayers, playersOnSpin, spinWithEligibility } from '../game/spin';
+import { getAvailablePlayers, playersOnSpin } from '../game/spin';
 import type { Player } from '../types/game';
 import {
-  createRng,
+  draftedKeys,
   initialState,
   openPositions,
   reducer,
-  takenIds,
   type GameState,
   type Screen,
 } from './gameReducer';
@@ -70,35 +70,15 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const spin = useCallback(() => {
     dispatch({ type: 'SPIN_START' });
-    let rand: () => number;
-    if (state.mode === 'daily') {
-      rand = dailyRng(state.dateKey ?? utcDateKey());
-      for (let i = 0; i < state.round * 17; i++) rand();
-    } else if (state.mode === 'challenge') {
-      rand = createRng(state.randSeed);
-      for (let i = 0; i < state.round * 17; i++) rand();
-    } else {
-      rand = createRng(state.randSeed + state.round * 1009);
-    }
-    const open = openPositions(state.roster);
-    const taken = takenIds(state.roster);
-    let result = spinWithEligibility(
-      rand,
-      open,
-      taken,
-      40,
-      state.lockedFranchiseId,
-    );
-    // Deterministic extra draws so seeded modes never soft-lock on empty pools
-    if (
-      (state.mode === 'daily' || state.mode === 'challenge') &&
-      getAvailablePlayers(result, open, taken).length === 0
-    ) {
-      for (let i = 0; i < 60; i++) {
-        result = spinWithEligibility(rand, open, taken, 20, state.lockedFranchiseId);
-        if (getAvailablePlayers(result, open, taken).length > 0) break;
-      }
-    }
+    const result = spinForRound({
+      mode: state.mode,
+      round: state.round,
+      randSeed: state.randSeed,
+      dateKey: state.dateKey,
+      openPositions: openPositions(state.roster),
+      drafted: draftedKeys(state.roster),
+      lockedFranchiseId: state.lockedFranchiseId,
+    });
     window.setTimeout(
       () => dispatch({ type: 'SPIN_DONE', spin: result }),
       spinDurationMs(),
@@ -151,10 +131,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         });
         const submitted = await submitDailyBoard({
           dateKey: state.dateKey,
-          wins: result.wins,
-          losses: result.losses,
-          gradeLabel: result.gradeLabel,
-          rosterNames,
+          picks: state.picks,
         });
         dailyRank = submitted.rank ?? null;
       }
@@ -194,7 +171,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
         newAchievements,
       });
     })();
-  }, [state.dateKey, state.mode, state.roster]);
+  }, [state.dateKey, state.mode, state.picks, state.roster]);
 
   const goHome = useCallback(() => dispatch({ type: 'RESET' }), []);
   const setScreen = useCallback(
@@ -211,7 +188,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const spinPlayers = useMemo(() => {
     if (!state.spin) return [];
-    return playersOnSpin(state.spin, takenIds(state.roster));
+    return playersOnSpin(state.spin, draftedKeys(state.roster));
   }, [state.roster, state.spin]);
 
   const availablePlayers = useMemo(() => {
@@ -219,7 +196,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     return getAvailablePlayers(
       state.spin,
       openPositions(state.roster),
-      takenIds(state.roster),
+      draftedKeys(state.roster),
     );
   }, [state.roster, state.spin]);
 

@@ -1,4 +1,5 @@
-import { utcDateKey } from './daily';
+import { utcDateKey } from './dailySeed';
+import type { SubmittedPick } from './verifyRun';
 
 export interface GlobalDailyEntry {
   id: string;
@@ -45,25 +46,27 @@ export async function fetchDailyBoard(dateKey = utcDateKey()): Promise<{
   }
 }
 
+/**
+ * Sends the draft order rather than a claimed record — the server replays the
+ * picks against the day's seed and computes the result itself.
+ */
 export async function submitDailyBoard(input: {
   dateKey: string;
-  wins: number;
-  losses: number;
-  gradeLabel: string;
-  rosterNames: string[];
+  picks: SubmittedPick[];
 }): Promise<{ rank?: number; error?: string }> {
   try {
     const res = await fetch('/api/daily', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        ...input,
+        dateKey: input.dateKey,
+        picks: input.picks,
         id: getOrCreateDailyAttemptId(input.dateKey),
       }),
     });
-    const data = (await res.json()) as { rank?: number; error?: string };
+    const data = (await res.json()) as { rank?: number | null; error?: string };
     if (!res.ok) return { error: data.error ?? 'Submit failed' };
-    return { rank: data.rank };
+    return { rank: data.rank ?? undefined };
   } catch {
     return { error: 'Submit failed' };
   }
