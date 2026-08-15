@@ -6,7 +6,13 @@ import {
   useReducer,
   type ReactNode,
 } from 'react';
-import { MODE_LABELS, spinDurationMs, type GameMode, type Position } from '../config/constants';
+import {
+  MODE_LABELS,
+  spinDurationMs,
+  type Decade,
+  type GameMode,
+  type Position,
+} from '../config/constants';
 import { FRANCHISE_BY_ID } from '../data/franchises';
 import { ensurePool } from '../data/pool';
 import { evaluateAchievements } from '../game/achievements';
@@ -34,7 +40,9 @@ export type { Screen } from './gameReducer';
 interface GameContextValue {
   state: GameState;
   startGame: (mode: GameMode, franchiseId?: string, challengeCode?: string) => void;
+  startEraLock: (decade: Decade) => void;
   beginFranchiseSelect: () => void;
+  beginDecadeSelect: () => void;
   spin: () => void;
   skipTeam: () => void;
   skipDecade: () => void;
@@ -69,8 +77,16 @@ export function GameProvider({ children }: { children: ReactNode }) {
     [],
   );
 
+  const startEraLock = useCallback((decade: Decade) => {
+    void ensurePool().then(() => dispatch({ type: 'START', mode: 'eralock', decade }));
+  }, []);
+
   const beginFranchiseSelect = useCallback(() => {
     dispatch({ type: 'SET_SCREEN', screen: 'franchise-select' });
+  }, []);
+
+  const beginDecadeSelect = useCallback(() => {
+    dispatch({ type: 'SET_SCREEN', screen: 'decade-select' });
   }, []);
 
   const spin = useCallback(() => {
@@ -83,6 +99,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
       openPositions: openPositions(state.roster),
       drafted: draftedKeys(state.roster),
       lockedFranchiseId: state.lockedFranchiseId,
+      lockedDecade: state.lockedDecade,
     });
     window.setTimeout(
       () => dispatch({ type: 'SPIN_DONE', spin: result }),
@@ -90,6 +107,7 @@ export function GameProvider({ children }: { children: ReactNode }) {
     );
   }, [
     state.dateKey,
+    state.lockedDecade,
     state.lockedFranchiseId,
     state.mode,
     state.randSeed,
@@ -218,7 +236,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
     () => ({
       state,
       startGame,
+      startEraLock,
       beginFranchiseSelect,
+      beginDecadeSelect,
       spin,
       skipTeam,
       skipDecade,
@@ -239,7 +259,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
     [
       state,
       startGame,
+      startEraLock,
       beginFranchiseSelect,
+      beginDecadeSelect,
       spin,
       skipTeam,
       skipDecade,

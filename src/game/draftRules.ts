@@ -1,13 +1,24 @@
 import type { GameMode } from '../config/constants';
 
-/** Daily and Challenge: same spins, no skips, no extra chances. */
+/** Daily and Challenge: same spins for everyone, so no skips or extra chances. */
 export function isFairnessMode(mode: GameMode | null): boolean {
   return mode === 'daily' || mode === 'challenge';
 }
 
-/** Undo last pick in Classic, Diamond IQ, Salary Cap, and One Franchise. */
+/** Ironman opts out of every safety net; seeded modes cannot offer one. */
+export function allowsRedraw(mode: GameMode | null): boolean {
+  return !isFairnessMode(mode) && mode !== 'ironman';
+}
+
+/** Undo is off in the seeded modes and in Ironman. */
 export function canUndoLastPick(mode: GameMode | null): boolean {
-  return mode === 'classic' || mode === 'diamondiq' || mode === 'salary' || mode === 'franchise';
+  return (
+    mode === 'classic' ||
+    mode === 'diamondiq' ||
+    mode === 'salary' ||
+    mode === 'franchise' ||
+    mode === 'eralock'
+  );
 }
 
 export type EmptyPoolKind = 'none' | 'no-fits' | 'over-cap';
@@ -25,17 +36,17 @@ export function emptyPoolKind(input: {
   return 'none';
 }
 
-/** Empty / unaffordable spins may redraw only outside Daily and Challenge. */
+/** Empty / unaffordable spins may redraw only in modes that allow one. */
 export function canRespinEmptyPool(mode: GameMode | null, kind: EmptyPoolKind): boolean {
-  return kind !== 'none' && !isFairnessMode(mode);
+  return kind !== 'none' && allowsRedraw(mode);
 }
 
-export function emptyPoolCopy(kind: EmptyPoolKind, fairMode: boolean): string {
+export function emptyPoolCopy(kind: EmptyPoolKind, noRedraw: boolean): string {
   if (kind === 'over-cap') {
     return 'Nobody on this spin fits the remaining salary cap.';
   }
-  if (fairMode) {
-    return 'This franchise and decade have no legal picks for your open positions. Daily and Challenge do not allow a redraw — everyone faces the same draws.';
+  if (noRedraw) {
+    return 'This franchise and decade have no legal picks for your open positions. This mode does not allow a redraw.';
   }
   return 'This franchise and decade have no legal picks for your open positions.';
 }

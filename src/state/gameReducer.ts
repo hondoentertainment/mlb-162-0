@@ -1,9 +1,10 @@
 import {
   POSITIONS,
+  type Decade,
   type GameMode,
   type Position,
 } from '../config/constants';
-import { canUndoLastPick, isFairnessMode } from '../game/draftRules';
+import { allowsRedraw, canUndoLastPick } from '../game/draftRules';
 import { decodeChallengeSeed, encodeChallengeSeed, newChallengeSeed } from '../game/challenge';
 import { dailySeed, utcDateKey } from '../game/dailySeed';
 import { mulberry32 } from '../game/rng';
@@ -22,6 +23,7 @@ import type { SubmittedPick } from '../game/verifyRun';
 export type Screen =
   | 'home'
   | 'franchise-select'
+  | 'decade-select'
   | 'draft'
   | 'reveal'
   | 'result'
@@ -57,6 +59,7 @@ export interface GameState {
   dailyRank: number | null;
   salaryCap: number | null;
   lockedFranchiseId: string | null;
+  lockedDecade: Decade | null;
   challengeCode: string | null;
   newAchievements: AchievementId[];
   lastPick: LastPickSnapshot | null;
@@ -66,7 +69,13 @@ export interface GameState {
 
 export type Action =
   | { type: 'SET_SCREEN'; screen: Screen }
-  | { type: 'START'; mode: GameMode; franchiseId?: string; challengeCode?: string }
+  | {
+      type: 'START';
+      mode: GameMode;
+      franchiseId?: string;
+      challengeCode?: string;
+      decade?: Decade;
+    }
   | { type: 'SPIN_START' }
   | { type: 'SPIN_DONE'; spin: SpinResult }
   | { type: 'SKIP_TEAM' }
@@ -117,6 +126,7 @@ export const initialState: GameState = {
   dailyRank: null,
   salaryCap: null,
   lockedFranchiseId: null,
+  lockedDecade: null,
   challengeCode: null,
   newAchievements: [],
   lastPick: null,
@@ -145,6 +155,8 @@ export function reducer(state: GameState, action: Action): GameState {
       const isSalary = action.mode === 'salary';
       const isFranchise = action.mode === 'franchise';
       const isChallenge = action.mode === 'challenge';
+      const isEraLock = action.mode === 'eralock';
+      const isIronman = action.mode === 'ironman';
       const dateKey = isDaily ? utcDateKey() : null;
       let seed: number;
       let challengeCode: string | null = null;
@@ -163,17 +175,20 @@ export function reducer(state: GameState, action: Action): GameState {
         ...initialState,
         screen: 'draft',
         mode: action.mode,
-        showStats:
-          action.mode === 'classic' || isSalary || isFranchise || isChallenge,
-        teamSkips: isDaily || isFranchise || isChallenge ? 0 : 1,
-        decadeSkips: isDaily || isChallenge ? 0 : isFranchise ? 2 : 1,
+        showStats: action.mode !== 'diamondiq' && !isDaily,
+        // Era Lock swaps decade skips for a second team skip; Ironman gets none.
+        teamSkips: isIronman || isDaily || isFranchise || isChallenge ? 0 : isEraLock ? 2 : 1,
+        decadeSkips:
+          isIronman || isDaily || isChallenge || isEraLock ? 0 : isFranchise ? 2 : 1,
         randSeed: seed,
         dateKey,
         roster: emptyRoster(),
         salaryCap: isSalary ? SALARY_CAP_M : null,
         lockedFranchiseId: isFranchise ? (action.franchiseId ?? null) : null,
+        lockedDecade: isEraLock ? (action.decade ?? null) : null,
         challengeCode,
         lastPick: null,
+        picks: [],
       };
     }
     case 'SPIN_START':
@@ -200,6 +215,9 @@ export function reducer(state: GameState, action: Action): GameState {
             rand,
             openPositions(state.roster),
             draftedKeys(state.roster),
+            40,
+            null,
+            state.lockedDecade,
           );
       return {
         ...state,
@@ -209,14 +227,21 @@ export function reducer(state: GameState, action: Action): GameState {
       };
     }
     case 'RESPIN': {
-      if (!state.spin || isFairnessMode(state.mode)) return state;
+      if (!state.spin || !allowsRedraw(state.mode)) return state;
       const open = openPositions(state.roster);
       const taken = draftedKeys(state.roster);
       let nextSeed = state.randSeed + 41;
       let spin = state.spin;
       for (let i = 0; i < 24; i++) {
         const rand = createRng(nextSeed + state.round * 53 + 7 + i * 17);
-        spin = spinWithEligibility(rand, open, taken, 40, state.lockedFranchiseId);
+        spin = spinWithEligibility(
+          rand,
+          open,
+          taken,
+          40,
+          state.lockedFranchiseId,
+          state.lockedDecade,
+        );
         const pool = getAvailablePlayers(spin, open, taken);
         if (!pool.length) {
           nextSeed += 3;

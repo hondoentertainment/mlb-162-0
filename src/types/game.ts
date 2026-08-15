@@ -45,6 +45,16 @@ export interface RosterSlot {
   player: Player | null;
 }
 
+/** How one roster slot fed the season result. */
+export interface SlotContribution {
+  position: Position;
+  playerName: string | null;
+  /** Slot quality, 0–1. */
+  rating: number;
+  /** Rating relative to the roster average — positive carries, negative drags. */
+  delta: number;
+}
+
 export interface SeasonResult {
   wins: number;
   losses: number;
@@ -55,6 +65,7 @@ export interface SeasonResult {
   weaknesses: string[];
   bestPickId: string | null;
   weakestSlot: Position | null;
+  contributions: SlotContribution[];
 }
 
 export interface LeaderboardEntry {

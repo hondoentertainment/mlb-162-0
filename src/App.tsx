@@ -3,6 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useEffect } from 'react';
 import { AppHeader } from './components/AppHeader';
 import { Career } from './components/Career';
+import { DecadeSelect } from './components/DecadeSelect';
 import { Draft } from './components/Draft';
 import { FranchiseSelect } from './components/FranchiseSelect';
 import { Home } from './components/Home';
@@ -28,6 +29,8 @@ function ScreenRouter() {
   switch (state.screen) {
     case 'franchise-select':
       return <FranchiseSelect />;
+    case 'decade-select':
+      return <DecadeSelect />;
     case 'draft':
       return <Draft />;
     case 'reveal':
@@ -51,8 +54,11 @@ export default function App() {
       <div className="app-shell">
         <div className="ballpark-bg" aria-hidden="true" />
         <ScrollToTop />
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
         <AppHeader />
-        <main className="app-content">
+        <main className="app-content" id="main">
           <ScreenRouter />
         </main>
       </div>

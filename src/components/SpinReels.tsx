@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { FRANCHISE_BY_ID } from '../data/franchises';
+import { useReducedMotion } from '../hooks/useReducedMotion';
 import type { SpinResult } from '../types/game';
 
 const FAKE_DECADES = ['1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s'];
@@ -22,28 +23,34 @@ export function SpinReels({
   spinning: boolean;
 }) {
   const [tick, setTick] = useState(0);
+  const reducedMotion = useReducedMotion();
   const franchise = spin ? FRANCHISE_BY_ID[spin.franchiseId] : null;
+  const animating = spinning && !reducedMotion;
 
   useEffect(() => {
-    if (!spinning) return;
+    if (!animating) return;
     const id = window.setInterval(() => setTick((t) => t + 1), 70);
     return () => window.clearInterval(id);
-  }, [spinning]);
+  }, [animating]);
 
   const decadeDisplay = spinning
-    ? FAKE_DECADES[tick % FAKE_DECADES.length]
+    ? animating
+      ? FAKE_DECADES[tick % FAKE_DECADES.length]
+      : 'Drawing…'
     : (spin?.decade ?? '—');
   const teamDisplay = spinning
-    ? FAKE_TEAMS[tick % FAKE_TEAMS.length]
+    ? animating
+      ? FAKE_TEAMS[tick % FAKE_TEAMS.length]
+      : 'Drawing…'
     : (franchise?.shortName ?? '—');
 
   return (
-    <div className="reels" aria-live="polite">
-      <div className={`reel ${spinning ? 'spinning' : ''}`}>
+    <div className="reels" aria-live="polite" aria-busy={spinning}>
+      <div className={`reel ${animating ? 'spinning' : ''}`}>
         <div className="reel-label">Decade</div>
         <div className="reel-value">{decadeDisplay}</div>
       </div>
-      <div className={`reel ${spinning ? 'spinning' : ''}`}>
+      <div className={`reel ${animating ? 'spinning' : ''}`}>
         <div className="reel-label">Franchise</div>
         <div className="reel-value">{teamDisplay}</div>
       </div>

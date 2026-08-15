@@ -59,12 +59,15 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 | # | Feature | Priority | Complexity | Why |
 |---|---------|----------|------------|-----|
-| N1 | Draft undo (last pick) | High | Low | Done — Classic / Diamond IQ / Salary / Franchise; off in Daily/Challenge |
-| N2 | Empty-pool auto-respin UX | High | Low | Done — clear copy + auto-respin (not a skip); Daily/Challenge never redraw |
+| N1 | Draft undo (last pick) | High | Low | Done — relaxed modes only; off in Daily/Challenge/Ironman |
+| N2 | Empty-pool auto-respin UX | High | Low | Done — clear copy + auto-respin (not a skip); no-redraw modes never offer one |
 | N3 | Result confetti / grade motion | Medium | Low | Celebrate Dynasty+ |
 | N4 | Install / “Add to Home Screen” tip | Medium | Low | Convert PWA browsers |
-| N5 | Accessibility pass | Medium | Medium | Focus order, contrast, reduced motion |
-| N6 | CI workflow (lint + unit + e2e) | High | Low | Done — GitHub Actions on PRs and main (oxlint, Vitest, Chromium e2e) |
+| N5 | Accessibility pass | Medium | Medium | Done — reduced motion, focus-visible, skip link |
+| N6 | CI workflow (lint + unit + e2e) | High | Low | Done — oxlint, Vitest, desktop + mobile e2e |
+| N7 | Competitive integrity | High | Medium | Done — one player per roster; daily runs verified server-side |
+| N8 | Link previews + analytics | High | Medium | Done — `/api/og`, `/c/CODE` share route, Vercel Analytics |
+| N9 | Ship less JS up front | Medium | Medium | Done — player table code-split; initial JS 121 kB → 79 kB gzip |
 
 ### v1.4 — Deeper daily / social
 
@@ -80,11 +83,12 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 | # | Feature | Priority | Complexity | Why |
 |---|---------|----------|------------|-----|
-| M1 | Era Lock (single decade) | High | Medium | Fresh constraint, easy to teach |
-| M2 | Ironman (no skips, Classic rules) | Medium | Low | Hardcore leaderboard |
+| M1 | Era Lock (single decade) | High | Medium | Done — lock a decade, spin franchises only |
+| M2 | Ironman (no skips, Classic rules) | Medium | Low | Done — no skips, redraws, or undo |
 | M3 | Expansion: DH or RP slot | Medium | High | Changes sim + pool |
 | M4 | Player encyclopedia / search | Low | Medium | Education + Diamond IQ practice |
 | M5 | Pool metadata pass (more HOF flags) | Medium | Medium | Fairness + achievements |
+| M6 | Source stats from a real dataset | High | Medium | Stat lines are hand-entered approximations |
 
 ### v2.0 — Platform (later)
 

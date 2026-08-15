@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { ROUNDS } from '../config/constants';
 import {
+  allowsRedraw,
   canRespinEmptyPool,
   canUndoLastPick,
   emptyPoolCopy,
   emptyPoolKind,
-  isFairnessMode,
 } from '../game/draftRules';
 import { formatSalary, playerSalary } from '../game/salary';
 import { useGame } from '../state/gameStore';
@@ -34,7 +34,9 @@ export function Draft() {
 
   const spinLabel = state.lockedFranchiseId
     ? 'Spin decade'
-    : 'Spin franchise + decade';
+    : state.lockedDecade
+      ? 'Spin franchise'
+      : 'Spin franchise + decade';
 
   const affordableCount = useMemo(() => {
     if (state.mode !== 'salary' || salaryRemaining == null) return availablePlayers.length;
@@ -50,7 +52,7 @@ export function Draft() {
   });
   const needsRedraw = canRespinEmptyPool(state.mode, poolKind);
   const showUndo = canUndoLastPick(state.mode);
-  const fairEmpty = isFairnessMode(state.mode) && poolKind !== 'none';
+  const fairEmpty = !allowsRedraw(state.mode) && poolKind !== 'none';
 
   const autoRespinKey = state.spin
     ? `${state.round}|${state.spin.franchiseId}|${state.spin.decade}|${poolKind}`
@@ -74,6 +76,12 @@ export function Draft() {
           <div className="round-meta" data-testid="round-meta">
             Round {Math.min(state.round, ROUNDS)} of {ROUNDS}
             {state.lockedFranchiseId && <> · {franchiseName}</>}
+            {state.lockedDecade && (
+              <>
+                {' '}
+                · <span data-testid="locked-decade">{state.lockedDecade}</span>
+              </>
+            )}
             {state.challengeCode && (
               <>
                 {' '}
@@ -169,7 +177,7 @@ export function Draft() {
             {(needsRedraw || fairEmpty) && (
               <div className="empty-pool empty-pool-banner" data-testid="empty-pool">
                 <p data-testid="empty-pool-copy">
-                  {emptyPoolCopy(poolKind, isFairnessMode(state.mode))}
+                  {emptyPoolCopy(poolKind, !allowsRedraw(state.mode))}
                 </p>
                 {needsRedraw && (
                   <>
