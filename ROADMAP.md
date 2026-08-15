@@ -33,7 +33,7 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 | Feature | Status | Notes |
 |---------|--------|-------|
 | PNG share card | Done | Share / download |
-| Deeper player pool | Done | 1,000+ unique names; every franchise-decade has 5+ |
+| Deeper player pool | Done | 1,600+ unique names; every franchise-decade fields a starting nine |
 | Global Daily board | Done | `/api/daily` + Vercel Blob |
 | Salary Cap mode | Done | $175M soft cap |
 | One Franchise mode | Done | Lock club, decade spins |
