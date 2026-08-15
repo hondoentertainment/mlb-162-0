@@ -96,7 +96,9 @@ export const LEADERBOARD_MAX = 50;
 export const STORAGE_KEYS = {
   leaderboard: 'mlb1620_leaderboard',
   daily: 'mlb1620_daily',
+  dailyHistory: 'mlb1620_daily_history',
   lastResult: 'mlb1620_last_result',
   career: 'mlb1620_career',
   achievements: 'mlb1620_achievements',
+  installTip: 'mlb1620_install_tip',
 } as const;

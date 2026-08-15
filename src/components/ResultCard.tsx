@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { ACHIEVEMENT_BY_ID } from '../game/achievements';
+import { shouldCelebrate } from '../game/celebrate';
 import { challengeShareUrl } from '../game/challenge';
 import { useGame } from '../state/gameStore';
+import { Confetti } from './Confetti';
 import { ContributionChart } from './ContributionChart';
 import { RosterBoard } from './RosterBoard';
 import { ShareCard } from './ShareCard';
@@ -34,6 +36,7 @@ export function ResultCard() {
   const result = state.result;
   if (!result) return null;
 
+  const celebrate = shouldCelebrate(result.gradeId);
   const names = state.roster.map((s) => s.player?.name ?? '—');
   const share = buildShareText(
     result.wins,
@@ -67,12 +70,19 @@ export function ResultCard() {
 
   return (
     <section data-testid="result">
-      <div className="panel" style={{ textAlign: 'center' }}>
+      <div className="panel result-hero" style={{ textAlign: 'center' }}>
+        {celebrate && <Confetti />}
         <p className="section-label">Final record</p>
         <div className="win-counter" data-testid="final-record">
           {result.wins}-{result.losses}
         </div>
-        <div className="grade-tag" data-testid="final-grade">
+        <div
+          className={['grade-tag', celebrate ? 'celebrate' : '', result.gradeId === 'perfection' ? 'perfection' : '']
+            .filter(Boolean)
+            .join(' ')}
+          data-testid="final-grade"
+          data-celebrate={celebrate ? '1' : '0'}
+        >
           {result.gradeLabel}
         </div>
         <p className="lede" style={{ margin: '0.5rem auto 0', textAlign: 'center' }}>

@@ -23,7 +23,7 @@ Every finished season breaks down where the wins came from, scoring each roster 
 
 ## Career
 
-Local career stats, daily streaks, and unlockable achievements live on the Career screen (this device only).
+Local career stats, a 14-day Daily history, daily streaks, and unlockable achievements live on the Career screen (this device only). Dynasty and Perfection celebrate on the result screen. Browsers that can install the PWA get an Add to Home Screen tip.
 
 ## Local
 

@@ -18,6 +18,7 @@ import { ensurePool } from '../data/pool';
 import { evaluateAchievements } from '../game/achievements';
 import { recordCareerResult } from '../game/career';
 import { saveDailyRecord } from '../game/daily';
+import { recordDailyHistory } from '../game/dailyHistory';
 import { submitDailyBoard } from '../game/dailyBoard';
 import { spinForRound } from '../game/draftSequence';
 import { canUndoLastPick } from '../game/draftRules';
@@ -144,9 +145,17 @@ export function GameProvider({ children }: { children: ReactNode }) {
       }
 
       if (state.mode === 'daily' && state.dateKey) {
-        saveDailyRecord({
+        const dailyEntry = {
           dateKey: state.dateKey,
           completed: true,
+          wins: result.wins,
+          losses: result.losses,
+          gradeLabel: result.gradeLabel,
+          rosterNames,
+        };
+        saveDailyRecord(dailyEntry);
+        recordDailyHistory({
+          dateKey: state.dateKey,
           wins: result.wins,
           losses: result.losses,
           gradeLabel: result.gradeLabel,
