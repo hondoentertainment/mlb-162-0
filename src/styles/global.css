@@ -489,6 +489,7 @@ a {
 
 #share-card-preview canvas {
   border: 1px solid var(--line);
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow);
 }
 

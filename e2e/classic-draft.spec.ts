@@ -9,6 +9,12 @@ test.describe('classic draft', () => {
     await expect(page.getByTestId('mode-label')).toHaveText('Classic');
     await playFullDraft(page);
     await expect(page.getByTestId('final-record')).toHaveText(/\d+-\d+/);
+
+    const card = page.getByTestId('share-card-preview').locator('canvas');
+    await expect(card).toBeVisible();
+    // Exported at 2x for crisp downloads and native shares
+    await expect(card).toHaveAttribute('width', '2400');
+    await expect(card).toHaveAttribute('height', '1260');
   });
 
   test('lists every player from the spun franchise-decade', async ({ page }) => {

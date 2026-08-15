@@ -132,8 +132,15 @@ export function ResultCard() {
           wins={result.wins}
           losses={result.losses}
           gradeLabel={result.gradeLabel}
+          gradeId={result.gradeId}
           modeLabel={modeLabel}
           rosterNames={names}
+          roster={state.roster.map((s) => ({
+            position: s.position,
+            name: s.player?.name ?? null,
+          }))}
+          score={result.score}
+          challengeCode={state.challengeCode}
         />
       </div>
 
