@@ -6,6 +6,7 @@
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { EXPANSION } from './player-expansion.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -840,6 +841,7 @@ const RAW = [
   ['Spencer Horwitz', 'tor', '2020s', '2B,1B', 1, 0, 0.27, 0.35, 0.43, 0],
   ['Colt Keith', 'det', '2020s', '2B,3B', 1, 0, 0.26, 0.31, 0.4, 0],
   ['Xander Bogaerts', 'sd', '2020s', 'SS,2B', 3, 0, 0.27, 0.34, 0.42, 0],
+  ...EXPANSION,
 ];
 
 const OF = new Set(['LF', 'CF', 'RF']);
