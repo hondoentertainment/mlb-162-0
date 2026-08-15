@@ -3,12 +3,10 @@ import { LEADERBOARD_MIN_WINS } from '../config/constants';
 import { utcDateKey } from '../game/daily';
 import { fetchDailyBoard, type GlobalDailyEntry } from '../game/dailyBoard';
 import { loadLeaderboard } from '../game/leaderboard';
-import { useGame } from '../state/gameStore';
 
 type Tab = 'classic' | 'daily';
 
 export function Leaderboard() {
-  const { setScreen } = useGame();
   const [tab, setTab] = useState<Tab>('daily');
   const local = loadLeaderboard();
   const [dailyEntries, setDailyEntries] = useState<GlobalDailyEntry[]>([]);
@@ -32,10 +30,7 @@ export function Leaderboard() {
   }, [tab, today]);
 
   return (
-    <section>
-      <button type="button" className="btn btn-ghost back-link" onClick={() => setScreen('home')}>
-        ← Back
-      </button>
+    <section data-testid="leaderboard">
       <h2 className="headline" style={{ marginTop: 0 }}>
         Leaderboards
       </h2>

@@ -3,19 +3,11 @@ import { decadesForFranchise } from '../game/spin';
 import { useGame } from '../state/gameStore';
 
 export function FranchiseSelect() {
-  const { startGame, goHome } = useGame();
+  const { startGame } = useGame();
   const options = FRANCHISES.filter((f) => decadesForFranchise(f.id).length > 0);
 
   return (
-    <section>
-      <button
-        type="button"
-        className="btn btn-ghost back-link"
-        data-testid="back-home"
-        onClick={goHome}
-      >
-        ← Back
-      </button>
+    <section data-testid="franchise-select">
       <h2 className="headline" style={{ marginTop: 0 }}>
         Pick your franchise
       </h2>

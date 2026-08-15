@@ -42,7 +42,7 @@ a {
 .app-shell {
   min-height: 100dvh;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .ballpark-bg {
@@ -79,6 +79,51 @@ a {
   background-image: radial-gradient(rgba(244, 239, 228, 0.05) 0.5px, transparent 0.5px);
   background-size: 3px 3px;
   opacity: 0.35;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background: rgba(7, 20, 13, 0.88);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+}
+
+.app-header-inner {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 0.65rem 0;
+}
+
+.app-header-brand {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--ivory);
+}
+
+.app-header-brand span {
+  color: var(--gold);
+}
+
+.app-header-brand:hover {
+  color: var(--gold-soft);
+}
+
+.app-header-home {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.9rem;
 }
 
 .app-content {

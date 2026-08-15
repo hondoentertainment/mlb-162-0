@@ -170,7 +170,7 @@ export function ResultCard() {
           <button type="button" className="btn btn-ghost" onClick={() => setScreen('career')}>
             Career
           </button>
-          <button type="button" className="btn btn-ghost" onClick={goHome}>
+          <button type="button" className="btn btn-ghost" data-testid="result-home" onClick={goHome}>
             Home
           </button>
         </div>
