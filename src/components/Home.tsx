@@ -8,6 +8,8 @@ import { ensurePool } from '../data/pool';
 import { isDailyCompletedToday, loadDailyRecord, utcDateKey } from '../game/daily';
 import { formatSalary, SALARY_CAP_M } from '../game/salary';
 import { useGame } from '../state/gameStore';
+import { DailyHistoryStrip } from './DailyHistory';
+import { InstallTip } from './InstallTip';
 
 export function Home() {
   const { startGame, beginFranchiseSelect, beginDecadeSelect, setScreen } = useGame();
@@ -77,6 +79,9 @@ export function Home() {
           )}
         </p>
       )}
+
+      <DailyHistoryStrip compact />
+      <InstallTip />
 
       <div className="mode-grid">
         <button

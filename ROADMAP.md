@@ -61,8 +61,8 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 |---|---------|----------|------------|-----|
 | N1 | Draft undo (last pick) | High | Low | Done — relaxed modes only; off in Daily/Challenge/Ironman |
 | N2 | Empty-pool auto-respin UX | High | Low | Done — clear copy + auto-respin (not a skip); no-redraw modes never offer one |
-| N3 | Result confetti / grade motion | Medium | Low | Celebrate Dynasty+ |
-| N4 | Install / “Add to Home Screen” tip | Medium | Low | Convert PWA browsers |
+| N3 | Result confetti / grade motion | Medium | Low | Done — Dynasty+ burst + grade pop; honors reduced motion |
+| N4 | Install / “Add to Home Screen” tip | Medium | Low | Done — native prompt + iOS Share copy; dismiss persists |
 | N5 | Accessibility pass | Medium | Medium | Done — reduced motion, focus-visible, skip link |
 | N6 | CI workflow (lint + unit + e2e) | High | Low | Done — oxlint, Vitest, desktop + mobile e2e |
 | N7 | Competitive integrity | High | Medium | Done — one player per roster; daily runs verified server-side |
@@ -73,7 +73,7 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 | # | Feature | Priority | Complexity | Why |
 |---|---------|----------|------------|-----|
-| S1 | Daily history (last 14 days local) | High | Low | Streak context + pride |
+| S1 | Daily history (last 14 days local) | High | Low | Done — 14-day strip on Home + Career |
 | S2 | Challenge rematch board (same code) | Medium | Medium | Compare friends’ records by code |
 | S3 | Anonymous display names on global daily | Medium | Medium | Identity without full accounts |
 | S4 | “Yesterday’s top 10” archive | Low | Medium | Blob retention / new keys |
@@ -111,11 +111,11 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 ---
 
-## Suggested build order (after N1 / N2 / N6)
+## Suggested build order (after N3 / N4 / S1)
 
-1. N3–N5 — confetti, install tip, accessibility  
-2. Daily history + challenge rematch board  
-3. Era Lock mode  
+1. Challenge rematch board + share-card challenge badge (S2, S5)  
+2. Anonymous display names on the global daily (S3)  
+3. Pool metadata / real stat lines (M5, M6)  
 4. Reassess accounts only if sync requests spike  
 
 ---
@@ -126,4 +126,4 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 - Challenge link opens → finishes  
 - Career return visits (streak > 1)  
 - Share card downloads / copies  
-- PWA install acceptance (when tip ships)
+- PWA install acceptance

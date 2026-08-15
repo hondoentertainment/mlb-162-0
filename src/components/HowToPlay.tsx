@@ -69,7 +69,8 @@ export function HowToPlay() {
         </li>
         <li>
           <strong>Daily</strong> — seeded by UTC date. One attempt per day. Results post to the
-          global daily board when available. Keep a streak by playing consecutive UTC days.
+          global daily board when available. The last 14 days stay on this device so you can see
+          the streak. Keep it going by playing consecutive UTC days.
         </li>
         <li>
           <strong>Challenge</strong> — share a code so friends face the same spins. No skips.
@@ -80,7 +81,8 @@ export function HowToPlay() {
       <h3>Career & achievements</h3>
       <p>
         Every finished season updates local career stats (best wins, mode breakdown, daily streak)
-        and can unlock badges. Progress stays on this device.
+        and can unlock badges. Dynasty and Perfection get a celebration on the result screen.
+        Progress stays on this device. Add 162-0 to your Home Screen when the tip appears.
       </p>
 
       <h3>Grades</h3>

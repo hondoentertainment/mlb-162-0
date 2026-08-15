@@ -5,6 +5,7 @@ import {
   unlockedCount,
 } from '../game/achievements';
 import { displayDailyStreak, loadCareer } from '../game/career';
+import { DailyHistoryStrip } from './DailyHistory';
 
 const MODE_ORDER: GameMode[] = [
   'classic',
@@ -67,6 +68,8 @@ export function Career() {
           Peak grade: <strong>{career.bestGradeLabel}</strong>
         </p>
       )}
+
+      <DailyHistoryStrip />
 
       <h3 className="subhead">By mode</h3>
       <ul className="mode-stats">
