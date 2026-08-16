@@ -597,6 +597,19 @@ a {
   padding-right: 2px;
 }
 
+.list-kicker {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0.15rem 0 0;
+}
+
+.player-card.hof-card {
+  border-color: rgba(212, 168, 75, 0.55);
+  background: rgba(212, 168, 75, 0.08);
+}
+
 .player-card {
   display: grid;
   gap: var(--space-2);

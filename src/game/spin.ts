@@ -43,8 +43,9 @@ function uniqueByEraName(players: Player[]): Player[] {
   return [...best.values()];
 }
 
-function sortByTierName(a: Player, b: Player): number {
-  return b.tier - a.tier || a.name.localeCompare(b.name);
+/** Hall of Famers first, then higher tier, then name. */
+export function comparePlayers(a: Player, b: Player): number {
+  return Number(b.hof) - Number(a.hof) || b.tier - a.tier || a.name.localeCompare(b.name);
 }
 
 /**
@@ -58,7 +59,7 @@ export function personKey(player: Player): string {
 
 /** Every unique player on this franchise-decade, including drafted names and non-fits. */
 export function playersOnSpin(spin: SpinResult): Player[] {
-  return uniqueByEraName(playersForSpin(spin.franchiseId, spin.decade)).sort(sortByTierName);
+  return uniqueByEraName(playersForSpin(spin.franchiseId, spin.decade)).sort(comparePlayers);
 }
 
 export function getAvailablePlayers(
@@ -69,7 +70,7 @@ export function getAvailablePlayers(
   return playersOnSpin(spin)
     .filter((p) => !drafted.has(personKey(p)))
     .filter((p) => p.positions.some((pos) => openPositions.includes(pos)))
-    .sort(sortByTierName);
+    .sort(comparePlayers);
 }
 
 export function decadesForFranchise(franchiseId: string): Decade[] {
