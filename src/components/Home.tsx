@@ -12,9 +12,14 @@ import { DailyHistoryStrip } from './DailyHistory';
 import { DisplayNameField } from './DisplayNameField';
 import { InstallTip } from './InstallTip';
 import { RematchBoard } from './RematchBoard';
+import { DecadeChipGrid, FranchiseChipGrid } from './SetupPickers';
+
+function scrollToId(id: string) {
+  document.getElementById(id)?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
 
 export function Home() {
-  const { startGame, beginFranchiseSelect, beginDecadeSelect, setScreen } = useGame();
+  const { startGame, startEraLock, setScreen } = useGame();
   const dailyDone = isDailyCompletedToday();
   const daily = loadDailyRecord();
   const today = utcDateKey();
@@ -64,14 +69,14 @@ export function Home() {
   };
 
   return (
-    <section className="hero" data-testid="home">
+    <section className="hero hero-home" data-testid="home">
       <p className="section-label">Major League Baseball</p>
       <h1 className="brand" data-testid="brand">
         162<span>-</span>0
       </h1>
       <h2 className="headline">Draft legends. Chase a perfect season.</h2>
       <p className="lede">
-        Spin a franchise and decade, fill nine positions, and see if your roster can go undefeated.
+        Pick a mode, or lock a club or decade — every start is on this screen.
       </p>
 
       {(streak > 0 || career.gamesPlayed > 0) && (
@@ -94,10 +99,10 @@ export function Home() {
       <DailyHistoryStrip compact />
       <InstallTip />
 
-      <div className="mode-grid">
+      <div className="mode-grid mode-grid-instant">
         <button
           type="button"
-          className="mode-card mode-card-lead"
+          className="mode-card mode-card-lead mode-card-compact"
           data-testid="mode-daily"
           onClick={() => startGame('daily')}
           disabled={dailyDone}
@@ -106,17 +111,44 @@ export function Home() {
           <p>
             {dailyDone && daily?.dateKey === today
               ? `Done today — ${daily.wins}-${daily.losses} · ${daily.gradeLabel}`
-              : 'Same spins worldwide. No skips. Compete on the global board.'}
+              : 'Same spins worldwide. No skips. Global board.'}
           </p>
         </button>
         <button
           type="button"
-          className="mode-card mode-card-lead"
+          className="mode-card mode-card-lead mode-card-compact"
           data-testid="mode-classic"
           onClick={() => startGame('classic')}
         >
           <h3>Classic</h3>
-          <p>Full stats visible. One team skip, one decade skip. Chase the all-time board.</p>
+          <p>Full stats. One team skip, one decade skip.</p>
+        </button>
+        <button
+          type="button"
+          className="mode-card mode-card-compact"
+          data-testid="mode-diamondiq"
+          onClick={() => startGame('diamondiq')}
+        >
+          <h3>Diamond IQ</h3>
+          <p>Blind draft — no numbers.</p>
+        </button>
+        <button
+          type="button"
+          className="mode-card mode-card-compact"
+          data-testid="mode-salary"
+          onClick={() => startGame('salary')}
+        >
+          <h3>Salary Cap</h3>
+          <p>Build under a {formatSalary(SALARY_CAP_M)} soft cap.</p>
+        </button>
+        <button
+          type="button"
+          className="mode-card mode-card-compact"
+          data-testid="mode-ironman"
+          onClick={() => startGame('ironman')}
+        >
+          <h3>Ironman</h3>
+          <p>No skips, no redraws, no undo.</p>
         </button>
 
         <div className="mode-card challenge-card" data-testid="mode-challenge">
@@ -164,59 +196,35 @@ export function Home() {
 
       {boardCode && <RematchBoard code={boardCode} />}
 
-      <details className="more-modes" data-testid="more-modes">
-        <summary>More ways to play</summary>
-        <div className="mode-grid more-modes-grid">
+      <section className="setup-panel" id="franchise-setup" data-testid="franchise-select">
+        <header className="setup-panel-head">
           <button
             type="button"
-            className="mode-card"
-            data-testid="mode-diamondiq"
-            onClick={() => startGame('diamondiq')}
-          >
-            <h3>Diamond IQ</h3>
-            <p>Blind draft — no numbers. Prove you know baseball history.</p>
-          </button>
-          <button
-            type="button"
-            className="mode-card"
-            data-testid="mode-salary"
-            onClick={() => startGame('salary')}
-          >
-            <h3>Salary Cap</h3>
-            <p>
-              Build under a {formatSalary(SALARY_CAP_M)} soft cap. Stars cost more — balance the
-              diamond.
-            </p>
-          </button>
-          <button
-            type="button"
-            className="mode-card"
+            className="setup-heading"
             data-testid="mode-franchise"
-            onClick={beginFranchiseSelect}
+            onClick={() => scrollToId('franchise-setup')}
           >
-            <h3>One Franchise</h3>
-            <p>Lock a club, spin decades only, and build an all-time single-franchise nine.</p>
+            One Franchise
           </button>
+          <p>Lock a club, spin decades only, and build an all-time single-franchise nine.</p>
+        </header>
+        <FranchiseChipGrid onPick={(id) => startGame('franchise', id)} />
+      </section>
+
+      <section className="setup-panel" id="era-setup" data-testid="decade-select">
+        <header className="setup-panel-head">
           <button
             type="button"
-            className="mode-card"
+            className="setup-heading"
             data-testid="mode-eralock"
-            onClick={beginDecadeSelect}
+            onClick={() => scrollToId('era-setup')}
           >
-            <h3>Era Lock</h3>
-            <p>Pick one decade and stay there. Two team skips, no decade skips.</p>
+            Era Lock
           </button>
-          <button
-            type="button"
-            className="mode-card"
-            data-testid="mode-ironman"
-            onClick={() => startGame('ironman')}
-          >
-            <h3>Ironman</h3>
-            <p>Classic rules with no safety net — no skips, no redraws, no undo.</p>
-          </button>
-        </div>
-      </details>
+          <p>Pick one decade and stay there. Two team skips, no decade skips.</p>
+        </header>
+        <DecadeChipGrid onPick={(decade) => startEraLock(decade)} />
+      </section>
 
       <DisplayNameField compact />
 
