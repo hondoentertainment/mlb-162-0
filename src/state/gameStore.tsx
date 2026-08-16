@@ -4,6 +4,7 @@ import {
   useContext,
   useMemo,
   useReducer,
+  useRef,
   type ReactNode,
 } from 'react';
 import {
@@ -42,7 +43,12 @@ export type { Screen } from './gameReducer';
 
 interface GameContextValue {
   state: GameState;
-  startGame: (mode: GameMode, franchiseId?: string, challengeCode?: string) => void;
+  startGame: (
+    mode: GameMode,
+    franchiseId?: string,
+    challengeCode?: string,
+    decade?: Decade,
+  ) => void;
   startEraLock: (decade: Decade) => void;
   beginFranchiseSelect: () => void;
   beginDecadeSelect: () => void;
@@ -68,27 +74,34 @@ const GameContext = createContext<GameContextValue | null>(null);
 
 export function GameProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const startGeneration = useRef(0);
 
   const startGame = useCallback(
-    (mode: GameMode, franchiseId?: string, challengeCode?: string) => {
-      // The player table is code-split, so make sure it is in memory before the
-      // draft screen tries to spin.
-      void ensurePool().then(() =>
-        dispatch({ type: 'START', mode, franchiseId, challengeCode }),
-      );
+    (mode: GameMode, franchiseId?: string, challengeCode?: string, decade?: Decade) => {
+      const generation = ++startGeneration.current;
+      void ensurePool().then(() => {
+        if (generation !== startGeneration.current) return;
+        dispatch({ type: 'START', mode, franchiseId, challengeCode, decade });
+      });
     },
     [],
   );
 
   const startEraLock = useCallback((decade: Decade) => {
-    void ensurePool().then(() => dispatch({ type: 'START', mode: 'eralock', decade }));
+    const generation = ++startGeneration.current;
+    void ensurePool().then(() => {
+      if (generation !== startGeneration.current) return;
+      dispatch({ type: 'START', mode: 'eralock', decade });
+    });
   }, []);
 
   const beginFranchiseSelect = useCallback(() => {
+    startGeneration.current += 1;
     dispatch({ type: 'SET_SCREEN', screen: 'franchise-select' });
   }, []);
 
   const beginDecadeSelect = useCallback(() => {
+    startGeneration.current += 1;
     dispatch({ type: 'SET_SCREEN', screen: 'decade-select' });
   }, []);
 
@@ -228,11 +241,14 @@ export function GameProvider({ children }: { children: ReactNode }) {
     state.roster,
   ]);
 
-  const goHome = useCallback(() => dispatch({ type: 'RESET' }), []);
-  const setScreen = useCallback(
-    (screen: Screen) => dispatch({ type: 'SET_SCREEN', screen }),
-    [],
-  );
+  const goHome = useCallback(() => {
+    startGeneration.current += 1;
+    dispatch({ type: 'RESET' });
+  }, []);
+  const setScreen = useCallback((screen: Screen) => {
+    startGeneration.current += 1;
+    dispatch({ type: 'SET_SCREEN', screen });
+  }, []);
 
   const salarySpent = useMemo(
     () => rosterSpend(state.roster.map((s) => s.player)),

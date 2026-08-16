@@ -47,6 +47,14 @@ describe('one person per roster', () => {
     expect(new Set(eras.map((p) => p.id)).size).toBeGreaterThan(1);
     expect(new Set(eras.map(personKey)).size).toBe(1);
   });
+
+  it('does not treat namesake pitcher and hitter as the same person', () => {
+    const pitcher = PLAYERS.find((p) => p.name === 'Luis Castillo' && p.pitching);
+    const hitter = PLAYERS.find((p) => p.name === 'Luis Castillo' && p.batting);
+    expect(pitcher).toBeDefined();
+    expect(hitter).toBeDefined();
+    expect(personKey(pitcher!)).not.toBe(personKey(hitter!));
+  });
 });
 
 describe('full era roster', () => {
