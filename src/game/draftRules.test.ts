@@ -91,5 +91,6 @@ describe('draft fairness rules', () => {
     expect(emptyPoolCopy('no-fits', false)).toMatch(/no legal picks/i);
     expect(emptyPoolCopy('over-cap', false)).toMatch(/salary cap/i);
     expect(emptyPoolCopy('no-fits', true)).toMatch(/does not allow a redraw/i);
+    expect(emptyPoolCopy('no-fits', true, 1)).toMatch(/already on your roster/i);
   });
 });

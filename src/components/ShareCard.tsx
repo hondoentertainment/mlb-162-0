@@ -1,33 +1,55 @@
 import { useEffect, useRef, useState } from 'react';
+import type { GradeId } from '../config/constants';
 import { canvasToPngBlob, drawShareCard } from '../game/shareCard';
 
 export function ShareCard(props: {
   wins: number;
   losses: number;
   gradeLabel: string;
+  gradeId?: GradeId;
   modeLabel: string;
   rosterNames: string[];
+  challengeCode?: string | null;
 }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [status, setStatus] = useState<string | null>(null);
 
   useEffect(() => {
-    const canvas = drawShareCard(props);
-    canvasRef.current = canvas;
-    const host = document.getElementById('share-card-preview');
-    if (host) {
-      host.replaceChildren(canvas);
-      canvas.style.width = '100%';
-      canvas.style.height = 'auto';
-      canvas.style.borderRadius = '12px';
-      canvas.style.display = 'block';
-    }
+    let cancelled = false;
+    const paint = () => {
+      if (cancelled) return;
+      const canvas = drawShareCard({
+        wins: props.wins,
+        losses: props.losses,
+        gradeLabel: props.gradeLabel,
+        gradeId: props.gradeId,
+        modeLabel: props.modeLabel,
+        rosterNames: props.rosterNames,
+        challengeCode: props.challengeCode,
+      });
+      canvasRef.current = canvas;
+      const host = document.getElementById('share-card-preview');
+      if (host) {
+        host.replaceChildren(canvas);
+        canvas.style.width = '100%';
+        canvas.style.height = 'auto';
+        canvas.style.borderRadius = '12px';
+        canvas.style.display = 'block';
+      }
+    };
+    paint();
+    void document.fonts?.ready.then(paint);
+    return () => {
+      cancelled = true;
+    };
   }, [
     props.wins,
     props.losses,
     props.gradeLabel,
+    props.gradeId,
     props.modeLabel,
-    props.rosterNames.join('|'),
+    props.challengeCode,
+    props.rosterNames,
   ]);
 
   const download = async () => {

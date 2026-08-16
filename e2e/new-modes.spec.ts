@@ -1,9 +1,10 @@
 import { expect, test } from '@playwright/test';
-import { draftOnePick, openApp, playFullDraft, spinAndWait } from './helpers';
+import { draftOnePick, openApp, openMoreModes, playFullDraft, spinAndWait } from './helpers';
 
 test.describe('era lock', () => {
   test('locks one decade for the whole draft', async ({ page }) => {
     await openApp(page);
+    await openMoreModes(page);
     await page.getByTestId('mode-eralock').click();
     await expect(page.getByTestId('decade-grid')).toBeVisible();
     await page.getByTestId('decade-1990s').click();
@@ -29,6 +30,7 @@ test.describe('era lock', () => {
 test.describe('ironman', () => {
   test('offers no skips, no undo, and completes a season', async ({ page }) => {
     await openApp(page);
+    await openMoreModes(page);
     await page.getByTestId('mode-ironman').click();
     await expect(page.getByTestId('draft')).toBeVisible();
     await expect(page.getByTestId('mode-label')).toHaveText('Ironman');

@@ -93,6 +93,7 @@ export const GRADE_BANDS: GradeBand[] = [
 
 export const LEADERBOARD_MIN_WINS = 140;
 export const LEADERBOARD_MAX = 50;
+export const GAME_LOG_MAX = 500;
 export const STORAGE_KEYS = {
   leaderboard: 'mlb1620_leaderboard',
   daily: 'mlb1620_daily',
@@ -101,4 +102,7 @@ export const STORAGE_KEYS = {
   career: 'mlb1620_career',
   achievements: 'mlb1620_achievements',
   installTip: 'mlb1620_install_tip',
+  gameLog: 'mlb1620_game_log',
+  displayName: 'mlb1620_display_name',
+  classicCoach: 'mlb1620_classic_coach',
 } as const;

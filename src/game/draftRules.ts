@@ -41,9 +41,23 @@ export function canRespinEmptyPool(mode: GameMode | null, kind: EmptyPoolKind): 
   return kind !== 'none' && allowsRedraw(mode);
 }
 
-export function emptyPoolCopy(kind: EmptyPoolKind, noRedraw: boolean): string {
+export function emptyPoolCopy(
+  kind: EmptyPoolKind,
+  noRedraw: boolean,
+  alreadyOnRoster = 0,
+): string {
   if (kind === 'over-cap') {
     return 'Nobody on this spin fits the remaining salary cap.';
+  }
+  if (alreadyOnRoster > 0) {
+    const who =
+      alreadyOnRoster === 1
+        ? 'The only fit for an open slot is already on your roster'
+        : 'The only fits for your open slots are already on your roster';
+    if (noRedraw) {
+      return `${who}. This mode does not allow a redraw.`;
+    }
+    return `${who}.`;
   }
   if (noRedraw) {
     return 'This franchise and decade have no legal picks for your open positions. This mode does not allow a redraw.';

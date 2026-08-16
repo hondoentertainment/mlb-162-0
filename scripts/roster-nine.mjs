@@ -145,7 +145,7 @@ export const ROSTER_NINE = [
   // Yankees
   h('Andy Carey', 'nyy', '1950s', '3B', 2, 0, 0.26, 0.326, 0.387),
   h('Mickey Mantle', 'nyy', '1960s', 'CF', 5, 1, 0.298, 0.421, 0.557),
-  h('Ken Griffey Sr.', 'nyy', '1980s', 'RF', 2, 0, 0.296, 0.359, 0.431),
+  h('Ken Griffey', 'nyy', '1980s', 'RF', 2, 0, 0.296, 0.359, 0.431),
   h('Derek Jeter', 'nyy', '2000s', 'SS', 5, 1, 0.31, 0.377, 0.44),
   h('Chase Headley', 'nyy', '2010s', '3B', 2, 0, 0.263, 0.347, 0.399),
   h('Didi Gregorius', 'nyy', '2010s', 'SS', 2, 0, 0.261, 0.304, 0.427),

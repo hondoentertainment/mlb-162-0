@@ -3,7 +3,7 @@ import { POSITIONS } from '../config/constants';
 import { PLAYERS } from '../data/players';
 import { spinForRound } from './draftSequence';
 import { getAvailablePlayers, personKey } from './spin';
-import { parsePicks, verifyDailyRun, type SubmittedPick } from './verifyRun';
+import { parsePicks, verifyChallengeRun, verifyDailyRun, type SubmittedPick } from './verifyRun';
 import type { RosterSlot } from '../types/game';
 
 /** Play a real Daily draft for `dateKey`, always taking the top available player. */
@@ -106,6 +106,44 @@ describe('verifyDailyRun', () => {
     expect(out.ok).toBe(false);
     if (out.ok) return;
     expect(out.error).toMatch(/9 picks/);
+  });
+});
+
+function playChallenge(randSeed: number): SubmittedPick[] {
+  const roster: RosterSlot[] = POSITIONS.map((position) => ({ position, player: null }));
+  const picks: SubmittedPick[] = [];
+  for (let round = 1; round <= POSITIONS.length; round++) {
+    const open = roster.filter((s) => !s.player).map((s) => s.position);
+    const drafted = new Set(roster.filter((s) => s.player).map((s) => personKey(s.player!)));
+    const spin = spinForRound({
+      mode: 'challenge',
+      round,
+      randSeed,
+      openPositions: open,
+      drafted,
+    });
+    const available = getAvailablePlayers(spin, open, drafted);
+    if (!available.length) throw new Error(`No pick available in round ${round}`);
+    const player = available[0]!;
+    const position = player.positions.find((p) => open.includes(p))!;
+    roster.find((s) => s.position === position)!.player = player;
+    picks.push({ position, playerId: player.id });
+  }
+  return picks;
+}
+
+describe('verifyChallengeRun', () => {
+  it('accepts a genuine challenge draft', () => {
+    const picks = playChallenge(424242);
+    const out = verifyChallengeRun(424242, picks);
+    expect(out.ok).toBe(true);
+    if (!out.ok) return;
+    expect(out.roster.every((s) => s.player)).toBe(true);
+  });
+
+  it('rejects the same picks against a different seed', () => {
+    const picks = playChallenge(424242);
+    expect(verifyChallengeRun(999999, picks).ok).toBe(false);
   });
 });
 
