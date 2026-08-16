@@ -3,7 +3,8 @@
 Fan-made MLB draft-and-sim browser game. Draft nine legends across franchises and decades, simulate a 162-game season, chase perfection.
 
 **Live:** [162-amber.vercel.app](https://162-amber.vercel.app)  
-**Repo:** [github.com/hondoentertainment/mlb-162-0](https://github.com/hondoentertainment/mlb-162-0)
+**Repo:** [github.com/hondoentertainment/mlb-162-0](https://github.com/hondoentertainment/mlb-162-0)  
+**Top teams:** [TEAMS.md](./TEAMS.md)
 
 ---
 
