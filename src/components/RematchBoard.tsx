@@ -40,7 +40,7 @@ export function RematchBoard({
       {!loading && !!entries.length && (
         <ol className="leaderboard-list" data-testid="rematch-list">
           {entries.map((e, i) => (
-            <li key={e.id}>
+            <li key={`${e.createdAt}-${e.wins}-${i}`}>
               <span>{i + 1}</span>
               <div>
                 <strong>

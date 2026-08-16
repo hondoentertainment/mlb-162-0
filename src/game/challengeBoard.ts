@@ -1,7 +1,7 @@
 import type { SubmittedPick } from './verifyRun';
 
 export interface ChallengeBoardEntry {
-  id: string;
+  id?: string;
   wins: number;
   losses: number;
   gradeLabel: string;
