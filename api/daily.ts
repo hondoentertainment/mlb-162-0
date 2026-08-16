@@ -1,4 +1,4 @@
-import { del, list, put } from '@vercel/blob';
+import { list, put } from '@vercel/blob';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { utcDateKey } from '../src/game/dailySeed';
 import { sanitizeDisplayName } from '../src/game/displayName';
@@ -48,14 +48,8 @@ function prefixFor(dateKey: string): string {
   return `daily-boards/${dateKey}/`;
 }
 
-/**
- * Entries live in one blob each, under a lexicographically sortable name, so
- * concurrent submissions never overwrite one another and reads can pick the
- * leaders from listing metadata alone.
- */
-function entryPath(dateKey: string, entry: DailyEntry): string {
-  const rank = String(Math.max(0, 999 - entry.wins)).padStart(3, '0');
-  return `${prefixFor(dateKey)}${rank}-${entry.createdAt}-${entry.id}.json`;
+function entryPath(dateKey: string, id: string): string {
+  return `${prefixFor(dateKey)}id/${id}.json`;
 }
 
 function parseBody(req: VercelRequest): Record<string, unknown> {
@@ -83,7 +77,7 @@ async function listEntryBlobs(dateKey: string) {
 }
 
 async function readTopEntries(dateKey: string, limit: number): Promise<DailyEntry[]> {
-  const blobs = (await listEntryBlobs(dateKey)).slice(0, limit);
+  const blobs = await listEntryBlobs(dateKey);
   const entries = await Promise.all(
     blobs.map(async (blob) => {
       try {
@@ -95,7 +89,9 @@ async function readTopEntries(dateKey: string, limit: number): Promise<DailyEntr
       }
     }),
   );
-  return entries.filter((e): e is DailyEntry => !!e);
+  const valid = entries.filter((e): e is DailyEntry => !!e);
+  valid.sort((a, b) => b.wins - a.wins || a.createdAt.localeCompare(b.createdAt));
+  return valid.slice(0, limit);
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -116,7 +112,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ error: 'Invalid date' });
       }
       const entries = await readTopEntries(dateKey, MAX_ENTRIES);
-      entries.sort((a, b) => b.wins - a.wins || a.createdAt.localeCompare(b.createdAt));
       return res.status(200).json({ dateKey, entries });
     }
 
@@ -169,22 +164,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         ...(displayName ? { displayName } : {}),
       };
 
-      // Drop any earlier submission from this attempt id before writing.
-      const existing = await listEntryBlobs(dateKey);
-      const previous = existing.filter((b) => b.pathname.endsWith(`-${id}.json`));
-      await Promise.all(
-        previous.map((b) => del(b.pathname).catch(() => undefined)),
-      );
-
-      await put(entryPath(dateKey, entry), JSON.stringify(entry), {
+      await put(entryPath(dateKey, id), JSON.stringify(entry), {
         access: 'public',
         addRandomSuffix: false,
         allowOverwrite: true,
         contentType: 'application/json',
       });
 
-      const after = await listEntryBlobs(dateKey);
-      const rank = after.findIndex((b) => b.pathname.endsWith(`-${id}.json`)) + 1;
+      const after = await readTopEntries(dateKey, MAX_ENTRIES);
+      const rank = after.findIndex((e) => e.id === id) + 1;
 
       return res.status(200).json({
         ok: true,

@@ -1,4 +1,4 @@
-import { del, list, put } from '@vercel/blob';
+import { list, put } from '@vercel/blob';
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { decodeChallengeSeed } from '../src/game/challenge';
 import { sanitizeDisplayName } from '../src/game/displayName';
@@ -45,9 +45,8 @@ function prefixFor(code: string): string {
   return `challenge-boards/${code}/`;
 }
 
-function entryPath(code: string, entry: ChallengeEntry): string {
-  const rank = String(Math.max(0, 999 - entry.wins)).padStart(3, '0');
-  return `${prefixFor(code)}${rank}-${entry.createdAt}-${entry.id}.json`;
+function entryPath(code: string, id: string): string {
+  return `${prefixFor(code)}id/${id}.json`;
 }
 
 function parseBody(req: VercelRequest): Record<string, unknown> {
@@ -75,7 +74,7 @@ async function listEntryBlobs(code: string) {
 }
 
 async function readTopEntries(code: string, limit: number): Promise<ChallengeEntry[]> {
-  const blobs = (await listEntryBlobs(code)).slice(0, limit);
+  const blobs = await listEntryBlobs(code);
   const entries = await Promise.all(
     blobs.map(async (blob) => {
       try {
@@ -87,7 +86,14 @@ async function readTopEntries(code: string, limit: number): Promise<ChallengeEnt
       }
     }),
   );
-  return entries.filter((e): e is ChallengeEntry => !!e);
+  const valid = entries.filter((e): e is ChallengeEntry => !!e);
+  valid.sort((a, b) => b.wins - a.wins || a.createdAt.localeCompare(b.createdAt));
+  return valid.slice(0, limit);
+}
+
+function publicEntry(entry: ChallengeEntry) {
+  const { id: _id, ...rest } = entry;
+  return rest;
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -108,8 +114,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ error: 'Invalid code' });
       }
       const entries = await readTopEntries(code, MAX_ENTRIES);
-      entries.sort((a, b) => b.wins - a.wins || a.createdAt.localeCompare(b.createdAt));
-      return res.status(200).json({ code, entries });
+      return res.status(200).json({ code, entries: entries.map(publicEntry) });
     }
 
     if (req.method === 'POST') {
@@ -152,19 +157,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         ...(displayName ? { displayName } : {}),
       };
 
-      const existing = await listEntryBlobs(code);
-      const previous = existing.filter((b) => b.pathname.endsWith(`-${id}.json`));
-      await Promise.all(previous.map((b) => del(b.pathname).catch(() => undefined)));
-
-      await put(entryPath(code, entry), JSON.stringify(entry), {
+      await put(entryPath(code, id), JSON.stringify(entry), {
         access: 'public',
         addRandomSuffix: false,
         allowOverwrite: true,
         contentType: 'application/json',
       });
 
-      const after = await listEntryBlobs(code);
-      const rank = after.findIndex((b) => b.pathname.endsWith(`-${id}.json`)) + 1;
+      const after = await readTopEntries(code, MAX_ENTRIES);
+      const rank = after.findIndex((e) => e.id === id) + 1;
 
       return res.status(200).json({
         ok: true,
