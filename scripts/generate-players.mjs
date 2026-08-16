@@ -12,6 +12,8 @@ import { dirname, join } from 'node:path';
 import { EXPANSION } from './player-expansion.mjs';
 import { ROSTER_FILL } from './roster-fill.mjs';
 import { ROSTER_NINE } from './roster-nine.mjs';
+import { ROSTER_BENCH } from './roster-bench.mjs';
+import { ROSTER_BENCH_2 } from './roster-bench-2.mjs';
 import { HOF_NAMES } from './hof-names.mjs';
 import { RAW_1 } from './raw-1.mjs';
 import { RAW_2 } from './raw-2.mjs';
@@ -20,7 +22,16 @@ import { RAW_3 } from './raw-3.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /** [name, franchise, decade, positions, tier, hof, avg|era, obp|whip, slg|k9, isPitcher] */
-const RAW = [...RAW_1, ...RAW_2, ...RAW_3, ...EXPANSION, ...ROSTER_FILL, ...ROSTER_NINE];
+const RAW = [
+  ...RAW_1,
+  ...RAW_2,
+  ...RAW_3,
+  ...EXPANSION,
+  ...ROSTER_FILL,
+  ...ROSTER_NINE,
+  ...ROSTER_BENCH,
+  ...ROSTER_BENCH_2,
+];
 
 const OF = new Set(['LF', 'CF', 'RF']);
 const VALID = new Set(['C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'SP']);
