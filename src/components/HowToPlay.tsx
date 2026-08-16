@@ -60,6 +60,8 @@ export function HowToPlay() {
         </li>
         <li>
           <strong>One Franchise</strong> — lock a club, spin decades only, two decade skips.
+          Yankees, Braves, Dodgers, and Red Sox are the deepest books; Orioles, Cardinals,
+          Giants, and Reds are right behind.
         </li>
         <li>
           <strong>Era Lock</strong> — lock a decade, spin franchises only. Two team skips, no
@@ -86,6 +88,15 @@ export function HowToPlay() {
         daily streak, and badges. Optional board names appear on Daily and Challenge boards —
         no account. Dynasty and Perfection get a celebration on the result screen. Progress stays
         on this device. Add 162-0 to your Home Screen when the tip appears.
+      </p>
+
+      <h3>Choosing a franchise</h3>
+      <p>
+        One Franchise is the only mode where you pick the club. The Yankees, Braves, Dodgers, and
+        Red Sox have the most Hall of Famers and star decades. Mariners 1990s, Dodgers 1950s, and
+        Braves 1990s are the single spins you most want to see in Classic or Era Lock. Expansion
+        clubs (Marlins, Rays, Diamondbacks, Rockies) field a full nine every era but have thinner
+        Hall of Fame lists.
       </p>
 
       <h3>Grades</h3>

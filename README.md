@@ -4,7 +4,8 @@ Draft MLB legends across random franchises and decades, fill nine positions, and
 
 **Play:** [162-amber.vercel.app](https://162-amber.vercel.app)  
 **Repo:** [github.com/hondoentertainment/mlb-162-0](https://github.com/hondoentertainment/mlb-162-0)  
-**Roadmap:** [ROADMAP.md](./ROADMAP.md)
+**Roadmap:** [ROADMAP.md](./ROADMAP.md)  
+**Top teams:** [TEAMS.md](./TEAMS.md) — strongest One Franchise locks and the franchise-decades you want to spin
 
 ## Modes
 

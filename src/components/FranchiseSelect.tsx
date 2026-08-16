@@ -13,7 +13,8 @@ export function FranchiseSelect() {
       </h2>
       <p className="lede">
         Lock one club for all nine rounds. Each spin draws a decade from that franchise&apos;s
-        history.
+        history. Yankees, Braves, Dodgers, and Red Sox are the deepest books if you are chasing a
+        high win total.
       </p>
       <div className="franchise-grid" data-testid="franchise-grid">
         {options.map((f) => (
