@@ -36,12 +36,11 @@ export function parsePicks(value: unknown): SubmittedPick[] | null {
   return picks;
 }
 
-/**
- * Replays a Daily run against that date's seed. Every pick must have been
- * legally available on the spin its round actually produced, so a client
- * cannot post a roster it never drafted or a record it never earned.
- */
-export function verifyDailyRun(dateKey: string, picks: SubmittedPick[]): VerifyResult {
+function verifySeededRun(
+  mode: 'daily' | 'challenge',
+  picks: SubmittedPick[],
+  opts: { dateKey?: string; randSeed?: number },
+): VerifyResult {
   // Server-side there is no bundle to protect, so prime the pool directly.
   if (!isPoolLoaded()) setPool(PLAYERS);
 
@@ -74,10 +73,10 @@ export function verifyDailyRun(dateKey: string, picks: SubmittedPick[]): VerifyR
     }
 
     const spin = spinForRound({
-      mode: 'daily',
+      mode,
       round,
-      randSeed: 0,
-      dateKey,
+      randSeed: opts.randSeed ?? 0,
+      dateKey: opts.dateKey,
       openPositions: open,
       drafted,
     });
@@ -91,4 +90,18 @@ export function verifyDailyRun(dateKey: string, picks: SubmittedPick[]): VerifyR
   }
 
   return { ok: true, roster, result: simulateSeason(roster) };
+}
+
+/**
+ * Replays a Daily run against that date's seed. Every pick must have been
+ * legally available on the spin its round actually produced, so a client
+ * cannot post a roster it never drafted or a record it never earned.
+ */
+export function verifyDailyRun(dateKey: string, picks: SubmittedPick[]): VerifyResult {
+  return verifySeededRun('daily', picks, { dateKey });
+}
+
+/** Same replay rules as Daily, keyed off a challenge code's seed. */
+export function verifyChallengeRun(randSeed: number, picks: SubmittedPick[]): VerifyResult {
+  return verifySeededRun('challenge', picks, { randSeed });
 }

@@ -17,9 +17,11 @@ import { FRANCHISE_BY_ID } from '../data/franchises';
 import { ensurePool } from '../data/pool';
 import { evaluateAchievements } from '../game/achievements';
 import { recordCareerResult } from '../game/career';
+import { submitChallengeBoard } from '../game/challengeBoard';
 import { saveDailyRecord } from '../game/daily';
 import { recordDailyHistory } from '../game/dailyHistory';
 import { submitDailyBoard } from '../game/dailyBoard';
+import { loadDisplayName } from '../game/displayName';
 import { spinForRound } from '../game/draftSequence';
 import { canUndoLastPick } from '../game/draftRules';
 import { tryAddLeaderboardEntry } from '../game/leaderboard';
@@ -164,8 +166,17 @@ export function GameProvider({ children }: { children: ReactNode }) {
         const submitted = await submitDailyBoard({
           dateKey: state.dateKey,
           picks: state.picks,
+          displayName: loadDisplayName() || undefined,
         });
         dailyRank = submitted.rank ?? null;
+      }
+
+      if (state.mode === 'challenge' && state.challengeCode) {
+        await submitChallengeBoard({
+          code: state.challengeCode,
+          picks: state.picks,
+          displayName: loadDisplayName() || undefined,
+        });
       }
 
       const career = state.mode
@@ -173,6 +184,10 @@ export function GameProvider({ children }: { children: ReactNode }) {
             mode: state.mode,
             result,
             dateKey: state.dateKey,
+            rosterNames,
+            challengeCode: state.challengeCode,
+            lockedFranchiseId: state.lockedFranchiseId,
+            lockedDecade: state.lockedDecade,
           })
         : null;
 
@@ -203,7 +218,15 @@ export function GameProvider({ children }: { children: ReactNode }) {
         newAchievements,
       });
     })();
-  }, [state.dateKey, state.mode, state.picks, state.roster]);
+  }, [
+    state.challengeCode,
+    state.dateKey,
+    state.lockedDecade,
+    state.lockedFranchiseId,
+    state.mode,
+    state.picks,
+    state.roster,
+  ]);
 
   const goHome = useCallback(() => dispatch({ type: 'RESET' }), []);
   const setScreen = useCallback(
@@ -220,8 +243,8 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const spinPlayers = useMemo(() => {
     if (!state.spin) return [];
-    return playersOnSpin(state.spin, draftedKeys(state.roster));
-  }, [state.roster, state.spin]);
+    return playersOnSpin(state.spin);
+  }, [state.spin]);
 
   const availablePlayers = useMemo(() => {
     if (!state.spin) return [];

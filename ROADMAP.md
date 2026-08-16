@@ -50,6 +50,7 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 | Achievements / badges | Done | 14 unlocks, result + Career screen |
 | Challenge a friend | Done | Shareable codes / `#c=` links |
 | Career screen | Done | Stats + achievement gallery |
+| Season log (all games) | Done | Local record of every finished season |
 
 ---
 
@@ -74,10 +75,10 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 | # | Feature | Priority | Complexity | Why |
 |---|---------|----------|------------|-----|
 | S1 | Daily history (last 14 days local) | High | Low | Done — 14-day strip on Home + Career |
-| S2 | Challenge rematch board (same code) | Medium | Medium | Compare friends’ records by code |
-| S3 | Anonymous display names on global daily | Medium | Medium | Identity without full accounts |
-| S4 | “Yesterday’s top 10” archive | Low | Medium | Blob retention / new keys |
-| S5 | Share card with challenge code badge | Medium | Low | Stronger viral loop |
+| S2 | Challenge rematch board (same code) | Medium | Medium | Done — `/api/challenge-board` + result/home board |
+| S3 | Anonymous display names on global daily | Medium | Medium | Done — optional handle, no account |
+| S4 | “Yesterday’s top 10” archive | Low | Medium | Done — Yesterday tab on Leaderboards |
+| S5 | Share card with challenge code badge | Medium | Low | Done — starting-nine grid + code pill |
 
 ### v1.5 — New modes & content
 
@@ -87,8 +88,8 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 | M2 | Ironman (no skips, Classic rules) | Medium | Low | Done — no skips, redraws, or undo |
 | M3 | Expansion: DH or RP slot | Medium | High | Changes sim + pool |
 | M4 | Player encyclopedia / search | Low | Medium | Education + Diamond IQ practice |
-| M5 | Pool metadata pass (more HOF flags) | Medium | Medium | Fairness + achievements |
-| M6 | Source stats from a real dataset | High | Medium | Stat lines are hand-entered approximations |
+| M5 | Pool metadata pass (more HOF flags) | Medium | Medium | Done — generate-time HOF name list |
+| M6 | Source stats from a real dataset | High | Medium | Lines still approximate; draft marks them “approx” |
 
 ### v2.0 — Platform (later)
 
@@ -111,12 +112,10 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 ---
 
-## Suggested build order (after N3 / N4 / S1)
+## Suggested build order (after this UX slice)
 
-1. Challenge rematch board + share-card challenge badge (S2, S5)  
-2. Anonymous display names on the global daily (S3)  
-3. Pool metadata / real stat lines (M5, M6)  
-4. Reassess accounts only if sync requests spike  
+1. Real stat lines from a public dataset (finish M6)  
+2. Reassess accounts only if sync requests spike  
 
 ---
 

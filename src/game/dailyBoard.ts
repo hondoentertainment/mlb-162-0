@@ -8,6 +8,7 @@ export interface GlobalDailyEntry {
   gradeLabel: string;
   rosterNames: string[];
   createdAt: string;
+  displayName?: string;
 }
 
 function attemptIdKey(dateKey: string): string {
@@ -53,6 +54,7 @@ export async function fetchDailyBoard(dateKey = utcDateKey()): Promise<{
 export async function submitDailyBoard(input: {
   dateKey: string;
   picks: SubmittedPick[];
+  displayName?: string;
 }): Promise<{ rank?: number; error?: string }> {
   try {
     const res = await fetch('/api/daily', {
@@ -62,6 +64,7 @@ export async function submitDailyBoard(input: {
         dateKey: input.dateKey,
         picks: input.picks,
         id: getOrCreateDailyAttemptId(input.dateKey),
+        displayName: input.displayName,
       }),
     });
     const data = (await res.json()) as { rank?: number | null; error?: string };

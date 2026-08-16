@@ -12,6 +12,7 @@ import { dirname, join } from 'node:path';
 import { EXPANSION } from './player-expansion.mjs';
 import { ROSTER_FILL } from './roster-fill.mjs';
 import { ROSTER_NINE } from './roster-nine.mjs';
+import { HOF_NAMES } from './hof-names.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -902,7 +903,7 @@ for (const row of RAW) {
     decade,
     positions,
     tier,
-    hof: Boolean(hof),
+    hof: Boolean(hof) || HOF_NAMES.has(name),
   };
 
   if (isPitcher) {

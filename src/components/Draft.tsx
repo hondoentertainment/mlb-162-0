@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ROUNDS } from '../config/constants';
+import { dismissClassicCoach, shouldShowClassicCoach } from '../game/classicCoach';
 import {
   allowsRedraw,
   canRespinEmptyPool,
@@ -8,6 +9,8 @@ import {
   emptyPoolKind,
 } from '../game/draftRules';
 import { formatSalary, playerSalary } from '../game/salary';
+import { personKey } from '../game/spin';
+import { draftedKeys } from '../state/gameReducer';
 import { useGame } from '../state/gameStore';
 import { PlayerPicker } from './PlayerPicker';
 import { RosterBoard } from './RosterBoard';
@@ -43,6 +46,7 @@ export function Draft() {
     return availablePlayers.filter((p) => playerSalary(p) <= salaryRemaining).length;
   }, [availablePlayers, salaryRemaining, state.mode]);
 
+  const [coach, setCoach] = useState(() => shouldShowClassicCoach());
   const poolKind = emptyPoolKind({
     mode: state.mode,
     hasSpin: !!state.spin,
@@ -53,6 +57,11 @@ export function Draft() {
   const needsRedraw = canRespinEmptyPool(state.mode, poolKind);
   const showUndo = canUndoLastPick(state.mode);
   const fairEmpty = !allowsRedraw(state.mode) && poolKind !== 'none';
+  const alreadyOnRoster = useMemo(() => {
+    if (!state.spin) return 0;
+    const taken = draftedKeys(state.roster);
+    return spinPlayers.filter((p) => taken.has(personKey(p))).length;
+  }, [spinPlayers, state.roster, state.spin]);
 
   const autoRespinKey = state.spin
     ? `${state.round}|${state.spin.franchiseId}|${state.spin.decade}|${poolKind}`
@@ -114,6 +123,26 @@ export function Draft() {
           </button>
         </div>
       </div>
+
+      {coach && state.mode === 'classic' && (
+        <div className="panel coach" data-testid="classic-coach">
+          <p className="section-label">First Classic</p>
+          <ol className="coach-steps">
+            <li>Spin a franchise and decade.</li>
+            <li>Tap one name into an open slot. Nine rounds, nine legends.</li>
+          </ol>
+          <button
+            type="button"
+            className="btn btn-secondary"
+            onClick={() => {
+              dismissClassicCoach();
+              setCoach(false);
+            }}
+          >
+            Got it
+          </button>
+        </div>
+      )}
 
       <div className="panel">
         <p className="section-label">Spin the park</p>
@@ -177,7 +206,7 @@ export function Draft() {
             {(needsRedraw || fairEmpty) && (
               <div className="empty-pool empty-pool-banner" data-testid="empty-pool">
                 <p data-testid="empty-pool-copy">
-                  {emptyPoolCopy(poolKind, !allowsRedraw(state.mode))}
+                  {emptyPoolCopy(poolKind, !allowsRedraw(state.mode), alreadyOnRoster)}
                 </p>
                 {needsRedraw && (
                   <>

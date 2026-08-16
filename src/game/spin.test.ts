@@ -65,4 +65,16 @@ describe('full era roster', () => {
     const names = playersOnSpin(nyy1950s).map((p) => p.name);
     expect(new Set(names).size).toBe(names.length);
   });
+
+  it('still lists a person who is already on the roster', () => {
+    const yogi = PLAYERS.find((p) => p.id === 'yogi-berra-nyy-1950s');
+    expect(yogi).toBeDefined();
+    const listed = playersOnSpin(nyy1950s);
+    expect(listed.some((p) => p.name === 'Yogi Berra')).toBe(true);
+    expect(
+      getAvailablePlayers(nyy1950s, ['C'], new Set([personKey(yogi!)])).some(
+        (p) => p.name === 'Yogi Berra',
+      ),
+    ).toBe(false);
+  });
 });

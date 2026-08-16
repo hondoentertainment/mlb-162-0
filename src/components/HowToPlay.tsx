@@ -21,8 +21,10 @@ export function HowToPlay() {
       <h3>The spin</h3>
       <p>
         Each round, a decade and franchise are drawn at random. You see every player from that
-        team-era — a full starting nine at every club era, not just the names who fit a remaining
-        slot. Draft one legend into an open eligible position. Nine rounds, nine legends.
+        team-era — a full starting nine at every club era. Names that fit an open slot sit on top;
+        filter by remaining position if the list is long. Someone already on your roster stays
+        visible and marked, so a dead Daily or Ironman spin is obvious. Draft one legend into an
+        open eligible position. Nine rounds, nine legends.
       </p>
 
       <h3>Skips, redraws, and undo</h3>
@@ -74,15 +76,16 @@ export function HowToPlay() {
         </li>
         <li>
           <strong>Challenge</strong> — share a code so friends face the same spins. No skips.
-          Compare records offline.
+          Finishes land on a rematch board for that code.
         </li>
       </ul>
 
       <h3>Career & achievements</h3>
       <p>
-        Every finished season updates local career stats (best wins, mode breakdown, daily streak)
-        and can unlock badges. Dynasty and Perfection get a celebration on the result screen.
-        Progress stays on this device. Add 162-0 to your Home Screen when the tip appears.
+        Every finished season updates local career stats, a season log (record, mode, roster),
+        daily streak, and badges. Optional board names appear on Daily and Challenge boards —
+        no account. Dynasty and Perfection get a celebration on the result screen. Progress stays
+        on this device. Add 162-0 to your Home Screen when the tip appears.
       </p>
 
       <h3>Grades</h3>
@@ -94,6 +97,10 @@ export function HowToPlay() {
         <li>REBUILDING — under 85</li>
       </ul>
       <p>Balance beats one superstar and empty slots. Incomplete rosters are capped hard.</p>
+      <p>
+        Batting and pitching lines are era approximations, marked “approx” in the draft. Hall of
+        Fame badges are for actual HOFers. A real stat dataset is still on the roadmap.
+      </p>
     </section>
   );
 }

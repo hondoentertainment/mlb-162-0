@@ -8,6 +8,14 @@ export async function openApp(page: Page) {
   await expect(page.getByTestId('home')).toBeVisible();
 }
 
+export async function openMoreModes(page: Page) {
+  const more = page.getByTestId('more-modes');
+  await expect(more).toBeVisible();
+  if (!(await more.getAttribute('open'))) {
+    await more.locator('summary').click();
+  }
+}
+
 export async function spinAndWait(page: Page) {
   await expect(page.getByTestId('spin-button')).toBeVisible({ timeout: 10_000 });
   await page.getByTestId('spin-button').click();

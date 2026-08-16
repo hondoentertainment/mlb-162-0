@@ -7,6 +7,7 @@ test.describe('career & challenge', () => {
     await page.getByTestId('nav-career').click();
     await expect(page.getByTestId('career')).toBeVisible();
     await expect(page.getByTestId('achievement-list')).toBeVisible();
+    await expect(page.getByTestId('game-log')).toContainText('No seasons logged yet');
   });
 
   test('new challenge shows code and completes a season', async ({ page }) => {
@@ -20,10 +21,15 @@ test.describe('career & challenge', () => {
     await playFullDraft(page);
     await expect(page.getByTestId('result-challenge-code')).toContainText(code);
     await expect(page.getByTestId('new-achievements')).toBeVisible();
+    await expect(page.getByTestId('rematch-board')).toBeVisible();
 
+    const record = (await page.getByTestId('final-record').innerText()).trim();
     await page.getByRole('button', { name: 'Career' }).click();
     await expect(page.getByTestId('career')).toBeVisible();
     await expect(page.getByTestId('ach-first_season')).toHaveClass(/unlocked/);
+    await expect(page.getByTestId('game-log')).toBeVisible();
+    await expect(page.getByTestId('game-log-record')).toHaveText(record);
+    await expect(page.getByTestId('game-log')).toContainText(code);
   });
 
   test('join challenge with code reaches draft', async ({ page }) => {

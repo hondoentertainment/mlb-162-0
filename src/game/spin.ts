@@ -56,14 +56,9 @@ export function personKey(player: Player): string {
   return player.name.trim().toLowerCase();
 }
 
-/** Every unique player on this franchise-decade, including those who do not fit an open slot. */
-export function playersOnSpin(
-  spin: SpinResult,
-  drafted: Set<string> = new Set(),
-): Player[] {
-  return uniqueByEraName(
-    playersForSpin(spin.franchiseId, spin.decade).filter((p) => !drafted.has(personKey(p))),
-  ).sort(sortByTierName);
+/** Every unique player on this franchise-decade, including drafted names and non-fits. */
+export function playersOnSpin(spin: SpinResult): Player[] {
+  return uniqueByEraName(playersForSpin(spin.franchiseId, spin.decade)).sort(sortByTierName);
 }
 
 export function getAvailablePlayers(
@@ -71,7 +66,8 @@ export function getAvailablePlayers(
   openPositions: string[],
   drafted: Set<string>,
 ): Player[] {
-  return playersOnSpin(spin, drafted)
+  return playersOnSpin(spin)
+    .filter((p) => !drafted.has(personKey(p)))
     .filter((p) => p.positions.some((pos) => openPositions.includes(pos)))
     .sort(sortByTierName);
 }

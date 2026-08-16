@@ -5,6 +5,7 @@ import { challengeShareUrl } from '../game/challenge';
 import { useGame } from '../state/gameStore';
 import { Confetti } from './Confetti';
 import { ContributionChart } from './ContributionChart';
+import { RematchBoard } from './RematchBoard';
 import { RosterBoard } from './RosterBoard';
 import { ShareCard } from './ShareCard';
 
@@ -139,14 +140,18 @@ export function ResultCard() {
       <p className="section-label">Roster</p>
       <RosterBoard roster={state.roster} />
 
+      {state.challengeCode && <RematchBoard code={state.challengeCode} />}
+
       <div className="panel" style={{ marginTop: '1.5rem' }}>
         <p className="section-label">Share card</p>
         <ShareCard
           wins={result.wins}
           losses={result.losses}
           gradeLabel={result.gradeLabel}
+          gradeId={result.gradeId}
           modeLabel={modeLabel}
           rosterNames={names}
+          challengeCode={state.challengeCode}
         />
       </div>
 
@@ -165,6 +170,16 @@ export function ResultCard() {
               onClick={copyChallengeLink}
             >
               Copy challenge link
+            </button>
+          )}
+          {state.mode && state.mode !== 'daily' && state.mode !== 'challenge' && (
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-testid="challenge-this-board"
+              onClick={() => startGame('challenge')}
+            >
+              Challenge a friend
             </button>
           )}
           {state.mode && state.mode !== 'daily' && (

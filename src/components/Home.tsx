@@ -9,7 +9,9 @@ import { isDailyCompletedToday, loadDailyRecord, utcDateKey } from '../game/dail
 import { formatSalary, SALARY_CAP_M } from '../game/salary';
 import { useGame } from '../state/gameStore';
 import { DailyHistoryStrip } from './DailyHistory';
+import { DisplayNameField } from './DisplayNameField';
 import { InstallTip } from './InstallTip';
+import { RematchBoard } from './RematchBoard';
 
 export function Home() {
   const { startGame, beginFranchiseSelect, beginDecadeSelect, setScreen } = useGame();
@@ -20,6 +22,7 @@ export function Home() {
   const streak = displayDailyStreak(career);
   const [challengeCode, setChallengeCode] = useState('');
   const [challengeError, setChallengeError] = useState<string | null>(null);
+  const [boardCode, setBoardCode] = useState<string | null>(null);
 
   useEffect(() => {
     const fromUrl = parseChallengeFromLocation();
@@ -29,8 +32,6 @@ export function Home() {
     history.replaceState(null, '', '/');
   }, [startGame]);
 
-  // Warm the code-split player table during idle time so the first mode tap
-  // does not wait on a network round trip.
   useEffect(() => {
     const warm = () => void ensurePool();
     const idle = window.requestIdleCallback;
@@ -50,6 +51,16 @@ export function Home() {
     }
     setChallengeError(null);
     startGame('challenge', undefined, code);
+  };
+
+  const viewBoard = () => {
+    const code = challengeCode.trim().toUpperCase();
+    if (decodeChallengeSeed(code) == null) {
+      setChallengeError('Enter a valid challenge code (4–10 characters).');
+      return;
+    }
+    setChallengeError(null);
+    setBoardCode(code);
   };
 
   return (
@@ -86,64 +97,7 @@ export function Home() {
       <div className="mode-grid">
         <button
           type="button"
-          className="mode-card"
-          data-testid="mode-classic"
-          onClick={() => startGame('classic')}
-        >
-          <h3>Classic</h3>
-          <p>Full stats visible. One team skip, one decade skip. Chase the all-time board.</p>
-        </button>
-        <button
-          type="button"
-          className="mode-card"
-          data-testid="mode-diamondiq"
-          onClick={() => startGame('diamondiq')}
-        >
-          <h3>Diamond IQ</h3>
-          <p>Blind draft — no numbers. Prove you know baseball history.</p>
-        </button>
-        <button
-          type="button"
-          className="mode-card"
-          data-testid="mode-salary"
-          onClick={() => startGame('salary')}
-        >
-          <h3>Salary Cap</h3>
-          <p>
-            Build under a {formatSalary(SALARY_CAP_M)} soft cap. Stars cost more — balance the
-            diamond.
-          </p>
-        </button>
-        <button
-          type="button"
-          className="mode-card"
-          data-testid="mode-franchise"
-          onClick={beginFranchiseSelect}
-        >
-          <h3>One Franchise</h3>
-          <p>Lock a club, spin decades only, and build an all-time single-franchise nine.</p>
-        </button>
-        <button
-          type="button"
-          className="mode-card"
-          data-testid="mode-eralock"
-          onClick={beginDecadeSelect}
-        >
-          <h3>Era Lock</h3>
-          <p>Pick one decade and stay there. Two team skips, no decade skips.</p>
-        </button>
-        <button
-          type="button"
-          className="mode-card"
-          data-testid="mode-ironman"
-          onClick={() => startGame('ironman')}
-        >
-          <h3>Ironman</h3>
-          <p>Classic rules with no safety net — no skips, no redraws, no undo.</p>
-        </button>
-        <button
-          type="button"
-          className="mode-card"
+          className="mode-card mode-card-lead"
           data-testid="mode-daily"
           onClick={() => startGame('daily')}
           disabled={dailyDone}
@@ -155,9 +109,19 @@ export function Home() {
               : 'Same spins worldwide. No skips. Compete on the global board.'}
           </p>
         </button>
+        <button
+          type="button"
+          className="mode-card mode-card-lead"
+          data-testid="mode-classic"
+          onClick={() => startGame('classic')}
+        >
+          <h3>Classic</h3>
+          <p>Full stats visible. One team skip, one decade skip. Chase the all-time board.</p>
+        </button>
+
         <div className="mode-card challenge-card" data-testid="mode-challenge">
           <h3>Challenge a friend</h3>
-          <p>Same spins for everyone with the code. No skips — pure comparison.</p>
+          <p>Same spins for everyone with the code. Compare records on the rematch board.</p>
           <div className="challenge-row">
             <button
               type="button"
@@ -185,10 +149,76 @@ export function Home() {
             >
               Join
             </button>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              data-testid="challenge-board"
+              onClick={viewBoard}
+            >
+              Board
+            </button>
           </div>
           {challengeError && <p className="field-error">{challengeError}</p>}
         </div>
       </div>
+
+      {boardCode && <RematchBoard code={boardCode} />}
+
+      <details className="more-modes" data-testid="more-modes">
+        <summary>More ways to play</summary>
+        <div className="mode-grid more-modes-grid">
+          <button
+            type="button"
+            className="mode-card"
+            data-testid="mode-diamondiq"
+            onClick={() => startGame('diamondiq')}
+          >
+            <h3>Diamond IQ</h3>
+            <p>Blind draft — no numbers. Prove you know baseball history.</p>
+          </button>
+          <button
+            type="button"
+            className="mode-card"
+            data-testid="mode-salary"
+            onClick={() => startGame('salary')}
+          >
+            <h3>Salary Cap</h3>
+            <p>
+              Build under a {formatSalary(SALARY_CAP_M)} soft cap. Stars cost more — balance the
+              diamond.
+            </p>
+          </button>
+          <button
+            type="button"
+            className="mode-card"
+            data-testid="mode-franchise"
+            onClick={beginFranchiseSelect}
+          >
+            <h3>One Franchise</h3>
+            <p>Lock a club, spin decades only, and build an all-time single-franchise nine.</p>
+          </button>
+          <button
+            type="button"
+            className="mode-card"
+            data-testid="mode-eralock"
+            onClick={beginDecadeSelect}
+          >
+            <h3>Era Lock</h3>
+            <p>Pick one decade and stay there. Two team skips, no decade skips.</p>
+          </button>
+          <button
+            type="button"
+            className="mode-card"
+            data-testid="mode-ironman"
+            onClick={() => startGame('ironman')}
+          >
+            <h3>Ironman</h3>
+            <p>Classic rules with no safety net — no skips, no redraws, no undo.</p>
+          </button>
+        </div>
+      </details>
+
+      <DisplayNameField compact />
 
       <div className="nav-links">
         <button type="button" data-testid="nav-how" onClick={() => setScreen('how')}>

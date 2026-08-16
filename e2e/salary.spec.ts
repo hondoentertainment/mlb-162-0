@@ -1,9 +1,10 @@
 import { expect, test } from '@playwright/test';
-import { openApp, playFullDraft } from './helpers';
+import { openApp, openMoreModes, playFullDraft } from './helpers';
 
 test.describe('salary cap', () => {
   test('shows cap budget and finishes a run', async ({ page }) => {
     await openApp(page);
+    await openMoreModes(page);
     await page.getByTestId('mode-salary').click();
     await expect(page.getByTestId('mode-label')).toHaveText('Salary Cap');
     await expect(page.getByTestId('round-meta')).toContainText('$');
