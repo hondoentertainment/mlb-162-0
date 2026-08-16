@@ -54,7 +54,11 @@ export function comparePlayers(a: Player, b: Player): number {
  * id would let the same person fill two slots.
  */
 export function personKey(player: Player): string {
-  return player.name.trim().toLowerCase();
+  const name = player.name.trim().toLowerCase();
+  // Same display name can be two people (Luis Castillo P vs 2B). Role keeps
+  // eras of one human together without collapsing namesakes.
+  const role = player.pitching ? 'p' : 'h';
+  return `${name}|${role}`;
 }
 
 /** Every unique player on this franchise-decade, including drafted names and non-fits. */

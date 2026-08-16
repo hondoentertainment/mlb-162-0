@@ -63,8 +63,16 @@ function pruneToWindow(entries: DailyHistoryEntry[], from = utcDateKey()): Daily
     .sort((a, b) => a.dateKey.localeCompare(b.dateKey));
 }
 
+function readHistoryRaw(): string | null {
+  try {
+    return localStorage.getItem(STORAGE_KEYS.dailyHistory);
+  } catch {
+    return null;
+  }
+}
+
 export function loadDailyHistory(from = utcDateKey()): DailyHistoryEntry[] {
-  const stored = pruneToWindow(parseHistory(localStorage.getItem(STORAGE_KEYS.dailyHistory)), from);
+  const stored = pruneToWindow(parseHistory(readHistoryRaw()), from);
   const migrated = fromDailyRecord(loadDailyRecord());
   if (!migrated || stored.some((e) => e.dateKey === migrated.dateKey)) {
     return stored;
@@ -73,7 +81,11 @@ export function loadDailyHistory(from = utcDateKey()): DailyHistoryEntry[] {
 }
 
 export function saveDailyHistory(entries: DailyHistoryEntry[]): void {
-  localStorage.setItem(STORAGE_KEYS.dailyHistory, JSON.stringify(entries));
+  try {
+    localStorage.setItem(STORAGE_KEYS.dailyHistory, JSON.stringify(entries));
+  } catch {
+    /* storage blocked */
+  }
 }
 
 export function recordDailyHistory(

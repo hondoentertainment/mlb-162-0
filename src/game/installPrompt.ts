@@ -14,8 +14,8 @@ export function isIosSafari(): boolean {
   const ua = navigator.userAgent;
   const ios = /iPad|iPhone|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const webkit = /WebKit/.test(ua);
-  const notOther = !/CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
-  return ios && webkit && notOther;
+  // Chrome / Firefox / Edge / Opera on iOS also add to Home Screen via Share.
+  return ios && webkit;
 }
 
 export function isInstallTipDismissed(): boolean {

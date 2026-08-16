@@ -33,7 +33,12 @@ export function isPoolLoaded(): boolean {
 
 export async function ensurePool(): Promise<void> {
   if (players) return;
-  loading ??= import('./players').then((mod) => setPool(mod.PLAYERS));
+  loading ??= import('./players')
+    .then((mod) => setPool(mod.PLAYERS))
+    .catch((err) => {
+      loading = null;
+      throw err;
+    });
   await loading;
 }
 

@@ -63,6 +63,18 @@ describe('dailyHistory', () => {
     ]);
   });
 
+  it('returns an empty history when localStorage throws', () => {
+    const original = localStorage.getItem;
+    localStorage.getItem = () => {
+      throw new DOMException('blocked', 'SecurityError');
+    };
+    try {
+      expect(loadDailyHistory('2026-08-15')).toEqual([]);
+    } finally {
+      localStorage.getItem = original;
+    }
+  });
+
   it('builds a 14-day grid with today marked', () => {
     recordDailyHistory(
       { dateKey: '2026-08-14', wins: 88, losses: 74, gradeLabel: 'PLAYOFFS' },

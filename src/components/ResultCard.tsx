@@ -189,7 +189,12 @@ export function ResultCard() {
               onClick={() =>
                 state.mode === 'challenge' && state.challengeCode
                   ? startGame('challenge', undefined, state.challengeCode)
-                  : startGame(state.mode!)
+                  : startGame(
+                      state.mode!,
+                      state.lockedFranchiseId ?? undefined,
+                      undefined,
+                      state.lockedDecade ?? undefined,
+                    )
               }
             >
               Play again

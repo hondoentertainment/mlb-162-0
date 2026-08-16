@@ -21,6 +21,18 @@ describe('Era Lock', () => {
     expect(state.showStats).toBe(true);
   });
 
+  it('keeps the locked decade when Play again omits a new decade', () => {
+    const first = reducer(initialState, { type: 'START', mode: 'eralock', decade: '1990s' });
+    const replay = reducer(first, { type: 'START', mode: 'eralock', decade: first.lockedDecade ?? undefined });
+    expect(replay.lockedDecade).toBe('1990s');
+    expect(replay.screen).toBe('draft');
+  });
+
+  it('does not unlock the decade when START is missing decade', () => {
+    const unlocked = reducer(initialState, { type: 'START', mode: 'eralock' });
+    expect(unlocked.lockedDecade).toBeNull();
+  });
+
   it('never spins outside the locked decade across a full draft', () => {
     for (const decade of ['1960s', '1990s', '2020s'] as const) {
       const roster: RosterSlot[] = POSITIONS.map((position) => ({ position, player: null }));
