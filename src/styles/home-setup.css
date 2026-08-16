@@ -1,0 +1,133 @@
+.setup-chip:focus-visible,
+.setup-heading:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 3px;
+}
+
+.hero-home .brand {
+  font-size: clamp(2.6rem, 11vw, 4.25rem);
+}
+
+.hero-home .headline {
+  margin-top: var(--space-3);
+}
+
+.hero-home .lede {
+  margin-bottom: var(--space-3);
+  font-size: 1rem;
+}
+
+.mode-grid-instant {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .mode-grid-instant {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.mode-grid-instant .challenge-card {
+  grid-column: 1 / -1;
+}
+
+.mode-card-compact {
+  padding: var(--space-3);
+}
+
+.mode-card-compact h3 {
+  font-size: 1.08rem;
+}
+
+.mode-card-compact p {
+  font-size: 0.82rem;
+}
+
+.setup-panel {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.setup-panel-head {
+  margin-bottom: var(--space-3);
+}
+
+.setup-heading {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.setup-panel-head p {
+  margin: 0.2rem 0 0;
+  color: var(--cream);
+  opacity: 0.75;
+  font-size: 0.85rem;
+}
+
+.setup-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+.setup-chip-grid-decades {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .setup-chip-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .setup-chip-grid-decades {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+
+.setup-chip {
+  display: grid;
+  gap: 0.1rem;
+  justify-items: center;
+  text-align: center;
+  min-width: 0;
+  padding: 0.45rem 0.2rem;
+  background: rgba(244, 239, 228, 0.05);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: inherit;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.setup-chip:hover {
+  border-color: rgba(212, 168, 75, 0.55);
+  background: rgba(212, 168, 75, 0.1);
+}
+
+.setup-chip-abbr {
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.setup-chip-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--cream);
+  opacity: 0.7;
+  font-size: 0.62rem;
+  line-height: 1.2;
+}

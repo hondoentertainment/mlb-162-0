@@ -9,11 +9,9 @@ export async function openApp(page: Page) {
 }
 
 export async function openMoreModes(page: Page) {
-  const more = page.getByTestId('more-modes');
-  await expect(more).toBeVisible();
-  if (!(await more.getAttribute('open'))) {
-    await more.locator('summary').click();
-  }
+  // Every mode and setup picker is already on Home.
+  await expect(page.getByTestId('mode-franchise')).toBeVisible();
+  await expect(page.getByTestId('mode-eralock')).toBeVisible();
 }
 
 export async function spinAndWait(page: Page) {

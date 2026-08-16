@@ -1,10 +1,8 @@
-import { FRANCHISES } from '../data/franchises';
-import { decadesForFranchise } from '../game/spin';
 import { useGame } from '../state/gameStore';
+import { FranchiseChipGrid } from './SetupPickers';
 
 export function FranchiseSelect() {
   const { startGame } = useGame();
-  const options = FRANCHISES.filter((f) => decadesForFranchise(f.id).length > 0);
 
   return (
     <section data-testid="franchise-select">
@@ -15,22 +13,7 @@ export function FranchiseSelect() {
         Lock one club for all nine rounds. Each spin draws a decade from that franchise&apos;s
         history.
       </p>
-      <div className="franchise-grid" data-testid="franchise-grid">
-        {options.map((f) => (
-          <button
-            key={f.id}
-            type="button"
-            className="mode-card"
-            data-testid={`franchise-${f.id}`}
-            onClick={() => startGame('franchise', f.id)}
-          >
-            <h3>{f.shortName}</h3>
-            <p>
-              {f.abbreviation} · {decadesForFranchise(f.id).length} eras
-            </p>
-          </button>
-        ))}
-      </div>
+      <FranchiseChipGrid onPick={(id) => startGame('franchise', id)} />
     </section>
   );
 }
