@@ -32,8 +32,8 @@ function canFieldStartingNine(players: ReturnType<typeof uniqueOnSpin>): boolean
 
 describe('player pool coverage', () => {
   it('has a deep historical catalog', () => {
-    expect(PLAYERS.length).toBeGreaterThanOrEqual(2000);
-    expect(new Set(PLAYERS.map((p) => p.name)).size).toBeGreaterThanOrEqual(1500);
+    expect(PLAYERS.length).toBeGreaterThanOrEqual(2500);
+    expect(new Set(PLAYERS.map((p) => p.name)).size).toBeGreaterThanOrEqual(1800);
   });
 
   it('gives every franchise-decade a distinct starting nine', () => {
@@ -45,6 +45,18 @@ describe('player pool coverage', () => {
         if (players.length < 9 || !canFieldStartingNine(players)) {
           thin.push(`${franchise.id}|${decade} (${players.length})`);
         }
+      }
+    }
+    expect(thin).toEqual([]);
+  });
+
+  it('gives every franchise-decade at least twelve unique names', () => {
+    const thin: string[] = [];
+    for (const franchise of FRANCHISES) {
+      for (const decade of DECADES) {
+        if (!franchise.decades.includes(decade)) continue;
+        const players = uniqueOnSpin(franchise.id, decade);
+        if (players.length < 12) thin.push(`${franchise.id}|${decade} (${players.length})`);
       }
     }
     expect(thin).toEqual([]);

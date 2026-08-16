@@ -21,7 +21,7 @@ export function HowToPlay() {
       <h3>The spin</h3>
       <p>
         Each round, a decade and franchise are drawn at random. You see every player from that
-        team-era — a full starting nine at every club era. Names that fit an open slot sit on top;
+        team-era — a starting nine plus bench at every club era. Names that fit an open slot sit on top;
         filter by remaining position if the list is long. Someone already on your roster stays
         visible and marked, so a dead Daily or Ironman spin is obvious. Draft one legend into an
         open eligible position. Nine rounds, nine legends.
