@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Position } from '../config/constants';
 import { formatSalary, playerSalary } from '../game/salary';
-import { personKey } from '../game/spin';
+import { comparePlayers, personKey } from '../game/spin';
 import type { Player, RosterSlot } from '../types/game';
 
 function formatBatting(p: Player): string {
@@ -59,11 +59,10 @@ export function PlayerPicker({
       if (eligible.length) available.push(player);
       else rest.push(player);
     }
-    const byTier = (a: Player, b: Player) => b.tier - a.tier || a.name.localeCompare(b.name);
     return {
-      available: available.sort(byTier),
-      already: already.sort(byTier),
-      rest: rest.sort(byTier),
+      available: available.sort(comparePlayers),
+      already: already.sort(comparePlayers),
+      rest: rest.sort(comparePlayers),
     };
   }, [drafted, open, players]);
 
@@ -89,7 +88,7 @@ export function PlayerPicker({
     return (
       <div
         key={player.id}
-        className={`player-card${unaffordable ? ' unaffordable' : ''}${noOpenSlot || already ? ' no-slot' : ''}`}
+        className={`player-card${player.hof ? ' hof-card' : ''}${unaffordable ? ' unaffordable' : ''}${noOpenSlot || already ? ' no-slot' : ''}`}
         data-testid={`player-${player.id}`}
         data-fits={kind === 'available' && !unaffordable ? 'true' : 'false'}
         data-already={already ? 'true' : 'false'}
@@ -148,6 +147,10 @@ export function PlayerPicker({
   };
 
   const openList = [...open];
+  const availableHof = filteredAvailable.filter((p) => p.hof);
+  const availableOthers = filteredAvailable.filter((p) => !p.hof);
+  const restHof = groups.rest.filter((p) => p.hof);
+  const restOthers = groups.rest.filter((p) => !p.hof);
 
   return (
     <div className="player-list" data-testid="player-list">
@@ -173,7 +176,13 @@ export function PlayerPicker({
         </div>
       )}
 
-      {filteredAvailable.map((p) => renderCard(p, 'available'))}
+      {availableHof.length > 0 && (
+        <p className="list-kicker" data-testid="hof-heading">
+          Hall of Fame
+        </p>
+      )}
+      {availableHof.map((p) => renderCard(p, 'available'))}
+      {availableOthers.map((p) => renderCard(p, 'available'))}
       {groups.already.map((p) => renderCard(p, 'already'))}
 
       {groups.rest.length > 0 && (
@@ -186,7 +195,13 @@ export function PlayerPicker({
           >
             {showRest ? 'Hide' : 'Show'} {groups.rest.length} who do not fit an open slot
           </button>
-          {showRest && groups.rest.map((p) => renderCard(p, 'rest'))}
+          {showRest && restHof.length > 0 && (
+            <p className="list-kicker" data-testid="hof-heading-rest">
+              Hall of Fame
+            </p>
+          )}
+          {showRest && restHof.map((p) => renderCard(p, 'rest'))}
+          {showRest && restOthers.map((p) => renderCard(p, 'rest'))}
         </div>
       )}
     </div>

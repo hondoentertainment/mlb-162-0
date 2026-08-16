@@ -23,6 +23,13 @@ test.describe('classic draft', () => {
       listed,
     );
     await expect(page.getByText(/All players from this franchise and decade/i)).toBeVisible();
+    const hofHeading = page.getByTestId('hof-heading');
+    if ((await hofHeading.count()) > 0) {
+      await expect(hofHeading).toBeVisible();
+      await expect(page.locator('[data-testid="player-list"] .player-card').first()).toHaveClass(
+        /hof-card/,
+      );
+    }
   });
 
   test('undoes the last pick and restores that spin', async ({ page }) => {

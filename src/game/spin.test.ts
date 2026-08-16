@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { POSITIONS } from '../config/constants';
 import { PLAYERS } from '../data/players';
-import { getAvailablePlayers, personKey, playersOnSpin } from './spin';
+import { comparePlayers, getAvailablePlayers, personKey, playersOnSpin } from './spin';
 
 const nyy1950s = { decade: '1950s' as const, franchiseId: 'nyy' };
 
@@ -64,6 +64,24 @@ describe('full era roster', () => {
   it('dedupes the same name on one franchise-decade', () => {
     const names = playersOnSpin(nyy1950s).map((p) => p.name);
     expect(new Set(names).size).toBe(names.length);
+  });
+
+  it('lists Hall of Famers before other players on a spin', () => {
+    const listed = playersOnSpin(nyy1950s);
+    expect(listed.some((p) => p.hof)).toBe(true);
+    expect(listed.some((p) => !p.hof)).toBe(true);
+    const firstNonHof = listed.findIndex((p) => !p.hof);
+    expect(listed.slice(0, firstNonHof).every((p) => p.hof)).toBe(true);
+    expect(listed.slice(firstNonHof).every((p) => !p.hof)).toBe(true);
+  });
+
+  it('ranks Hall of Famers ahead of a higher-tier non-HOF name', () => {
+    const hof = PLAYERS.find((p) => p.hof && p.tier <= 3);
+    const star = PLAYERS.find((p) => !p.hof && p.tier === 5);
+    expect(hof).toBeDefined();
+    expect(star).toBeDefined();
+    expect(comparePlayers(hof!, star!)).toBeLessThan(0);
+    expect(comparePlayers(star!, hof!)).toBeGreaterThan(0);
   });
 
   it('still lists a person who is already on the roster', () => {
