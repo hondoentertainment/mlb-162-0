@@ -50,6 +50,14 @@ describe('player pool coverage', () => {
     expect(thin).toEqual([]);
   });
 
+  it('sources most lines from Lahman franchise-decade totals', () => {
+    const lahman = PLAYERS.filter((p) => p.statsSource === 'lahman').length;
+    expect(lahman / PLAYERS.length).toBeGreaterThan(0.55);
+    const mantle = PLAYERS.find((p) => p.id === 'mickey-mantle-nyy-1950s');
+    expect(mantle?.statsSource).toBe('lahman');
+    expect(mantle?.batting?.avg).toBeGreaterThan(0.25);
+  });
+
   it('gives every franchise-decade at least twelve unique names', () => {
     const thin: string[] = [];
     for (const franchise of FRANCHISES) {

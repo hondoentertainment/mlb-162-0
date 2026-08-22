@@ -23,6 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
+scripts/.cache/
+
 .vercel
 .env*.local
 test-results/

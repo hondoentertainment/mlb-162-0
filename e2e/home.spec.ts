@@ -38,6 +38,10 @@ test.describe('home', () => {
     await page.getByTestId('nav-career').click();
     await expect(page.getByTestId('career')).toBeVisible();
     await expectHomeFrom(page);
+
+    await page.getByTestId('nav-encyclopedia').click();
+    await expect(page.getByRole('heading', { name: /Encyclopedia/i })).toBeVisible();
+    await expectHomeFrom(page);
   });
 
   test('scrolls to top so the home header is visible', async ({ page }) => {

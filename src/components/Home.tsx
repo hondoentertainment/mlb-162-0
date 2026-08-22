@@ -242,6 +242,13 @@ export function Home() {
         <button type="button" data-testid="nav-career" onClick={() => setScreen('career')}>
           Career
         </button>
+        <button
+          type="button"
+          data-testid="nav-encyclopedia"
+          onClick={() => setScreen('encyclopedia')}
+        >
+          Encyclopedia
+        </button>
       </div>
 
       <p className="disclaimer">

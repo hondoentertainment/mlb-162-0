@@ -114,7 +114,7 @@ export function PlayerPicker({
         {showStats && (
           <div className="stats">
             <span>{player.pitching ? formatPitching(player) : formatBatting(player)}</span>
-            <span className="stats-approx">approx</span>
+            {player.statsSource !== 'lahman' && <span className="stats-approx">approx</span>}
           </div>
         )}
 

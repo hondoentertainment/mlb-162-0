@@ -48,7 +48,7 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 |---------|--------|-------|
 | Career stats | Done | Seasons, best/avg wins, by mode |
 | Daily streak | Done | Consecutive UTC days |
-| Achievements / badges | Done | 14 unlocks, result + Career screen |
+| Achievements / badges | Done | 16 unlocks, result + Career screen |
 | Challenge a friend | Done | Shareable codes / `#c=` links |
 | Career screen | Done | Stats + achievement gallery |
 | Season log (all games) | Done | Local record of every finished season |
@@ -88,9 +88,9 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 | M1 | Era Lock (single decade) | High | Medium | Done — lock a decade, spin franchises only |
 | M2 | Ironman (no skips, Classic rules) | Medium | Low | Done — no skips, redraws, or undo |
 | M3 | Expansion: DH or RP slot | Medium | High | Changes sim + pool |
-| M4 | Player encyclopedia / search | Low | Medium | Education + Diamond IQ practice |
+| M4 | Player encyclopedia / search | Low | Medium | Done — search + blind-stats practice |
 | M5 | Pool metadata pass (more HOF flags) | Medium | Medium | Done — generate-time HOF name list |
-| M6 | Source stats from a real dataset | High | Medium | Lines still approximate; draft marks them “approx” |
+| M6 | Source stats from a real dataset | High | Medium | Done — Lahman/Databank franchise-decade lines |
 
 ### v2.0 — Platform (later)
 
@@ -113,10 +113,10 @@ A sticky, shareable baseball IQ game: fast rounds, strong identity, daily ritual
 
 ---
 
-## Suggested build order (after this UX slice)
+## Suggested build order (after Lahman + encyclopedia)
 
-1. Real stat lines from a public dataset (finish M6)  
-2. Reassess accounts only if sync requests spike  
+1. Reassess accounts only if sync requests spike  
+2. DH/RP expansion only if the nine-slot diamond feels thin  
 
 ---
 

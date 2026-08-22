@@ -17,7 +17,8 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:desktop": "npm run build && playwright test --project=chromium",
     "test:e2e:mobile": "npm run build && playwright test --project=mobile",
-    "test:all": "npm run test && npm run test:e2e"
+    "test:all": "npm run test && npm run test:e2e",
+    "players": "node scripts/generate-players.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

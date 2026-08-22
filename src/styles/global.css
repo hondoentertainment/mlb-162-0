@@ -1241,3 +1241,11 @@ a {
   background: rgba(0, 0, 0, 0.22);
   color: var(--cream);
 }
+
+.pedia-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-2);
+}

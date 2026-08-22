@@ -110,8 +110,9 @@ export function HowToPlay() {
       </ul>
       <p>Balance beats one superstar and empty slots. Incomplete rosters are capped hard.</p>
       <p>
-        Batting and pitching lines are era approximations, marked “approx” in the draft. Hall of
-        Fame badges are for actual HOFers. A real stat dataset is still on the roadmap.
+        Batting and pitching lines use Baseball Databank (Lahman) franchise-decade totals when a
+        name matches. Unmatched fill players stay marked “approx.” Search the pool in Encyclopedia
+        — hide stats there to practice Diamond IQ.
       </p>
     </section>
   );

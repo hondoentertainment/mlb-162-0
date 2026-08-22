@@ -29,7 +29,8 @@ export type Screen =
   | 'result'
   | 'how'
   | 'leaderboard'
-  | 'career';
+  | 'career'
+  | 'encyclopedia';
 
 /** One-step snapshot so a mis-tap can restore the last pick's spin. */
 export interface LastPickSnapshot {

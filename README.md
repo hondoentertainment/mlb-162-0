@@ -18,6 +18,8 @@ Draft MLB legends across random franchises and decades, fill nine positions, and
 - **Daily Challenge** — same UTC-seeded spins, no skips or undo, global board via `/api/daily`, streak tracking
 - **Challenge a friend** — shareable `/c/CODE` links, identical spins, no skips or undo
 
+The **Encyclopedia** searches the pool (hide stats to practice Diamond IQ). Batting and pitching lines are Baseball Databank (Lahman) franchise-decade totals when a name matches; unmatched fill players stay marked “approx.”
+
 Each spin lists every player from that franchise and decade — 1,800+ unique names, and every club era can field a full starting nine (C through SP) plus bench. Fits sit on top, Hall of Famers first; filter by an open position when the list is long. A player can only be drafted once, even if he appears in several team-eras — those names stay visible and marked. Empty legal pools redraw automatically in the relaxed modes (not a skip). Daily, Challenge, and Ironman never grant a redraw.
 
 Challenge codes have a rematch board. Daily and Challenge boards take an optional display name (this device only). Every finished season is stored in a local season log. Share cards show the starting nine and, for Challenge, the code.

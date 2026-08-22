@@ -22,6 +22,8 @@ export interface Player {
   hof: boolean;
   batting?: BattingStats;
   pitching?: PitchingStats;
+  /** `lahman` when the line is a franchise-decade aggregate from Baseball Databank. */
+  statsSource?: 'lahman' | 'approx';
 }
 
 export interface Franchise {

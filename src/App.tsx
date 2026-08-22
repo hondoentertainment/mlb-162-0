@@ -3,6 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { useEffect } from 'react';
 import { AppHeader } from './components/AppHeader';
 import { Career } from './components/Career';
+import { Encyclopedia } from './components/Encyclopedia';
 import { DecadeSelect } from './components/DecadeSelect';
 import { Draft } from './components/Draft';
 import { FranchiseSelect } from './components/FranchiseSelect';
@@ -43,6 +44,8 @@ function ScreenRouter() {
       return <Leaderboard />;
     case 'career':
       return <Career />;
+    case 'encyclopedia':
+      return <Encyclopedia />;
     default:
       return <Home />;
   }
