@@ -32,14 +32,21 @@ export function rosterSlots(names: string[]): { position: Position; name: string
   }));
 }
 
-function roundRect(
-  ctx: CanvasRenderingContext2D,
+/** Largest corner radius `arcTo` can honour for a w×h rect; anything bigger draws
+ *  huge arcs that spill far outside the shape instead of a pill. */
+export function clampRadius(w: number, h: number, r: number): number {
+  return Math.max(0, Math.min(r, w / 2, h / 2));
+}
+
+export function roundRect(
+  ctx: Pick<CanvasRenderingContext2D, 'beginPath' | 'moveTo' | 'arcTo' | 'closePath'>,
   x: number,
   y: number,
   w: number,
   h: number,
-  r: number,
+  radius: number,
 ) {
+  const r = clampRadius(w, h, radius);
   ctx.beginPath();
   ctx.moveTo(x + r, y);
   ctx.arcTo(x + w, y, x + w, y + h, r);
