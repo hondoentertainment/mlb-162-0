@@ -48,9 +48,9 @@ export function RematchBoard({
                 </strong>{' '}
                 · {e.gradeLabel}
                 {e.displayName && (
-                  <div style={{ fontSize: '0.85rem', marginTop: 2 }}>{e.displayName}</div>
+                  <div className="board-name">{e.displayName}</div>
                 )}
-                <div style={{ fontSize: '0.8rem', opacity: 0.75, marginTop: 2 }}>
+                <div className="board-meta">
                   {e.rosterNames.slice(0, 3).join(', ')}
                   {e.rosterNames.length > 3 ? '…' : ''}
                 </div>
