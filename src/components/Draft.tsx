@@ -161,37 +161,35 @@ export function Draft() {
 
         {state.spin && !state.spinning && (
           <>
-            <p
-              className="lede"
-              style={{ maxWidth: 'none', marginBottom: '0.75rem' }}
-              data-testid="spin-result"
-            >
-              {state.spin.decade} · {franchiseName}
-            </p>
-            {(state.teamSkips > 0 || state.decadeSkips > 0) && (
-              <div className="skip-row">
-                {state.teamSkips > 0 && (
+            <div className="spin-status" data-testid="spin-status">
+              <p className="lede" data-testid="spin-result">
+                {state.spin.decade} · {franchiseName}
+              </p>
+              {(state.teamSkips > 0 || state.decadeSkips > 0) && (
+                <div className="skip-row">
+                  {state.teamSkips > 0 && (
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      data-testid="skip-team"
+                      disabled={state.teamSkips <= 0}
+                      onClick={skipTeam}
+                    >
+                      Skip team ({state.teamSkips})
+                    </button>
+                  )}
                   <button
                     type="button"
                     className="btn btn-secondary"
-                    data-testid="skip-team"
-                    disabled={state.teamSkips <= 0}
-                    onClick={skipTeam}
+                    data-testid="skip-decade"
+                    disabled={state.decadeSkips <= 0}
+                    onClick={skipDecade}
                   >
-                    Skip team ({state.teamSkips})
+                    Skip decade ({state.decadeSkips})
                   </button>
-                )}
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-testid="skip-decade"
-                  disabled={state.decadeSkips <= 0}
-                  onClick={skipDecade}
-                >
-                  Skip decade ({state.decadeSkips})
-                </button>
-              </div>
-            )}
+                </div>
+              )}
+            </div>
             <p className="section-label">
               All players from this {state.lockedFranchiseId ? 'decade' : 'franchise and decade'}
             </p>

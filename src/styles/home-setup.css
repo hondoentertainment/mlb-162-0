@@ -14,7 +14,7 @@
 
 .hero-home .lede {
   margin-bottom: var(--space-3);
-  font-size: 1rem;
+  font-size: var(--text-md);
 }
 
 .mode-grid-instant {
@@ -37,11 +37,11 @@
 }
 
 .mode-card-compact h3 {
-  font-size: 1.08rem;
+  font-size: var(--text-md);
 }
 
 .mode-card-compact p {
-  font-size: 0.82rem;
+  font-size: var(--text-sm);
 }
 
 .setup-panel {
@@ -61,9 +61,12 @@
   background: none;
   border: none;
   padding: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
   color: inherit;
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: var(--text-lg);
   font-weight: 700;
   text-align: left;
 }
@@ -72,12 +75,12 @@
   margin: 0.2rem 0 0;
   color: var(--cream);
   opacity: 0.75;
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
 }
 
 .setup-chip-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.4rem;
 }
 
@@ -116,7 +119,7 @@
 
 .setup-chip-abbr {
   font-weight: 800;
-  font-size: 0.78rem;
+  font-size: var(--text-sm);
   letter-spacing: 0.04em;
   line-height: 1.1;
 }
@@ -128,6 +131,6 @@
   white-space: nowrap;
   color: var(--cream);
   opacity: 0.7;
-  font-size: 0.62rem;
+  font-size: var(--text-xs);
   line-height: 1.2;
 }

@@ -34,14 +34,14 @@ function DailyList({
             </strong>{' '}
             · {e.gradeLabel}
             {e.displayName && (
-              <div style={{ fontSize: '0.85rem', marginTop: 2 }}>{e.displayName}</div>
+              <div className="board-name">{e.displayName}</div>
             )}
-            <div style={{ fontSize: '0.8rem', opacity: 0.75, marginTop: 2 }}>
+            <div className="board-meta">
               {e.rosterNames.slice(0, 3).join(', ')}
               {e.rosterNames.length > 3 ? '…' : ''}
             </div>
           </div>
-          <span style={{ opacity: 0.6, fontSize: '0.8rem' }}>
+          <span className="board-time">
             {new Date(e.createdAt).toLocaleTimeString([], {
               hour: '2-digit',
               minute: '2-digit',
@@ -128,12 +128,12 @@ export function Leaderboard() {
                       {e.wins}-{e.losses}
                     </strong>{' '}
                     · {e.gradeLabel}
-                    <div style={{ fontSize: '0.8rem', opacity: 0.75, marginTop: 2 }}>
+                    <div className="board-meta">
                       {e.rosterNames.slice(0, 3).join(', ')}
                       {e.rosterNames.length > 3 ? '…' : ''}
                     </div>
                   </div>
-                  <span style={{ opacity: 0.6, fontSize: '0.8rem' }}>
+                  <span className="board-time">
                     {new Date(e.createdAt).toLocaleDateString()}
                   </span>
                 </li>

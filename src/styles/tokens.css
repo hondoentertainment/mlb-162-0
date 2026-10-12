@@ -12,7 +12,9 @@
   --gold: #d4a84b;
   --gold-soft: #e8c97a;
   --ink: #102018;
-  --muted: #6b7c6e;
+  /* ~6:1 on --night; the old #6b7c6e sat at 4.3:1, under AA for small text */
+  --muted: #8a9b8d;
+  --placeholder: rgba(232, 223, 200, 0.62);
   --danger: #b54a3a;
   --success: #3d8f5a;
   --line: rgba(244, 239, 228, 0.18);
@@ -20,6 +22,20 @@
 
   --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
   --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+
+  /* Type scale. 12px is the floor for anything that carries meaning. */
+  --text-xs: 0.75rem; /* 12 — badges, labels, kickers */
+  --text-sm: 0.8125rem; /* 13 — secondary copy, meta */
+  --text-base: 0.875rem; /* 14 — body in cards */
+  --text-md: 1rem; /* 16 — primary body, inputs */
+  --text-lg: 1.125rem; /* 18 — card titles */
+  --text-xl: 1.375rem; /* 22 — section titles, reel values */
+  --text-2xl: 1.625rem; /* 26 — screen titles, stat values */
+  --text-headline: clamp(1.4rem, 4vw, 1.85rem);
+  --text-display: clamp(3.5rem, 14vw, 5.5rem);
+
+  /* Minimum pointer target (WCAG 2.5.8 / Apple HIG) */
+  --tap-target: 44px;
 
   --radius-sm: 6px;
   --radius-md: 12px;
@@ -35,4 +51,5 @@
   --space-8: 4rem;
 
   --max-width: 720px;
+  --header-height: 3.6rem;
 }
