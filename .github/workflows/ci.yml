@@ -36,5 +36,17 @@ jobs:
 
       # Both projects run on Chromium; mobile is the primary form factor, so it
       # is not optional.
+      # Includes the visual regression spec: screenshots are compared against
+      # the Linux Chromium baselines in e2e/__screenshots__.
       - name: End-to-end (desktop + mobile)
         run: npx playwright test
+
+      # Expected / actual / diff PNGs for any failed screenshot assertion.
+      - name: Upload Playwright failures
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-failures
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 14

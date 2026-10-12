@@ -42,9 +42,17 @@ npm test          # Vitest unit tests
 npm run lint      # oxlint
 npm run test:e2e  # Playwright (builds + preview)
 npm run test:all  # unit + e2e
+npm run test:e2e:visual        # screenshot comparison for Home, Draft, Result
+npm run e2e:update-snapshots   # regenerate baselines after an intended design change
 ```
 
-PRs and pushes to `main` run lint, unit tests, and Chromium e2e via GitHub Actions.
+PRs and pushes to `main` run lint, unit tests, and Chromium e2e (desktop + mobile) via GitHub Actions.
+
+Visual baselines live in `e2e/__screenshots__/` and are rendered on Linux Chromium, which is
+what CI uses. On other platforms the visual spec is skipped unless `VISUAL=1` is set, since font
+rasterisation differs. When CI reports a screenshot mismatch, download the `playwright-failures`
+artifact for the expected / actual / diff images; if the change is intended, regenerate the
+baselines on Linux and commit them.
 
 ## Global daily board
 
