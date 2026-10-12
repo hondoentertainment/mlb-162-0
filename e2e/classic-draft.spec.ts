@@ -11,6 +11,33 @@ test.describe('classic draft', () => {
     await expect(page.getByTestId('final-record')).toHaveText(/\d+-\d+/);
   });
 
+  test('renders a share card whose grade pill stays inside its bounds', async ({ page }) => {
+    await openApp(page);
+    await page.getByTestId('mode-classic').click();
+    await playFullDraft(page);
+
+    const canvas = page.locator('#share-card-preview canvas');
+    await expect(canvas).toBeVisible();
+    await expect
+      .poll(async () =>
+        canvas.evaluate((el) => {
+          const ctx = (el as HTMLCanvasElement).getContext('2d')!;
+          const px = (x: number, y: number) => Array.from(ctx.getImageData(x, y, 1, 1).data);
+          const dark = (c: number[]) => c[0]! < 60 && c[1]! < 80 && c[2]! < 60;
+          const bright = (c: number[]) => c[0]! + c[1]! + c[2]! > 250;
+          return {
+            // Inside the border, well away from any shape: must be the dark backdrop.
+            corner: dark(px(70, 70)),
+            // Between the record and the roster grid on the right: backdrop too.
+            open: dark(px(1800, 500)),
+            // Centre of the grade pill: must be the accent colour.
+            pill: bright(px(300, 619)),
+          };
+        }),
+      )
+      .toEqual({ corner: true, open: true, pill: true });
+  });
+
   test('lists every player from the spun franchise-decade', async ({ page }) => {
     await openApp(page);
     await page.getByTestId('mode-classic').click();
