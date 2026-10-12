@@ -330,25 +330,6 @@ a {
   background: rgba(212, 168, 75, 0.07);
 }
 
-.more-modes {
-  margin-top: var(--space-4);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: var(--space-3) var(--space-4);
-  background: rgba(0, 0, 0, 0.18);
-}
-
-.more-modes summary {
-  cursor: pointer;
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  color: var(--cream);
-}
-
-.more-modes-grid {
-  margin-top: var(--space-3);
-}
-
 .coach-steps {
   margin: 0 0 var(--space-3);
   padding-left: 1.2rem;
@@ -424,11 +405,55 @@ a {
 }
 
 .name-field {
-  margin-top: var(--space-4);
+  margin-top: var(--space-5);
 }
 
-.name-field.compact {
-  margin-top: var(--space-5);
+.name-field-label {
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.name-field-hint {
+  margin: 0 0 var(--space-3);
+  color: var(--cream);
+  opacity: 0.75;
+  font-size: var(--text-sm);
+  max-width: 52ch;
+}
+
+.join-row {
+  margin-top: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.join-row-label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--cream);
+}
+
+.join-row .challenge-row {
+  margin-top: 0;
+}
+
+.join-row .challenge-input {
+  flex: 1 1 10rem;
+}
+
+@media (max-width: 480px) {
+  .join-row .challenge-input {
+    flex-basis: 100%;
+  }
+
+  .join-row .challenge-row > .btn {
+    flex: 1 1 0;
+  }
 }
 
 .nav-links {
@@ -929,6 +954,60 @@ a {
   background: rgba(0, 0, 0, 0.25);
 }
 
+/* Leaderboards: empty / offline / loading */
+.board-state {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.board-state-glyph {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(212, 168, 75, 0.12);
+  border: 1px solid rgba(212, 168, 75, 0.4);
+  color: var(--gold-soft);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-1);
+}
+
+.board-state.offline .board-state-glyph {
+  background: rgba(181, 74, 58, 0.14);
+  border-color: rgba(181, 74, 58, 0.5);
+  color: #e0a294;
+}
+
+.board-state-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--chalk);
+}
+
+.board-state-body {
+  margin: 0;
+  color: var(--cream);
+  opacity: 0.8;
+  font-size: var(--text-base);
+  max-width: 40ch;
+}
+
+.board-state .btn-row {
+  margin-top: var(--space-2);
+  justify-content: center;
+}
+
 .board-name {
   margin-top: 2px;
   font-size: var(--text-sm);
@@ -966,14 +1045,6 @@ a {
   color: var(--gold-soft);
   font-size: var(--text-base);
   letter-spacing: 0.02em;
-}
-
-.challenge-card {
-  cursor: default;
-}
-
-.challenge-card:hover {
-  transform: none;
 }
 
 .challenge-row {
