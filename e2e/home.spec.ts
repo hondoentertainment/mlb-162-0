@@ -53,6 +53,28 @@ test.describe('home', () => {
     await expectHomeFrom(page);
   });
 
+  test('lays out six equal mode tiles with the code entry below', async ({ page }) => {
+    await openApp(page);
+    const tiles = page.locator('[data-testid="home"] .mode-grid-instant > .mode-card');
+    await expect(tiles).toHaveCount(6);
+    const widths = await tiles.evaluateAll((els) =>
+      els.map((el) => Math.round(el.getBoundingClientRect().width)),
+    );
+    expect(new Set(widths).size).toBe(1);
+    await expect(page.getByTestId('challenge-join-row')).toBeVisible();
+    await expect(page.getByLabel('Have a code?')).toBeVisible();
+    await expect(page.getByLabel('Board name')).toBeVisible();
+    await expect(page.getByTestId('display-name')).toContainText(/global Daily/i);
+  });
+
+  test('rejects a bad challenge code on submit', async ({ page }) => {
+    await openApp(page);
+    await page.getByTestId('challenge-input').fill('!');
+    await page.getByTestId('challenge-input').press('Enter');
+    await expect(page.getByText(/valid challenge code/i)).toBeVisible();
+    await expect(page.getByTestId('home')).toBeVisible();
+  });
+
   test('keeps franchise setup on home and returns home from draft', async ({ page }) => {
     await openApp(page);
     await page.getByTestId('mode-franchise').click();

@@ -150,49 +150,55 @@ export function Home() {
           <h3>Ironman</h3>
           <p>No skips, no redraws, no undo.</p>
         </button>
-
-        <div className="mode-card challenge-card" data-testid="mode-challenge">
+        <button
+          type="button"
+          className="mode-card mode-card-compact"
+          data-testid="mode-challenge"
+          onClick={() => startGame('challenge')}
+        >
           <h3>Challenge a friend</h3>
-          <p>Same spins for everyone with the code. Compare records on the rematch board.</p>
-          <div className="challenge-row">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              data-testid="challenge-new"
-              onClick={() => startGame('challenge')}
-            >
-              New challenge
-            </button>
-            <input
-              type="text"
-              className="challenge-input"
-              placeholder="Enter code"
-              aria-label="Challenge code"
-              data-testid="challenge-input"
-              value={challengeCode}
-              onChange={(e) => setChallengeCode(e.target.value.toUpperCase())}
-              maxLength={10}
-            />
-            <button
-              type="button"
-              className="btn btn-primary"
-              data-testid="challenge-join"
-              onClick={joinChallenge}
-            >
-              Join
-            </button>
-            <button
-              type="button"
-              className="btn btn-ghost"
-              data-testid="challenge-board"
-              onClick={viewBoard}
-            >
-              Board
-            </button>
-          </div>
-          {challengeError && <p className="field-error">{challengeError}</p>}
-        </div>
+          <p>Get a code. Everyone with it draws the same spins.</p>
+        </button>
       </div>
+
+      <form
+        className="join-row"
+        data-testid="challenge-join-row"
+        onSubmit={(e) => {
+          e.preventDefault();
+          joinChallenge();
+        }}
+      >
+        <label className="join-row-label" htmlFor="challenge-code">
+          Have a code?
+        </label>
+        <div className="challenge-row">
+          <input
+            id="challenge-code"
+            type="text"
+            className="challenge-input"
+            placeholder="Enter code"
+            autoComplete="off"
+            autoCapitalize="characters"
+            data-testid="challenge-input"
+            value={challengeCode}
+            onChange={(e) => setChallengeCode(e.target.value.toUpperCase())}
+            maxLength={10}
+          />
+          <button type="submit" className="btn btn-primary" data-testid="challenge-join">
+            Join
+          </button>
+          <button
+            type="button"
+            className="btn btn-ghost"
+            data-testid="challenge-board"
+            onClick={viewBoard}
+          >
+            Board
+          </button>
+        </div>
+        {challengeError && <p className="field-error">{challengeError}</p>}
+      </form>
 
       {boardCode && <RematchBoard code={boardCode} />}
 
@@ -226,7 +232,7 @@ export function Home() {
         <DecadeChipGrid onPick={(decade) => startEraLock(decade)} />
       </section>
 
-      <DisplayNameField compact />
+      <DisplayNameField />
 
       <div className="nav-links">
         <button type="button" data-testid="nav-how" onClick={() => setScreen('how')}>

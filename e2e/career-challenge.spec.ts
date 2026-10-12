@@ -12,7 +12,7 @@ test.describe('career & challenge', () => {
 
   test('new challenge shows code and completes a season', async ({ page }) => {
     await openApp(page);
-    await page.getByTestId('challenge-new').click();
+    await page.getByTestId('mode-challenge').click();
     await expect(page.getByTestId('draft')).toBeVisible();
     await expect(page.getByTestId('challenge-code')).toBeVisible();
     const code = (await page.getByTestId('challenge-code').innerText()).trim();
@@ -34,7 +34,7 @@ test.describe('career & challenge', () => {
 
   test('join challenge with code reaches draft', async ({ page }) => {
     await openApp(page);
-    await page.getByTestId('challenge-new').click();
+    await page.getByTestId('mode-challenge').click();
     const code = (await page.getByTestId('challenge-code').innerText()).trim();
     await page.getByTestId('quit').click();
     await expect(page.getByTestId('home')).toBeVisible();

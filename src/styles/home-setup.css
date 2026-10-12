@@ -28,10 +28,6 @@
   }
 }
 
-.mode-grid-instant .challenge-card {
-  grid-column: 1 / -1;
-}
-
 .mode-card-compact {
   padding: var(--space-3);
 }
